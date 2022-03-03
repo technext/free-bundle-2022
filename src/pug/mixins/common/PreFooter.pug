@@ -1,0 +1,57 @@
+mixin FooterList(...items)
+  each item in items
+    li.mb-1
+      a.link-900.text-secondary.text-decoration-none(href='#!')= item
+
+
+
+
+
+mixin PreFooter 
+  +Section.pb-2.pb-lg-5
+    .row.border-top.border-top-secondary.pt-7
+      .col-lg-3.col-md-6.mb-4.mb-md-6.mb-lg-0.mb-sm-2.order-1.order-md-1.order-lg-1
+        img.mb-4(src=`${CWD}assets/img/logo.svg`, width="184" alt="") 
+
+      .col-lg-3.col-md-6.mb-4.mb-lg-0.order-3.order-md-3.order-lg-2
+        p.fs-2.mb-lg-4 Quick Links
+        ul.list-unstyled.mb-0
+          +FooterList('About us', 'Blog', 'Contact','FAQ')
+      .col-lg-3.col-md-6.mb-4.mb-lg-0.order-4.order-md-4.order-lg-3
+        p.fs-2.mb-lg-4 Legal stuff
+        ul.list-unstyled.mb-0
+          +FooterList('Disclaimer', 'Financing', 'Privacy Policy','Terms of Service')
+      .col-lg-3.col-md-6.col-6.mb-4.mb-lg-0.order-2.order-md-2.order-lg-4
+        p.fs-2.mb-lg-4 knowing you're always on 
+          |the best energy deal.
+        form.mb-3
+          input.form-control(type='email' placeholder='Enter your phone Number' aria-label='phone')
+        button.btn.btn-warning.fw-medium.py-1 Sign up Now
+
+
+
+
+
+
+
+
+
+
+
+
+        //- ul.list-unstyled.mb-0
+        //-   +FooterList('Airlinefees', 'Airline', 'Low fare tips')
+
+        //- .icon-group.mb-4 
+        //-   a.text-decoration-none.icon-item.shadow-social#facebook(href="#!")
+        //-     i.fab.fa-facebook-f 
+        //-   a.text-decoration-none.icon-item.shadow-social#instagram(href="#!")
+        //-     i.fab.fa-instagram 
+        //-   a.text-decoration-none.icon-item.shadow-social#twitter(href="#!")
+        //-     i.fab.fa-twitter 
+        //- h4.fw-medium.font-sans-serif.text-secondary.mb-3 Discover our app
+        //- .d-flex.align-items-center  
+        //-   a(href="#!") 
+        //-     img.me-2(src=`${CWD}assets/img/play-store.png`, alt="play store")
+        //-   a(href="#!") 
+        //-     img(src=`${CWD}assets/img/apple-store.png`, alt="apple store")

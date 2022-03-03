@@ -1,0 +1,32 @@
+append variables 
+  -
+    var background={
+      "className":"z-index--1 bottom-0 d-none d-lg-block background-position-top",
+      "image":`${CWD}assets/img/superhero/oval.png`,
+      attrs:{
+        style:'opacity:.5; background-position: top !important ;'
+      }
+    }
+
+
+mixin Superhero
+  +Section(background).py-md-11.py-8#superhero
+    .row.justify-content-center
+      .col-lg-6.text-center
+        h1.fw-bold.mb-4.fs-7 Need a super hero?
+        p.mb-5.text-info.fw-medium Do you require some help for your project: Conception workshop,
+          br.d-none.d-xl-block
+          |prototyping, marketing strategy, landing page, Ux/UI?
+        button.btn.btn-warning.btn-md Contact our expert
+
+
+
+
+
+
+
+
+
+
+
+

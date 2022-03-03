@@ -1,0 +1,66 @@
+append variables
+  - var CWD = './'
+
+  -
+    var data=[
+
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "01",
+      "item":"admin",
+      "category": "Admin & DashBoard"
+    },
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "02",
+      "item":"admin",
+      "category": "Admin & DashBoard"
+    },
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "03",
+      "item":"admin",
+      "category": "Admin & DashBoard"
+    },
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "04",
+      "item":"admin",
+      "category": "Admin & DashBoard"
+    },
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "05",
+      "item":"dash",
+      "category": "Admin & DashBoard"
+    },
+    {
+      "title": "Star Admin",
+      "link": "",
+      "img": "06",
+      "item":"",
+      "category": "Admin & DashBoard"
+    },
+    ]
+
+
+
+
+
+mixin Item 
+  +Section
+    .grid
+      each val in data
+        div.col-md-4
+          +ItemCard(val)
+
+
+
+
+
+

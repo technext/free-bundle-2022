@@ -1,0 +1,5 @@
+mixin FeatureCard(prop)
+  .col-lg-3.col-sm-6.mb-2 
+    img.mb-3.ms-n3(src=`${CWD}assets/img/category/${prop.image}` width='75' alt="Feature")
+    h4.mb-3= prop.title 
+    p.mb-0.fw-medium.text-secondary= prop.text

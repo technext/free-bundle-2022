@@ -1,0 +1,45 @@
+append variables 
+  - 
+    var services= [
+      {
+        image: 'icon1.png',
+        title: 'First click tests',
+        text: 'While most people enjoy casino gambling,'
+      },
+      {
+        image: 'icon2.png',
+        title: 'Design surveys',
+        text: 'Sports betting,lottery and bingo playing for the fun'
+      },
+      {
+        image: 'icon3.png',
+        title: 'Preference tests',
+        text: 'The Myspace page defines the individual.'
+      },
+      {
+        image: 'icon4.png',
+        title: 'Five second tests',
+        text: 'Personal choices and the overall personality of the person.'
+      }
+    ]
+  -
+    var backgroundImage={
+      "className":"z-index--1 bottom-0 d-none d-lg-block",
+      "image":`${CWD}assets/img/category/shape.png`,
+      attrs:{
+        style:'opacity:.5;'
+      }
+    }
+
+
+mixin Feature
+  +Section(backgroundImage).pt-5.pt-md-9.mb-6#feature
+    h1.fs-9.fw-bold.mb-4.text-center   We design tools to unveil 
+      br.d-none.d-xl-block
+      |your superpowers
+
+    .row 
+      each val in services
+        +FeatureCard(val)
+    .text-center
+      a.btn.btn-warning.mt-5(href='#!' role='button') SIGN UP NOW

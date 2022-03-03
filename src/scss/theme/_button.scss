@@ -1,0 +1,27 @@
+.round-btn-lg{
+  @include round-btn(toRem(52))
+}
+.btn-secondary-outline{
+  color: #173A56;
+  border-color: #BCD0E5;
+  border: toRem(1) solid #BCD0E5;
+}
+
+.primary-btn-shadow{
+  box-shadow: 0 toRem(20) toRem(35) 0 rgba(241, 165, 1, 0.15);
+}
+
+.danger-btn-shadow {
+  box-shadow: 0 toRem(15) toRem(30) 0 rgba(223, 105, 81, 0.3);
+}
+
+.orange-gradient-btn{
+  background-image: linear-gradient(to bottom, #FF946D, #FF7D68);
+  border: none;
+  border-radius: toRem(10);
+  padding: 1rem 2.5rem;
+
+  @include hover-focus{
+    background-image: linear-gradient(to bottom, #FF7D68, #FF946D);
+  }
+}

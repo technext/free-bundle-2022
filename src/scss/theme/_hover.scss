@@ -1,0 +1,38 @@
+/* Hover */
+.hover-top {
+  transform: translateY(0) translateZ(0);
+  transition: all 0.5s ease;
+  &.hover-top-shadow-lg {
+    &:hover,
+    &:focus {
+      transform: translateY(-0.3125rem) translateZ(0);
+    }
+  }
+  &:hover,
+  &:focus {
+    transform: translateY(-0.125rem) translateZ(0);
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba(110, 74, 156, 0.1) !important;
+    background-color: $pink;
+    color: $white;
+    .heading-color{
+      color: $white;
+    }
+  }
+  
+}
+/* Icon Forward */
+.hvr-icon-forward {
+	transition-duration: 0.1s;
+	.hover-icon {
+		transform: translateZ(0);
+		transition-duration: 0.1s;
+		transition-property: transform;
+		transition-timing-function: ease-out;
+	}
+	&:hover,&:focus,&:active {
+		.hover-icon {
+			transform: translateX(4px);
+		}
+	}
+
+}

@@ -1,0 +1,37 @@
+append variables 
+    -
+        var data=[
+            {
+                "author":"Abdullah",
+                "img":"marketing01",
+                "date":"03 March 2019",
+                "text":"Increasing Prosperity With Positive Thinking"
+            },
+            {
+                "author":"Abdullah",
+                "img":"marketing02",
+                "date":"03 March 2019",
+                "text":"Motivation Is The First Step To Success"
+            },
+            {
+                "author":"Abdullah",
+                "img":"marketing03",
+                "date":"03 March 2019",
+                "text":"Success Steps For Your Personal Or Business Life"
+            },
+
+        ]
+
+
+
+mixin Marketing
+    +Section.pt-5#marketing
+        h1.fw-bold.fs-6.mb-3 Marketing Strategies
+        p.mb-6.text-secondary Join 40,000+ other marketers and get proven strategies on email marketing
+        .row
+            each val in data
+                +MarketingCard(val)
+
+
+
+

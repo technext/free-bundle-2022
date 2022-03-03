@@ -1,0 +1,19 @@
+extends layouts/LayoutTheme
+include mixins/common/PreFooter
+include mixins/common/Footer
+include mixins/common/ItemCard
+
+include mixins/home/landing/HeroHeader
+
+include mixins/home/landing/Item
+
+
+
+
+prepend scripts
+
+append content
+
+  +HeroHeader
+  +NavbarShowcase
+  +Item

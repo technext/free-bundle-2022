@@ -1,0 +1,7 @@
+mixin ItemCard(props)
+
+  .card.shadow-lg.p-3.mb-5.bg-white.rounded.grid-item(class=props.item)
+    .card-body.text-center
+      .card-title=props.title
+      .card-text=props.category
+    img.card-img-bottom(src=`${CWD}assets/img/template/tabler${props.img}.png`  alt="Feature")
