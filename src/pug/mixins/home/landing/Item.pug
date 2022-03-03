@@ -43,7 +43,7 @@ append variables
       "title": "Star Admin",
       "link": "",
       "img": "06",
-      "item":"",
+      "item":"business",
       "category": "Admin & DashBoard"
     },
     ]
@@ -55,9 +55,11 @@ append variables
 mixin Item 
   +Section
     .grid
-      each val in data
-        div.col-md-4
-          +ItemCard(val)
+          each val in data
+            div(data-category=`${val.item}` class=`item ${
+              val.item
+            }`).col-md-4.grid-item.me-2
+                +ItemCard(val)
 
 
 

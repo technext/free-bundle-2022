@@ -59,7 +59,8 @@
 		"bootstrap-icons": "^1.5.0",
 		"feather-icons": "^4.28.0",
 		"is_js": "^0.9.0",
-		"isotope-layout": "^3.0.6"
+		"isotope-layout": "^3.0.6",
+		"isotope-packery": "^2.0.1"
 	},
 	"browserslist": [
 		"last 5 version"

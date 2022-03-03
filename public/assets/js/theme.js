@@ -349,18 +349,23 @@ var navbarInit = function navbarInit() {
 
 
 var isotopeFilter = function isotopeFilter() {
-  var elem = document.querySelector('.grid');
   var iso = new Isotope('.grid', {
-    // options
-    itemSelector: '.grid-item',
-    layoutMode: 'fitRows'
+    itemSelector: '.item',
+    layoutMode: 'packery',
+    masonry: {
+      // use element for option
+      columnWidth: '.grid-sizer'
+    },
+    percentPosition: true
   });
-  iso.arrange({
-    // item element provided as argument
-    filter: function filter(itemElem) {
-      var number = itemElem.querySelector('.number').innerText;
-      return parseInt(number, 10) > 50;
-    }
+  var filtersElem = document.querySelectorAll('.nav-link');
+  filtersElem.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var filterValue = event.target.getAttribute('data-filter');
+      iso.arrange({
+        filter: filterValue
+      });
+    });
   });
 };
 /* -------------------------------------------------------------------------- */
@@ -393,6 +398,6 @@ var scrollToTop = function scrollToTop() {
 
 docReady(navbarInit);
 docReady(detectorInit);
-docReady(isotopeFilter);
 docReady(scrollToTop);
+docReady(isotopeFilter);
 //# sourceMappingURL=theme.js.map

@@ -21,5 +21,9 @@
 	"isotope-layout": {
 		"src": "dist/isotope.pkgd.min.js",
 		"dest": "isotope-layout"
+	},
+	"isotope-packery": {
+		"src": "packery-mode.pkgd.min.js",
+		"dest": "isotope-packery"
 	}
 }

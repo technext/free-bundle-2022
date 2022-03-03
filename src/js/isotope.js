@@ -2,19 +2,40 @@
 
 import utils from './utils';
 
-const isotopeFilter = () => {
-	var elem = document.querySelector('.grid');
-	var iso = new Isotope('.grid', {
-		// options
-		itemSelector: '.grid-item',
-		layoutMode: 'fitRows'
-	});
+const isotopeFilter=()=>{
 
-	iso.arrange({
-		// item element provided as argument
-		filter: function (itemElem) {
-			var number = itemElem.querySelector('.number').innerText;
-			return parseInt(number, 10) > 50;
-		}
-	});
-};
+var iso = new Isotope( '.grid', {
+  itemSelector: '.item',
+  layoutMode: 'packery',
+   masonry: {
+    // use element for option
+    columnWidth: '.grid-sizer'
+  },
+ percentPosition: true,
+
+
+});
+
+
+var filtersElem = document.querySelectorAll('.nav-link');
+
+filtersElem.forEach(element => {
+
+
+
+element.addEventListener( 'click', function( event ) {
+
+  var filterValue = event.target.getAttribute('data-filter');
+
+  iso.arrange({ filter: filterValue });
+});
+
+	
+});
+
+}
+
+fetch(`${CWD}assets/data/data.json`).then((data)=>{
+	console.log(data)
+
+export default isotopeFilter;
