@@ -6,18 +6,51 @@ mixin NavbarShowcase
       #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
         ul.navbar-nav.mx-auto
           li.nav-item
-            a.nav-link(href="#" data-filter="*") All
+            a.nav-link(href="#" data-filter="*" data-bs-nav) All
           li.nav-item
-            a.nav-link(href="#" data-filter=".admin") Admin & Dashboard
+            a.nav-link(href="#" data-filter=".admin" data-bs-nav) Admin & Dashboard
           li.nav-item
-            a.nav-link(href="#" data-filter=".business") Business & Corporate
+            a.nav-link(href="#" data-filter=".business" data-bs-nav) Business & Corporate
           li.nav-item
-            a.nav-link(href="#" data-filter=".landing") Landing Pages
+            a.nav-link(href="#" data-filter=".landing" data-bs-nav) Landing Pages
           li.nav-item
-            a.nav-link(href="#" data-filter=".ecommerce") E-commerce
+            a.nav-link(href="#" data-filter=".ecommerce" data-bs-nav) E-commerce
           li.nav-item
-            a.nav-link(href="#" data-filter=".food") Food & Restaurant
+            a.nav-link(href="#" data-filter=".food" data-bs-nav) Food & Restaurant
           li.nav-item
+            a.nav-link(href="#" data-filter=".medical" data-bs-nav) Medical & Health Care
+          li.nav-item
+            a.nav-link(href="#" data-filter=".travel" data-bs-nav) Travel & Booking
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") More
+            ul.dropdown-menu(aria-labelledby="navbarDropdown")
+              li
+                a.dropdown-item(href="#" data-filter=".photography") Multipurpose
+              li
+                a.dropdown-item(href="#" data-filter=".coming") Personal
+              li
+                a.dropdown-item(href="#" data-filter=".other") PortFolio
+              li
+                a.dropdown-item(href="#" data-filter=".photography") Photography
+              li
+                a.dropdown-item(href="#" data-filter=".coming") Coming Soon
+              li
+                a.dropdown-item(href="#" data-filter=".other") Other
+
+
+
+        //-   <li class="nav-item dropdown">
+        //-   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        //-     Dropdown
+        //-   </a>
+        //-   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        //-     <li><a class="dropdown-item" href="#">Action</a></li>
+        //-     <li><a class="dropdown-item" href="#">Another action</a></li>
+        //-     <li><hr class="dropdown-divider"></li>
+        //-     <li><a class="dropdown-item" href="#">Something else here</a></li>
+        //-   </ul>
+        //- </li>
+
           //-   a.nav-link Medical & Health Care
           //- li.nav-item
           //-   a.nav-link Travel & Booking

@@ -358,7 +358,7 @@ var isotopeFilter = function isotopeFilter() {
     },
     percentPosition: true
   });
-  var filtersElem = document.querySelectorAll('.nav-link');
+  var filtersElem = document.querySelectorAll('[data-bs-nav]');
   filtersElem.forEach(function (element) {
     element.addEventListener('click', function (event) {
       var filterValue = event.target.getAttribute('data-filter');

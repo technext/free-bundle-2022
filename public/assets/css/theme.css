@@ -19576,6 +19576,33 @@ iframe {
   width: 30%;
 }
 
+.header.shape {
+  background: -o-linear-gradient(300deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  overflow: hidden;
+}
+
+.header.skew {
+  -webkit-transform: skewY(-7deg);
+  -ms-transform: skewY(-7deg);
+  transform: skewY(-7deg);
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+}
+
+.header.h-100 {
+  height: 100% !important;
+}
+
+.header.w-100 {
+  width: 100% !important;
+}
+
+.header.position-absolute {
+  position: absolute !important;
+}
+
 /*-----------------------------------------------
 |   User Styles
 -----------------------------------------------*/

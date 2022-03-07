@@ -2,40 +2,26 @@
 
 import utils from './utils';
 
-const isotopeFilter=()=>{
+const isotopeFilter = () => {
+	var iso = new Isotope('.grid', {
+		itemSelector: '.item',
+		layoutMode: 'packery',
+		masonry: {
+			// use element for option
+			columnWidth: '.grid-sizer'
+		},
+		percentPosition: true
+	});
 
-var iso = new Isotope( '.grid', {
-  itemSelector: '.item',
-  layoutMode: 'packery',
-   masonry: {
-    // use element for option
-    columnWidth: '.grid-sizer'
-  },
- percentPosition: true,
+	var filtersElem = document.querySelectorAll('[data-bs-nav]');
 
+	filtersElem.forEach(element => {
+		element.addEventListener('click', function (event) {
+			var filterValue = event.target.getAttribute('data-filter');
 
-});
-
-
-var filtersElem = document.querySelectorAll('.nav-link');
-
-filtersElem.forEach(element => {
-
-
-
-element.addEventListener( 'click', function( event ) {
-
-  var filterValue = event.target.getAttribute('data-filter');
-
-  iso.arrange({ filter: filterValue });
-});
-
-	
-});
-
-}
-
-fetch(`${CWD}assets/data/data.json`).then((data)=>{
-	console.log(data)
+			iso.arrange({ filter: filterValue });
+		});
+	});
+};
 
 export default isotopeFilter;
