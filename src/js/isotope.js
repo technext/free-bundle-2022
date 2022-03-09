@@ -4,11 +4,11 @@ import utils from './utils';
 
 const isotopeFilter = () => {
 	var iso = new Isotope('.grid', {
-		itemSelector: '.item',
+		itemSelector: '.grid-item',
 		layoutMode: 'packery',
 		masonry: {
 			// use element for option
-			columnWidth: '.grid-sizer'
+			columnWidth: '.grid-item'
 		},
 		percentPosition: true
 	});

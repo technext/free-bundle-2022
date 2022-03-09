@@ -55,11 +55,11 @@ append variables
 mixin Item 
   +Section
     .grid
-          each val in data
-            div(data-category=`${val.item}` class=`item ${
-              val.item
-            }`).col-md-4.grid-item.me-2
-                +ItemCard(val)
+      each val in data
+        div(data-category=`${val.item}` class=`item ${
+          val.item
+        }`).col-md-4.grid-item.me-2
+          +ItemCard(val)
 
 
 

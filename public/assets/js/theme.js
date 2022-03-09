@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /* -------------------------------------------------------------------------- */
 
 /*                                    Utils                                   */
@@ -255,93 +249,49 @@ var detectorInit = function detectorInit() {
 
 
 var navbarInit = function navbarInit() {
-  var Selector = {
-    NAVBAR: '[data-navbar-on-scroll]',
-    NAVBAR_COLLAPSE: '.navbar-collapse',
-    NAVBAR_TOGGLER: '.navbar-toggler'
-  };
-  var ClassNames = {
-    COLLAPSED: 'collapsed'
-  };
-  var Events = {
-    SCROLL: 'scroll',
-    SHOW_BS_COLLAPSE: 'show.bs.collapse',
-    HIDE_BS_COLLAPSE: 'hide.bs.collapse',
-    HIDDEN_BS_COLLAPSE: 'hidden.bs.collapse'
-  };
-  var DataKey = {
-    NAVBAR_ON_SCROLL: 'navbar-light-on-scroll'
-  };
-  var navbar = document.querySelector(Selector.NAVBAR); // responsive nav collapsed
+  navbar();
+  console.log('running'); // const Selector = {
+  // 	NAV_ITEM: '.nav-item',
+  // 	CATEGORY_LIST: '.navbar-toggler',
+  // 	NAVBAR: '.navbar',
+  // 	NAVBAR_DROPDOWN: '.navbar .dropdown'
+  // };
+  // const ClassNames = {
+  // 	COLLAPSED: 'collapsed'
+  // };
+  // Toggle bg class on window resize
 
-  navbar.addEventListener('click', function (e) {
-    if (e.target.classList.contains('nav-link') && window.innerWidth < utils.getBreakpoint(navbar)) {
-      navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
-    }
+  utils.resize(function () {
+    var el = document.getElementsByClassName('nav-item');
+    Array.prototype.forEach.call(elements, function (el, i) {
+      el.removeAttribute('style');
+    });
+    document.getElementsByClassName('category-list').innerHTML = ' ';
+    navbar();
   });
 
-  if (navbar) {
-    var windowHeight = window.innerHeight;
-    var html = document.documentElement;
-    var navbarCollapse = navbar.querySelector(Selector.NAVBAR_COLLAPSE);
+  function navbar() {
+    var totalWidth = 0;
+    var navbar = document.querySelector('.navbar');
+    var dropdown = document.querySelector('.dropdown');
+    var navbarWidth = parseFloat(getComputedStyle(navbar, null).width.replace('px', ''));
+    var dropdownWidth = parseFloat(getComputedStyle(dropdown, null).width.replace('px', ''));
+    var elWidth = navbarWidth - dropdownWidth; // let el = document.getElementsByClassName('nav-item');
 
-    var allColors = _objectSpread(_objectSpread({}, utils.colors), utils.grays);
+    var elements = document.getElementsByClassName('nav-item');
+    Array.prototype.forEach.call(elements, function (el, i) {
+      var cw = parseFloat(getComputedStyle(el, null).width.replace('px', ''));
+      totalWidth += cw;
 
-    var name = utils.getData(navbar, DataKey.NAVBAR_ON_SCROLL);
-    var colorName = Object.keys(allColors).includes(name) ? name : 'light';
-    var color = allColors[colorName];
-    var bgClassName = "bg-".concat(colorName);
-    var paddingName = 'padding-transition';
-    var colorRgb = utils.hexToRgb(color);
-
-    var _window$getComputedSt = window.getComputedStyle(navbar),
-        backgroundImage = _window$getComputedSt.backgroundImage;
-
-    var transition = 'background-color,padding 0.35s ease';
-    navbar.style.backgroundImage = 'none'; // Change navbar background color on scroll
-
-    window.addEventListener(Events.SCROLL, function () {
-      var scrollTop = html.scrollTop;
-      var alpha = scrollTop / windowHeight * 0.35; // navbar.classList.add(paddingName);
-      // Add class on scroll
-
-      navbar.classList.add('backdrop');
-
-      if (alpha === 0) {
-        navbar.classList.remove('backdrop');
+      if (totalWidth > elWidth) {
+        if (!el.classList.contains('dropdown')) {
+          // let link = el.textContent;
+          // let ch = document.createElement('p');
+          // ch.innerHTML = 'home';
+          // console.log(ch);
+          document.getElementById('category-list').appendChild(el);
+        }
       }
-
-      alpha >= 1 && (alpha = 1);
-      navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
-      navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'none';
-    }); // Toggle bg class on window resize
-
-    utils.resize(function () {
-      var breakPoint = utils.getBreakpoint(navbar);
-
-      if (window.innerWidth > breakPoint) {
-        navbar.style.backgroundImage = html.scrollTop ? backgroundImage : 'none'; // navbar.style.transition = 'none';
-      } else if (!utils.hasClass(navbar.querySelector(Selector.NAVBAR_TOGGLER), ClassNames.COLLAPSED)) {
-        // navbar.classList.add(bgClassName);
-        // navbar.classList.add(paddingName);
-        navbar.style.backgroundImage = backgroundImage;
-      }
-
-      if (window.innerWidth <= breakPoint) {// navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
-      }
-    });
-    navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, function () {
-      navbar.classList.add(bgClassName); // navbar.classList.add(paddingName);
-
-      navbar.style.backgroundImage = backgroundImage;
-      navbar.style.transition = transition;
-    });
-    navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, function () {
-      navbar.classList.remove(bgClassName); // navbar.classList.remove(paddingName);
-
-      !html.scrollTop && (navbar.style.backgroundImage = 'none');
-    });
-    navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {// navbar.style.transition = 'none';
     });
   }
 };
@@ -350,11 +300,11 @@ var navbarInit = function navbarInit() {
 
 var isotopeFilter = function isotopeFilter() {
   var iso = new Isotope('.grid', {
-    itemSelector: '.item',
+    itemSelector: '.grid-item',
     layoutMode: 'packery',
     masonry: {
       // use element for option
-      columnWidth: '.grid-sizer'
+      columnWidth: '.grid-item'
     },
     percentPosition: true
   });

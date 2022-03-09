@@ -1,75 +1,72 @@
 mixin NavbarShowcase
   nav.navbar.navbar-expand-lg.navbar-light.sticky-top.pt-4(data-navbar-on-scroll)
     .container-fluid
-      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon 
-      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
-        ul.navbar-nav.mx-auto
-          li.nav-item
-            a.nav-link(href="#" data-filter="*" data-bs-nav) All
-          li.nav-item
-            a.nav-link(href="#" data-filter=".admin" data-bs-nav) Admin & Dashboard
-          li.nav-item
-            a.nav-link(href="#" data-filter=".business" data-bs-nav) Business & Corporate
-          li.nav-item
-            a.nav-link(href="#" data-filter=".landing" data-bs-nav) Landing Pages
-          li.nav-item
-            a.nav-link(href="#" data-filter=".ecommerce" data-bs-nav) E-commerce
-          li.nav-item
-            a.nav-link(href="#" data-filter=".food" data-bs-nav) Food & Restaurant
-          li.nav-item
-            a.nav-link(href="#" data-filter=".medical" data-bs-nav) Medical & Health Care
-          li.nav-item
-            a.nav-link(href="#" data-filter=".travel" data-bs-nav) Travel & Booking
-          li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") More
-            ul.dropdown-menu(aria-labelledby="navbarDropdown")
-              li
-                a.dropdown-item(href="#" data-filter=".photography") Multipurpose
-              li
-                a.dropdown-item(href="#" data-filter=".coming") Personal
-              li
-                a.dropdown-item(href="#" data-filter=".other") PortFolio
-              li
-                a.dropdown-item(href="#" data-filter=".photography") Photography
-              li
-                a.dropdown-item(href="#" data-filter=".coming") Coming Soon
-              li
-                a.dropdown-item(href="#" data-filter=".other") Other
+      ul.navbar-nav.mx-auto
+        li.nav-item
+          a.nav-link(href="#" data-filter="*" data-bs-nav) All
+        li.nav-item
+          a.nav-link(href="#" data-filter=".admin" data-bs-nav) Admin & Dashboard
+        li.nav-item
+          a.nav-link(href="#" data-filter=".business" data-bs-nav) Business & Corporate
+        li.nav-item
+          a.nav-link(href="#" data-filter=".landing" data-bs-nav) Landing Pages
+        li.nav-item
+          a.nav-link(href="#" data-filter=".ecommerce" data-bs-nav) E-commerce
+        li.nav-item
+          a.nav-link(href="#" data-filter=".food" data-bs-nav) Food & Restaurant
+        li.nav-item
+          a.nav-link(href="#" data-filter=".medical" data-bs-nav) Medical & Health Care
+        li.nav-item
+          a.nav-link(href="#" data-filter=".travel" data-bs-nav) Travel & Booking
+        li.nav-item
+          a.nav-link(href="#" data-filter=".photography") Multipurpose
+        li.nav-item
+          a.nav-link(href="#" data-filter=".coming") Personal
+        li.nav-item
+          a.nav-link(href="#" data-filter=".other") PortFolio
+        li.nav-item
+          a.nav-link(href="#" data-filter=".photography") Photography
+        li.nav-item
+          a.nav-link(href="#" data-filter=".coming") Coming Soon
+        li.nav-item
+          a.nav-link(href="#" data-filter=".other") Other
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") More
+          .dropdown-menu#category-list(aria-labelledby="navbarDropdown")
 
 
 
-        //-   <li class="nav-item dropdown">
-        //-   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        //-     Dropdown
-        //-   </a>
-        //-   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        //-     <li><a class="dropdown-item" href="#">Action</a></li>
-        //-     <li><a class="dropdown-item" href="#">Another action</a></li>
-        //-     <li><hr class="dropdown-divider"></li>
-        //-     <li><a class="dropdown-item" href="#">Something else here</a></li>
-        //-   </ul>
-        //- </li>
+      //-   <li class="nav-item dropdown">
+      //-   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      //-     Dropdown
+      //-   </a>
+      //-   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      //-     <li><a class="dropdown-item" href="#">Action</a></li>
+      //-     <li><a class="dropdown-item" href="#">Another action</a></li>
+      //-     <li><hr class="dropdown-divider"></li>
+      //-     <li><a class="dropdown-item" href="#">Something else here</a></li>
+      //-   </ul>
+      //- </li>
 
-          //-   a.nav-link Medical & Health Care
-          //- li.nav-item
-          //-   a.nav-link Travel & Booking
-          //- li.nav-item
-          //-   a.nav-link Multipurpose
-          //- li.nav-item
-          //-   a.nav-link Personal
-          //- li.nav-item
-          //-   a.nav-link Portfolio
-          //- li.nav-item
-          //-   a.nav-link Landing Pages
-          //- li.nav-item
-          //-   a.nav-link All Categories
-          //- li.nav-item
-          //-   a.nav-link Admin & Dashboard
-          //- li.nav-item
-          //-   a.nav-link Business & Corporate
-          //- li.nav-item
-          //-   a.nav-link Landing Pages
+        //-   a.nav-link Medical & Health Care
+        //- li.nav-item
+        //-   a.nav-link Travel & Booking
+        //- li.nav-item
+        //-   a.nav-link Multipurpose
+        //- li.nav-item
+        //-   a.nav-link Personal
+        //- li.nav-item
+        //-   a.nav-link Portfolio
+        //- li.nav-item
+        //-   a.nav-link Landing Pages
+        //- li.nav-item
+        //-   a.nav-link All Categories
+        //- li.nav-item
+        //-   a.nav-link Admin & Dashboard
+        //- li.nav-item
+        //-   a.nav-link Business & Corporate
+        //- li.nav-item
+        //-   a.nav-link Landing Pages
 
 
 

@@ -5,99 +5,63 @@ import utils from './utils';
 |   Top navigation opacity on scroll
 -----------------------------------------------*/
 const navbarInit = () => {
-	const Selector = {
-		NAVBAR: '[data-navbar-on-scroll]',
-		NAVBAR_COLLAPSE: '.navbar-collapse',
-		NAVBAR_TOGGLER: '.navbar-toggler'
-	};
+	navbar();
 
-	const ClassNames = {
-		COLLAPSED: 'collapsed'
-	};
+	console.log('running');
+	// const Selector = {
+	// 	NAV_ITEM: '.nav-item',
+	// 	CATEGORY_LIST: '.navbar-toggler',
+	// 	NAVBAR: '.navbar',
+	// 	NAVBAR_DROPDOWN: '.navbar .dropdown'
+	// };
 
-	const Events = {
-		SCROLL: 'scroll',
-		SHOW_BS_COLLAPSE: 'show.bs.collapse',
-		HIDE_BS_COLLAPSE: 'hide.bs.collapse',
-		HIDDEN_BS_COLLAPSE: 'hidden.bs.collapse'
-	};
+	// const ClassNames = {
+	// 	COLLAPSED: 'collapsed'
+	// };
 
-	const DataKey = {
-		NAVBAR_ON_SCROLL: 'navbar-light-on-scroll'
-	};
-	const navbar = document.querySelector(Selector.NAVBAR);
-	// responsive nav collapsed
-	navbar.addEventListener('click', e => {
-		if (e.target.classList.contains('nav-link') && window.innerWidth < utils.getBreakpoint(navbar)) {
-			navbar.querySelector(Selector.NAVBAR_TOGGLER).click();
-		}
+	// Toggle bg class on window resize
+	utils.resize(() => {
+		let el = document.getElementsByClassName('nav-item');
+
+		Array.prototype.forEach.call(elements, function (el, i) {
+			el.removeAttribute('style');
+		});
+
+		document.getElementsByClassName('category-list').innerHTML = ' ';
+
+		navbar();
 	});
 
-	if (navbar) {
-		const windowHeight = window.innerHeight;
-		const html = document.documentElement;
-		const navbarCollapse = navbar.querySelector(Selector.NAVBAR_COLLAPSE);
-		const allColors = { ...utils.colors, ...utils.grays };
+	function navbar() {
+		let totalWidth = 0;
 
-		const name = utils.getData(navbar, DataKey.NAVBAR_ON_SCROLL);
-		const colorName = Object.keys(allColors).includes(name) ? name : 'light';
-		const color = allColors[colorName];
-		const bgClassName = `bg-${colorName}`;
-		const paddingName = 'padding-transition';
-		const colorRgb = utils.hexToRgb(color);
-		const { backgroundImage } = window.getComputedStyle(navbar);
-		const transition = 'background-color,padding 0.35s ease';
-		navbar.style.backgroundImage = 'none';
+		let navbar = document.querySelector('.navbar');
+		let dropdown = document.querySelector('.dropdown');
 
-		// Change navbar background color on scroll
-		window.addEventListener(Events.SCROLL, () => {
-			const { scrollTop } = html;
-			let alpha = (scrollTop / windowHeight) * 0.35;
-			// navbar.classList.add(paddingName);
-			// Add class on scroll
-			navbar.classList.add('backdrop');
-			if (alpha === 0) {
-				navbar.classList.remove('backdrop');
+		let navbarWidth = parseFloat(getComputedStyle(navbar, null).width.replace('px', ''));
+		let dropdownWidth = parseFloat(getComputedStyle(dropdown, null).width.replace('px', ''));
+
+		let elWidth = navbarWidth - dropdownWidth;
+
+		// let el = document.getElementsByClassName('nav-item');
+
+		var elements = document.getElementsByClassName('nav-item');
+
+		Array.prototype.forEach.call(elements, function (el, i) {
+			let cw = parseFloat(getComputedStyle(el, null).width.replace('px', ''));
+
+			totalWidth += cw;
+			if (totalWidth > elWidth) {
+				if (!el.classList.contains('dropdown')) {
+					// let link = el.textContent;
+					// let ch = document.createElement('p');
+					// ch.innerHTML = 'home';
+					// console.log(ch);
+
+					document.getElementById('category-list').appendChild(el);
+				}
 			}
-			alpha >= 1 && (alpha = 1);
-			navbar.style.backgroundColor = `rgba(${colorRgb[0]}, ${colorRgb[1]}, ${colorRgb[2]}, ${alpha})`;
-			navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'none';
-		});
-
-		// Toggle bg class on window resize
-		utils.resize(() => {
-			const breakPoint = utils.getBreakpoint(navbar);
-			if (window.innerWidth > breakPoint) {
-				navbar.style.backgroundImage = html.scrollTop ? backgroundImage : 'none';
-				// navbar.style.transition = 'none';
-			} else if (!utils.hasClass(navbar.querySelector(Selector.NAVBAR_TOGGLER), ClassNames.COLLAPSED)) {
-				// navbar.classList.add(bgClassName);
-				// navbar.classList.add(paddingName);
-				navbar.style.backgroundImage = backgroundImage;
-			}
-
-			if (window.innerWidth <= breakPoint) {
-				// navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
-			}
-		});
-
-		navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, () => {
-			navbar.classList.add(bgClassName);
-			// navbar.classList.add(paddingName);
-			navbar.style.backgroundImage = backgroundImage;
-			navbar.style.transition = transition;
-		});
-
-		navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, () => {
-			navbar.classList.remove(bgClassName);
-			// navbar.classList.remove(paddingName);
-			!html.scrollTop && (navbar.style.backgroundImage = 'none');
-		});
-
-		navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, () => {
-			// navbar.style.transition = 'none';
 		});
 	}
 };
-
 export default navbarInit;
