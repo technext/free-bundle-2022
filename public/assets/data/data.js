@@ -437,102 +437,102 @@ const data = [
 		category: 'Other'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'DGital',
+		link: 'https://themewagon.com/themes/dgital-free-responsive-bootstrap-5-creative-agency-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'agency',
+		category: 'Agency'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Famms',
+		link: 'https://themewagon.com/themes/famms-free-responsive-bootstrap-4-e-commerce-website-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'ecommerce',
+		category: 'E-commerce'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Material kit 2',
+		link: 'https://themewagon.com/themes/material-kit-2-free-responsive-bootstrap-5-website-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'multipurpose',
+		category: 'Multipurpose'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Chain',
+		link: 'https://themewagon.com/themes/chain-free-bootstrap-5-html5-landing-page-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'landing',
+		category: 'Landing Page'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Patrix ',
+		link: 'https://themewagon.com/themes/patrix-free-responsive-bootstrap-5-landing-page-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'landing',
+		category: 'Landing Page'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Dtox',
+		link: 'https://themewagon.com/themes/dtox-free-bootstrap-4-html5-landing-page-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'landing',
+		category: 'Landing Page'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Livedoc',
+		link: 'https://themewagon.com/themes/livedoc-free-responsive-bootstrap-5-html5-medical-website-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'medical',
+		category: 'Medical & Health'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Zinc',
+		link: 'https://themewagon.com/themes/free-bootstrap-5-html5-business-website-template-zinc/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'business',
+		category: 'Business'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Simple',
+		link: 'https://themewagon.com/themes/free-bootstrap-4-html5-landing-page-website-template-simple/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'landing',
+		category: 'Landing Page'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Ioniq',
+		link: 'https://themewagon.com/themes/ioniq-free-bootstrap-5-html5-business-website-template/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'business',
+		category: 'Business'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Nubis',
+		link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-business-website-template-nubis/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'business',
+		category: 'Business'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Medic Care',
+		link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-healthcare-website-template-medic-care/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'medical',
+		category: 'Medical & Health'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Yavin',
+		link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-business-website-template-yavin/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'business',
+		category: 'Business'
 	},
 	{
-		title: '',
-		link: '',
+		title: 'Soft UI',
+		link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-admin-dashboard-template-soft-ui/',
 		img: '',
-		item: '',
-		category: ''
+		item: 'admin',
+		category: 'Admin & Dashboard'
 	},
 	{
 		title: '',
