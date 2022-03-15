@@ -19548,8 +19548,26 @@ iframe {
   border-bottom-color: #DF6951;
 }
 
-.grid-item {
-  width: 30%;
+.nav-link {
+  white-space: nowrap;
+}
+
+.content .grid {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.grid .item {
+  width: 33.33%;
+  display: block;
+  padding: 0 16px;
+  margin-bottom: 30px;
+  float: right;
+  text-decoration: none;
+}
+
+.grid .item:hover {
+  text-decoration: none;
 }
 
 /*-----------------------------------------------

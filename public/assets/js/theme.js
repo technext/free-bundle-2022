@@ -253,9 +253,7 @@ var navbarInit = function navbarInit() {
     NAV_ITEM: '.nav-item',
     NAVBAR: '.navbar',
     DROPDOWN: '.dropdown'
-  }; // const ClassNames = {
-  // 	COLLAPSED: 'collapsed'
-  // };
+  };
 
   var navbar = function navbar() {
     var totalWidth = 0;
@@ -264,23 +262,24 @@ var navbarInit = function navbarInit() {
     var navbarWidth = nav - dropdown;
     var elements = document.querySelectorAll('.nav-item');
     elements.forEach(function (item) {
-      var cw = item.clientWidth;
-      totalWidth += cw; // console.log(`totalWidth +${totalWidth}`);
-      // console.log(`navbar +${navbarWidth}`);
+      var itemWidth = item.clientWidth;
+      totalWidth = totalWidth + itemWidth;
 
       if (totalWidth > navbarWidth) {
         if (!item.classList.contains('dropdown')) {
           item.style.display = 'none';
-          var link = item.querySelector('.nav-link');
+          var link = item.firstChild;
+          var linkItem = link.cloneNode(true);
+          console.log(link); // var wrapper = document.createElement('li');
+          // wrapper.classList.add('nav-item');
+          // wrapper.innerHTML = link;
 
-          if (link != null) {
-            document.querySelector('.category-list').prepend(link);
-          }
+          document.querySelector('.category-list').appendChild(linkItem);
         }
       }
     });
-    var dropdownItem = document.querySelectorAll('.dropdown-menu .nav-link');
-    dropdownItem.forEach(function (item) {
+    var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
+    dropdownMenu.forEach(function (item) {
       item.classList.remove('nav-link');
       item.classList.add('dropdown-item');
     });
@@ -289,14 +288,14 @@ var navbarInit = function navbarInit() {
   navbar(); // Toggle bg class on window resize
 
   utils.resize(function () {
-    // let navItem = document.querySelectorAll('.nav-item');
-    // navItem.forEach(item => {
-    // 	item.style.display = 'block';
-    // });
-    // let categoryList = document.querySelectorAll('.category-list');
-    // categoryList.forEach(item => {
-    // 	item.innerHTML = ' ';
-    // });
+    var navElements = document.querySelectorAll('.nav-item');
+    navElements.forEach(function (item) {
+      item.style.display = 'block';
+    });
+    var dropElements = document.querySelectorAll('.category-list');
+    dropElements.forEach(function (item) {
+      item.innerHTML = ' ';
+    });
     navbar();
   });
 };
@@ -305,13 +304,12 @@ var navbarInit = function navbarInit() {
 
 var isotopeFilter = function isotopeFilter() {
   var iso = new Isotope('.grid', {
-    itemSelector: '.grid-item',
+    itemSelector: '.item',
     layoutMode: 'packery',
     masonry: {
       // use element for option
-      columnWidth: '.grid-item'
-    },
-    percentPosition: true
+      columnWidth: '.item'
+    }
   });
   var filtersElem = document.querySelectorAll('[data-bs-nav]');
   filtersElem.forEach(function (element) {

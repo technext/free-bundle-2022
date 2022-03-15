@@ -4,13 +4,12 @@ import utils from './utils';
 
 const isotopeFilter = () => {
 	var iso = new Isotope('.grid', {
-		itemSelector: '.grid-item',
+		itemSelector: '.item',
 		layoutMode: 'packery',
 		masonry: {
 			// use element for option
-			columnWidth: '.grid-item'
-		},
-		percentPosition: true
+			columnWidth: '.item'
+		}
 	});
 
 	var filtersElem = document.querySelectorAll('[data-bs-nav]');

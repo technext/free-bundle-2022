@@ -1,64 +1,13 @@
 append variables
-  - var CWD = './'
-
-  -
-    var data=[
-
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "01",
-      "item":"admin",
-      "category": "Admin & DashBoard"
-    },
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "02",
-      "item":"admin",
-      "category": "Admin & DashBoard"
-    },
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "03",
-      "item":"admin",
-      "category": "Admin & DashBoard"
-    },
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "04",
-      "item":"admin",
-      "category": "Admin & DashBoard"
-    },
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "05",
-      "item":"dash",
-      "category": "Admin & DashBoard"
-    },
-    {
-      "title": "Star Admin",
-      "link": "",
-      "img": "06",
-      "item":"business",
-      "category": "Admin & DashBoard"
-    },
-    ]
-
-
-
 
 
 mixin Item 
-  +Section
-    .grid
+  +Section.pt-0
+    .grid.mx-n3
       each val in data
-        div(data-category=`${val.item}` class=`item ${
+        a(href="#" data-category=`${val.item}` class=`item ${
           val.item
-        }`).col-md-4.grid-item.me-2
+        }`)
           +ItemCard(val)
 
 

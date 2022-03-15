@@ -11,10 +11,6 @@ const navbarInit = () => {
 		DROPDOWN: '.dropdown'
 	};
 
-	// const ClassNames = {
-	// 	COLLAPSED: 'collapsed'
-	// };
-
 	const navbar = () => {
 		let totalWidth = 0;
 
@@ -26,25 +22,26 @@ const navbarInit = () => {
 		let elements = document.querySelectorAll('.nav-item');
 
 		elements.forEach(item => {
-			let cw = item.clientWidth;
+			let itemWidth = item.clientWidth;
+			totalWidth = totalWidth + itemWidth;
 
-			totalWidth += cw;
-			// console.log(`totalWidth +${totalWidth}`);
-			// console.log(`navbar +${navbarWidth}`);
 			if (totalWidth > navbarWidth) {
 				if (!item.classList.contains('dropdown')) {
 					item.style.display = 'none';
-					let link = item.querySelector('.nav-link');
-					if (link != null) {
-						document.querySelector('.category-list').prepend(link);
-					}
+					let link = item.firstChild;
+					let linkItem = link.cloneNode(true);
+					console.log(link);
+					// var wrapper = document.createElement('li');
+					// wrapper.classList.add('nav-item');
+					// wrapper.innerHTML = link;
+
+					document.querySelector('.category-list').appendChild(linkItem);
 				}
 			}
 		});
+		let dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
 
-		let dropdownItem = document.querySelectorAll('.dropdown-menu .nav-link');
-
-		dropdownItem.forEach(item => {
+		dropdownMenu.forEach(item => {
 			item.classList.remove('nav-link');
 			item.classList.add('dropdown-item');
 		});
@@ -54,18 +51,14 @@ const navbarInit = () => {
 
 	// Toggle bg class on window resize
 	utils.resize(() => {
-		// let navItem = document.querySelectorAll('.nav-item');
-
-		// navItem.forEach(item => {
-		// 	item.style.display = 'block';
-		// });
-
-		// let categoryList = document.querySelectorAll('.category-list');
-
-		// categoryList.forEach(item => {
-		// 	item.innerHTML = ' ';
-		// });
-
+		let navElements = document.querySelectorAll('.nav-item');
+		navElements.forEach(item => {
+			item.style.display = 'block';
+		});
+		let dropElements = document.querySelectorAll('.category-list');
+		dropElements.forEach(item => {
+			item.innerHTML = ' ';
+		});
 		navbar();
 	});
 };

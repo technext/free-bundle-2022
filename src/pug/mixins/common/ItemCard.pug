@@ -1,7 +1,7 @@
 mixin ItemCard(props)
 
-  .card.shadow-lg.p-3.mb-2.bg-white.rounded
+  .card.shadow-lg.mb-2.bg-white.rounded
     .card-body.text-center
       .card-title=props.title
       .card-text=props.category
-    img.card-img-bottom(src=`${CWD}assets/img/template/tabler${props.img}.png`  alt="Feature")
+    img.card-img-bottom(src=`${CWD}assets/img/template/${props.img}`  alt="Feature")
