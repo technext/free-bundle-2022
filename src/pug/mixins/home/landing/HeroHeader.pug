@@ -1,10 +1,9 @@
 append variables 
   -
     var background={
-      "className":"z-index--1 bottom-0 d-none d-lg-block ",
-      "image":`${CWD}assets/img/superhero/background.jpg`,
+      "className":"z-index--1 bottom-0",
       attrs:{
-        style:'opacity:.9; background-position: top !important ;,height:100%;width:100%'
+        style:' background: linear-gradient(to right, #43cea2, #185a9d);' 
       }
     }
 
@@ -13,17 +12,15 @@ append variables
 
 
 mixin HeroHeader
-  +Section.py-5
-    .row
-      .col-md-6.align-self-center
-        h1.fs-lg-10.fs-md-10.fw-bold ThemeWagon
-        h2.fs-4 HTML5 Template Collection 2022
-        h5.mt-3 One Hundred Pre-build website
-        a.btn.btn-primary.mt-2.mt-lg-5
-          i.fas.fa-cloud-download-alt.me-3
-          |Download Free
-      .col-md-6.d-flex.align-items-center
-        img(src=`${CWD}assets/img/superhero/background.jpg`).img-fluid.d-sm-none.d-lg-block
+  +Section(background).py-10
+    .container.text-center
+      h1.text-white.fs-lg-13.fs-md-10.fw-bold ThemeWagon
+      h4.text-white HTML5 Template Collection 2022
+      h5.text-white One Hundred Pre-build website
+      a.text-white.btn.btn-primary.mt-2.mt-lg-5
+        i.fas.fa-cloud-download-alt.me-3
+        |Download Free
+    //- img(src=`${CWD}assets/img/superhero/alternate.webp`).img-fluid.d-sm-none.d-lg-block
 
 
 

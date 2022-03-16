@@ -21,6 +21,15 @@ const isotopeFilter = () => {
 			iso.arrange({ filter: filterValue });
 		});
 	});
+
+	var dropDownEl = document.querySelectorAll('.dropdown-item');
+	dropDownEl.forEach(element => {
+		element.addEventListener('click', function (event) {
+			var filterValue = event.target.getAttribute('data-filter');
+
+			iso.arrange({ filter: filterValue });
+		});
+	});
 };
 
 export default isotopeFilter;

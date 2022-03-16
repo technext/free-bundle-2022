@@ -5,7 +5,7 @@ mixin Item
   +Section.pt-0
     .grid.mx-n3
       each val in data
-        a(href="#" data-category=`${val.item}` class=`item ${
+        a(href=`${val.preview}` data-category=`${val.item}` class=`item ${
           val.item
         }`)
           +ItemCard(val)

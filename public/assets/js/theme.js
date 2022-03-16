@@ -320,6 +320,15 @@ var isotopeFilter = function isotopeFilter() {
       });
     });
   });
+  var dropDownEl = document.querySelectorAll('.dropdown-item');
+  dropDownEl.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var filterValue = event.target.getAttribute('data-filter');
+      iso.arrange({
+        filter: filterValue
+      });
+    });
+  });
 };
 /* -------------------------------------------------------------------------- */
 
