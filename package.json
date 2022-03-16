@@ -1,7 +1,7 @@
 {
-	"name": "Productly",
+	"name": "Showcase",
 	"version": "1.0.0",
-	"description": "Landing, Responsive & Business Template",
+	"description": "One Hundred Pre-build website",
 	"main": "gulpfile.js",
 	"scripts": {
 		"start": "gulp",
