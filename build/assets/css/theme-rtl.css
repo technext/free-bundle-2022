@@ -19572,11 +19572,6 @@ iframe {
   z-index: 999;
 }
 
-.content .grid {
-  margin-left: -6px;
-  margin-right: -6px;
-}
-
 .grid .item {
   width: 33.33%;
   display: block;

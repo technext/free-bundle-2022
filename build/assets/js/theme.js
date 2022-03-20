@@ -298,6 +298,21 @@ var navbarInit = function navbarInit() {
     });
     navbar();
   });
+  var backToToP = document.querySelector('.back-to-top');
+  var navbarEl = document.querySelector('.navbar');
+
+  var myScrollFunc = function myScrollFunc() {
+    var y = window.scrollY;
+
+    if (y >= 540) {
+      backToToP.style.opacity = '1';
+      navbarEl.classList.add('sticky-top');
+    } else {
+      backToToP.style.opacity = '0';
+    }
+  };
+
+  window.addEventListener('scroll', myScrollFunc);
 };
 /*eslint-disable*/
 
