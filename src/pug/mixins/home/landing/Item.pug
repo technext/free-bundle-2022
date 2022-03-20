@@ -2,7 +2,7 @@ append variables
 
 
 mixin Item 
-  +Section.pt-0
+  section.pt-0.w-100.position-relative
     .grid.mx-n3
       each val in data
         a(href=`${val.preview}` data-category=`${val.item}` class=`item ${

@@ -10,7 +10,5 @@ import isotopeFilter from './isotope';
 
 docReady(navbarInit);
 docReady(detectorInit);
-
 docReady(scrollToTop);
-
 docReady(isotopeFilter);
