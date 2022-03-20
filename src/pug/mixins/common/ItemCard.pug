@@ -2,7 +2,7 @@ mixin ItemCard(props)
 
   .card.shadow-lg.mb-2.bg-white.rounded
     .card-body.text-center
-      .card-title=props.title
+      .card-title.fw-bold.text-primary=props.title
       .card-text=props.category
     img.card-img-bottom(src=`${CWD}assets/img/template/${props.img}`  alt="Feature")
 

@@ -23,3 +23,22 @@
 .nav-link{
   white-space: nowrap;
 }
+
+.back-to-top{
+   position: fixed;
+    bottom: toRem(20);
+    right: toRem(20);
+    height:toRem(40);
+    width:toRem(40);
+    box-shadow: 0 toRem(4)  toRem(4);;
+    text-align: center;
+    line-height: toRem(40);
+    text-align: center;
+    opacity: 0;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    z-index: 999;
+
+
+}
