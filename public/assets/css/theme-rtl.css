@@ -19504,6 +19504,7 @@ iframe {
 
 .card {
   border: none;
+  background: transparent;
 }
 
 .input-group-icon {
