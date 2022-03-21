@@ -25,5 +25,9 @@
 	"isotope-packery": {
 		"src": "packery-mode.pkgd.min.js",
 		"dest": "isotope-packery"
+	},
+	"imagesloaded": {
+		"src": ["imagesloaded.pkgd.js"],
+		"dest": "imagesloaded"
 	}
 }

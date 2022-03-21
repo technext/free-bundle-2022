@@ -3,3 +3,14 @@
   background: transparent;
 }
 
+.card-showcase{
+  transition: .5s ease;
+  border: 0 1px solid rgba(90,122,190,.12)!important;
+  box-shadow: 0 7px 14px 0 rgba(90,122,190,.13),0 3px 6px 0 rgba(90,122,190,.09);
+
+}
+
+.card-showcase:hover{
+  box-shadow: 0 9px 22px 0 rgba(90,122,190,.13),0 6px 15px 0 rgba(90,122,190,.09);
+  transform: translateY(-5px);
+}

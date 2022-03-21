@@ -1,27 +1,27 @@
 append variables
 
 
-mixin Item 
-  section.pt-0.w-100.position-relative
-    .grid.mx-n3
-      each val in data
-        a(href=`${val.preview}` data-category=`${val.item}` class=`item ${
-          val.item
-        }`)
-          +ItemCard(val)
-
-
-
 //- mixin Item 
-//-   section.pt-0
-//-     .container-fluid
-//-       .row(data-isotope={"layoutMode": 'packery'}  )
-//-         each val in data
-//-           .col-lg-4.col-md-6(data-bs-grid)
-//-             a(href=`${val.preview}`  data-category=`${val.item}`   class=`item ${
+//-   section.pt-0.w-100.position-relative
+//-     .grid.mx-n3
+//-       each val in data
+//-         a(href=`${val.preview}` data-category=`${val.item}` class=`item ${
 //-           val.item
-//-             }`)
-//-               +ItemCard(val)
+//-         }`)
+//-           +ItemCard(val)
+
+
+
+mixin Item 
+  .row.mt-4( data-isotope!={
+    layoutMode: 'packery',   
+  })
+    each val in data
+      .col-lg-4.col-md-6.isotope-item.mb-3(class=`item ${
+      val.item
+        }`)
+          a(href=`${val.preview}`  data-category=`${val.item}`).text-decoration-none
+            +ItemCard(val)
 
 
 
