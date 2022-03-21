@@ -19504,6 +19504,24 @@ iframe {
 
 .card {
   border: none;
+  background: transparent;
+}
+
+.card-showcase {
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  border: 0 1px solid rgba(90, 122, 190, 0.12) !important;
+  -webkit-box-shadow: 0 7px 14px 0 rgba(90, 122, 190, 0.13), 0 3px 6px 0 rgba(90, 122, 190, 0.09);
+  box-shadow: 0 7px 14px 0 rgba(90, 122, 190, 0.13), 0 3px 6px 0 rgba(90, 122, 190, 0.09);
+}
+
+.card-showcase:hover {
+  -webkit-box-shadow: 0 9px 22px 0 rgba(90, 122, 190, 0.13), 0 6px 15px 0 rgba(90, 122, 190, 0.09);
+  box-shadow: 0 9px 22px 0 rgba(90, 122, 190, 0.13), 0 6px 15px 0 rgba(90, 122, 190, 0.09);
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .input-group-icon {

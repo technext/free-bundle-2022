@@ -316,34 +316,55 @@ var navbarInit = function navbarInit() {
 };
 /*eslint-disable*/
 
+/*-----------------------------------------------
+|                     Isotope
+-----------------------------------------------*/
+
 
 var isotopeFilter = function isotopeFilter() {
-  var iso = new Isotope('.grid', {
-    itemSelector: '.item',
-    layoutMode: 'packery',
-    masonry: {
-      // use element for option
-      columnWidth: '.item'
-    }
-  });
-  var filtersElem = document.querySelectorAll('[data-bs-nav]');
-  filtersElem.forEach(function (element) {
-    element.addEventListener('click', function (event) {
-      var filterValue = event.target.getAttribute('data-filter');
-      iso.arrange({
-        filter: filterValue
+  var Selector = {
+    ISOTOPE_ITEM: '.isotope-item',
+    DATA_ISOTOPE: '[data-isotope]',
+    DATA_FILTER: '[data-filter]',
+    DATA_FILER_NAV: '[data-bs-nav]'
+  };
+  var DATA_KEY = {
+    ISOTOPE: 'isotope'
+  };
+  var ClassName = {
+    ACTIVE: 'active'
+  };
+
+  if (window.Isotope) {
+    var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
+    masonryItems.length && masonryItems.forEach(function (masonryItem) {
+      window.imagesLoaded(masonryItem, function () {
+        console.log('running');
+        masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
+          // eslint-disable-next-line
+          item.style.visibility = 'visible';
+        });
+        var defaultOptions = {
+          itemSelector: Selector.ISOTOPE_ITEM,
+          layoutMode: 'packery'
+        }; // const options = window._.merge(defaultOptions, userOptions);
+
+        var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
+
+        var filtersElem = document.querySelectorAll('[data-bs-nav]');
+        filtersElem.forEach(function (element) {
+          element.addEventListener('click', function (event) {
+            var filterValue = event.target.getAttribute('data-filter');
+            isotope.arrange({
+              filter: filterValue
+            });
+          });
+        }); //---------- filter end ------------
+
+        return isotope;
       });
     });
-  });
-  var dropDownEl = document.querySelectorAll('.dropdown-item');
-  dropDownEl.forEach(function (element) {
-    element.addEventListener('click', function (event) {
-      var filterValue = event.target.getAttribute('data-filter');
-      iso.arrange({
-        filter: filterValue
-      });
-    });
-  });
+  }
 };
 /* -------------------------------------------------------------------------- */
 
