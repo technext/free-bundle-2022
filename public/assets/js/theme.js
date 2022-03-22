@@ -307,8 +307,12 @@ var navbarInit = function navbarInit() {
     if (y >= 540) {
       backToToP.style.opacity = '1';
       navbarEl.classList.add('sticky-top');
+      navbarEl.classList.add('bg-light');
+      navbarEl.classList.add('opacity-75');
     } else {
       backToToP.style.opacity = '0';
+      navbarEl.classList.remove('bg-light');
+      navbarEl.classList.remove('opacity-75');
     }
   };
 
@@ -353,6 +357,15 @@ var isotopeFilter = function isotopeFilter() {
 
         var filtersElem = document.querySelectorAll('[data-bs-nav]');
         filtersElem.forEach(function (element) {
+          element.addEventListener('click', function (event) {
+            var filterValue = event.target.getAttribute('data-filter');
+            isotope.arrange({
+              filter: filterValue
+            });
+          });
+        });
+        var dropDownEl = document.querySelectorAll('.dropdown-item');
+        dropDownEl.forEach(function (element) {
           element.addEventListener('click', function (event) {
             var filterValue = event.target.getAttribute('data-filter');
             isotope.arrange({

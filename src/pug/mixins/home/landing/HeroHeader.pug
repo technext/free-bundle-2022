@@ -1,31 +1,50 @@
 append variables 
   -
-    var background={
-      "className":"z-index--1 bottom-0",
+    var gradient={
+      "className":" bottom-0",
+        //- "image":`${CWD}assets/img/hero/background.png`,
+        //- "gradient":"linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);" 
       attrs:{
-        style:' background: linear-gradient(to right, #43cea2, #185a9d);' 
+        style:'background-image:linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);' 
       }
+    }
+    var background={
+      "className":" bottom-0",
+        "image":`${CWD}assets/img/hero/background.png`,
+        //- "gradient":"linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);" 
+        //- attrs:{
+        //-   style:'background-image:linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);' 
+        //- }
+    }
+    var frame={
+      "className":"bottom-0 ",
+        "image":`${CWD}assets/img/hero/frame.png`,
+        //- "gradient":"linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);" 
+        attrs:{
+          style:'background-size: auto;background-position: bottom;' 
+        }
     }
 
 
 
 
 
+
 mixin HeroHeader
-  +Section(background).py-10
-    .shape
-      span
-      span
-      span
-      span
-    .container.text-center
-      h1.text-white.fs-lg-13.fs-md-10.fw-bold ThemeWagon
-      h4.text-white HTML5 Template Collection 2022
-      h5.text-white One Hundred Pre-build website
-      a.text-white.btn.btn-primary.mt-2.mt-lg-5
-        i.fas.fa-cloud-download-alt.me-3
-        |Download Free
-    //- img(src=`${CWD}assets/img/superhero/alternate.webp`).img-fluid.d-sm-none.d-lg-block
+  +Section(gradient,"container-fluid").py-0
+    +Background(background)
+      .container.text-center.py-9.z-index-1
+        img(src=`${CWD}assets/img/hero/final.png`  alt="Feature").mb-4.mt-6
+        p.text-white.fw-medium 
+          |HTML5 Template Collection 2022
+          br
+          |One Hundred Pre-build website
+
+        a.text-black.btn.btn-info.mt-2.mt-lg-5.mb-5
+          i.fas.fa-download.me-3
+          |Download Free
+    +Background(frame)
+
 
 
 

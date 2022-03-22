@@ -48,7 +48,7 @@ $gray-600:  #F0F4F9!default;
 $gray-700:  #2F281E !default; //made changes here
 $gray-800: #979797 !default; //made changes here
 $gray-900: #6e6d7a !default;
-$gray-1000: #0d0c22 !default;
+$gray-1000: #133537!default;
 $black: #000 !default; 
 
 $grays: () !default;
@@ -80,13 +80,13 @@ $pink: #D42DA3 !default;
 $red: #DF6951 !default;
 $orange: #DF6951 !default;
 $yellow:#FF9900 !default; //made changes here
-$green: #79B93C !default;
+$green: #5BC142!default;
 $teal: #567592 !default;
-$cyan: #2fc4f1 !default;
+$cyan: #53F5FF !default;
 $light: #F0F4F9 !default;
 $dark-blue:  #2F281E!default; //changed to #2F281E
 $dark-grey:#544837!default;
-$navy-blue: #BCD0E5 !default;
+$navy-blue: #B9B9B9!default;
 
 
 //*-----------------------------------------------
@@ -95,10 +95,10 @@ $navy-blue: #BCD0E5 !default;
 $primary: $blue !default;
 $secondary: $gray-900  !default;
 $success: $green !default;
-$info: $teal !default;
+$info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $light !default;
+$light: $navy-blue !default;
 $dark: $gray-800 !default;
 
 $theme-colors: () !default;
@@ -165,7 +165,7 @@ $brand-colors: map-merge(
 //*-----------------------------------------------
 //|   Border
 //-----------------------------------------------*/
-$border-color: $gray-300 !default;
+$border-color: $navy-blue !default;
 $border-width: 1px !default;
 
 // Options
@@ -197,7 +197,7 @@ $spacers: map-merge(
     0: 0,
     1: $spacer * 0.25,
     2: $spacer * 0.5,
-    3: $spacer,
+    3: $spacer * 1.5,
     4: $spacer * 1.8,
     5: $spacer * 2.5,
     6: $spacer * 3,
@@ -231,7 +231,7 @@ $link-hover-decoration: underline;
 //*-----------------------------------------------
 //|   Components
 //-----------------------------------------------*/
-$border-radius: .25rem !default;
+$border-radius: .5rem !default;
 $border-radius-sm: 0.25rem !default;
 $border-radius-lg: 2.25rem !default;
 
@@ -361,16 +361,16 @@ $input-btn-padding-x:         1.563rem !default;
 //|   Navigation
 //-----------------------------------------------*/
 $navbar-font-size: $font-size-base !default;
-$navbar-light-color: $gray-900 !default;
-$navbar-light-hover-color: $gray-1000 !default;
-$navbar-light-active-color: $gray-1000 !default;
+$navbar-light-color: $gray-1000 !default;
+$navbar-light-hover-color: $green !default;
+$navbar-light-active-color: $green!default;
 $navbar-light-disabled-color: rgba($black, 0.25) !default;
 
 $navbar-dark-color: rgba($white, .7) !default;
 $navbar-dark-hover-color: rgba($white, 0.9) !default;
 
 $navbar-padding-y: map_get($spacers, 3) !default;
-$navbar-padding-x: $spacer !default;
+$navbar-padding-x: map_get($spacers, 1) !default;
 $top-nav-height: 4.3125rem !default;
 $standard-nav-height: 3.5625rem !default;
 

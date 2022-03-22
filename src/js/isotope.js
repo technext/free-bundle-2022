@@ -49,6 +49,15 @@ const isotopeFilter = () => {
 						});
 					});
 
+					let dropDownEl = document.querySelectorAll('.dropdown-item');
+					dropDownEl.forEach(element => {
+						element.addEventListener('click', function (event) {
+							let filterValue = event.target.getAttribute('data-filter');
+
+							isotope.arrange({ filter: filterValue });
+						});
+					});
+
 					//---------- filter end ------------
 
 					return isotope;
