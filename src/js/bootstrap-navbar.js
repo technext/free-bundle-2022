@@ -30,10 +30,6 @@ const navbarInit = () => {
 					item.style.display = 'none';
 					let link = item.firstChild;
 					let linkItem = link.cloneNode(true);
-					console.log(link);
-					// var wrapper = document.createElement('li');
-					// wrapper.classList.add('nav-item');
-					// wrapper.innerHTML = link;
 
 					document.querySelector('.category-list').appendChild(linkItem);
 				}

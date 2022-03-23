@@ -270,10 +270,6 @@ var navbarInit = function navbarInit() {
           item.style.display = 'none';
           var link = item.firstChild;
           var linkItem = link.cloneNode(true);
-          console.log(link); // var wrapper = document.createElement('li');
-          // wrapper.classList.add('nav-item');
-          // wrapper.innerHTML = link;
-
           document.querySelector('.category-list').appendChild(linkItem);
         }
       }
@@ -332,18 +328,11 @@ var isotopeFilter = function isotopeFilter() {
     DATA_FILTER: '[data-filter]',
     DATA_FILER_NAV: '[data-bs-nav]'
   };
-  var DATA_KEY = {
-    ISOTOPE: 'isotope'
-  };
-  var ClassName = {
-    ACTIVE: 'active'
-  };
 
   if (window.Isotope) {
     var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
     masonryItems.length && masonryItems.forEach(function (masonryItem) {
       window.imagesLoaded(masonryItem, function () {
-        console.log('running');
         masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
           // eslint-disable-next-line
           item.style.visibility = 'visible';
@@ -351,8 +340,7 @@ var isotopeFilter = function isotopeFilter() {
         var defaultOptions = {
           itemSelector: Selector.ISOTOPE_ITEM,
           layoutMode: 'packery'
-        }; // const options = window._.merge(defaultOptions, userOptions);
-
+        };
         var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
 
         var filtersElem = document.querySelectorAll('[data-bs-nav]');

@@ -13,19 +13,11 @@ const isotopeFilter = () => {
 		DATA_FILER_NAV: '[data-bs-nav]'
 	};
 
-	const DATA_KEY = {
-		ISOTOPE: 'isotope'
-	};
-	const ClassName = {
-		ACTIVE: 'active'
-	};
-
 	if (window.Isotope) {
 		const masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
 		masonryItems.length &&
 			masonryItems.forEach(masonryItem => {
 				window.imagesLoaded(masonryItem, () => {
-					console.log('running');
 					masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(item => {
 						// eslint-disable-next-line
 						item.style.visibility = 'visible';
@@ -35,7 +27,6 @@ const isotopeFilter = () => {
 						itemSelector: Selector.ISOTOPE_ITEM,
 						layoutMode: 'packery'
 					};
-					// const options = window._.merge(defaultOptions, userOptions);
 					const isotope = new window.Isotope(masonryItem, defaultOptions);
 
 					//--------- filter -----------------
