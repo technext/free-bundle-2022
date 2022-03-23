@@ -333,7 +333,7 @@ var isotopeFilter = function isotopeFilter() {
   if (window.Isotope) {
     var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
     masonryItems.length && masonryItems.forEach(function (masonryItem) {
-      imagesLoaded(masonryItem, function () {
+      window.imagesLoaded(masonryItem, function () {
         masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
           // eslint-disable-next-line
           item.style.visibility = 'visible';
@@ -341,7 +341,8 @@ var isotopeFilter = function isotopeFilter() {
         var defaultOptions = {
           itemSelector: Selector.ISOTOPE_ITEM,
           layoutMode: 'packery'
-        };
+        }; // const options = window._.merge(defaultOptions, userOptions);
+
         var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
 
         var filtersElem = document.querySelectorAll('[data-bs-nav]');

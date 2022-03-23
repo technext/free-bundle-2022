@@ -254,11 +254,23 @@ var navbarInit = function navbarInit() {
     NAVBAR: '.navbar',
     DROPDOWN: '.dropdown'
   };
+  utils.resize(function () {
+    var navElements = document.querySelectorAll('.nav-item');
+    navElements.forEach(function (item) {
+      item.style.display = 'block';
+    });
+    var dropElements = document.querySelectorAll('.category-list');
+    dropElements.forEach(function (item) {
+      item.innerHTML = ' ';
+    });
+    navbar();
+  });
 
   var navbar = function navbar() {
     var totalWidth = 0;
     var nav = document.querySelector(Selector.NAVBAR).clientWidth;
-    var dropdown = document.querySelector('.navbar .dropdown').clientWidth;
+    var dropdown = document.querySelector('.dropdown').clientWidth; // let navbarNav = document.querySelector('.navbar-nav').clientWidth;
+
     var navbarWidth = nav - dropdown;
     var elements = document.querySelectorAll('.nav-item');
     elements.forEach(function (item) {
@@ -270,10 +282,6 @@ var navbarInit = function navbarInit() {
           item.style.display = 'none';
           var link = item.firstChild;
           var linkItem = link.cloneNode(true);
-          console.log(link); // var wrapper = document.createElement('li');
-          // wrapper.classList.add('nav-item');
-          // wrapper.innerHTML = link;
-
           document.querySelector('.category-list').appendChild(linkItem);
         }
       }
@@ -287,17 +295,6 @@ var navbarInit = function navbarInit() {
 
   navbar(); // Toggle bg class on window resize
 
-  utils.resize(function () {
-    var navElements = document.querySelectorAll('.nav-item');
-    navElements.forEach(function (item) {
-      item.style.display = 'block';
-    });
-    var dropElements = document.querySelectorAll('.category-list');
-    dropElements.forEach(function (item) {
-      item.innerHTML = ' ';
-    });
-    navbar();
-  });
   var backToToP = document.querySelector('.back-to-top');
   var navbarEl = document.querySelector('.navbar');
 
@@ -336,7 +333,7 @@ var isotopeFilter = function isotopeFilter() {
   if (window.Isotope) {
     var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
     masonryItems.length && masonryItems.forEach(function (masonryItem) {
-      window.imagesLoaded(masonryItem, function () {
+      imagesLoaded(masonryItem, function () {
         masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
           // eslint-disable-next-line
           item.style.visibility = 'visible';
