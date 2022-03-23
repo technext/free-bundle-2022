@@ -369,7 +369,7 @@ $navbar-light-disabled-color: rgba($black, 0.25) !default;
 $navbar-dark-color: rgba($white, .7) !default;
 $navbar-dark-hover-color: rgba($white, 0.9) !default;
 
-$navbar-padding-y: map_get($spacers, 3) !default;
+$navbar-padding-y: map_get($spacers, 2) !default;
 $navbar-padding-x: map_get($spacers, 1) !default;
 $top-nav-height: 4.3125rem !default;
 $standard-nav-height: 3.5625rem !default;
