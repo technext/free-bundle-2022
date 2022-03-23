@@ -11,11 +11,25 @@ const navbarInit = () => {
 		DROPDOWN: '.dropdown'
 	};
 
+	utils.resize(() => {
+		let navElements = document.querySelectorAll('.nav-item');
+		navElements.forEach(item => {
+			item.style.display = 'block';
+		});
+		let dropElements = document.querySelectorAll('.category-list');
+		dropElements.forEach(item => {
+			item.innerHTML = ' ';
+		});
+		navbar();
+	});
+
 	const navbar = () => {
 		let totalWidth = 0;
 
 		let nav = document.querySelector(Selector.NAVBAR).clientWidth;
-		let dropdown = document.querySelector('.navbar .dropdown').clientWidth;
+		let dropdown = document.querySelector('.dropdown').clientWidth;
+
+		// let navbarNav = document.querySelector('.navbar-nav').clientWidth;
 
 		let navbarWidth = nav - dropdown;
 
@@ -30,10 +44,6 @@ const navbarInit = () => {
 					item.style.display = 'none';
 					let link = item.firstChild;
 					let linkItem = link.cloneNode(true);
-					console.log(link);
-					// var wrapper = document.createElement('li');
-					// wrapper.classList.add('nav-item');
-					// wrapper.innerHTML = link;
 
 					document.querySelector('.category-list').appendChild(linkItem);
 				}
@@ -50,17 +60,6 @@ const navbarInit = () => {
 	navbar();
 
 	// Toggle bg class on window resize
-	utils.resize(() => {
-		let navElements = document.querySelectorAll('.nav-item');
-		navElements.forEach(item => {
-			item.style.display = 'block';
-		});
-		let dropElements = document.querySelectorAll('.category-list');
-		dropElements.forEach(item => {
-			item.innerHTML = ' ';
-		});
-		navbar();
-	});
 
 	let backToToP = document.querySelector('.back-to-top');
 	let navbarEl = document.querySelector('.navbar');

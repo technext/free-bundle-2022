@@ -17,7 +17,7 @@ const isotopeFilter = () => {
 		const masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
 		masonryItems.length &&
 			masonryItems.forEach(masonryItem => {
-				window.imagesLoaded(masonryItem, () => {
+				imagesLoaded(masonryItem, () => {
 					masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(item => {
 						// eslint-disable-next-line
 						item.style.visibility = 'visible';
