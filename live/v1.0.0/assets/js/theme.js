@@ -342,39 +342,38 @@ var isotopeFilter = function isotopeFilter() {
   if (window.Isotope) {
     var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
     masonryItems.length && masonryItems.forEach(function (masonryItem) {
-      window.imagesLoaded(masonryItem, function () {
-        masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(function (item) {
-          // eslint-disable-next-line
-          item.style.visibility = 'visible';
-        });
-        var defaultOptions = {
-          itemSelector: Selector.ISOTOPE_ITEM,
-          layoutMode: 'packery'
-        }; // const options = window._.merge(defaultOptions, userOptions);
+      // window.imagesLoaded(masonryItem, () => {
+      // 	masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(item => {
+      // 		// eslint-disable-next-line
+      // 		item.style.visibility = 'visible';
+      // 	});
+      var defaultOptions = {
+        itemSelector: Selector.ISOTOPE_ITEM,
+        layoutMode: 'packery'
+      }; // const options = window._.merge(defaultOptions, userOptions);
 
-        var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
+      var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
 
-        var filtersElem = document.querySelectorAll('[data-bs-nav]');
-        filtersElem.forEach(function (element) {
-          element.addEventListener('click', function (event) {
-            var filterValue = event.target.getAttribute('data-filter');
-            isotope.arrange({
-              filter: filterValue
-            });
+      var filtersElem = document.querySelectorAll('[data-bs-nav]');
+      filtersElem.forEach(function (element) {
+        element.addEventListener('click', function (event) {
+          var filterValue = event.target.getAttribute('data-filter');
+          isotope.arrange({
+            filter: filterValue
           });
         });
-        var dropDownEl = document.querySelectorAll('.dropdown-item');
-        dropDownEl.forEach(function (element) {
-          element.addEventListener('click', function (event) {
-            var filterValue = event.target.getAttribute('data-filter');
-            isotope.arrange({
-              filter: filterValue
-            });
-          });
-        }); //---------- filter end ------------
-
-        return isotope;
       });
+      var dropDownEl = document.querySelectorAll('.dropdown-item');
+      dropDownEl.forEach(function (element) {
+        element.addEventListener('click', function (event) {
+          var filterValue = event.target.getAttribute('data-filter');
+          isotope.arrange({
+            filter: filterValue
+          });
+        });
+      }); //---------- filter end ------------
+
+      return isotope; // });
     });
   }
 };
