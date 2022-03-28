@@ -14,7 +14,7 @@ const navbarInit = () => {
 	utils.resize(() => {
 		let navElements = document.querySelectorAll('.nav-item');
 		navElements.forEach(item => {
-			item.style.display = 'block';
+			item.removeAttribute('style');
 		});
 		let dropElements = document.querySelectorAll('.category-list');
 		dropElements.forEach(item => {
@@ -37,6 +37,7 @@ const navbarInit = () => {
 
 		elements.forEach(item => {
 			let itemWidth = item.clientWidth;
+			console.log(itemWidth);
 			totalWidth = totalWidth + itemWidth;
 
 			if (totalWidth > navbarWidth) {
@@ -49,6 +50,9 @@ const navbarInit = () => {
 				}
 			}
 		});
+		console.log('total width : ' + totalWidth);
+		console.log('navbar width : ' + navbarWidth);
+
 		let dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
 
 		dropdownMenu.forEach(item => {
@@ -70,13 +74,21 @@ const navbarInit = () => {
 			backToToP.style.opacity = '1';
 			navbarEl.classList.add('sticky-top');
 			navbarEl.classList.add('bg-light');
-			navbarEl.classList.add('opacity-75');
 		} else {
 			backToToP.style.opacity = '0';
 			navbarEl.classList.remove('bg-light');
-			navbarEl.classList.remove('opacity-75');
 		}
 	};
+
+	let navbarLink = document.querySelectorAll('.nav-link');
+
+	document.addEventListener('click', function (e) {
+		for (let x = 0; x < navbarLink.length; x++) {
+			navbarLink[x].classList.remove('active');
+		}
+
+		e.target.closest('li').classList.add('active');
+	});
 
 	window.addEventListener('scroll', myScrollFunc);
 };
