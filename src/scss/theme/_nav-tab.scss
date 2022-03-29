@@ -46,3 +46,28 @@
 .sticky-top{
   top:toRem(30);
 }
+
+// .clearfix::after {
+//   display: block;
+//   clear: both;
+//   content: "";
+// }
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

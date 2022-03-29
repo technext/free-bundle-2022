@@ -59,6 +59,10 @@ const navbarInit = () => {
 		});
 	};
 
+	window.addEventListener('DOMContentLoaded', event => {
+		navbar();
+	});
+
 	navbar();
 
 	// Toggle bg class on window resize

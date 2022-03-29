@@ -1,14 +1,11 @@
 append variables
 mixin Item 
-  .row.mt-4( data-isotope!={
-    layoutMode: 'packery',   
-  })
+  .row.mt-4.grid
     each val in data
-      .col-lg-4.col-md-6.isotope-item.mb-3(class=`item ${
+      .col-lg-4.col-md-6.item.mb-3(class=`item ${
       val.item
         }`)
           a(href=`${val.preview}`  data-category=`${val.item}`).text-decoration-none
             +ItemCard(val)
-
 
 

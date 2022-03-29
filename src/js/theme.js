@@ -4,9 +4,9 @@ import detectorInit from './detector';
 import scrollToTop from './scroll-to-top';
 import isotopeFilter from './isotope';
 
-// /* -------------------------------------------------------------------------- */
-// /*                            Theme Initialization                            */
-// /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                            Theme Initialization                            */
+/* -------------------------------------------------------------------------- */
 
 docReady(navbarInit);
 docReady(detectorInit);
