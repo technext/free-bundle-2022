@@ -293,6 +293,9 @@ var navbarInit = function navbarInit() {
     });
   };
 
+  window.addEventListener('DOMContentLoaded', function (event) {
+    navbar();
+  });
   navbar(); // Toggle bg class on window resize
 
   var backToToP = document.querySelector('.back-to-top');
@@ -326,54 +329,70 @@ var navbarInit = function navbarInit() {
 /*-----------------------------------------------
 |                     Isotope
 -----------------------------------------------*/
+// const isotopeFilter = () => {
+// 	const Selector = {
+// 		ISOTOPE_ITEM: '.isotope-item',
+// 		DATA_ISOTOPE: '[grid]',
+// 		DATA_FILTER: '[data-filter]',
+// 		DATA_FILER_NAV: '[data-bs-nav]'
+// 	};
+// // 	window.addEventListener('load', event => {
+// // 		if (window.Isotope) {
+// // 			const masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
+// // 			console.log(masonryItems);
+// // 			masonryItems.length &&
+// // 				masonryItems.forEach(masonryItem => {
+// // 					// masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(item => {
+// // 					// 	// eslint-disable-next-line
+// // 					// 	item.style.visibility = 'visible';
+// // 					// });
+// // 					const defaultOptions = {
+// // 						itemSelector: Selector.ISOTOPE_ITEM,
+// // 						layoutMode: 'packery'
+// // 					};
+// // 					// const options = window._.merge(defaultOptions, userOptions);
+// // 					const isotope = new window.Isotope(masonryItem, defaultOptions);
+// // 					//--------- filter -----------------
+// // 					let filtersElem = document.querySelectorAll('[data-bs-nav]');
+// // 					filtersElem.forEach(element => {
+// // 						element.addEventListener('click', function (event) {
+// // 							let filterValue = event.target.getAttribute('data-filter');
+// // 							isotope.arrange({ filter: filterValue });
+// // 						});
+// // 					});
+// // 					let dropDownEl = document.querySelectorAll('.dropdown-item');
+// // 					dropDownEl.forEach(element => {
+// // 						element.addEventListener('click', function (event) {
+// // 							let filterValue = event.target.getAttribute('data-filter');
+// // 							isotope.arrange({ filter: filterValue });
+// // 						});
+// // 					});
+// // 					//---------- filter end ------------
+// // 					return isotope;
+// // 				});
+// // 		}
+// // 	});
+// // };
 
 
 var isotopeFilter = function isotopeFilter() {
-  var Selector = {
-    ISOTOPE_ITEM: '.isotope-item',
-    DATA_ISOTOPE: '[data-isotope]',
-    DATA_FILTER: '[data-filter]',
-    DATA_FILER_NAV: '[data-bs-nav]'
-  };
   window.addEventListener('load', function (event) {
-    if (window.Isotope) {
-      var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
-      masonryItems.length && masonryItems.forEach(function (masonryItem) {
-        window.imagesLoaded(masonryItem, function () {
-          // masonryItem.querySelectorAll(Selector.ISOTOPE_ITEM).forEach(item => {
-          // 	// eslint-disable-next-line
-          // 	item.style.visibility = 'visible';
-          // });
-          var defaultOptions = {
-            itemSelector: Selector.ISOTOPE_ITEM,
-            layoutMode: 'packery'
-          }; // const options = window._.merge(defaultOptions, userOptions);
-
-          var isotope = new window.Isotope(masonryItem, defaultOptions); //--------- filter -----------------
-
-          var filtersElem = document.querySelectorAll('[data-bs-nav]');
-          filtersElem.forEach(function (element) {
-            element.addEventListener('click', function (event) {
-              var filterValue = event.target.getAttribute('data-filter');
-              isotope.arrange({
-                filter: filterValue
-              });
-            });
-          });
-          var dropDownEl = document.querySelectorAll('.dropdown-item');
-          dropDownEl.forEach(function (element) {
-            element.addEventListener('click', function (event) {
-              var filterValue = event.target.getAttribute('data-filter');
-              isotope.arrange({
-                filter: filterValue
-              });
-            });
-          }); //---------- filter end ------------
-
-          return isotope;
+    var iso = new Isotope('.grid', {
+      itemSelector: '.item',
+      masonry: {
+        // use outer width of grid-sizer for columnWidth
+        columnWidth: '.item'
+      }
+    });
+    var filtersElem = document.querySelectorAll('[data-bs-nav]');
+    filtersElem.forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        var filterValue = event.target.getAttribute('data-filter');
+        iso.arrange({
+          filter: filterValue
         });
       });
-    }
+    });
   });
 };
 /* -------------------------------------------------------------------------- */
@@ -399,9 +418,12 @@ var scrollToTop = function scrollToTop() {
       window.location.hash = id;
     });
   });
-}; // /* -------------------------------------------------------------------------- */
-// /*                            Theme Initialization                            */
-// /* -------------------------------------------------------------------------- */
+};
+/* -------------------------------------------------------------------------- */
+
+/*                            Theme Initialization                            */
+
+/* -------------------------------------------------------------------------- */
 
 
 docReady(navbarInit);

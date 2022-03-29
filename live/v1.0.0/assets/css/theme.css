@@ -19584,17 +19584,24 @@ iframe {
   top: 1.875rem;
 }
 
-.grid .item {
-  width: 33.33%;
-  display: block;
-  padding: 0 16px;
-  margin-bottom: 30px;
-  float: left;
-  text-decoration: none;
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
-.grid .item:hover {
-  text-decoration: none;
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
 }
 
 /*-----------------------------------------------
