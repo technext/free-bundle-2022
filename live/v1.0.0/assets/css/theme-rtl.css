@@ -19590,6 +19590,10 @@ iframe {
   z-index: 999;
 }
 
+.sticky-top {
+  top: 1.875rem;
+}
+
 .grid .item {
   width: 33.33%;
   display: block;

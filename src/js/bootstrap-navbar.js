@@ -73,7 +73,7 @@ const navbarInit = () => {
 		if (y >= 540) {
 			backToToP.style.opacity = '1';
 			navbarEl.classList.add('sticky-top');
-			navbarEl.classList.add('bg-light');
+			navbarEl.classList.add('bg-white');
 		} else {
 			backToToP.style.opacity = '0';
 			navbarEl.classList.remove('bg-light');
