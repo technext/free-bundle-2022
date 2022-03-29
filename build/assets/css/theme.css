@@ -19492,39 +19492,6 @@ iframe {
   overflow: unset;
 }
 
-.hero-title {
-  font-family: "Poppins", "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 700;
-  font-size: 2.88651rem;
-  color: #2F281E;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-@media (min-width: 1200px) {
-  .hero-title {
-    font-size: 2.88651rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero-title {
-    font-size: 2.88651rem;
-  }
-}
-
-.hero-img {
-  width: 105%;
-  margin-left: -5rem;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .hero-img {
-    width: 135%;
-    margin-left: -4rem;
-  }
-}
-
 .card {
   border: none;
   background: transparent;

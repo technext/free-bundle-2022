@@ -275,7 +275,6 @@ var navbarInit = function navbarInit() {
     var elements = document.querySelectorAll('.nav-item');
     elements.forEach(function (item) {
       var itemWidth = item.clientWidth;
-      console.log(itemWidth);
       totalWidth = totalWidth + itemWidth;
 
       if (totalWidth > navbarWidth) {
@@ -287,8 +286,6 @@ var navbarInit = function navbarInit() {
         }
       }
     });
-    console.log('total width : ' + totalWidth);
-    console.log('navbar width : ' + navbarWidth);
     var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
     dropdownMenu.forEach(function (item) {
       item.classList.remove('nav-link');
@@ -338,8 +335,7 @@ var isotopeFilter = function isotopeFilter() {
     DATA_FILTER: '[data-filter]',
     DATA_FILER_NAV: '[data-bs-nav]'
   };
-
-  window.onload = function () {
+  window.addEventListener('load', function (event) {
     if (window.Isotope) {
       var masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
       masonryItems.length && masonryItems.forEach(function (masonryItem) {
@@ -378,7 +374,7 @@ var isotopeFilter = function isotopeFilter() {
         });
       });
     }
-  };
+  });
 };
 /* -------------------------------------------------------------------------- */
 

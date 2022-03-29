@@ -37,7 +37,7 @@ const navbarInit = () => {
 
 		elements.forEach(item => {
 			let itemWidth = item.clientWidth;
-			console.log(itemWidth);
+
 			totalWidth = totalWidth + itemWidth;
 
 			if (totalWidth > navbarWidth) {
@@ -50,8 +50,6 @@ const navbarInit = () => {
 				}
 			}
 		});
-		console.log('total width : ' + totalWidth);
-		console.log('navbar width : ' + navbarWidth);
 
 		let dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
 

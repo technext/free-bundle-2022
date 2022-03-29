@@ -13,7 +13,7 @@ const isotopeFilter = () => {
 		DATA_FILER_NAV: '[data-bs-nav]'
 	};
 
-	window.onload = () => {
+	window.addEventListener('load', event => {
 		if (window.Isotope) {
 			const masonryItems = document.querySelectorAll(Selector.DATA_ISOTOPE);
 			masonryItems.length &&
@@ -57,7 +57,7 @@ const isotopeFilter = () => {
 					});
 				});
 		}
-	};
+	});
 };
 
 export default isotopeFilter;
