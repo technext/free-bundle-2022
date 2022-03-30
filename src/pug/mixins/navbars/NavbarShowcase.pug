@@ -1,5 +1,5 @@
 mixin NavbarShowcase
-  nav.navbar.navbar-expand.navbar-light.rounded.border.mt-3
+  nav.navbar.navbar-expand.navbar-light.rounded.border.mt-6
     ul.navbar-nav
       li.nav-item
         a.nav-link.active.fw-medium(href="javascript: void(0)" data-filter="*" data-bs-nav) All
@@ -31,7 +31,7 @@ mixin NavbarShowcase
         a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".other" data-bs-nav) Other
       li.nav-item.dropdown
         a.nav-link.dropdown-toggle.fw-medium(href="javascript: void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") More
-        .dropdown-menu.category-list(aria-labelledby="navbarDropdown")
+        .dropdown-menu.dropdown-menu-end.category-list(aria-labelledby="navbarDropdown")
   a.back-to-top.bg-info(href="#")
     i.fas.fa-angle-double-up 
 

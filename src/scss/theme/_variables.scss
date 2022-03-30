@@ -371,6 +371,7 @@ $navbar-dark-hover-color: rgba($white, 0.9) !default;
 
 $navbar-padding-y: map_get($spacers, 2) !default;
 $navbar-padding-x: map_get($spacers, 1) !default;
+$navbar-nav-link-padding-x:0.75rem !default;
 $top-nav-height: 4.3125rem !default;
 $standard-nav-height: 3.5625rem !default;
 

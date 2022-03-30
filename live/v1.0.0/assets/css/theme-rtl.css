@@ -4966,8 +4966,8 @@ fieldset:disabled .btn {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .navbar-expand-sm .navbar-nav-scroll {
     overflow: visible;
@@ -5002,8 +5002,8 @@ fieldset:disabled .btn {
     position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .navbar-expand-md .navbar-nav-scroll {
     overflow: visible;
@@ -5038,8 +5038,8 @@ fieldset:disabled .btn {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
@@ -5074,8 +5074,8 @@ fieldset:disabled .btn {
     position: absolute;
   }
   .navbar-expand-xl .navbar-nav .nav-link {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .navbar-expand-xl .navbar-nav-scroll {
     overflow: visible;
@@ -5110,8 +5110,8 @@ fieldset:disabled .btn {
     position: absolute;
   }
   .navbar-expand-xxl .navbar-nav .nav-link {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   .navbar-expand-xxl .navbar-nav-scroll {
     overflow: visible;
@@ -5148,8 +5148,8 @@ fieldset:disabled .btn {
 }
 
 .navbar-expand .navbar-nav .nav-link {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .navbar-expand .navbar-nav-scroll {
@@ -19543,8 +19543,6 @@ iframe {
   left: 1.25rem;
   height: 2.5rem;
   width: 2.5rem;
-  -webkit-box-shadow: 0 0.25rem 0.25rem;
-  box-shadow: 0 0.25rem 0.25rem;
   text-align: center;
   line-height: 2.5rem;
   text-align: center;
@@ -19559,26 +19557,6 @@ iframe {
 
 .sticky-top {
   top: 1.875rem;
-}
-
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after {
-  clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-  *zoom: 1;
 }
 
 /*-----------------------------------------------

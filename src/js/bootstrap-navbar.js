@@ -27,6 +27,7 @@ const navbarInit = () => {
 		let totalWidth = 0;
 
 		let nav = document.querySelector(Selector.NAVBAR).clientWidth;
+
 		let dropdown = document.querySelector('.dropdown').clientWidth;
 
 		// let navbarNav = document.querySelector('.navbar-nav').clientWidth;
@@ -59,7 +60,7 @@ const navbarInit = () => {
 		});
 	};
 
-	window.addEventListener('DOMContentLoaded', event => {
+	window.addEventListener('load', event => {
 		navbar();
 	});
 
