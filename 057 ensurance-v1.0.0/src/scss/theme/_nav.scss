@@ -1,0 +1,78 @@
+.icon-box{
+  border-radius: 50%;
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #224E8F;
+  margin-bottom: 15px;
+  margin-left:auto;
+  margin-right:auto;
+  .car-insurance-icon-hover{
+    display:none !important;
+  }
+  .car-insurance-icon{
+    width: 40px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+  &:hover{
+    background-color: $secondary;
+    .car-insurance-icon{
+      display: none !important;
+    }
+    .car-insurance-icon-hover{
+      display:block !important;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .icon-box{
+    height: 100%;
+    width: 100%;
+    .car-insurance-icon{
+      width: 60px;
+    }
+    
+  }
+}
+
+.circle-hover-wrapper {
+  position: relative;
+  z-index: 999;
+  height:  100px;
+  width: 100px;
+  padding: 0;
+  &:hover{
+    z-index: 800;
+    &::before{
+      position: absolute;
+      content: '';
+      height: 80%;
+      width: 80%;
+      border: 1px solid $primary;
+      border-radius: 50%;
+      transform: translate(10px, -5px);
+      pointer-events: none;
+      opacity: .7;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &:hover{
+      z-index: 800;
+      &::before{
+        height: 100%;
+        width: 100%;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,40 @@
+mixin HeroSection
+  section.py-0
+    +Background({ image: `${CWD}assets/img/illustrations/bg.png`, attrs: { style: { 'background-position': 'left center', 'background-size': 'auto 816px'} }, className: '' })
+    .container
+      .row.align-items-center.min-vh-100
+        .col-md-7.col-xl-7.pt-9.text-md-start.text-center
+          h1.display-2.text-light.fw-thin We provide the best 
+            br.d-none.d-xl-block
+            | value 
+            strong.fw-bolder insurance 
+          p.fs-2.text-400 Simple Steps You Can Take to Improve Your 
+            br.d-none.d-xxl-block
+            | Financial Well-Being for the rest of Your Life  
+          a.btn.btn-primary.btn-ensurance.mt-5(href='#!')
+            span.fas.fa-chevron-right.fa-xs.btn-icon
+            span.btn-text Learn more
+            
+        .col-md-5.col-xl-5.pe-xxl-0
+          .card.card-bg.shadow.hero-header-form
+            .card-body.p-4.p-xl-6
+              h2.text-100.text-center Get a Quote
+              form.mb-3
+                .form-floating.mb-3
+                  input.form-control.input-box.form-ensurance-header-control#floatingName(type='text' placeholder='name')
+                  label(for='floatingName') Your name
+                .form-floating.mb-3
+                  input.form-control.input-box.form-ensurance-header-control#floatingPhone(type='tel' placeholder='name@example.com')
+                  label(for='floatingPhone') Phone
+                .form-floating.mb-3
+                  input.form-control.input-box.form-ensurance-header-control#floatingEmail(type='email' placeholder='name@example.com')
+                  label(for='floatingEmail') Email
+                .form-floating.mb-3
+                  input.form-control.input-box.form-ensurance-header-control#floatingCatrgory(type='text' placeholder='Insurance Category')
+                  label(for='floatingCatrgory') Insurance Category
+                .form-floating.mb-3
+                  textarea.form-control.input-box.form-ensurance-header-control#floatingTextarea(placeholder='Leave a comment here')
+                  label(for='floatingTextarea') Comments
+                .col-12.d-grid  
+                  button.btn.btn-primary.rounded-pill(type='submit') Get Quote
+                  

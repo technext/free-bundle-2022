@@ -1,0 +1,36 @@
+/**************** about css start ****************/
+.about_part{
+    position: relative;
+    z-index: 1;
+    .about_text{
+        margin-top: 60px;
+        @media #{$small_mobile}{
+            margin-top: 20px;
+        }
+        @media #{$large_mobile}{
+            margin-top: 20px;
+        }
+        @media #{$tab_device}{
+            margin-top: 20px;
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+    @media #{$small_mobile}{
+        .about_part{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media #{$large_mobile}{
+    
+    }
+    @media #{$tab_device}{
+    
+    }
+    @media #{$medium_device}{
+    
+    }
+}

@@ -1,0 +1,17 @@
+extends layouts/LayoutTheme
+include mixins/common/Cta
+include mixins/common/Footer
+include mixins/pricing/PricingTable
+
+
+
+append variables
+  - var currentPage = 'pricing'
+
+prepend scripts
+  
+append content
+  +Pricing
+  +Cta 
+  +PreFooter
+  

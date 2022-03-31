@@ -1,0 +1,22 @@
+mixin LayoutContent  
+
+  div.container-fluid.px-0()&attributes(attrsLayout)
+    //- script.
+
+    block wrapperContent
+      block beforeContent
+        block navbarVertical
+          +NavbarVertical.navbar-expand-lg
+        block navbarTop 
+          +NavbarTop({
+            toggleID: 'navbarVerticalCollapse',
+            links: false,
+            search: true
+          }).navbar-expand
+
+      .content()&attributes(attrsContent)
+        block content
+        if footer
+          +Footer
+
+      block afterContent

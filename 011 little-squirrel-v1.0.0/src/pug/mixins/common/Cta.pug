@@ -1,0 +1,17 @@
+mixin Cta
+  +Section
+    .row.align-items-center
+      .col-md-6.col-lg-4.mb-5
+        img(src=`${CWD}assets/img/gallery/cta.png` width="280" alt='cta')
+      .col-md-6.col-lg-5
+        h5.text-primary.font-sans-serif.fw-bold Subscrible now
+        h1.mb-5 Get every single
+          br
+          | update you will get
+        form.row.g-0.align-items-center     
+          .col 
+            .input-group-icon
+              input.form-control.form-little-squirrel-control(type='email' placeholder='Enter email ' aria-label='email')
+              i.fas.fa-envelope.input-box-icon
+          .col-auto
+            button.btn.btn-primary.rounded-0(type='submit') Subscribe now

@@ -1,0 +1,50 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Display
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Display',
+      description: 'Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/display/`,
+      linkText: 'Display on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Notation',
+        id: '#notation',
+      },
+      {
+        name: 'Example',
+        id: '#example',
+      },
+      {
+        name: 'Hiding Elements',
+        id: '#hiding-elements'
+      },
+      {
+        name: 'Display in Prints',
+        id: '#display-in-prints'
+      },
+    ]
+
+append component
+
+  +ComponentCard({title: 'Notation', anchor: true, hideNavTab:true}).mb-4
+    +DisplayProperty
+
+  +ComponentCard({title: 'Example', anchor: true}).mb-4
+    +DisplayBasicExample
+
+  +ComponentCard({title: 'Hiding Elements', anchor: true, hideNavTab:true}).mb-4
+    +DisplayInHide
+
+  +ComponentCard({
+    title: 'Display in Prints', 
+    anchor: true,
+    description:"Change the <code>display </code>value of elements when printing with our print display utility classes. Includes support for the same <code>display </code>values as our responsive <code>.d-* utilities. </code><ul class='mt-3'><li><code>.d-print-none</code></li><li><code>.d-print-inline</code></li><li><code>.d-print-inline-block</code></li><li><code>.d-print-block</code></li><li><code>.d-print-table</code></li><li><code>.d-print-table-row</code></li><li><code>.d-print-table-cell</code></li><li><code>.d-print-flex</code></li><li><code>.d-print-inline-flex</code></li></ul><p class='mt-3 mb-0'>The print and display classes can be combined."
+  }).mb-4
+    +DisplayPrintDemo
+
+

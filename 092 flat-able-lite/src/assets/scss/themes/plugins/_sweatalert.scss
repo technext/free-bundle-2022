@@ -1,0 +1,129 @@
+.swal-icon--error {
+    border-color: theme-color("danger");
+}
+
+.swal-icon--error__line {
+    background-color: theme-color("danger");
+}
+
+.swal-icon--warning {
+    border-color: theme-color("warning");
+}
+
+.swal-icon--warning__body {
+    background-color: theme-color("warning");
+}
+
+.swal-icon--warning__dot {
+    background-color: theme-color("warning");
+}
+@-webkit-keyframes pulseWarning {
+    0% {
+        border-color: lighten(theme-color("warning"),5%);
+    }
+
+    to {
+        border-color: theme-color("warning");
+    }
+}
+@keyframes pulseWarning {
+    0% {
+        border-color: lighten(theme-color("warning"),5%);
+    }
+
+    to {
+        border-color: theme-color("warning");
+    }
+}
+
+.swal-icon--success {
+    border-color: theme-color("success");
+}
+
+.swal-icon--success__ring {
+    border: 4px solid transparentize(theme-color("success"),0.8);
+}
+
+.swal-icon--success__line {
+    background-color: theme-color("success");
+}
+
+.swal-icon--info {
+    border-color: theme-color("info");
+
+    &:after,
+    &:before {
+        background-color: theme-color("info");
+    }
+}
+
+.swal-title {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.swal-text {
+    color: rgba(0, 0, 0, 0.64);
+}
+
+.swal-button {
+    background-color: theme-color("primary");
+
+    &:not([disabled]):hover {
+        background-color: darken(theme-color("primary"),5%);
+    }
+
+    &:active {
+        background-color: darken(theme-color("primary"),5%);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px transparentize(theme-color("primary"), 0.71);
+    }
+}
+
+.swal-button--cancel {
+    color: #555;
+    background-color: #efefef;
+
+    &:not([disabled]):hover {
+        background-color: #e8e8e8;
+    }
+
+    &:active {
+        background-color: #d7d7d7;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+    }
+}
+
+.swal-button--danger {
+    background-color: theme-color("danger");
+
+    &:not([disabled]):hover {
+        background-color: darken(theme-color("danger"),5%);
+    }
+
+    &:active {
+        background-color: darken(theme-color("danger"),5%);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px transparentize(theme-color("danger"), 0.71);
+    }
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.swal-content__input:focus {
+    border-color: transparentize(theme-color("primary"), 0.71);
+}
+
+.swal-content__textarea {
+    &:focus {
+        border-color: transparentize(theme-color("primary"), 0.71);
+    }
+}

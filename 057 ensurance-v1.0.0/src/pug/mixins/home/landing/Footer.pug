@@ -1,0 +1,58 @@
+mixin Footer 
+	+Section.py-0.bg-black
+		.row.justify-content-md-between.justify-content-evenly.py-4
+			.col-12.col-sm-8.col-md-6.col-lg-auto.text-center.text-md-start 
+				p.fs--1.my-2.fw-light.text-200 All rights Reserved &copy; Your Company, 2021
+			.col-12.col-sm-8.col-md-6
+				p.fs--1.fw-light.my-2.text-center.text-md-end.text-200  Made with&nbsp;
+					svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='#F95C19' viewBox='0 0 16 16')
+						path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+					|&nbsp;by&nbsp;
+					a(href='https://themewagon.com/' target='_blank').fw-bold.text-primary ThemeWagon
+
+mixin PreFooter
+	+Section.py-0 
+		.row
+			.col 
+				.d-md-flex.justify-content-between.pb-1.pt-4
+					.pb-4
+						ul.widget-list.d-flex.flex-wrap.justify-content-center.justify-content-md-start
+							li
+								a.widget-list-link.fs-ms(href='#') Home
+							li.ms-4
+								a.widget-list-link.fs-ms(href='#') About Us
+							li.ms-4
+								a.widget-list-link.fs-ms(href='#') Blog
+							li.ms-4
+								a.widget-list-link.fs-ms(href='#') Services
+							li.ms-4
+								a.widget-list-link.fs-ms(href='#') Terms &amp; Conditions
+					.pb-4
+						ul.list-unstyled.list-inline.my-2
+							li.list-inline-item
+								a.text-decoration-none(href='#!')
+									i.fab.fa-facebook-square.fa-2x.social-icons
+							li.list-inline-item
+								a.text-decoration-none(href='#!')
+									i.fab.fa-instagram.fa-2x.social-icons
+							li.list-inline-item
+								a.text-decoration-none(href='#!')
+									i.fab.fa-twitter-square.fa-2x.social-icons 			
+							li.list-inline-item
+								a.text-decoration-none(href='#!')
+									i.fab.fa-linkedin.fa-2x.social-icons
+	+Footer
+
+
+
+
+
+
+
+
+
+
+
+
+

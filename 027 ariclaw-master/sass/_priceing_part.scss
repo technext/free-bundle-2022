@@ -1,0 +1,123 @@
+/**************** pricing part css start ****************/
+.priceing_part{
+    padding: 140px 0px 90px;
+    @media #{$small_mobile}{
+        padding: 70px 0px 40px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px 40px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px 40px;
+    }
+    @media #{$medium_device}{
+        padding: 70px 0px 20px;
+    }
+    .single_pricing_item{
+        img{
+            float: left;
+            display: inline-block;
+            @media #{$small_mobile}{
+                max-width: 60px;
+            }
+            @media #{$large_mobile}{
+            
+            }
+            @media #{$tab_device}{
+                max-width: 60px;
+            }
+            @media #{$medium_device}{
+                
+            }
+        }
+        .single_pricing_text{
+            margin-left: 120px;
+            padding-top: 16px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 57px;
+            @media #{$small_mobile}{
+                margin-bottom: 30px;
+                margin-left: 80px;
+                padding-top: 0;
+            }
+            @media #{$large_mobile}{
+            
+            }
+            @media #{$tab_device}{
+                margin-bottom: 30px;
+                margin-left: 80px;
+                padding-top: 10px;
+            }
+            @media #{$medium_device}{
+                
+            }
+            @media #{$small_mobile}{
+                p{
+                  line-height: 1.4;  
+                }
+            }
+            @media #{$large_mobile}{
+            
+            }
+            @media #{$tab_device}{
+                p{
+                    line-height: 1.4;  
+                  }
+            }
+            @media #{$medium_device}{
+                
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 28px;
+                width: 100%;
+                height: 1px;
+                border-top: 1px dotted $btn_bg;
+                z-index: -1;
+                @media #{$small_mobile}{
+                    top: 10px;
+                }
+                @media #{$large_mobile}{
+                
+                }
+                @media #{$tab_device}{
+                    top: 20px;
+                }
+                @media #{$medium_device}{
+                    
+                }
+
+            }
+            h5,h6{
+                display: inline-block;
+                background-color: #fff;
+                font-weight: 700;
+                font-size: 22px;
+                color: #30383b;
+                padding-right: 20px;
+                @media #{$small_mobile}{
+                    font-size: 16px;
+                }
+                @media #{$large_mobile}{
+                
+                }
+                @media #{$tab_device}{
+                    font-size: 16px;
+                }
+                @media #{$medium_device}{
+                    
+                }
+            }
+            h6{
+                float: right;
+                color: $btn_bg;
+                padding-left: 20px;
+                padding-right: 0px;
+            }
+        }
+        
+    }
+}

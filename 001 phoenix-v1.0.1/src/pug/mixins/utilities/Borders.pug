@@ -1,0 +1,272 @@
+mixin BorderWidth
+  = '\n'
+  span.border.border-1
+  = '\n'
+  span.border.border-2
+  = '\n'
+  span.border.border-3
+  = '\n'
+  span.border.border-4
+  = '\n'
+  span.border.border-5
+  = '\n'
+  hr
+  = '\n'
+  span.border.border-top-2
+  = '\n'
+  span.border.border-end-2
+  = '\n'
+  span.border.border-bottom-2
+  = '\n'
+  span.border.border-start-2
+
+
+mixin BorderWidthDoc
+  p&attributes(attributes) You can control border width using helper classes 
+    code border-{1|2|3|4|5}
+    |. In addition, you can also use 
+    code border-top-2
+    |, 
+    code border-end-2
+    |, 
+    code border-bottom-2
+    |, 
+    code border-start-2
+    | .
+mixin BorderDoc
+  p The classes are named using the format 
+    code border-{side}
+    |  for 
+    code xs
+    |  and 
+    code border-{breakpoint}-{side}
+    |  for 
+    code sm
+    | , 
+    code md
+    | , 
+    code lg
+    | ,  
+    code xl
+    | , and 
+    code xxl
+    | .
+  p
+    | Where
+    em  side
+    |  is one of:
+  ul
+    li
+      code top
+      |  - for classes that set style for 
+      code border-top
+    li
+      code bottom
+      |  - for  classes that set style for 
+      code border-bottom
+    li
+      code left
+      |  - for  classes that set style for 
+      code border-start
+    li
+      code right
+      |  - for  classes that set style for 
+      code border-right
+    li
+      code x
+      |  - for classes that set both
+      code *-left
+      |  and 
+      code *-right
+    li
+      code y
+      |  - for classes that set both
+      code *-top
+      |  and 
+      code *-bottom
+    li
+      | blank - for classes that set the
+      code border
+      |  style on all 4 side of the element.
+
+  p.mb-0 Use border utilities to quickly style the
+    code border
+    |  of an element. Great for images, buttons, or any other element.
+
+mixin BorderAdditive
+  span.border
+  = '\n'
+  span.border-top
+  = '\n'
+  span.border-end
+  = '\n'
+  span.border-bottom
+  = '\n'
+  span.border-start
+
+mixin BorderSubtractive
+  span.border.border-0
+  = '\n'
+  span.border.border-top-0
+  = '\n'
+  span.border.border-end-0
+  = '\n'
+  span.border.border-bottom-0
+  = '\n'
+  span.border.border-start-0
+  = '\n'
+
+mixin BorderRadiusHeader
+  h5(data-anchor) Border Radius &amp; sizes
+  p.mb-0 Add helper classes to an element to easily round its corners. For the rounded border, the class are named using the format 
+    code rounded-*
+
+mixin BorderRadius
+  span.rounded-0
+  = '\n'
+  span.rounded-1
+  = '\n'
+  span.rounded-2
+  = '\n'
+  span.rounded-3
+  = '\n'
+  span.rounded-circle
+  = '\n'
+  span.rounded-pill(style="width:150px; height:75px;")
+  = '\n'
+
+mixin BorderRadiusSizeDescription
+  p&attributes(attributes) You can control top, right, bottom, left border radius of different size, using the helper classes. The classes also support responsive behaviors like 
+    code rounded-{xxl | xl | lg | md | sm}-*
+    |. Examples are given below
+
+mixin BorderRadiusSizeDemo
+
+  span.rounded-top
+  = '\n'
+  span.rounded-top-lg
+  = '\n'
+  span.rounded-end
+  = '\n'
+  span.rounded-end-lg
+  = '\n'
+  span.rounded-bottom
+  = '\n'
+  span.rounded-bottom-lg
+  = '\n'
+  span.rounded-start
+  = '\n'
+  span.rounded-start-lg
+
+mixin BorderStyleHeader
+  h5(data-anchor) Border Style
+  p.mb-0  For the dashed border, the classes are named using the format, 
+    code border-dashed-{side}
+    |  for 
+    code xs
+    |  and 
+    code border-{breakpoint}-dashed-{side}
+    |  for 
+    code sm
+    | , 
+    code md
+    | , 
+    code lg
+    | , 
+    code xl 
+    |  and 
+    code xxl
+    | .
+  p.mb-0
+    | Where
+    em side
+    |  is same as documented before.
+
+mixin BorderStyle
+  span.border-dashed
+  = '\n'
+  span.border-dashed-top
+  = '\n'
+  span.border-dashed-right
+  = '\n'
+  span.border-dashed-bottom
+  = '\n'
+  span.border-dashed-left
+  = '\n'
+
+mixin BorderColorWidthDoc
+  p Border color set as 
+    code currentColor 
+    |  and border width 
+    code 1px 
+    | . Modifier can be used to change border color and width. The modifier classes for color are named using the format 
+    code border-{color}
+    |.
+  p.mb-0
+    | Where
+    em  color
+    |  is one of:
+    each val in colorsAll
+      code #{val}
+      | , 
+
+mixin BorderColorWidth
+  span.border.border-info
+  = '\n'
+  span.border.border-success
+  = '\n'
+  span.border.border-warning
+  = '\n'
+  span.border.border-danger
+  = '\n'
+  span.border.border-cake
+  = '\n'
+  span.border.border-facebook
+  = '\n'
+  span.border.border-twitter
+  = '\n'
+  span.border.border-google-plus
+  = '\n'
+  span.border.border-github
+  = '\n'
+  .w-100
+  = '\n'
+  span.border.border-black
+  = '\n'
+  span.border.border-dark
+  = '\n'
+  span.border.border-1100
+  = '\n'
+  span.border.border-1000
+  = '\n'
+  span.border.border-900
+  = '\n'
+  span.border.border-800
+  = '\n'
+  span.border.border-700
+  = '\n'
+  span.border.border-600
+  = '\n'
+  span.border.border-500
+  = '\n'
+  span.border.border-400
+  = '\n'
+  span.border.border-300
+  = '\n'
+  span.border.border-200
+  = '\n'
+  span.border.border-100
+  = '\n'
+  span.border.border-light
+  = '\n'
+  span.border.border-white
+  = '\n'
+  span.border.border-2
+  = '\n'
+  span.border-top.border-top-2
+  = '\n'
+  span.border-end.border-end-2
+  = '\n'
+  span.border-bottom.border-bottom-2
+  = '\n'
+  span.border-start.border-start-2

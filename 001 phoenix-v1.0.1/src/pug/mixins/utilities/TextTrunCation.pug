@@ -1,0 +1,22 @@
+mixin TextTrunCationExampleDescription
+  p&attributes(attributes)
+    | For longer content, you can add a 
+    code .text-truncate
+    |  class to truncate the text with an ellipsis. 
+    strong
+      | Requires 
+      code display: inline-block
+      |  or 
+      code display: block
+      | .
+
+mixin TextTruncationExampleDemo
+  .row
+    .col-2.text-truncate
+      | Truncate your long text with bootstrap text trancation featuer
+  // Inline level
+  = '\n'
+  span.d-inline-block.text-truncate(style='max-width: 150px;')
+    = '\n'
+    |   Truncate your long text with bootstrap text trancation featuer.
+    = '\n'

@@ -1,0 +1,56 @@
+mixin Items(config)
+  .col-12.col-lg-7.mb-3.mb-md-0
+    .card.h-100
+      .card-body.d-flex.flex-center.flex-column
+        p.text-center.card-text.mb-5=config.text
+        .d-flex.justify-content-between.align-items-center
+          .d-flex.align-items-center
+            img(src=`${CWD}assets/img/gallery/${config.image}` alt='').img-fluid
+        .mt-3.text-center    
+          h6.text-1000.fw-bold=config.name 
+          p.fs--1.fw-normal.mb-0=config.type
+
+mixin Travellers 
+  +Section.pt-5
+    .row.flex-center.mb-5
+      .col-lg-8.text-center 
+        h1.fw-bold.fs-md-3.fs-lg-4.fs-xl-5 Traveller's Experiences
+        hr.mx-auto.text-primary.my-4(style="height:3px; width:70px;")
+
+      #carouselExampleDark.carousel.slide(data-bs-ride='carousel')
+        .carousel-inner
+          .carousel-item.active(data-bs-interval='10000')
+            .row.h-100.flex-center
+              +Items({image: 'user-2.png', name:'Donquixote Law',type:'Traveller', star: 4.5, 
+                text:'“Curabitur posuere ullamcorper pulvinar. Donec dignissim bibendum leo, at faucibus enim aliquam eu. Nullam quis pulvinar diam, ac elementum urna. Integer id vehicula tortor, nec pulvinar libero. Ut elit elit, fringilla a nisi ut, dapibus eleifend quam.” ',
+              })
+            
+                    
+          .carousel-item(data-bs-interval='2000')
+            .row.h-100.flex-center
+              +Items({image: 'user-1.png', name:'Viezh Robert',type:'Traveller', star: 4.5, 
+                text:'“Curabitur posuere ullamcorper pulvinar. Donec dignissim bibendum leo, at faucibus enim aliquam eu. Nullam quis pulvinar diam, ac elementum urna. Integer id vehicula tortor, nec pulvinar libero. Ut elit elit, fringilla a nisi ut, dapibus eleifend quam.” ',
+              })
+            
+
+          .carousel-item(data-bs-interval='3000')
+            .row.h-100.flex-center
+              +Items({image: 'user-2.png', name:'Donquixote Law',type:'Traveller', star: 4.5, 
+                text:'“Curabitur posuere ullamcorper pulvinar. Donec dignissim bibendum leo, at faucibus enim aliquam eu. Nullam quis pulvinar diam, ac elementum urna. Integer id vehicula tortor, nec pulvinar libero. Ut elit elit, fringilla a nisi ut, dapibus eleifend quam.” ',
+              })
+
+          .carousel-item
+            .row.h-100.flex-center
+              +Items({image: 'user-1.png', name:'Viezh Robert',type:'Traveller', star: 4.5, 
+                text:'“Curabitur posuere ullamcorper pulvinar. Donec dignissim bibendum leo, at faucibus enim aliquam eu. Nullam quis pulvinar diam, ac elementum urna. Integer id vehicula tortor, nec pulvinar libero. Ut elit elit, fringilla a nisi ut, dapibus eleifend quam.” ',
+              })  
+        
+        .row.px-3.px-md-0
+          .col-12.position-relative.d-flex.flex-center
+            ol.carousel-indicators
+              li.active(data-bs-target='#carouselExampleDark' data-bs-slide-to='0')
+              li(data-bs-target='#carouselExampleDark' data-bs-slide-to='1')
+              li(data-bs-target='#carouselExampleDark' data-bs-slide-to='2')
+              li(data-bs-target='#carouselExampleDark' data-bs-slide-to='3')
+         
+      

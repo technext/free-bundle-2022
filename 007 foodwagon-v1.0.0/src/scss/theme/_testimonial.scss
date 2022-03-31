@@ -1,0 +1,86 @@
+
+
+// //*----------------------------- bootstrap carousel ------------------*//
+
+.carousel-icon {
+  width: auto;
+  .carousel-control-prev-icon {
+   
+    &:hover {
+      background-color: $carousel-control-bg-color;
+    }
+  }
+  .carousel-control-next-icon {
+   
+    &:hover {
+      background-color: $carousel-control-bg-color;
+    }
+  }
+ 
+  // Icons for within
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    border-radius: 50%;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .carousel-control-prev {
+    left: -35px;
+  }
+  .carousel-control-next {
+    right: -35px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-control-prev {
+    left: -50px;
+  }
+  .carousel-control-next {
+    right: -50px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .carousel-control-prev {
+    left: 0;
+  }
+  .carousel-control-next {
+    right: 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .carousel-control-prev {
+    left: -55px;
+  }
+  .carousel-control-next {
+    right: -55px;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .carousel-control-prev {
+    left: -70px;
+  }
+  .carousel-control-next {
+    right: -70px;
+  }
+}
+
+// search by food
+
+@include media-breakpoint-up(md) {
+  .carousel-control-prev.s-icon-prev {
+    left: -20px;
+  }
+  .carousel-control-next.s-icon-next {
+    right: -20px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .carousel-control-prev.s-icon-prev {
+    left: -30px;
+  }
+  .carousel-control-next.s-icon-next {
+    right: -30px;
+  }
+}

@@ -1,0 +1,122 @@
+
+.testimonial-wrapper{
+    position: relative;
+    @media #{$md}{
+        padding-top: 20px;
+    }
+    @media #{$sm}{
+        padding-top: 0px;
+    }
+    @media #{$xs}{
+        padding-top: 0px;
+    }
+}
+.testimonial-area{
+    padding-top: 20px;
+    padding-bottom: 160px;
+    @media #{$xs}{
+        padding-bottom: 85px;
+    }
+    .single-testimonial {
+        background: #4C1E51;
+        padding:70px 100px 70px 100px;
+        border-radius: 12px;
+        @media #{$sm}{
+            padding: 70px 20px 70px 20px
+        }
+        @media #{$xs}{
+            padding: 70px 20px 70px 20px
+        }
+    }
+    .testimonial-caption{
+        display: flex;
+        justify-content: center;
+        img{
+            padding-bottom: 22px !important;
+            position: absolute;
+            top: -3px;
+        }
+        p{
+            font-size:16px;
+            color: $heading_color;
+            color:#fff;
+            line-height: 45px;
+            line-height: 1.5;
+            margin-bottom: 37px;
+
+            @media #{$lg}{
+                margin-bottom: 15px;
+            }
+            @media #{$sm}{
+                width: 99%;
+            }
+        }
+    }
+    .founder-img {
+        margin-right: 20px;
+    }
+    .founder-text {
+        text-align: left;
+        span{
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        p {
+            color: #A5A7C5;
+            font-size: 14px;
+            @media #{$xs}{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Homepage1 Testimonial */
+.h1-testimonial-active{
+    button{
+        &.slick-arrow {
+            position: absolute;
+            top: 60%;
+            left: -19px;
+            transform: translateY(-60%);
+            background: none;
+            border: 0;
+            border-radius: 50%;
+            padding: 0;
+            z-index: 2;
+            height:40px;
+            width: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            background: #fff;
+            -webkit-transition: .4s;
+            -o-transition: .4s;
+            transition: .4s;
+            &:hover{
+                background: #fff;
+                i{
+                    color: #4C1E51;
+                }
+            }
+            i{
+                color: #4C1E51;
+                font-size: 20px;
+                position: relative;
+                top: 3px;
+            }
+        }
+        &.slick-next {
+            left: auto;
+            right: -18px;
+        }
+    }
+}
+
+.slick-initialized .slick-slide {
+    outline: 0;
+}
+

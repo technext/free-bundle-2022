@@ -1,0 +1,243 @@
+//! Header left right padding
+.header-area {
+    .main-header {
+        &.main-header2{
+            padding: 0;
+        }
+        padding: 0px 130px;
+        @media #{$laptop}{
+            padding: 0px 30px;
+        }
+        @media #{$lg}{
+            padding: 0px 15px;
+        }
+        // mobile menu show
+        @media #{$md}{
+            padding: 22px 50px;
+         }
+        @media #{$sm}{
+            padding: 22px 20px;
+         }
+        @media #{$xs}{
+            padding: 22px 14px;
+         }
+
+        /* 2. header */
+        .main-menu {
+            ul {
+                li {
+                    display: inline-block;
+                    position: relative;
+                    a {
+                        font-family: $font_2;
+                        color: #000;
+                        display: block;
+                        font-weight: 400;
+                        padding: 18px 26px;
+                        text-transform: capitalize;
+                        font-size: 14px;
+                        text-decoration: underline transparent;
+                        // @media #{$lg}{
+                        //     padding: 29px 17px;
+                        // }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    
+
+                     //! Sub-menu
+                    ul.submenu{
+                        position: absolute;
+                        width: 170px;
+                        background: rgba(43,43,43,0.7);
+                        left: 0;
+                        top: 80%;
+                        visibility: hidden;
+                        opacity: 0;
+                        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+                        padding: 17px 0;
+                        // border-top: 5px solid $theme-color;
+                        z-index: 2;
+
+                        @include transition(.3s);
+                        & > li{
+                            margin-left: 7px;
+                            display: block;
+                            & > a{
+                                color: #ffff;
+                                padding: 6px 10px !important;
+                                font-size: 16px;
+                                text-transform: capitalize;
+                                margin: 0;
+                                &:hover{
+                                    color:#fff;
+                                    background: none;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//! SubMenu Hover
+.header-area .main-menu ul ul.submenu > li > a:hover {
+    padding-left: 13px !important;
+}
+.header-area .main-menu ul > li:hover > ul.submenu {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+
+
+//! hamburger Menu
+.hamburger {
+  float: right;
+  margin-left: 20px;
+  margin-top: 11px !important;
+  padding: 0;
+  transition: all 0.3s ease 0s;
+}
+.hamburger-menu {
+    float: right;
+    margin-right: 90px;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+  }
+.black-menu .hamburger {
+    margin-top: 0px;
+}
+.hamburger.hamburger--collapse > span {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    top: -5px;
+  }
+
+.black-menu .hamburger-inner, .black-menu .hamburger-inner::after, .black-menu .hamburger-inner::before {
+    background: #000 none repeat scroll 0 0;
+  }
+.hamburger.is-active {
+  margin-top: 57px;
+}
+.hamburger.hamburger--collapse.is-active {
+	margin-top: 17px !important;
+}
+
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+  background: #000 none repeat scroll 0 0;
+  height: 2px;
+  width: 30px;
+}
+
+.hamburger-inner{
+    &::before {
+        top: -8px;
+        left: 0px !important;   // custom
+    }
+    &::after {
+        bottom: -10px;
+        display: none;  // custom
+    }
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+	left: 0 !important;  //Custom
+}
+.hamburger--collapse .hamburger-inner::after {
+  top: -16px;
+}
+
+
+nav.nav-menu-show {
+  margin-right: 50px;
+  opacity: 1;
+  visibility: visible;
+
+}
+.main-menu.black-menu ul li a {
+  color: #fff;
+  padding: 35px 0;
+}
+
+
+
+//! Transparent Header
+.header-transparent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9;
+}
+
+//! header Sticky  & Responsive
+    .header-sticky{
+        &.sticky-bar{
+            background: #fff;
+            &.sticky {
+                .main-menu{
+                    ul {
+                        li{
+                            a {
+                                padding: 20px 20px !important;
+                            }
+                        }
+                    }
+                }
+                // Small device sticky show padding
+                @media #{$md}{
+                    padding: 15px 0px;
+                }
+                @media #{$sm}{
+                    padding: 15px 0px;
+                }
+                @media #{$xs}{
+                    padding: 15px 0px;
+                } 
+            }
+        }
+    }
+
+//! Mobile Menu
+    .mobile_menu {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 99;
+        .slicknav_menu {
+            background: transparent;
+            margin-top: 0px !important;
+            .slicknav_btn {
+                top: -25px;
+                // mobile Menu button color
+                .slicknav_icon-bar {
+                    background-color:#000 !important;
+                }
+            }
+            .slicknav_nav{
+                margin-top: 16px !important;
+                // box-shadow: 0 0 10px 3px rgba(141, 140, 140, 0.5);
+                a:hover {
+                    background: transparent;
+                    color: $theme-color;
+                }
+                a {
+                    font-size: 15px;
+                    padding: 7px 10px;
+                }
+                // Dropdown Menu button Padding None
+            .slicknav_item a {
+                    padding: 0 !important;
+                }
+            }
+        }
+    }

@@ -1,0 +1,14 @@
+extends ../../../layouts/LayoutTheme
+include ../../../layouts/LayoutSimpleAuth
+
+block wrapperContent
+  +LayoutBasic({logo:false})
+    .text-center.mb-5
+      .avatar.avatar-3xl.mb-4
+        img.rounded-circle(src=`${CWD}assets/img/team/30.png`, alt='')
+      h2.text-800 
+        span.fw-normal Hello 
+        | John Smith
+      p.text-700 Enter your password to access the admin
+    input#password.form-control.mb-3(type='password' placeholder='Enter Password')
+    a.btn.btn-primary.w-100(href=`${CWD}${paths['default-dashboard']}`) Sign In

@@ -1,0 +1,13 @@
+.bootstrap-tagsinput {
+    padding: 5px 10px;
+    background: $body-bg;
+    border: 1px solid $border-color;
+    border-radius: $card-border-radius;
+    width: 100%;
+
+    .tag {
+        background: theme-color("primary");
+        color: #fff;
+        border-radius: $card-border-radius;
+    }
+}

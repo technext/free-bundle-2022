@@ -1,0 +1,34 @@
+include ../authentication/LoginForm
+include ../authentication/SocialButtons
+include Mixins
+
+mixin NavbarStandard(config)
+  nav.navbar.navbar-standard&attributes(attributes)
+    .container
+      +NavbarBrand({ image: false,color:config.brandColor })
+      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarStandard' aria-controls='navbarStandard' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarStandard.collapse.navbar-collapse.scrollbar
+        +NewTopNav({combo:false})
+        block
+
+
+  #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-body.p-4
+
+          .row.text-start.justify-content-between.align-items-center.mb-2
+            .col-auto
+              h5#modalLabel Register
+            .col-auto
+              p.fs--1.text-600.mb-0 Have an account? 
+                a(href=`${CWD}${paths['simple-login']}`) Login
+          +RegisterForm({
+            name: { attrs: { placeholder: 'Name' } },
+            email: { attrs: { placeholder: 'Email address' } },
+            password: { attrs: { placeholder: 'Password' } },
+            confirmPassword: { attrs: { placeholder: 'Confirm Password' } },
+            checkbox: { attrs: { id: 'modal-register-checkbox' } },
+          })
+          +SocialButtons({ title: 'register' }).mt-4

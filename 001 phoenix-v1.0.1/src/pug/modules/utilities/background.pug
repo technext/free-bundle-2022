@@ -1,0 +1,61 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Backgrounds
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Background',
+      description: 'Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/backgrund/`,
+      linkText: 'Background on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Solid colors',
+        id: '#solid-colors',
+      },
+      {
+        name: 'Grays',
+        id: '#grays',
+      },
+      {
+        name: 'Gradients',
+        id: '#gradients'
+      }
+    ]
+append component
+
+  +ComponentCard({title:'Solid colors', anchor: true}).my-5#doc-bg-color
+    +ThemeColorsDemo
+
+  +ComponentCard({title:'Grays', anchor: true}).my-5#doc-bg-grays
+    +GrayShadeDemo
+
+  +ComponentCard({title:'Gradients', anchor: true}).my-5#doc-bg-gradients
+    +BackgroundGradientDemo
+  //- .card.mb-3
+    .card-body.bg-light
+      +ThemeColorsDemo
+  //- .card.mb-3
+  //-   .card-header
+  //-     +DocCardHeader('Gray shades')
+  //-   .card-body.bg-light
+  //-     +GrayShadeDemo
+  //- .card.mb-3
+  //-   .card-header
+  //-     +DocCardHeader('Background Gradient')
+  //-       +BackgroundGradientDescription.mt-2.mb-0
+  //-   .card-body.bg-light
+  //-     +BackgroundGradientDemo
+  //- .card.mb-3
+  //-   .card-header
+  //-     +DocCardHeader('Soft colors')
+  //-   .card-body.bg-light
+  //-     +SoftColorsDemo
+  //- .card
+  //-   .card-header
+  //-     +DocCardHeader('Brand colors')
+  //-   .card-body.bg-light
+  //-     +BrandColorsDemo

@@ -1,0 +1,21 @@
+mixin NavbarFoodwagon
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top(data-navbar-on-scroll)
+    .container
+      a.navbar-brand.d-inline-flex(href='index.html')
+        img.d-inline-block(src=`${CWD}assets/img/gallery/logo.svg`  alt='logo')
+        span.text-1000.fs-3.fw-bold.ms-2.text-gradient foodwaGon
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon 
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.my-2.mt-lg-0
+        .mx-auto.pt-5.pt-lg-0.d-block.d-lg-none.d-xl-block
+          p.mb-0.fw-bold.text-lg-center Deliver to: 
+            i.fas.fa-map-marker-alt.text-warning.mx-2
+            span.fw-normal Current Location 
+            span Mirpur 1 Bus Stand, Dhaka
+        form.d-flex.mt-4.mt-lg-0.ms-lg-auto.ms-xl-0
+          .input-group-icon.pe-2
+            i.fas.fa-search.input-box-icon.text-primary
+            input.form-control.border-0.input-box.bg-100(type='search' placeholder='Search Food' aria-label='Search')
+          button.btn.btn-white.shadow-warning.text-warning(type='submit') 
+            i.fas.fa-user.me-2
+            | Login

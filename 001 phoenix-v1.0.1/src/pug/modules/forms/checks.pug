@@ -1,0 +1,114 @@
+extends ../../layouts/LayoutComponent
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Checks',
+      description: 'Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/forms/checks-radios/`,
+      linkText: 'Checks on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Checks',
+        id: '#checks',
+      },
+      {
+        name: 'Radios',
+        id: '#radios',
+      },
+      {
+        name: 'Switches',
+        id: '#switches',
+      },
+      {
+        name: 'Check Inline',
+        id: '#check-inline',
+      },
+      {
+        name: 'Radio Inline',
+        id: '#radio-inline',
+      },
+    ]
+
+block component
+  +ComponentCard({title:'Checks'}).my-4
+    .form-check
+      = '\n'
+      input#flexCheckDefault.form-check-input(type='checkbox' value='')
+      = '\n'
+      label.form-check-label(for='flexCheckDefault') Default checkbox
+    .form-check
+      = '\n'
+      input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
+      = '\n'
+      label.form-check-label(for='flexCheckChecked') Checked checkbox
+
+  +ComponentCard({title:'Radios'}).my-4
+    .form-check
+      = '\n'
+      input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault')
+      = '\n'
+      label.form-check-label(for='flexRadioDefault1') Default radio
+    .form-check
+      = '\n'
+      input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault' checked='')
+      = '\n'
+      label.form-check-label(for='flexRadioDefault2') Default checked radio
+
+  +ComponentCard({title:'Switches'}).my-4
+    .form-check.form-switch
+      = '\n'
+      input#flexSwitchCheckDefault.form-check-input(type='checkbox')
+      = '\n'
+      label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
+    .form-check.form-switch
+      = '\n'
+      input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+      = '\n'
+      label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
+    .form-check.form-switch
+      = '\n'
+      input#flexSwitchCheckDisabled.form-check-input(type='checkbox' disabled='')
+      = '\n'
+      label.form-check-label(for='flexSwitchCheckDisabled') Disabled switch checkbox input
+    .form-check.form-switch
+      = '\n'
+      input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox' checked='' disabled='')
+      = '\n'
+      label.form-check-label(for='flexSwitchCheckCheckedDisabled') Disabled checked switch checkbox input
+
+  +ComponentCard({title:'Check Inline'}).my-4
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineCheckbox1.form-check-input(type='checkbox' value='option1')
+      = '\n'
+      label.form-check-label(for='inlineCheckbox1') Item 1
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineCheckbox2.form-check-input(type='checkbox' value='option2')
+      = '\n'
+      label.form-check-label(for='inlineCheckbox2') Item 2
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineCheckbox3.form-check-input(type='checkbox' value='option3' disabled='')
+      = '\n'
+      label.form-check-label(for='inlineCheckbox3') Item 3 (disabled)
+
+  +ComponentCard({title:'Radio Inline'}).my-4
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineRadio1.form-check-input(type='radio' name='inlineRadioOptions' value='option1')
+      = '\n'
+      label.form-check-label(for='inlineRadio1') Item 1
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineRadio2.form-check-input(type='radio' name='inlineRadioOptions' value='option2')
+      = '\n'
+      label.form-check-label(for='inlineRadio2') item 2
+    .form-check.form-check-inline
+      = '\n'
+      input#inlineRadio3.form-check-input(type='radio' name='inlineRadioOptions' value='option3' disabled='')
+      = '\n'
+      label.form-check-label(for='inlineRadio3') Item 3 (disabled)

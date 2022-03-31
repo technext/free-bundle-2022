@@ -1,0 +1,12 @@
+extends ../../../layouts/LayoutTheme
+include ../../../layouts/LayoutSimpleAuth
+
+block wrapperContent
+  +LayoutBasic({logo:false, columnClass:'col-xxl-4'})
+    .text-center.mb-6
+      img.mb-7(src=`${CWD}assets/img/spot-illustrations/3.png` alt='phoenix')
+      h4 Come back soon!
+      p.text-700 Thanks for using Falcon. You are now successfully signed out.
+    a.btn.btn-primary.w-100(href=`${CWD}${paths['simple-signin']}`)
+      span.fas.fa-angle-left.me-2
+      | Go to sign in page

@@ -1,0 +1,17 @@
+append variables
+  -
+    var chicken = [
+      {
+        image:'fried-chicken.png',
+        rounded:'rounded-top rounded-md-start rounded-md-top-0',
+        order: 'order-md-0',
+        title:'Celebrate  parties with  <span class="text-primary">Fried Chicken</span>',
+        text:'Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out best deals for fried chicken.'
+      },
+    ]
+
+mixin FriedChicken 
+  +Section.py-0 
+    .row 
+      .col-12
+        +CardText(chicken[0])

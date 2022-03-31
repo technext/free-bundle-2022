@@ -1,0 +1,32 @@
+mixin DevelopmentHeader
+  +Section.pb-11.pt-7.bg-600
+    .row 
+      .col-12 
+        h6.font-sans-serif.text-primary.fw-bold Course category
+        h1.mb-6 Web Development
+      
+        form.row.g-3
+          .col-sm-6.col-md-3
+            label.form-label(for='inputCategories') Categories
+            select.form-select#inputCategories
+              option(selected) Web development
+              option(value='1') UX designer
+          .col-sm-6.col-md-3
+            label.form-label(for='inputLevel') Level
+            select.form-select#inputLevel
+              option(selected) All Level
+              option(value='1') Level 1 
+              option(value='2') Level 2 
+              option(value='3') Level 3
+          .col-sm-6.col-md-3
+            label.form-label(for='inputLanguage') Language
+            select.form-select#inputLanguage
+              option(selected) English
+              option(value='1') Bangla
+              option(value='2') Hindi
+          .col-sm-6.col-md-3
+            label.form-label(for='inputInstructor') Instructor
+            select.form-select#inputInstructor
+              option(selected) All Instructor 
+          .col-auto.z-index-2
+            button.btn.btn-primary(type='submit') Submit

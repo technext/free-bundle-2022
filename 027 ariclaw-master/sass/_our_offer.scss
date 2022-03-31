@@ -1,0 +1,208 @@
+/**************** our_offer css start ****************/
+.case_study{
+    overflow: hidden;
+    .col-lg-4 {
+        &:first-child{
+            padding-left: 0px;
+            @media #{$small_mobile}{
+                padding-left: 15px;
+            }
+            @media #{$large_mobile}{
+                padding-left: 15px;
+            }
+            @media #{$tab_device}{
+                padding-left: 15px;
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+        &:nth-child(2){
+            padding-right: 7.5px;
+            padding-left: 7.5px;
+            @media #{$small_mobile}{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            @media #{$large_mobile}{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            @media #{$tab_device}{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+        &:last-child{
+            padding-right: 0px;
+            @media #{$small_mobile}{
+                padding-right: 15px;
+            }
+            @media #{$large_mobile}{
+                padding-right: 15px;
+            }
+            @media #{$tab_device}{
+                padding-right: 15px;
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+    }
+
+}
+.our_offer {
+    
+    @media #{$small_mobile}{
+        padding: 70px 0px 50px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px 50px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px 60px;
+    }
+    @media #{$medium_device}{
+    
+    }
+    .single_offer_part {
+        @media #{$small_mobile}{
+            margin-bottom: 20px;
+        }
+        @media #{$large_mobile}{
+            margin-bottom: 20px;
+        }
+        @media #{$tab_device}{
+            margin-bottom: 20px;
+        }
+        @media #{$medium_device}{
+        
+        }
+        &:hover {
+            .single_offer {
+                &:after {
+                    width: 100%;
+                    height: 100%;
+                    left: 22px;
+                    top: 22px;
+                    opacity: 1;
+                    background-image: url(../img/offer_overlay.png);
+                    z-index: 99;
+                    @media #{$small_mobile}{
+                        left: 15px;
+                        top: 15px;
+                    }
+                    @media #{$large_mobile}{
+                        left: 15px;
+                        top: 15px;
+                    }
+                    @media #{$tab_device}{
+                        left: 15px;
+                        top: 15px;
+                    }
+                    @media #{$medium_device}{
+                    
+                    }
+                }
+                .hover_text {
+                    opacity: 1;
+                    left: 15px;
+                    right: 15px;
+                    h2{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .single_offer_part {
+        position: relative;
+        z-index: 1;
+
+        .single_offer {
+            position: relative;
+            z-index: 3;
+            &:after {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background: url(../img/offer_overlay.png);
+                content: "";
+                @include transform_time(0.5s);
+                opacity: 0;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                position: relative;
+                z-index: 1;
+            }
+
+            .hover_text {
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0 auto;
+                top: 40%;
+                z-index: 100;
+                opacity: 0;
+                @include transform_time(0.5s);
+
+                img {
+                    max-width: 39px;
+                    max-height: 48px;
+                    margin-bottom: 26px;
+                }
+
+                h2 {
+                    color: $white_color;
+                    font-size: 30px;
+                }
+
+                p {
+                    color: $white_color;
+                    margin-bottom: 9px;
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+}
+
+.team_part {
+    .single_offer_part {
+        width: 100%;
+        float: left;
+        position: relative;
+        z-index: 1;
+    }
+
+    .team_member_info {
+        text-align: center;
+
+        h4 {
+            font-size: 22px;
+            margin-top: 26px;
+        }
+    }
+
+    .team_social_icon {
+        a {
+            font-size: 15px;
+            color: $white_color;
+            margin: 7px;
+            display: inline-block;
+        }
+
+    }
+}
+
+/**************** our_offer css end ****************/

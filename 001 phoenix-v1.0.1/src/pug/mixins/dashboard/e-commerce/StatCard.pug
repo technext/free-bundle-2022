@@ -1,0 +1,95 @@
+mixin TotalOrders
+  .card.border.border-200.shadow-none.h-100
+    .card-body
+      .d-flex.justify-content-between
+        div
+          h5.mb-1 Total orders
+            span.badge.badge-light-warning.rounded-pill.fs--1.ms-2 -6.8%
+          h6.text-700 Last 7 days
+        h4 16,247
+      .d-flex.justify-content-center.px-4.py-6
+        .echart-total-orders(style='height:85px;width:115px' data-echarts!={
+          tooltip:{
+            show: false
+          },
+          series: [
+            { 
+              type: 'bar',
+              barWidth: "5px",
+              data: [120, 200, 150, 80, 70, 110, 120],
+              showBackground: true,
+              symbol: 'none',
+              itemStyle: {
+                borderRadius: 10,
+              },
+              backgroundStyle:{
+                borderRadius: 10,
+              }
+            }
+          ],
+          grid: { right: 10, left: 10, bottom: 0, top: 0 },
+        })
+      .mt-2
+        .d-flex.align-items-center.mb-2
+          .bullet-item.bg-primary.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Completed
+          h6.text-900.fw-semi-bold.mb-0 52%
+        .d-flex.align-items-center
+          .bullet-item.bg-light-primary.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Pending payment
+          h6.text-900.fw-semi-bold.mb-0 48%
+
+mixin NewCustomers
+  .card.border.border-200.shadow-none.h-100
+    .card-body
+      .d-flex.justify-content-between
+        div
+          h5.mb-1 New customers
+            span.badge.badge-light-warning.rounded-pill.fs--1.ms-2 +26.5%
+          h6.text-700 Last 7 days
+        h4 356
+      .pb-0.pt-4
+        .echarts-new-customers(style='height:180px;width:100%;')
+
+mixin TopCoupons
+  .card.border.border-200.shadow-none.h-100
+    .card-body
+      .d-flex.justify-content-between
+        div
+          h5.mb-2 Top coupons
+          h6.text-700 Last 7 days
+      .pb-4.pt-3
+        .echart-top-coupons(style='height:115px;width:100%;')
+      div
+        .d-flex.align-items-center.mb-2
+          .bullet-item.bg-primary.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Percentage discount
+          h6.text-900.fw-semi-bold.mb-0 72%
+        .d-flex.align-items-center.mb-2
+          .bullet-item.bg-primary-200.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Fixed card discount
+          h6.text-900.fw-semi-bold.mb-0 18%
+        .d-flex.align-items-center
+          .bullet-item.bg-info.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Fixed product discount
+          h6.text-900.fw-semi-bold.mb-0 10%
+
+mixin PayingCustomer
+  .card.border.border-200.shadow-none.h-100
+    .card-body
+      .d-flex.justify-content-between
+        div
+          h5.mb-2 Paying vs non paying
+          h6.text-700 Last 7 days
+      .d-flex.justify-content-center.pt-3
+        div(style='height:145px;width:140px')
+          canvas#payingCustomerChart
+      .mt-3
+        .d-flex.align-items-center.mb-2
+          .bullet-item.bg-primary.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Paying customer
+          h6.text-900.fw-semi-bold.mb-0 30%
+        .d-flex.align-items-center
+          .bullet-item.bg-light-primary.me-2
+          h6.text-900.fw-semi-bold.flex-1.mb-0 Non-paying customer
+          h6.text-900.fw-semi-bold.mb-0 70%

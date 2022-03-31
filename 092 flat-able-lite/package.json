@@ -1,0 +1,44 @@
+{
+  "name": "Flat-bootstrap-admin-template",
+  "version": "1.0.0",
+  "description": "Nextro is a admin template made using Bootstrap 4 framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phoenixcoded",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject": "^5.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sequence": "^1.0.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.1",
+    "merge-stream": "^1.0.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "apexcharts": "^3.6.9",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "clipboard": "^2.0.4",
+    "components-jqueryui": "^1.12.1",
+    "gmaps": "^0.4.24",
+    "gulp-file-include": "^2.0.1",
+    "jquery": "^3.4.0",
+    "lodash": "^4.17.11",
+    "perfect-scrollbar": "^1.4.0",
+    "prismjs": "^1.16.0"
+  }
+}

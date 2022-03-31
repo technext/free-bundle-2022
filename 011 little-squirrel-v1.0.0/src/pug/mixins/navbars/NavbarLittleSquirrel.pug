@@ -1,0 +1,33 @@
+mixin NavbarLittleSquirrel
+  nav.navbar.navbar-expand-lg.navbar-light.sticky-top.py-3.d-block(data-navbar-on-scroll)
+    .container
+      a.navbar-brand(href='index.html')
+        img(src=`${CWD}assets/img/gallery/logo-n.png`   height="45"  alt='logo')
+
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon 
+      #navbarSupportedContent.collapse.navbar-collapse.border-top.border-lg-0.mt-4.mt-lg-0
+        ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base
+          li.nav-item.px-2
+            a.nav-link(aria-current='page', href=`${CWD}index.html` class=currentPage === 'index' ? 'active' : false ) Home
+          //- #{console.log(currentPage)}
+          li.nav-item.px-2
+            a.nav-link(aria-current='page', href=`${CWD}pricing.html` class=currentPage === 'pricing' ? 'active' : false) Pricing
+          li.nav-item.px-2
+            a.nav-link(aria-current='page', href=`${CWD}web-development.html` class=currentPage === 'web-development' ? 'active' : false) Web Development
+          li.nav-item.px-2
+            a.nav-link(aria-current='page', href=`${CWD}user-research.html` class=currentPage === 'user-research' ? 'active' : false) User Research
+
+
+        a.btn.btn-primary.order-1.order-lg-0( href="#!") Sign Up
+        form.d-flex.my-3.d-block.d-lg-none
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn.btn-outline-primary(type='submit') Search
+
+        .dropdown.d-none.d-lg-block
+          button.btn.btn-outline-light#dropdownMenuButton1.ms-2(type='submit' data-bs-toggle='dropdown' aria-expanded='false')
+            i.fas.fa-search.text-800
+          
+          ul.dropdown-menu.dropdown-menu-lg-end(aria-labelledby='dropdownMenuButton1' style="top:55px")
+            form
+              input.form-control(type='search' placeholder='Search' aria-label='Search') 

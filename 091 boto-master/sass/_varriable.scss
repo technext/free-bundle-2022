@@ -1,0 +1,26 @@
+
+// Color
+$primary_color: #8DB952;
+$sub_color: #E4E4E4;
+$p_color: #7E858B;
+$heading_color: #222222;
+$white_color:#fff;
+
+$bg_1 : #151515;
+
+//Fonts
+$font_1: 'Arimo', sans-serif;
+$font_2: 'Raleway', sans-serif;
+
+
+$medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large_mobile: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$tab:'(max-width: 991px)';
+$small_mobile:'(max-width: 576px)';
+$xs_mobile:'(max-width: 420px)';
+$sm_mobile:'only screen and (min-width: 421px) and (max-width: 575px)';
+$big_screen:'only screen and (min-width: 1200px) and (max-width: 1440px)';
+$extra_big_screen: 'only screen and (min-width: 1200px) and (max-width: 3640px)';
+
+$sm_mobile_h:'(max-height: 500px)';

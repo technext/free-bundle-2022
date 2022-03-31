@@ -1,0 +1,26 @@
+
+.yt-video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -100000;
+  pointer-events: none;
+}
+
+iframe.yt-video {
+  opacity: 0;
+  &.loaded{
+    opacity: 1;   
+  }
+}
+
+.player{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+

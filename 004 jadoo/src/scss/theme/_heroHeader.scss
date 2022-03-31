@@ -1,0 +1,52 @@
+.hero-title {
+  font-family: $font-family-cursive;
+  font-weight: $font-weight-bold;
+  font-size: map-get($font-sizes, 9);
+  color: $navy-blue;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+
+  @include media-breakpoint-up(xl){ 
+    font-size: map-get($font-sizes, 13);
+  }
+
+  @include media-breakpoint-up(xxl){ 
+    font-size: map-get($font-sizes, 14);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: toRem(15);
+    top: toRem(40);
+    width: toRem(320);
+    height: toRem(13);
+    @include media-breakpoint-up(lg){ 
+      top: toRem(45);
+    }
+    @include media-breakpoint-up(xl){ 
+      font-size: map-get($font-sizes, 13);
+      top: toRem(67);
+      right: toRem(-15);
+    }
+    @include media-breakpoint-up(xxl){ 
+      font-size: map-get($font-sizes, 14);
+      top: toRem(75);
+      width: toRem(370);
+    }
+    background-image: url(../img/hero/shape.svg);
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.hero-img{
+  width: 105%;
+  margin-left: -(map-get($spacers, 8));
+
+  @include media-breakpoint-between(md, lg){
+    width: 135%;
+    margin-left: -(map-get($spacers, 7));
+  }
+}

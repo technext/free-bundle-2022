@@ -1,0 +1,43 @@
+mixin FooterList(...items)
+  each item in items
+    li.mb-2
+      a.link-900.fs-1.fw-medium.text-decoration-none(href='#!')= item
+
+mixin Footer 
+  +PreFooter 
+  .py-5.text-center 
+    p.mb-0.text-secondary.fs--1.fw-medium All rights reserved@jadoo.co 
+
+
+mixin PreFooter 
+  +Section.pb-0.pb-lg-4   
+    .row 
+      .col-lg-3.col-md-7.col-12.mb-4.mb-md-6.mb-lg-0.order-0 
+        img.mb-4(src=`${CWD}assets/img/logo2.svg`, width="150", alt="jadoo") 
+        p.fs--1.text-secondary.mb-0.fw-medium Book your trip in minute, get full Control for much longer.
+      .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-1.order-md-2 
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 Company
+        ul.list-unstyled.mb-0
+          +FooterList('About', 'Careers', 'Mobile')
+      .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-2.order-md-3 
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 Contact
+        ul.list-unstyled.mb-0
+          +FooterList('Help/FAQ', 'Press', 'Affiliate')
+      .col-lg-2.col-md-4.mb-4.mb-lg-0.order-lg-3.order-md-4 
+        h4.footer-heading-color.fw-bold.font-sans-serif.mb-3.mb-lg-4 More
+        ul.list-unstyled.mb-0
+          +FooterList('Airlinefees', 'Airline', 'Low fare tips')
+      .col-lg-3.col-md-5.col-12.mb-4.mb-md-6.mb-lg-0.order-lg-4.order-md-1 
+        .icon-group.mb-4 
+          a.text-decoration-none.icon-item.shadow-social#facebook(href="#!")
+            i.fab.fa-facebook-f 
+          a.text-decoration-none.icon-item.shadow-social#instagram(href="#!")
+            i.fab.fa-instagram 
+          a.text-decoration-none.icon-item.shadow-social#twitter(href="#!")
+            i.fab.fa-twitter 
+        h4.fw-medium.font-sans-serif.text-secondary.mb-3 Discover our app
+        .d-flex.align-items-center  
+          a(href="#!") 
+            img.me-2(src=`${CWD}assets/img/play-store.png`, alt="play store")
+          a(href="#!") 
+            img(src=`${CWD}assets/img/apple-store.png`, alt="apple store")

@@ -1,0 +1,97 @@
+/*-----------------------------------------------
+|   Reboot
+-----------------------------------------------*/
+::placeholder {
+  opacity: 1;
+  color: var(--#{$variable-prefix}400);
+}
+
+::selection {
+  background-color: $primary;
+  color: $white;
+}
+
+html {
+  scroll-padding-top: $navbar-top-height + 1.5;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  opacity: 1 !important;
+  // line-height: $line-height-lg;
+}
+
+pre,
+code {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+section {
+  position: relative;
+  padding-top: map_get($spacers, 6);
+  padding-bottom: map_get($spacers, 6);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: map_get($spacers, 8);
+    padding-bottom: map_get($spacers, 8);
+  }
+}
+
+//setting up font family for bootstrap components
+input,
+button,
+select,
+optgroup,
+textarea,
+label,
+.alert,
+.badge,
+.blockquote-footer,
+.btn,
+.navbar,
+.pagination,
+.valid-feedback,
+.invalid-feedback {
+  font-family: $font-family-sans-serif;
+}
+
+pre {
+  margin: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+label {
+  font-weight: $font-weight-medium;
+  margin-bottom: map-get($spacers, 2);
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-size: $font-size-sm;
+}
+
+[type='search'] {
+  -webkit-appearance: none; // 2
+}
+
+.min-h-auto {
+  min-height: auto;
+}
+.content-min-h {
+  min-height: calc(100vh - 10rem);
+}
+
+.table {
+  th {
+    letter-spacing: 1px;
+  }
+}

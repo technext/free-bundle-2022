@@ -1,0 +1,40 @@
+/*-------------------
+   Gallery Page
+ -------------------*/
+.gallery__page {
+    padding: 80px 15px 65px;
+    @media #{ $small_mobile} {
+        padding: 30px 15px 65px;
+    }
+}
+.gallery__warp {
+    max-width: 1570px;
+    margin: 0 auto;
+}
+
+.gallery__item {
+    display: block;
+    margin-bottom: 30px;
+    img {
+        min-width: 100%;
+    }
+}
+
+
+.fr-position-outside {
+    left: 0;
+    top: 0;
+    right: auto;
+    bottom: auto;
+}
+.fr-position-text {
+    color: $white_color;
+}
+.fr-window-skin-fresco.fr-window-ui-outside .fr-close-background,
+.fr-window-skin-fresco.fr-window-ui-outside .fr-close:hover .fr-close-background {
+     background-color: transparent;
+}
+
+.fr-thumbnail-active {
+    border: 2px solid $primary_color;
+}

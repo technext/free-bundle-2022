@@ -1,0 +1,150 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/common/Avatar
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Accordion',
+      description: 'Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/accordion/`,
+      linkText: 'Accordion on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Accordion Example',
+        id: '#accordion-example',
+      },
+      {
+        name: 'Standard Accordion Example',
+        id: '#standard-accordion-example',
+      },
+      {
+        name: 'Iconic Accordion Example',
+        id: '#iconic-accordion-example',
+      },
+    ]
+
+block component
+  +ComponentCard({
+    title: 'Accordion Example',
+    anchor: true
+  }).my-4
+      #accordionExample.accordion
+        .accordion-item
+          h2#headingOne.accordion-header
+            = '\n'
+            button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+              = '\n'
+              |  How long does it take to ship my order?
+              = '\n'
+          #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionExample')
+            .accordion-body.pt-0
+              = '\n'
+              strong This is the first item&apos;s accordion body.
+              = '\n'
+              |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+        .accordion-item
+          h2#headingTwo.accordion-header
+            = '\n'
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+              = '\n'
+              |  How long does it take to ship my order?
+              = '\n'
+          #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample')
+            .accordion-body.pt-0
+              = '\n'
+              strong This is the second item&apos;s accordion body.
+              = '\n'
+              |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+        .accordion-item
+          h2#headingThree.accordion-header
+            = '\n'
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+              = '\n'
+              |  How long does it take to ship my order?
+              = '\n'
+          #collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionExample')
+            .accordion-body.pt-0
+              = '\n'
+              strong This is the third item&apos;s accordion body.
+              |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+
+  +ComponentCard({
+    title: 'Standard Accordion Example',
+    anchor: true
+  }).mb-4
+    .py-3 
+      #accordionExample2.accordion.standard-accordion
+        .accordion-item
+          h2#headingFour.accordion-header
+            button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFour' aria-expanded='true' aria-controls='collapseFour')
+              |  How long does it take to ship my order?
+          #collapseFour.accordion-collapse.collapse.show(aria-labelledby='headingFour' data-bs-parent='#accordionExample2')
+            .accordion-body.pt-0
+              strong This is the first item&apos;s accordion body.
+              |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+        .accordion-item
+          h2#headingFive.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
+              |  How long does it take to ship my order?
+          #collapseFive.accordion-collapse.collapse(aria-labelledby='headingFive' data-bs-parent='#accordionExample2')
+            .accordion-body.pt-0
+              strong This is the second item&apos;s accordion body.
+              |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+        .accordion-item
+          h2#headingSix.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSix' aria-expanded='false' aria-controls='collapseSix')
+              |  How long does it take to ship my order?
+          #collapseSix.accordion-collapse.collapse(aria-labelledby='headingSix' data-bs-parent='#accordionExample2')
+            .accordion-body.pt-0
+              strong This is the third item&apos;s accordion body.
+              |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+              code .accordion-body
+              | , though the transition does limit overflow.
+
+  +ComponentCard({
+    title: 'Iconic Accordion Example',
+    anchor: true
+  }).mb-4
+    #accordionExample3.accordion.iconic-accordion
+      .accordion-item
+        h2#headingSeven.accordion-header
+          button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSeven' aria-expanded='true' aria-controls='collapseSeven')
+            |  How long does it take to ship my order?
+        #collapseSeven.accordion-collapse.collapse.show(aria-labelledby='headingSeven' data-bs-parent='#accordionExample3')
+          .accordion-body.pt-0
+            strong This is the first item&apos;s accordion body.
+            |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+            code .accordion-body
+            | , though the transition does limit overflow.
+      .accordion-item
+        h2#headingEight.accordion-header
+          button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseEight' aria-expanded='false' aria-controls='collapseEight')
+            |  How long does it take to ship my order?
+        #collapseEight.accordion-collapse.collapse(aria-labelledby='headingEight' data-bs-parent='#accordionExample3')
+          .accordion-body.pt-0
+            strong This is the second item&apos;s accordion body.
+            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+            code .accordion-body
+            | , though the transition does limit overflow.
+      .accordion-item
+        h2#headingNine.accordion-header
+          button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseNine' aria-expanded='false' aria-controls='collapseNine')
+            |  How long does it take to ship my order?
+        #collapseNine.accordion-collapse.collapse(aria-labelledby='headingNine' data-bs-parent='#accordionExample3')
+          .accordion-body.pt-0
+            strong This is the third item&apos;s accordion body.
+            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It&apos;s also worth noting that just about any HTML can go within the 
+            code .accordion-body
+            | , though the transition does limit overflow.

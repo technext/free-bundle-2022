@@ -1,0 +1,13 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/documentation/Plugin
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Plugin',
+      description:`List of third-party plugins that ${title} use`
+    }
+
+block component
+  //- +ComponentCard({title: 'Webpack based workflow', hideNavTab: true}).my-4
+  +Plugins

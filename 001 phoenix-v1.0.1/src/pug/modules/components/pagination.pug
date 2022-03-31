@@ -1,0 +1,35 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Pagination
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Pagination',
+      description: 'Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/pagination/`,
+      linkText: 'Pagination on Bootstrap',
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Example',
+        id: '#example',
+      },
+      {
+        name: 'Alignment',
+        id: '#alignment',
+      }
+    ]
+
+block component
+
+  +ComponentCard({
+    title:'Example'
+  }).my-6
+    +Example
+
+  +ComponentCard({
+    title:'Alignment',
+    descriptionEl:`<p>Change the alignment of pagination components with <a href="/modules/utilities/flex.html">flexbox utilities</a>.</p>`
+  }).my-6
+    +PaginationAlignment

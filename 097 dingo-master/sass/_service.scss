@@ -1,0 +1,192 @@
+/**************** service_part css start ****************/
+.service_part {
+   .single_service_text {
+      h2 {
+         font-size: 45px;
+         color: rgb(47, 55, 61);
+         line-height: 1.222;
+         margin-bottom: 20px;
+         margin-top: 50px;
+
+         @media #{$small_mobile} {
+            margin-top: 0px;
+            font-size: 30px;
+            margin-bottom: 15px;
+         }
+
+         @media #{$large_mobile} {
+            margin-top: 0px;
+            font-size: 30px;
+            margin-bottom: 15px;
+         }
+
+         @media #{$tab_device} {
+            font-size: 30px;
+         }
+
+         @media #{$medium_device} {
+            margin-top: 0px;
+            font-size: 35px;
+         }
+      }
+
+      p {
+         color: rgb(102, 102, 102);
+         line-height: 1.8;
+      }
+
+      .btn_2 {
+         margin-top: 45px;
+
+         @media #{$small_mobile} {
+            margin-top: 25px;
+         }
+
+         @media #{$large_mobile} {
+            margin-top: 25px;
+         }
+
+         @media #{$tab_device} {
+            margin-top: 25px;
+         }
+
+         @media #{$medium_device} {
+            margin-top: 25px;
+         }
+      }
+   }
+
+   .single_service_part {
+      padding: 60px 50px;
+      background-color: $white_color;
+      @media #{$small_mobile} {
+         padding: 30px 25px;
+         margin-top: 25px;
+      }
+
+      @media #{$large_mobile} {
+         padding: 30px 25px;
+         margin-top: 25px;
+      }
+
+      @media #{$tab_device} {
+         padding: 30px 25px;
+         margin-top: 25px;
+      }
+
+      @media #{$medium_device} {
+         margin-top: 25px;
+      }
+
+      span {
+         margin-left: 30px;
+         margin-bottom: 60px;
+         display: inline-block;
+         position: relative;
+         z-index: 1;
+         @media #{$small_mobile} {
+            margin-bottom: 35px;
+         }
+   
+         @media #{$large_mobile} {
+            margin-bottom: 35px;
+         }
+   
+         @media #{$tab_device} {
+            margin-bottom: 35px;
+         }
+   
+         @media #{$medium_device} {
+   
+         }
+         &:after {
+            position: absolute;
+            content: "";
+            bottom: -15px;
+            left: -30px;
+            border-radius: 50%;
+            background-color: #f6ece5;
+            width: 50px;
+            height: 50px;
+            z-index: -1;
+            background-color: rgb(227, 241, 218);
+         }
+
+         i {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 5px;
+            background-image: -moz-linear-gradient(131deg, rgb(0, 176, 155) 0%, rgb(150, 201, 61) 100%);
+            background-image: -webkit-linear-gradient(131deg, rgb(0, 176, 155) 0%, rgb(150, 201, 61) 100%);
+            background-image: -ms-linear-gradient(131deg, rgb(0, 176, 155) 0%, rgb(150, 201, 61) 100%);
+            box-shadow: 0px 12px 20px 0px rgba(53, 185, 122, 0.2);
+         }
+      }
+
+      .style_icon {
+         &:after {
+            background-color: rgb(246, 236, 229);
+         }
+
+         i {
+            background-image: -moz-linear-gradient(131deg, rgb(255, 126, 95) 0%, rgb(254, 180, 123) 99%);
+            background-image: -webkit-linear-gradient(131deg, rgb(255, 126, 95) 0%, rgb(254, 180, 123) 99%);
+            background-image: -ms-linear-gradient(131deg, rgb(255, 126, 95) 0%, rgb(254, 180, 123) 99%);
+            box-shadow: 0px 12px 20px 0px rgba(255, 126, 95, 0.2);
+         }
+      }
+
+      h4 {
+         font-weight: 600;
+         color: #1d1d1d;
+         font-size: 20px;
+         margin-bottom: 23px;
+         @media #{$small_mobile} {
+            margin-bottom: 15px;
+         }
+   
+         @media #{$large_mobile} {
+            margin-bottom: 15px;
+         }
+   
+         @media #{$tab_device} {
+            margin-bottom: 15px;
+         }
+   
+         @media #{$medium_device} {
+   
+         }
+      }
+
+      p {
+         color: $font_3;
+         line-height: 1.8;
+         font-size: 15px;
+      }
+   }
+
+   .service_btn {
+      &:after {
+         background-color: #f6ece5;
+      }
+   }
+
+   .hero-app-8 {
+      position: absolute;
+      right: 25%;
+   }
+   @media #{$small_mobile} {
+      .btn_3{
+         margin-top: 20px;
+      }
+   }
+
+   @media #{$large_mobile} {}
+
+   @media #{$tab_device} {}
+
+   @media #{$medium_device} {}
+}

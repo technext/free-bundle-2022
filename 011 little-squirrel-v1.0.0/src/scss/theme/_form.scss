@@ -1,0 +1,19 @@
+.input-group-icon{
+  position: relative;
+  .input-box{
+    padding-left: 2.8rem;
+    vertical-align: middle;
+  }
+  .input-box-icon{
+    position: absolute;
+    top:50%;
+    left: 1rem;
+    color:#212529;
+    transform: translateY(-50%);
+  }
+}
+
+.form-little-squirrel-control{
+  border-radius: 0;
+  padding: $input-padding-y 2.4rem;
+}

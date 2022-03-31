@@ -1,0 +1,62 @@
+
+mixin BadgeHeadingDemo 
+  h1 Example heading 
+    span.badge.bg-secondary New
+  h2 Example heading 
+      span.badge.bg-secondary New
+  h3 Example heading 
+      span.badge.bg-secondary New
+  h4 Example heading 
+      span.badge.bg-secondary New
+  h5 Example heading 
+      span.badge.bg-secondary New
+  h6 Example heading 
+      span.badge.bg-secondary New
+
+
+mixin BadgeButtonsDemo 
+  button.btn.btn-primary.d-flex.align-items-center(type='button')
+    | Notifications 
+    span.badge.bg-secondary.ms-2 4
+
+mixin BadgePositionedDemo 
+  button.btn.btn-primary.position-relative(type='button')
+    = '\n'
+    | Inbox
+    span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
+      | 99+
+      span.visually-hidden unread messages
+    = '\n'
+
+
+mixin BadgeSolidDemo
+  each value in colors
+    span.badge(class=`bg-${value}${value === 'light' ? ' text-dark' : ''}${value === 'dark' ? ' dark__bg-dark' : '' }`)
+      +cleanText(value)
+      //- span.fas.fa-bell.ms-2
+    = '\n'
+
+mixin BadgeWithIconsDemo
+  each value in colors
+    span.badge.fs--1(class=`bg-${value}${value === 'light' ? ' text-dark' : ''}${value === 'dark' ? ' dark__bg-dark' : '' }`)
+      +cleanText(value)
+      span.fas.fa-bell.ms-1
+    = '\n'
+
+mixin BadgePillDemo
+  each value in colors
+    span.badge.rounded-pill(class=`bg-${value}${value === 'light' ? ' text-dark' : ''}${value === 'dark' ? ' dark__bg-dark' : '' }`)
+      +cleanText(value)
+    = '\n'
+
+mixin BadgeSoftDemo
+  each value in colors
+    span.badge(class=`badge-soft-${value}`)
+      +cleanText(value)
+    = '\n'
+    
+mixin BadgeSoftPillDemo
+  each value in colors
+    span.badge.rounded-pill(class=`badge-soft-${value}`)
+      +cleanText(value)
+    = '\n'

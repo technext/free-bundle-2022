@@ -1,0 +1,73 @@
+.input-group-icon{
+  position: relative;
+  .input-box{
+    padding-left: 2.8rem;
+    vertical-align: middle;
+  }
+  .input-box-icon{
+    position: absolute;
+    top:50%;
+    left: 1rem;
+    color:#212529;
+    transform: translateY(-50%);
+  }
+}
+
+.form-livedoc-control {
+  border: $input-border-width solid rgba($info, .2);
+  border-radius: 1.25rem;
+  color: $black;
+  font-weight: 300;
+  background-color: $white;
+  padding: .95rem .95rem;
+
+  &:focus {
+    color: $gray-800;
+    font-weight: 700;
+    background-color:  rgba($info, .08);
+    border: 2px solid rgba($primary, .8);
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: none;
+    }
+  }
+}
+
+.form-cta-control {
+  border: $input-border-width solid rgba($light, .95);
+  color: #B2DDED;
+  background-color: transparent;
+  &:focus {
+    color: $light;
+    font-weight: 700;
+    background-color:  transparent;
+    border: 2px solid rgba($light, .8);
+  }
+}
+
+.form-select{
+  border: $input-border-width solid rgba($info, .2);
+  @include border-radius(1rem, 0);
+  font-weight: 300;
+  border-radius: 1.25rem;
+  padding: .95rem .95rem;
+  background-color: transparent;
+  color: $gray-600;
+  &:focus {
+    color: $gray-800;
+    font-weight: 700;
+    background-color:  rgba($info, .08);
+    border: 2px solid rgba($primary, .8);
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: none;
+    }
+  }
+}
+

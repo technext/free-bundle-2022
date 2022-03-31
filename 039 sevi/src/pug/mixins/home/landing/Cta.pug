@@ -1,0 +1,18 @@
+mixin Cta
+  section.py-6 
+    +Background({image: `${CWD}assets/img/illustrations/cta-bg.png`, attrs: { style: { 'background-position': 'right bottom', 'background-size': 'contain'} }, className: '' })
+    .container
+      .row.align-items-center
+        .col-md-5.col-lg-7.order-md-1.text-end
+          img.img-fluid.mb-4.mb-md-0(src=`${CWD}assets/img/illustrations/cta.png` width="670"  alt='')
+        .col-md-7.col-lg-5.text-center.text-md-start
+          h1.fw-semi-bold.text-warning.lh-base Create 
+            span.text-1100 your own 
+              br 
+              | mobile library
+          p.my-4.lh-lg  Create your own library on your phone easily with Sevi mobile app. Get it free on Google Play Store for android and Download on the App Store for iOS for free.
+          .d-flex.justify-content-center.d-md-inline-block
+            a(href='!#').pe-2.pe-sm-3.pe-md-4
+              img(src=`${CWD}assets/img/gallery/google-play.png` width='160' alt='')
+            a(href='!#')
+              img(src=`${CWD}assets/img/gallery/app-store.png` width='160' alt='')  

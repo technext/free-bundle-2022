@@ -1,0 +1,40 @@
+/*---------------------
+   Hero section
+ -----------------------*/
+ .hero__section {
+  padding-top: 120px;
+  margin-bottom: 90px;
+  @media #{$small_mobile} {
+    padding-top: 30px;
+  }
+ }
+ .slide-item {
+  padding: 0 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-center.slide-item img{
+  padding: 0;
+  @include transition(all 0.4s ease 0s);
+}
+
+.hero-slider .slick-track {
+  @include transition(all 0.1s);
+}
+
+.slide-item img {
+  height: 570px;
+  padding: 65px 0;
+  @include transition(0.4s);
+  @media #{$small_mobile} {
+    padding: 0;
+  }
+}
+
+.hero-text-slider {
+  text-align: center;
+  padding-top: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}

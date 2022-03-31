@@ -1,0 +1,88 @@
+.form-control{
+    height: 65px;
+    width: 100%;
+    background: #f7fafc;
+    &:focus{
+        border-color: $primary-color;
+        box-shadow: none;
+    }
+}
+textarea.form-control{
+    height: 157px;
+}
+
+.contact-bg{
+    background-color: #f3f7fb;
+}
+
+.round-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    &.green{
+        background: #e0fef4;
+        color: #00f7a7;
+    }
+    &.blue{
+        background: #e0f1ff;
+        color: #008cff;
+    }
+    &.orange{
+        background: #fff1e0;
+        color: #ff8b00;
+    }
+}
+
+.contact{
+    position: relative;
+    &-bg-1{
+        position: absolute;
+        left: 0;
+        top: 10%;
+        z-index: -1;
+        @include tablet {
+          display: none;
+        }
+    }
+    &-bg-2{
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: -1;
+        @include tablet {
+          display: none;
+        }
+    }
+    &-bg-3{
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        z-index: -1;
+        @include tablet {
+          display: none;
+        }
+    }
+    &-bg-4{
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        z-index: -1;
+        @include tablet {
+          display: none;
+        }
+    }
+    &-bg-5{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        z-index: -1;
+        @include tablet {
+          display: none;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                   Borders                                  */
+/* -------------------------------------------------------------------------- */
+
+// Safari clipping mask
+.overflow-hidden[class*='rounded']{
+  mask-image: radial-gradient($white, $black);
+}
+
+.border-top-2{ border-top-width: 0.125rem !important; }
+.border-end-2{ border-right-width: 0.125rem !important; }
+.border-bottom-2{ border-bottom-width: 0.125rem !important; }
+.border-start-2{ border-left-width: 0.125rem !important; }
+
+
+// Border cleanup
+
+.border-klean{
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(180, 210, 255, 0) 1%, rgb(199, 217, 245) 50%, rgba(180, 210, 255, 0) 100%)100% 0 100% 0/1px 0 1px 0 stretch;
+}
+
+
+.border-img{
+  border: 2px solid $white;
+  border-radius: 5rem;
+}
+
+.border-klean-gradient{
+  border: double .5rem transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white),linear-gradient(to right,rgba(195,129,219,1),rgba(78,146,249,1));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}

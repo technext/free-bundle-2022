@@ -1,0 +1,10 @@
+.dropdown-menu {
+  min-width: 16rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #F0F4F9;
+}
+
+/*# sourceMappingURL=dropdown-rtl.css.map */

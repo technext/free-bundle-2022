@@ -1,0 +1,21 @@
+mixin Navbar(navItems)
+    nav.navbar.navbar-expand-xl.navbar-light.fixed-top.px-0.pb-0.mb-2#navbar(data-navbar-darken-on-scroll="white")
+        .container-fluid.align-items-center.py-2
+            a.navbar-brand.flex-center(href='index.html')
+                img.logo(src=`${CWD}assets/img/logo.png` alt='open enterprise')
+                span.ms-2.d-none.d-sm-block.fw-bold Open Enterprise
+            button.navbar-toggler(
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            )
+                span.navbar-toggler-icon
+            div.collapse.navbar-collapse#navbarSupportedContent.justify-content-end
+                ul.navbar-nav.mr-auto.mt-3.mt-xl-0
+                    each item,index in navItems
+                        li.nav-item.ps-0.ps-xl-4.ms-2
+                            a.nav-link.fs-2.fw-medium(href=item.path) #{item.label} 
+

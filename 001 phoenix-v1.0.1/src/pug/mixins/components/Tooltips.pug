@@ -1,0 +1,30 @@
+mixin Tooltip(config)
+  button.btn.btn-secondary.btn-sm.m-1(type='button', data-bs-toggle='tooltip', data-bs-placement=config.placement, title=config.text)&attributes(attributes)
+    = '\n'
+    | #{config.text}
+    = '\n'
+  = '\n'
+
+mixin TooltipExampleDemo
+  +Tooltip({
+    placement: 'top',
+    text: 'Tooltip on top'
+  })
+  +Tooltip({
+    placement: 'right',
+    text: 'Tooltip on right'
+  })
+  +Tooltip({
+    placement: 'bottom',
+    text: 'Tooltip on bottom'
+  })
+  +Tooltip({
+    placement: 'left',
+    text: 'Tooltip on left'
+  })
+  +Tooltip({
+    placement: 'top',
+    text: 'Tooltip with HTML'
+  })(data-bs-html='true' title="<em>Tooltip</em> <u>with</u> <b>HTML</b>")
+        
+        

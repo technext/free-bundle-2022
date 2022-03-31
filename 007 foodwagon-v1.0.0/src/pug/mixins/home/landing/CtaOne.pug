@@ -1,0 +1,42 @@
+mixin CtaOne 
+  section
+    +Background({image: `${CWD}assets/img/gallery/cta-one-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: '' })
+    .container 
+      .row.justify-content-center
+        .col-xxl-10
+          .card.card-span.shadow-warning(style="border-radius: 35px;")
+            .card-body.py-5
+              .row.justify-content-evenly
+                .col-md-3
+                  .d-flex.d-md-block.d-xl-flex.justify-content-evenly.justify-content-lg-between
+                    img(src=`${CWD}assets/img/icons/discounts.png` width='100'  alt='...') 
+                    .d-flex.d-lg-block.d-xl-flex.flex-center
+                      h2.fw-bolder.text-1000.mb-0.text-gradient Daily
+                        br.d-none.d-md-block
+                        | Discounts  
+                      
+                .col-md-3.hr-vertical
+                  .d-flex.d-md-block.d-xl-flex.justify-content-evenly.justify-content-lg-between
+                    img(src=`${CWD}assets/img/icons/live-tracking.png` width='100' alt='...') 
+                    .d-flex.d-lg-block.d-xl-flex.flex-center
+                      h2.fw-bolder.text-1000.mb-0.text-gradient Live Tracking
+
+                .col-md-3.hr-vertical
+                  .d-flex.d-md-block.d-xl-flex.justify-content-evenly.justify-content-lg-between
+                    img(src=`${CWD}assets/img/icons/quick-delivery.png` width='100' alt='...') 
+                    .d-flex.d-lg-block.d-xl-flex.flex-center
+                      h2.fw-bolder.text-1000.mb-0.text-gradient Quick Delivery 
+
+      .row.flex-center.mt-md-8 
+        .col-lg-5.d-none.d-lg-block(style='margin-bottom: -122px;') 
+          img.w-100(src=`${CWD}assets/img/gallery/phone-cta-one.png`  alt='...')
+        .col-lg-5.mt-7.mt-md-0
+          h1.text-primary Install the app
+          p It's never been easier to order food. Look for the finest 
+            br.d-none.d-xl-block 
+            |discounts and you'll be lost in a world of delectable food.
+          
+          a(href='https://www.apple.com/app-store/' target="_blank").pe-2
+            img(src=`${CWD}assets/img/gallery/app-store.svg` width='160' alt='')
+          a(href='https://play.google.com/store/apps' target="_blank")
+            img(src=`${CWD}assets/img/gallery/google-play.svg` width='160' alt='')  

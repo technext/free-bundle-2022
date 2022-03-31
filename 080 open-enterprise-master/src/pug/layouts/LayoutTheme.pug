@@ -1,0 +1,19 @@
+extends Layout
+include ../mixins/navbars/Navbar
+include ../mixins/Variables
+
+prepend scripts
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+
+ 
+append footerStyles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;600;700;900&display=swap" rel='stylesheet')
+
+block mainContent 
+  +Navbar(sitemap)
+  block wrapperContent 
+    block beforeContent
+    block content
+    block afterContent
+  //- +pre-footer

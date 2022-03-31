@@ -1,0 +1,83 @@
+append variables
+  -
+    var doctorsInfo= [
+      {
+        name:'Anita Deshai',
+        image:'anita.png',
+        designation: 'Pediatrics, Gochi Medicine',
+        country: 'Florida, United States',
+        experience:'10 years experience',
+      },
+      {
+        name:'Jane Flakis',
+        image:'jane.png',
+        designation: 'Gynaecology, Abenka Care',
+        country: 'Melbourne, Australia',
+        experience:'12 years experience',
+      },
+      {
+        name:'Leo Mario',
+        image: 'leo-mario.png',
+        designation: 'Physiotherapy, FitCare',
+        country: 'London, England',
+        experience:'25 years experience',
+      },
+    ];
+ 
+
+mixin doctorsInfo(config, ...items)
+  .col-md-4.mb-8.mb-md-0
+    .card.card-span.h-100.shadow&attributes(attributes) 
+      .card-body.d-flex.flex-column.flex-center.py-5
+        img(src=`${CWD}assets/img/gallery/${config.image}` width="128" alt='...')
+        h5.mt-3=config.name
+        p.mb-0.fs-xxl-1=config.designation
+        p.text-600.mb-0=config.country 
+        p.text-600.mb-4=config.experience
+        .text-center
+          if config.hasBtnOutline 
+            button.btn.btn-outline-secondary.rounded-pill(type='submit') View Profile
+          else  
+            button.btn.btn-secondary.hover-top.rounded-pill.border-0(type='submit') View Profile
+    
+mixin OurDoctors 
+  +Section.pb-0
+    .row 
+      .col-12.py-3
+        +Background({image: `${CWD}assets/img/gallery/doctors-us.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+        h1.text-center OUR DOCTORS
+
+  section.py-5
+    +Background({image: `${CWD}assets/img/gallery/doctors-bg.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+    .container
+      .row.flex-center
+        - const d1 = { name:'Anita Deshai',image:'anita.png', designation: 'Pediatrics, Gochi Medicine',country: 'Florida, United States', experience:'10 years experience',hasBtnOutline: true}
+        - const d2 = { name:'Jane Flakis',image:'jane.png', designation: 'Gynaecology, Abenka Care', country: 'Melbourne, Australia', experience:'12 years experience',hasBtnOutline: true}
+        - const d3 = { name:'Leo Mario',image: 'leo-mario.png', designation: 'Physiotherapy, FitCare', country: 'London, England', experience:'25 years experience',hasBtnOutline: false}
+        .col-xl-10.px-0    
+          #carouselExampleDark.carousel.slide(data-bs-ride='carousel')
+            a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselExampleDark' role='button' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            a.carousel-control-next.carousel-icon.z-index-2(href='#carouselExampleDark' role='button' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.m-lg-7.mx-3.mt-6.mx-md-4.my-md-7
+                  +doctorsInfo(d1)
+                  +doctorsInfo(d2)
+                  +doctorsInfo(d3)
+                        
+              .carousel-item(data-bs-interval='2000')
+                .row.h-100.m-lg-7.mx-3.mt-6.mx-md-4.my-md-7
+                  +doctorsInfo(d1)
+                  +doctorsInfo(d2)
+                  +doctorsInfo(d3)
+
+              .carousel-item
+                .row.h-100.m-lg-7.mx-3.mt-6.mx-md-4.my-md-7
+                  +doctorsInfo(d1)
+                  +doctorsInfo(d2)
+                  +doctorsInfo(d3)
+            

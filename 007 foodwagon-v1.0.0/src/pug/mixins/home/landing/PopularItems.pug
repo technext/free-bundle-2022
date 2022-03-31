@@ -1,0 +1,93 @@
+append variables
+  -
+    var pItems= [
+      {
+        image:'cheese-burger.png',
+        title:'Cheese Burger',
+        shop:'Burger Arena',
+        price:'$3.88',
+
+      },
+      {
+        image:'toffes-cake.png',
+        title:`Toffe's Cake`,
+        shop:'Top Sticks',
+        price:'$4.00',
+      },
+      {
+        image:'dancake.png',
+        title:'Dancake',
+        shop:'Cake World',
+        price:'$1.99',
+      },
+      {
+        image:'crispy-sandwitch.png',
+        title:'Crispy Sandwitch',
+        shop:'Fastfood Dine',
+        price:'$3.00',
+      },
+      {
+        image:'thai-soup.png',
+        title:'Thai Soup',
+        shop:'Foody Man',
+        price:'$2.79',
+      },
+
+    ];
+mixin PopularItem(config)
+  .col-sm-6.col-md-4.col-xl.mb-5.h-100
+    .card.card-span.h-100.rounded-3
+      img.img-fluid.rounded-3.h-100(src=`${CWD}assets/img/gallery/${config.image}` alt='...')  
+      .card-body.ps-0
+        h5.fw-bold.text-1000.text-truncate.mb-1=config.title 
+        div
+          span.text-warning.me-2
+            i.fas.fa-map-marker-alt
+          span.text-primary=config.shop  
+        span.text-1000.fw-bold=config.price
+    .d-grid.gap-2
+      a.btn.btn-lg.btn-danger(href='#!' role='button') Order now
+
+mixin PopularItems
+  +Section.py-4.overflow-hidden
+    .row.h-100
+      .col-lg-7.mx-auto.text-center.mt-7.mb-5
+        h5.fw-bold.fs-3.fs-lg-5.lh-sm Popular items
+      .col-12
+        #carouselPopularItems.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+          .carousel-inner
+            .carousel-item.active(data-bs-interval='10000')
+              .row.gx-3.h-100.align-items-center            
+                +PopularItem(pItems[0])                                                                    
+                +PopularItem(pItems[1])                                                                    
+                +PopularItem(pItems[2])                                                                    
+                +PopularItem(pItems[3])                                                                    
+                +PopularItem(pItems[4])                                                                    
+            .carousel-item(data-bs-interval='5000')
+              .row.gx-3.h-100.align-items-center             
+                +PopularItem(pItems[0])                                                                    
+                +PopularItem(pItems[1])                                                                    
+                +PopularItem(pItems[2])
+                +PopularItem(pItems[3])                     
+                +PopularItem(pItems[4])                     
+            .carousel-item(data-bs-interval='3000')
+              .row.gx-3.h-100.align-items-center                                 
+                +PopularItem(pItems[0])                                                                    
+                +PopularItem(pItems[1])                                                                    
+                +PopularItem(pItems[2])
+                +PopularItem(pItems[3])                       
+                +PopularItem(pItems[4])                       
+            .carousel-item
+              .row.gx-3.h-100.align-items-center      
+                +PopularItem(pItems[0])                                                                    
+                +PopularItem(pItems[1])                                                                    
+                +PopularItem(pItems[2]) 
+                +PopularItem(pItems[3])   
+                +PopularItem(pItems[4])   
+
+          button.carousel-control-prev.carousel-icon(type='button' data-bs-target='#carouselPopularItems' data-bs-slide='prev')
+            span.carousel-control-prev-icon.hover-top-shadow(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next.carousel-icon(type='button' data-bs-target='#carouselPopularItems' data-bs-slide='next')
+            span.carousel-control-next-icon.hover-top-shadow(aria-hidden='true')
+            span.visually-hidden Next 

@@ -1,0 +1,27 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Places
+include mixins/home/landing/FeatureVideos
+include mixins/home/landing/Category
+include mixins/home/landing/Travellers
+include mixins/home/landing/Booking
+include mixins/home/landing/Footer
+
+
+append variables
+  - var currentPage = 'index'
+
+prepend styles
+  link(href=`${CWD}vendors/plyr/plyr.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`${CWD}vendors/plyr/plyr.polyfilled.min.js`)
+
+append content
+  +HeroHeader
+  +Places
+  +FeatureVideos
+  +Category
+  +Travellers
+  +Booking
+  +Footer

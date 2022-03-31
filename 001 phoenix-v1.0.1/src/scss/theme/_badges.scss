@@ -1,0 +1,20 @@
+/* -------------------------------------------------------------------------- */
+/*                                    Badge                                   */
+/* -------------------------------------------------------------------------- */
+
+@mixin badge-light-variant($color) {
+  color: map-get($theme-colors-dark, $color);
+  background-color: map-get($theme-colors-light, $color);
+  &[href] {
+    @include hover-focus {
+      text-decoration: none;
+      color: map-get($theme-colors-dark, $color);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors-light {
+  .badge-light-#{$color} {
+    @include badge-light-variant($color);
+  }
+}

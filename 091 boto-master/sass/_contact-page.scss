@@ -1,0 +1,60 @@
+/*----------------
+   Contact Page
+ ----------------*/
+ .contact__warp {
+    max-width: 802px;
+    padding: 170px 15px 130px;
+    margin: 0 auto;
+    @media #{ $small_mobile} {
+        padding: 30px 15px 130px;
+    }
+ }
+
+ .contact__social {
+     padding-top: 20px;
+     margin-bottom: 40px;
+     a {
+         display: inline-block;
+         text-align: center;
+         width: 40px;
+         height: 40px;
+         padding-top: 8px;
+         margin-right: 6px;
+         color: $heading_color;
+         border-radius: 50%;
+         background: #E8E8E8;
+         @include transition(0.3s);
+         &:hover {
+             background: $primary_color;
+             color: #ffffff;
+         }
+     }
+ }
+
+ .contact__text {
+    p {
+        font-size: 18px;
+        color: $heading_color;
+    }
+ }
+ .contact__form {
+     padding-top: 20px;
+    input,
+    textarea {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        padding: 15px 20px;
+        margin-bottom: 26px;
+        color: $heading_color;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &:focus {
+            border: 1px solid $primary_color;
+        }
+    }
+    textarea {
+        height: 110px;
+        resize: none;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,18 @@
+mixin HeroHeader
+  section.py-0#home
+    +Background({ image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'right top', 'background-size': 'contain'} }, className: 'd-none d-sm-block' })
+    +Background({image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'right top', 'background-size': 'contain'} }, className: 'd-sm-none' })
+    .container
+      .row.align-items-center.min-vh-75.min-vh-md-100
+        .col-md-7.col-lg-6.py-6.text-sm-start.text-center
+          h1.mt-6.mb-sm-4.display-2.fw-semi-bold.lh-sm.fs-4.fs-lg-6.fs-xxl-8 Find your job better 
+            br.d-block.d-lg-none.d-xl-block
+            |and faster
+          p.mb-4.fs-1 Find your best job better and faster with Jobest
+          .pt-3
+            form
+              .input-group.w-xl-75.w-xxl-50.d-flex.flex-end-center
+                input#formGroupExampleInput.form-control.rounded-pill.shadow-lg.border-0(type='text' placeholder='Seacrh by skill, company and job' )
+                img(src=`${CWD}assets/img/illustrations/search.png` width="30" alt='').input-box-icon.me-2
+
+              

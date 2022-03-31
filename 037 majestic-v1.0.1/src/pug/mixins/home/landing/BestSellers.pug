@@ -1,0 +1,84 @@
+append variables
+  -
+    var testimonials= [
+      {
+        image:'handbag.png',
+        title:'Marie Claire Handbag',
+        prevPrice:'$399',
+        price:'$365',
+         
+      },
+      {
+        image:'earrings.png',
+        title:'Red Gem Earrings',
+        prevPrice:'$489',
+        price:'$466',
+      },
+      {
+        image:'lathered-wristwatch.png',
+        title:'Black Leathered Wristwatch',
+        prevPrice:'$799',
+        price:'$745',
+      },
+      {
+        image:'tie.png',
+        title:'Red-White Stripped Tie',
+        prevPrice:'$299',
+        price:'$243',
+      },
+      
+    ];
+
+
+mixin Items(config)
+  .col-md-3.mb-3.mb-md-0.h-100
+    .card.card-span.h-100.text-white
+      img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+      .card-img-overlay.ps-0    
+      .card-body.ps-0.bg-200 
+        h5.fw-bold.text-1000.text-truncate=config.title 
+        .fw-bold
+          span.text-600.me-2.text-decoration-line-through=config.prevPrice
+          span.text-danger=config.price
+      a.stretched-link(href='#')
+mixin BestSellers
+  section
+    .container
+      .row.h-100
+        .col-lg-7.mx-auto.text-center.mb-6
+          h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3 Best Sellers
+        .col-12
+          #carouselBestSellers.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.align-items-center.g-2                
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])                                                                    
+                  +Items(testimonials[3])                                                                    
+              .carousel-item(data-bs-interval='5000')
+                .row.h-100.align-items-center.g-2                
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])
+                  +Items(testimonials[3])                     
+              .carousel-item(data-bs-interval='3000')
+                .row.h-100.align-items-center.g-2                                  
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2])
+                  +Items(testimonials[3])                       
+              .carousel-item
+                .row.h-100.align-items-center.g-2          
+                  +Items(testimonials[0])                                                                    
+                  +Items(testimonials[1])                                                                    
+                  +Items(testimonials[2]) 
+                  +Items(testimonials[3])   
+              .row
+                button.carousel-control-prev(type='button' data-bs-target='#carouselBestSellers' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouselBestSellers' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next 
+        

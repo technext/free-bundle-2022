@@ -1,0 +1,30 @@
+append variables
+    -
+        var featureCards = [
+            {
+                img:`${CWD}assets/img/icons/icon1.png`,
+                title:'Modern workforce',
+                details:'Multistakeholder governance aligns employees with the organization’s wider community.'
+            },
+            {
+                img:`${CWD}assets/img/icons/icon2.png`,
+                title:'Meritocratic by design',
+                details:'Tokenized ownership aligns deeply committed individuals with the organization’s success.'
+            },
+            {
+                img:`${CWD}assets/img/icons/icon3.png`,
+                title:'Engineered for resilience',
+                details:'Open Enterprise supports best practices in sociocratic management.'
+            },
+        ];
+
+mixin Features 
+    +Section#features.pt-xxl-0
+        +TitleText({
+            title : 'Reimagining what it means to work',
+            subTitle : 'Teams and communities using Open Enterprise fundamentally unlock a reality of work that reimagines how people engage in economic opportunity, meeting the demands and expectations of a modern organization.'
+        })
+        .row.row-cols-1.row-cols-xl-3.g-4.mt-3.text-center
+            each card,index in featureCards
+                .col-12(class=index !== 2 && 'col-md-6')
+                    +FeatureCard(card)

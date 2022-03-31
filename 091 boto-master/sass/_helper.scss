@@ -1,0 +1,153 @@
+/*---------------------
+   Helper CSS
+ -----------------------*/
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+    img {
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 38px;
+        text-transform: uppercase;
+    }
+    p{
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.spad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.text-white {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    li,
+    a {
+        color: #fff;
+    }
+}
+
+
+/*---------------------
+  Commom elements
+-----------------------*/
+.site-btn {
+    display: inline-block;
+	font-size: 16px;
+    padding: 16px 15px;
+    min-width: 180px;
+	color: $white-color;
+	background: $primary-color;
+	line-height: 1;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+    i {
+        font-size: 24px;
+        position: relative;
+        top: 5px;
+        margin-left: 4px;
+    }
+    &:hover {
+        color: $white_color;
+    }
+}
+
+.section__title {
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 45px;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 4px;
+        left: calc(50% - 30px);
+        bottom: 0;
+        background: $primary_color;
+    }
+    h2 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        @media #{$small_mobile} {
+            font-size: 24px;
+        }
+    }
+}
+
+
+.search-model {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    z-index: 99999;
+  }
+  
+  .search-model-form {
+    padding: 0 15px;
+  }
+  
+  .search-model-form input {
+    width: 500px;
+    font-size: 34px;
+    border: none;
+    border-bottom: 2px solid #ededed;
+    background: 0 0;
+    color: #999;
+    @media #{$small_mobile} {
+        width: 100%;
+        font-size: 24px;
+    }
+  }
+  
+  .search-close-switch {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 39px;
+    line-height: 28px;
+    top: 30px;
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .pt83 {
+    padding-top: 83px;
+  }

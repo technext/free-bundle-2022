@@ -1,0 +1,154 @@
+
+mixin TopRegionsTableRow(data,index)
+  tr
+    td.white-space-nowrap.ps-0(style="width:32%")
+      .d-flex.align-items-center
+        h6.mb-0.me-3=`${index + 1}. ` 
+        a(href='#!')
+          .d-flex.align-items-center
+            img(src=`${CWD}assets${data.country.flag}`, alt='' width=24)
+            p.mb-0.ps-3.text-primary.fw-bold.fs--1=data.country.name
+    td.align-middle(style='width:17%')
+      h6.mb-0=data.users.number
+        span.text-700.fw-medium.ms-2=`(${data.users.percantage})`
+    td.align-middle.text-end(style='width:17%')
+      h6.mb-0=data.transactions.number
+        span.text-700.fw-medium.ms-2=`(${data.transactions.percantage})`
+    td.align-middle.text-end(style='width:17%')
+      h6.mb-0=`$${data.revenue.number}`
+        span.text-700.fw-medium.ms-2=`(${data.revenue.percantage})`
+    td.align-middle.text-end.pe-0(style='width:17%')
+      h6=data.convRate
+
+mixin TopRegionsTable
+  - 
+    var topRegionsTableData = [
+      {
+        country:{
+          name: 'India',
+          flag: '/img/country/india.png'
+        },
+        users: {
+          number: 92896,
+          percantage: '41.6%'
+        },
+        transactions: {
+          number: 67,
+          percantage: '34.3%'
+        },
+        revenue: {
+          number: 7560,
+          percantage: '36.9%'
+        },
+        convRate: '14.01%',
+      },
+      {
+        country:{
+          name: 'China',
+          flag: '/img/country/china.png'
+        },
+        users: {
+          number: 50496,
+          percantage: '32.8%'
+        },
+        transactions: {
+          number: 54,
+          percantage: '23.8%'
+        },
+        revenue: {
+          number: 6532,
+          percantage: '26.5%'
+        },
+        convRate: '23.56%',
+      },
+      {
+        country:{
+          name: 'USA',
+          flag: '/img/country/usa.png'
+        },
+        users: {
+          number: 45679,
+          percantage: '24.3%'
+        },
+        transactions: {
+          number: 35,
+          percantage: '19.7%'
+        },
+        revenue: {
+          number: 5432,
+          percantage: '16.9%'
+        },
+        convRate: '10.23%',
+      },
+      {
+        country:{
+          name: 'South Korea',
+          flag: '/img/country/south-korea.png'
+        },
+        users: {
+          number: 36453,
+          percantage: '19.7%'
+        },
+        transactions: {
+          number: 22,
+          percantage: '9.54%'
+        },
+        revenue: {
+          number: 4673,
+          percantage: '11.6%'
+        },
+        convRate: '8.85%',
+      },
+      {
+        country:{
+          name: 'Vietnam',
+          flag: '/img/country/vietnam.png'
+        },
+        users: {
+          number: 15007,
+          percantage: '11.9%'
+        },
+        transactions: {
+          number: 17,
+          percantage: '6.91%'
+        },
+        revenue: {
+          number: 2456,
+          percantage: '10.2%'
+        },
+        convRate: '6.01%',
+      }
+    ]
+  .table-responsive.scrollbar
+    table.table.fs--2.mb-0
+      thead
+        tr
+          th.border-top.border-200.ps-0.align-middle(scope='col' style="width:32%") COUNTRY
+          th.border-top.border-200.align-middle(scope='col' style="width:17%") USERS
+          th.border-top.border-200.text-end.align-middle(scope='col' style="width:16%") TRANSACTIONS
+          th.border-top.border-200.text-end.align-middle(scope='col' style="width:20%") REVENUE
+          th.border-top.border-200.text-end.pe-0.align-middle(scope='col' style="width:17%") CONV. RATE
+      tbody.list
+        tr
+          td
+          td.align-middle.py-4
+            h4.mb-0.fw-normal 377,620
+          td.align-middle.text-end.py-4
+            h4.mb-0.fw-normal 236
+          td.align-middle.text-end.py-4
+            h4.mb-0.fw-normal $15,758
+          td.align-middle.text-end.py-4.pe-0
+            h4.mb-0.fw-normal 10.32%
+        each row, index in topRegionsTableData
+          +TopRegionsTableRow(row,index)
+  .d-flex.align-items-center.justify-content-between.py-2.fs--1.mb-1
+      p.mb-0.d-none.d-sm-block.me-3.fw-semi-bold.text-900(data-list-info='')
+        | 1 to 5 
+        span.text-600  Items of 
+        |  15
+      a.fw-semi-bold(href='#!', data-list-view='*')
+        | View all
+        span.fas.fa-angle-right.ms-2(data-fa-transform='down-1')
+
+      
+      

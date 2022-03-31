@@ -1,0 +1,35 @@
+extends layouts/LayoutTheme
+include mixins/common/CardText
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Discount
+include mixins/home/landing/HowItWorks
+include mixins/home/landing/PopularItems
+include mixins/home/landing/FeaturedRestaurants
+include mixins/home/landing/SearchByFood
+include mixins/home/landing/CrispySandwiches
+include mixins/home/landing/FriedChicken
+include mixins/home/landing/SpicyPizza
+include mixins/home/landing/CtaOne
+include mixins/home/landing/CtaTwo
+include mixins/home/landing/Footer
+
+
+
+append variables
+  - var currentPage = 'index'
+
+prepend scripts
+  
+append content
+  +HeroHeader
+  +Discount
+  +Features
+  +PopularItems
+  +FeaturedRestaurants
+  +SearchByFoods
+  +CtaOne
+  +CrispySandwiches
+  +FriedChicken
+  +SpicyPizza
+  +CtaTwo
+  +Footer

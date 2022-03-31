@@ -1,0 +1,25 @@
+
+
+// //*----------------------------- from bootstrap carousel ------------------*//
+.carousel-indicators {
+  position: static;
+  justify-content: start;
+  margin:  0;
+  
+
+ li{
+  border-radius: 50%;
+  border-radius: 10px;
+ }
+
+  .active {
+    opacity: $carousel-indicator-active-opacity;
+  }
+}
+
+.carousel-control-prev {
+  left: auto;
+ 
+}
+
+

@@ -1,0 +1,17 @@
+
+
+// // Nav links
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-light-hover-color;
+        font-weight: 700;
+      }
+    }
+
+  }
+}

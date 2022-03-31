@@ -1,0 +1,224 @@
+//*-----------------------------------------------
+//|   Color System
+//-----------------------------------------------*/
+
+$white: #fff !default;
+$gray-soft: #f5f7fa !default;
+$gray-100: #eff2f6 !default;
+$gray-200: #e3e6ed !default;
+$gray-300: #cbd0dd !default;
+$gray-400: #9fa6bc !default;
+$gray-500: #8a94ad !default;
+$gray-600: #6e7891 !default;
+$gray-700: #525b75 !default;
+$gray-800: #3e465b !default;
+$gray-900: #31374a !default;
+$gray-1000: #222834 !default;
+$gray-1100: #141824 !default;
+$black: #000 !default;
+
+// $grays: () !default;
+$grays: (
+  'black': $black,
+  'soft': $gray-soft,
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+  '1000': $gray-1000,
+  '1100': $gray-1100,
+  'white': $white
+) !default;
+// $body-bg: $gray-200 !default;
+//*-----------------------------------------------
+//|   Solid Colors
+//-----------------------------------------------*/
+// $blue: #387430 !default;
+$blue: #3874ff !default;
+$red: #ec1f00 !default;
+$orange: #e5780b !default;
+$green: #25b003 !default;
+$cyan: #0097eb !default;
+
+$colors: (
+  'blue': $blue,
+  'red': $red,
+  'orange': $orange,
+  'green': $green,
+  'cyan': $cyan
+) !default;
+
+//*-----------------------------------------------
+//|   Theme Colors
+//-----------------------------------------------*/
+$primary: $blue !default;
+$secondary: $gray-900 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-1100 !default;
+
+$theme-colors-variant: (
+  'primary': 'blue',
+  'secondary': 'gray',
+  'success': 'green',
+  'info': 'cyan',
+  'warning': 'orange',
+  'danger': 'red',
+  'light': 'light',
+  'dark': 'dark'
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark
+  ),
+  $theme-colors
+);
+
+$blue-soft: #f5f8ff !default;
+$blue-100: #e5edff !default;
+$blue-200: #adc5ff !default;
+$blue-300: #85a9ff !default;
+$blue-400: $blue !default;
+$blue-500: #004dff !default;
+$blue-600: #004dff !default;
+
+$blues: (
+  'blue-soft': $blue-soft,
+  'blue-100': $blue-100,
+  'blue-200': $blue-200,
+  'blue-300': $blue-300,
+  'blue-400': $blue-400,
+  'blue-500': $blue-500,
+  'blue-600': $blue-600
+) !default;
+
+$red-soft: #ffedeb !default;
+$red-100: #ffe0db !default;
+$red-200: #fabcb3 !default;
+$red-300: #f48270 !default;
+$red-400: $red !default;
+$red-500: #cc1b00 !default;
+$red-600: #b81800 !default;
+
+$reds: (
+  'red-soft': $red-soft,
+  'red-100': $red-100,
+  'red-200': $red-200,
+  'red-300': $red-300,
+  'red-400': $red-400,
+  'red-500': $red-500,
+  'red-600': $red-600
+) !default;
+
+$green-soft: #f0fdec !default;
+$green-100: #d9fbd0 !default;
+$green-200: #bee8b4 !default;
+$green-300: #90d67f !default;
+$green-400: $green !default;
+$green-500: #23890b !default;
+$green-600: #1c6c09 !default;
+
+$greens: (
+  'green-soft': $green-soft,
+  'green-100': $green-100,
+  'green-200': $green-200,
+  'green-300': $green-300,
+  'green-400': $green-400,
+  'green-500': $green-500,
+  'green-600': $green-600
+) !default;
+
+$orange-soft: #fff6e0 !default;
+$orange-100: #ffefca !default;
+$orange-200: #ffe6ad !default;
+$orange-300: #ffcc85 !default;
+$orange-400: $orange !default;
+$orange-500: #d6700a !default;
+$orange-600: #bc3803 !default;
+
+$oranges: (
+  'orange-soft': $orange-soft,
+  'orange-100': $orange-100,
+  'orange-200': $orange-200,
+  'orange-300': $orange-300,
+  'orange-400': $orange-400,
+  'orange-500': $orange-500,
+  'orange-600': $orange-600
+) !default;
+
+$cyan-soft: #f0faff !default;
+$cyan-100: #c7ebff !default;
+$cyan-200: #96d9ff !default;
+$cyan-300: #60c6ff !default;
+$cyan-400: $cyan !default;
+$cyan-500: #0080c7 !default;
+$cyan-600: #005585 !default;
+
+$cyans: (
+  'cyan-soft': $cyan-soft,
+  'cyan-100': $cyan-100,
+  'cyan-200': $cyan-200,
+  'cyan-300': $cyan-300,
+  'cyan-400': $cyan-400,
+  'cyan-500': $cyan-500,
+  'cyan-600': $cyan-600
+) !default;
+
+$theme-colors-soft: () !default;
+$theme-colors-soft: map-merge(
+  (
+    'primary': $blue-soft,
+    'secondary': $gray-soft,
+    'success': $green-soft,
+    'info': $cyan-soft,
+    'warning': $orange-soft,
+    'danger': $red-soft
+  ),
+  $theme-colors-soft
+);
+
+$theme-colors-light: (
+  'primary': $blue-100,
+  'secondary': $gray-100,
+  'success': $green-100,
+  'info': $cyan-100,
+  'warning': $orange-100,
+  'danger': $red-100
+);
+
+$theme-colors-dark: (
+  'primary': $blue-600,
+  'secondary': $gray-1100,
+  'success': $green-600,
+  'info': $cyan-600,
+  'warning': $orange-600,
+  'danger': $red-600
+);
+
+$theme-hover-colors: (
+  'primary': $blue-500,
+  'secondary': $gray-1000,
+  'success': $green-500,
+  'info': $cyan-500,
+  'warning': $orange-500,
+  'danger': $red-500
+);
+
+$button-colors: map-remove($theme-colors, 'light', 'dark');

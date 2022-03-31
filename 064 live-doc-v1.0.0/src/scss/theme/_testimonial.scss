@@ -1,0 +1,61 @@
+
+
+// //*----------------------------- bootstrap carousel ------------------*//
+
+.carousel-indicators {
+
+ li{
+  border-radius: 50%;
+  border-radius: 10px;
+ }
+  .active {
+    opacity: $carousel-indicator-active-opacity;
+    background-color: #1B71A1;
+    width: 21px;
+    height:12px;
+    border-radius: 10px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .carousel-control-prev {
+    left: -35px;
+  }
+  .carousel-control-next {
+    right: -35px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-control-prev {
+    left: -50px;
+  }
+  .carousel-control-next {
+    right: -50px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .carousel-control-prev {
+    left: 0;
+  }
+  .carousel-control-next {
+    right: 0;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .carousel-control-prev {
+    left: -55px;
+  }
+  .carousel-control-next {
+    right: -55px;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .carousel-control-prev {
+    left: -70px;
+  }
+  .carousel-control-next {
+    right: -70px;
+  }
+}
+

@@ -1,0 +1,160 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/common/Avatar
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Modals',
+      description: 'Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/modal/`,
+      linkText: 'Modal on Bootstrap',
+      breadcrumb:[
+        {
+          name:'Components',
+          link:'#!'
+        },
+        {
+          name:'Modals',
+          active:true
+        },
+      ]
+    }
+  
+  -
+    var rightNav = [
+      {
+        name: 'Basic Modal',
+        id: '#basic-modal',
+      },
+      {
+        name: 'Static backdrop',
+        id: '#static-backdrop',
+      },
+      {
+        name: 'Scrolling long content (scroll body)',
+        id: '#scrolling-long-content-scroll-body',
+      },
+      {
+        name: 'Scrolling long content (scroll modal)',
+        id: '#scrolling-long-content-scroll-modal',
+      },
+      {
+        name: 'Vertically centered',
+        id: '#vertically-centered',
+      },
+      {
+        name: 'Tooltips and popovers',
+        id: '#tooltips-and-popovers',
+      },
+    ]
+
+block component
+  +ComponentCard({title:'Basic Modal'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+      | Launch basic modal
+    #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1
+          .modal-body
+            p.text-700.lh-lg.mb-0 This is a static modal example (meaning its position and display have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). 
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel
+
+  +ComponentCard({title:'Static backdrop'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#staticBackdrop')
+      | Launch demo modal 2
+    #staticBackdrop.modal.fade(tabindex='-1' data-bs-backdrop="static" aria-labelledby='staticBackdropLabel' aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header.bg-primary
+            h5#staticBackdropLabel.modal-title.text-white Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1.text-white
+          .modal-body
+            p.text-700.lh-lg.mb-0 This is a static modal example (meaning its position and display have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). 
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel
+
+  +ComponentCard({title:'Scrolling long content (scroll body)'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#scrollingLong')
+      | Launch Scrolling long content modal
+    #scrollingLong.modal.fade(tabindex='-1' aria-labelledby='scrollingLongModalLabel' aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h5#scrollingLongModalLabel.modal-title Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1
+          .modal-body
+            p.text-700.lh-lg.mb-0 Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel
+
+  +ComponentCard({title:'Scrolling long content (scroll modal)'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#scrollingLong2')
+      | Launch Scrolling long content modal
+    #scrollingLong2.modal.fade(tabindex='-1' aria-labelledby='scrollingLongModalLabel2' aria-hidden='true')
+      .modal-dialog.modal-dialog-scrollable
+        .modal-content
+          .modal-header
+            h5#scrollingLongModalLabel2.modal-title Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1
+          .modal-body
+            p.text-700.lh-lg.mb-0 Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel
+
+  +ComponentCard({title:'Vertically centered'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#verticallyCentered')
+      | Vertically centered modal
+    #verticallyCentered.modal.fade(tabindex='-1' aria-labelledby='verticallyCenteredModalLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            h5#verticallyCenteredModalLabel.modal-title Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1
+          .modal-body
+            p.text-700.lh-lg.mb-0 This is a static modal example (meaning its position and display have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). 
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel
+
+  +ComponentCard({title:'Tooltips and popovers'}).my-4
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#tooltipModal')
+      | Vertically centered modal
+    #tooltipModal.modal.fade(tabindex='-1' aria-labelledby='tooltipModallLabel' aria-hidden='true')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            h5#tooltipModalLabel.modal-title Modal title
+            button.btn.p-1(type='button' data-bs-dismiss='modal' aria-label='Close')
+              span.fas.fa-times.fs--1
+          .modal-body
+            h5 Tooltip in a modal
+            p 
+            | This 
+            a.text-primary(href="#!" data-bs-toggle='tooltip' data-bs-placement='top' title='Tooltip on top')
+              | Link
+            |  triggers a tooltip on hover.
+            hr
+            h5 Popover in a modal
+            p 
+            | This 
+            button.btn.btn-secondary(type='button' data-bs-toggle='popover' title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?")
+              | button
+            |  triggers a popover on click.
+
+            //- p.text-700.lh-lg.mb-0 This is a static modal example (meaning its position and display have been overridden). Included are the modal header, modal body (required for padding), and modal footer (optional). 
+          .modal-footer
+            button.btn.btn-primary(type='button') Okay
+            button.btn.btn-outline-primary(type='button' data-bs-dismiss='modal') Cancel

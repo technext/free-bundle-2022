@@ -1,0 +1,45 @@
+mixin PricingTable(config, ...items) 
+	.col-md-4
+		.card.mb-5.mb-md-0.h-100&attributes(attributes)
+			.text-center.mb-5
+				span.badge.bg-black.fw-normal.text-uppercase(class=`bg-${config.planBg}`)=config.plan
+			.card-body.px-4.py-6.py-md-5.py-lg-6
+				.d-flex.justify-content-start.text-secondary
+					span.h4.mb-0.mt-2.me-2 $
+					span.display-3.fw-medium=config.price
+					span.display-4.fw-medium 00
+
+				p.text-muted.mb-2.my-md-3 A private limited is the most popular
+				hr.border.border-1 
+				ul.list-unstyled
+					each item in items  
+						li.mb-3!=item
+				if config.notActiveButton    
+					.d-grid
+						a.btn.btn-lg.btn-secondary(href='#!') Purchase now
+				else 
+					.d-grid 
+						a.btn.btn-lg.btn-primary(href='#!') Purchase now
+
+
+mixin Pricing
+	+Section.bg-600
+		.row
+			.col
+				h6.font-sans-serif.text-primary.fw-bold Our Plans 
+				h1.mb-6 Get in Reasonable Price
+			.col
+				.d-flex.justify-content-end
+					label.form-check-label.me-2(for='customSwitch1') Monthly
+					.form-check.form-switch
+						input#customSwitch1.form-check-input(type='checkbox' checked)
+						label.form-check-label.align-top(for='customSwitch1') Yearly
+
+		.row 
+			- const p1 = {plan:'Starter',planBg:'secondary',price:'19.',notActiveButton: false}
+			- const p2 = {plan:'premium',planBg:'info',price:'29.',notActiveButton: true }  
+			- const p3 = {plan:'enterprise',planBg:'danger',price:'49.',notActiveButton: false}
+
+			+PricingTable(p1, '<i class="fas fa-check text-info me-2"></i>Access to 25 courses', '<i class="fas fa-check text-info me-2"></i>Course Discussions','<i class="fas fa-check text-info me-2"></i>Offline Viewing', '<i class="fas fa-check text-muted me-2"></i>Certificate after completion','<i class="fas fa-check text-muted me-2"></i> Private sessions')
+			+PricingTable(p2, '<i class="fas fa-check text-info me-2"></i>Access to 25 courses', '<i class="fas fa-check text-info me-2"></i>Course Discussions', '<i class="fas fa-check text-info me-2"></i>Certificate after completion','<i class="fas fa-check text-info me-2"></i>Offline Viewing', '<i class="fas fa-check text-muted me-2"></i> Private sessions')
+			+PricingTable(p3, '<i class="fas fa-check text-info me-2"></i>Access to 25 courses', '<i class="fas fa-check text-info me-2"></i>Course Discussions', '<i class="fas fa-check text-info me-2"></i>Certificate after completion','<i class="fas fa-check text-info me-2"></i>Offline Viewing', '<i class="fas fa-check text-info me-2"></i> Private sessions')

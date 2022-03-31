@@ -1,0 +1,35 @@
+append variables 
+  -
+    var partners = [
+      {
+        img: '1.png',
+      },
+      {
+        img: '2.png',
+      },
+      {
+        img: '3.png',
+      },
+      {
+        img: '4.png',
+      },
+      {
+        img: '5.png',
+      }
+    ]
+
+mixin PartnerItem(props)
+  .col 
+    .card.shadow-hover.mb-4(style="border-radius:10px;")
+      .card-body.text-center 
+        img.img-fluid(src=`${CWD}assets/img/partner/${props.img}` alt="")  
+
+mixin Partner 
+  .position-relative.pt-9.pt-lg-8.pb-6.pb-lg-8
+    .container 
+      .row.row-cols-lg-5.row-cols-md-3.row-cols-2.flex-center 
+        each item in partners 
+          +PartnerItem(item)
+      
+
+

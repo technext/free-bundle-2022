@@ -1,0 +1,122 @@
+/*-----------------------------------------------
+|   Object fit and Z-index
+-----------------------------------------------*/
+.fit-cover{ object-fit: cover; }
+.z-index-1{ z-index: 1 !important; }
+.z-index-2{ z-index: 2 !important; }
+.z-index--1{ z-index: -1 !important; }
+
+
+
+/*-----------------------------------------------
+|   Miscellaneous
+-----------------------------------------------*/
+
+.hover-text-decoration-none{
+  @include hover-focus{
+    text-decoration: none;
+  }
+}
+.resize-none{ resize: none; }
+
+.collapsed .collapse-icon {
+  transition: $transition-base;
+  transform: rotate(0deg);
+}
+.collapse-icon {
+  transition: $transition-base;
+  transform: rotate(90deg);
+}
+
+[data-dismiss="dropdown"],
+[data-bs-offset-top],
+[data-bs-toggle="collapse"],
+[data-bs-toggle="tooltip"],
+[data-bs-toggle="popover"]{
+  *{
+    pointer-events: none;
+  }
+}
+
+/*-----------------------------------------------
+|   Outline
+-----------------------------------------------*/
+
+.outline-none {
+  outline: none;
+  box-shadow: none;
+  @include hover-focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/*-----------------------------------------------
+|   Vertical Line (used in kanban header)
+-----------------------------------------------*/
+.vertical-line {
+  &:after {
+    position: absolute;
+    content: "";
+    height: 75%;
+    width: 1px;
+    background: var(--#{$variable-prefix}300);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.vertical-line-400 {
+    &:after {
+      background-color: var(--#{$variable-prefix}400);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Transition                                 */
+/* -------------------------------------------------------------------------- */
+
+.transition-base {
+  transition: $transition-base;
+}
+.transition-none{
+  transition: none;
+}
+
+.fsp-75{
+  font-size: 75%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Width                                   */
+/* -------------------------------------------------------------------------- */
+
+// used in chat
+.min-w-0{ min-width: 0; }
+ 
+/* -------------------------------------------------------------------------- */
+/*                                    Divider                                   */
+/* -------------------------------------------------------------------------- */
+
+.divider-content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-left: map-get($spacers, 2);
+  padding-right: map-get($spacers, 2);
+  background-color: var(--#{$variable-prefix}card-bg);
+  font-family: $font-family-sans-serif;
+  font-size: map-get($font-sizes, '-1');
+  color: var(--#{$variable-prefix}500);
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Zanimation                              */
+/* -------------------------------------------------------------------------- */
+
+
+*[data-zanim-trigger] {
+  opacity: 0;
+}

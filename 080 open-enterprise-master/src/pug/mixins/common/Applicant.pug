@@ -1,0 +1,6 @@
+mixin Applicant({image,name})
+   .applicant.d-flex.justify-content-between.text-1000
+      .d-flex.align-items-center
+         +Avatar(image,40).my-2.me-2.me-md-3
+         p.fs-1.fs-md-2.mb-0.fw-semi-bold #{name}
+      +Rating(4.8)

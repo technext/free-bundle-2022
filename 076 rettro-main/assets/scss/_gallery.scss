@@ -1,0 +1,100 @@
+
+.gallery-area{
+    .box{
+        position: relative;
+        // img
+        .gallery-img{
+            height: 565px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .big-img{
+            height: 900px;
+            @media #{$md}{
+                height: 435px;
+            }
+            @media #{$sm}{
+                height: 435px;
+            }
+        }
+        .small-img{
+            height: 535px;
+            @media #{$md}{
+                height: 380px;
+            }
+            @media #{$sm}{
+                height: 335px;
+            }
+            @media #{$xs}{
+                height: 335px;
+            }
+
+        }
+        figcaption {
+            position: absolute;
+            bottom: 17px;
+            z-index: 1;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 400;
+            left: 15px;
+        }
+        // Caption
+        .overlay {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0,.3);
+            top: 0;
+            left: 0;
+            .overlay-content {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                a {
+                    color: #FFEFAE;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 37px;
+                    @include transition(.4s);
+                    transform: scale(1);
+                    i{
+
+                    }
+                    &:hover{
+                        transform: scale(1.08);
+                    }
+                }
+            }
+        }
+        &.snake{
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}
+
+.box{
+    position: relative;
+    img{
+        width: 100%;
+    }
+    &.snake{
+        position: relative;
+        overflow: hidden;
+    }
+}
+.overlay{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.3);
+    top: 0;
+    left: 0;
+  }
+  

@@ -1,0 +1,51 @@
+append variables
+  -
+    var collections= [
+      {
+        image:'outfit.png',
+        title:'Outfit',
+      },
+      {
+        image:'vanity-bag.png',
+        title:'Vanity Bags',
+      },
+      {
+        image:'hat.png',
+        title:'Hats',
+      },
+      {
+        image:'high-heels.png',
+        title:'High Heels',
+      },
+      
+    ];
+
+mixin CollectionItem(config)
+  .card.card-span.h-100.text-white
+    img.card-img(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+    .card-img-overlay.bg-dark-gradient
+      .d-flex.align-items-end.justify-content-center.h-100
+        a.btn.btn-lg.text-light.fs-1(href='#!' role='button')=config.title
+          svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')     
+ 
+mixin ExclusiveCollection
+  +Section 
+    .row.h-100.g-0 
+      .col-md-6
+        .bg-300.p-4.h-100.d-flex.flex-column.justify-content-center
+          h4.text-800 Exclusive collection 2021
+          h1.fw-semi-bold.lh-sm.fs-4.fs-lg-5.fs-xl-6 Be exclusive
+          p.mb-5.fs-1 The best everyday option in a Super Saver range within a reasonable price. It is our responsibility to keep you 100 percent stylish. Be smart  &amp; , trendy with us.
+          .d-grid.gap-2.d-md-block
+            a.btn.btn-lg.btn-dark(href='#' role='button') Explore
+      .col-md-6
+        +CollectionItem(collections[0])
+
+    .row.h-100.g-2.py-1
+      .col-md-4
+        +CollectionItem(collections[1])
+      .col-md-4
+        +CollectionItem(collections[2])  
+      .col-md-4
+        +CollectionItem(collections[3])        

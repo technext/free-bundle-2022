@@ -1,0 +1,13 @@
+mixin Partner(image)
+  .col-auto.col-md-4.col-lg-auto.my-3.text-xl-start&attributes(attributes)
+    img(src=`${CWD}assets/img/gallery/${image}` height="40"  alt='Partner')
+
+mixin Partners
+  +Section.py-0
+    .row.align-items-center.justify-content-xl-between
+      h2.text-light.text-center.my-5 Partners
+      +Partner('partner-1.png')                 
+      +Partner('partner-2.png')                  
+      +Partner('partner-3.png')                                   
+      +Partner('partner-4.png')                
+      +Partner('partner-5.png') 

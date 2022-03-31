@@ -1,0 +1,32 @@
+append variables
+  -
+    var destinations= [
+      {
+        place: 'Rome, Italty',
+        cost: '5,42k',
+        trip: 10,
+        img: 'dest1.jpg'
+      },
+      {
+        place: 'London, UK',
+        cost: '4.2k',
+        trip: 12,
+        img: 'dest2.jpg'
+      },
+      {
+        place: 'Full Europe',
+        cost: '15k',
+        trip: 28,
+        img: 'dest3.jpg'
+      }
+    ]
+
+mixin Destination 
+  +Section.pt-5#destination
+    .position-absolute.start-100.bottom-0.translate-middle-x.d-none.d-xl-block.ms-xl-n4
+      img(src=`${CWD}assets/img/dest/shape.svg`, alt="destination")
+    .mb-7.text-center 
+      +SectionTitle('Top Selling', 'Top Destinations')
+    .row 
+      each val in destinations
+        +DestinationCard(val)

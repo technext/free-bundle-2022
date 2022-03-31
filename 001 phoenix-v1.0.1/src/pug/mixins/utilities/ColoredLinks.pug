@@ -1,0 +1,38 @@
+
+mixin ColoredLinksExampleDescription
+  p&attributes(attributes) You can use the 
+    code .link-*
+    |  classes to colorize links. Unlike the 
+    a(href=`https://getbootstrap.com/docs/${bootstrapVersion}/helpers/colored-links/`)
+      code .text-*
+      |  classes
+    | , these classes have a 
+    code :hover
+    |  and 
+    code :focus
+    |  state.
+
+mixin ColoredLinksDemo        
+  a.link-primary.d-block(href='#!') Primary link
+  = '\n'
+  a.link-secondary.d-block(href='#!') Secondary link
+  = '\n'
+  a.link-success.d-block(href='#!') Success link
+  = '\n'
+  a.link-danger.d-block(href='#!') Danger link
+  = '\n'
+  a.link-warning.d-block(href='#!') Warning link
+  = '\n'
+  a.link-info.d-block(href='#!') Info link
+  = '\n'
+  a.link-light.d-block(href='#!') Light link
+  = '\n'
+  a.link-dark.d-block(href='#!') Dark link
+  = '\n'
+
+mixin GraysColoredLinksDemo
+  each val, index in grays
+    //- .col-6.col-sm-4.col-lg-3
+    //-   +ColorPalette(val, index)        
+    a.d-block(href='#!' class=`link-${val}`) Link #{val}
+    = '\n'

@@ -1,0 +1,44 @@
+extends layouts/LayoutTheme
+//- common
+include mixins/common/TitleText
+include mixins/common/FeatureCard
+include mixins/common/InfoText
+include mixins/common/Avatar
+include mixins/common/Member
+include mixins/common/Applicant
+include mixins/common/SliderCard
+include mixins/common/Rating
+include mixins/common/Hero
+//- Sections
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Features
+include mixins/home/landing/KickStart
+include mixins/home/landing/Onboard
+include mixins/home/landing/Contributors
+include mixins/home/landing/Slider
+include mixins/home/landing/FooterHero
+include mixins/home/landing/Footer
+
+append variables
+    - var currentPage = 3;
+    -
+        var attrsBody = {
+            'data-bs-spy':"scroll",
+            'data-bs-target':"#navbar"
+        }
+
+append styles
+    link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`,rel='stylesheet') 
+
+prepend scripts
+    script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+
+append content
+    +HeroHeader
+    +Features
+    +KickStart
+    +Onboard
+    +Contributors
+    +Slider({id: 'pagination1'})
+    +FooterHero
+    +Footer

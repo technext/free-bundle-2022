@@ -1,0 +1,44 @@
+/*------------------------------------
+  Modals
+------------------------------------*/
+
+.modal {
+  &-backdrop.show {
+    opacity: .9;
+  }
+
+  &-dialog {
+    width: $modal-dialog;
+    max-width: calc(100% - #{$modal-dialog-padding});
+    padding: $modal-dialog-padding;
+    background-color: $white;
+    @if $enable-rounded {
+      border-radius: $border-radius;
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-width: 100%;
+    }
+
+    .modal-content {
+      max-width: 100%;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      .modal-gd & {
+        width: $modal-content;
+      }
+    }
+  }
+
+  .modal-gd &-header {
+    padding: $modal-gd-header-padding;
+  }
+  .modal-gd &-body {
+    padding: $modal-gd-inner-padding;
+  }
+  .modal-gd &-footer {
+    padding: $modal-gd-inner-padding;
+  }
+}

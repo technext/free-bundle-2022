@@ -1,0 +1,30 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Shadows
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Shadows',
+      description: 'Add or remove shadows to elements with box-shadow utilities.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/shadows/`,
+      linkText: 'Shadows on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Examples',
+        id: '#examples',
+      }
+    ]
+
+block component
+
+  +ComponentCard({
+    title: 'Examples',
+    anchor: true,
+    description: 'While shadows on components are disabled by default in Bootstrap and can be enabled via <code>$enable-shadows</code>, you can also quickly add or remove a shadow with our <code>box-shadow</code> utility classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated variables to match).',
+    descriptionClass: '.mt-2.mb-0'
+  }).my-5
+    +ShadowsExamples
+

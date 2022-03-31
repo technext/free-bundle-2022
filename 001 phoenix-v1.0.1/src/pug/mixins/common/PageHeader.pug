@@ -1,0 +1,10 @@
+mixin PageHeader(config)
+  h2.mb-2.lh-sm(class=config.headerClass && config.headerClass data-anchor=config.dataAnchor)=config.title
+  if config.description 
+    p.text-700.lead.mb-2!=config.description
+  if config.descriptionEl
+    .text-700.fw-semi-bold.mb-2(class=config.descriptionClass && config.descriptionClass)!=config.descriptionEl
+  if config.url
+    a.btn.btn-link.p-0(href=config.url target='_blank')
+      =config.linkText
+      span.ms-1(data-feather="chevron-right")

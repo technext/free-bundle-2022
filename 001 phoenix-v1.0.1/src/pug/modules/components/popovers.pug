@@ -1,0 +1,54 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Popovers
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Popovers',
+      description: 'Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/popovers/`,
+      linkText: 'Popovers on Bootstrap',
+      breadcrumb:[
+        {
+          name:'Components',
+          link:'#!'
+        },
+        {
+          name:'Popovers',
+          active:true
+        },
+      ]
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Basic Example',
+        id: '#basic-example',
+      },
+      {
+        name: 'Dismissible Example',
+        id: '#dismissible-example',
+      }
+    ]
+
+block component
+  +ComponentCard({title:'Basic Example'}).my-4
+    .row.g-1
+      .col-auto
+        = '\n'
+        +Popover("top")
+      .col-auto
+        = '\n'
+        +Popover("left")
+      .col-auto
+        = '\n'
+        +Popover("right")
+      .col-auto
+        = '\n'
+        +Popover("bottom")
+
+  +ComponentCard({
+    title:'Dismissible Example',
+    description:`Use the <code>data-bs-trigger="focus"</code> to dismiss popovers on the user’s next click of a different element than the toggle element.`
+  }).my-6
+    +DismissiblePopover

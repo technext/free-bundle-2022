@@ -1,0 +1,91 @@
+/*------------------
+   About page
+ ------------------*/
+.about__page {
+    padding: 90px 60px 150px;
+    @media #{ $small_mobile} {
+        padding: 30px 0 150px;
+    }
+}
+
+.about__title {
+    display: inline-block;
+    margin-bottom: 50px;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 6px;
+        left: 0;
+        bottom: 8px;
+        background: $primary_color;
+        opacity: 0.5;
+        z-index: -1;
+    }
+}
+
+
+.about__text {
+    padding-bottom: 50px;
+    img {
+        padding-top: 20px;
+    }
+}
+
+.about__meta {
+    overflow: hidden;
+    margin-bottom: 35px;
+    img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 15px;
+        padding-top: 0;
+    }
+}
+.about__meta__info {
+    overflow: hidden;
+    padding-top: 25px;
+    h5 {
+        margin-bottom: 5px;
+    }
+    p {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $primary_color;
+    }
+}
+
+.experience__item {
+    padding-top: 15px;
+    margin-bottom: 20px;
+    h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.skills__text {
+    padding-bottom: 50px;
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+.single-progress-item {
+    margin-bottom: 30px;
+    h6 {
+        margin-bottom: 10px;
+    }
+}
+
+.progress-bar-style {
+    height: 6px;
+    background: #E8E8E8;
+    .bar-inner {
+        height: 100%;
+        background: $primary_color;
+    }
+}

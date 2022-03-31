@@ -1,0 +1,58 @@
+append variables
+  -
+    var blog= [
+      {
+        image:'covid-19.png',
+        category:'Health',
+        date  :'Nov 21, 2021',
+        title: 'COVID-19: The Most Up-to-Date Information',
+      },
+      {
+        image:'laboratories.png',
+        category:'Lifestyle',
+        date  :'Nov 25, 2021',
+        title: 'Importance of Accreditation for Laboratories',
+      },
+      {
+        image:'nicotine.png',
+        category:'Health',
+        date  :'Nov 28, 2021',
+        title: 'The dangers of nicotine are addressed in depth',
+      },
+      {
+        image:'treatment.png',
+        category:'Health',
+        date  :'Nov 30, 2021',
+        title: 'Treatment of patients with diabetes during COVID-19',
+      },
+    
+    ];
+
+mixin BlogCard(config)
+  .col-sm-6.col-lg-3.mb-4
+    .card.h-100.shadow.card-span.rounded-3
+      img.card-img-top.rounded-top-3(src=`${CWD}assets/img/gallery/${config.image}`  alt='news')
+      .card-body
+        span.fs--1.text-primary.me-3=config.category
+        svg.bi.bi-calendar2.me-2(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' viewBox='0 0 16 16')
+          path(d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z')
+          path(d='M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z') 
+        span.fs--1.text-900=config.date
+        span.fs--1
+        h5.font-base.fs-lg-0.fs-xl-1.my-3=config.title
+        a.stretched-link(href='#!') read full article
+
+mixin BlogPost
+  +Section.py-5
+    .row 
+      .col-12.py-3
+        +Background({image: `${CWD}assets/img/gallery/blog-post.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+        h1.text-center RECENT BLOGPOSTS
+  section
+    +Background({image: `${CWD}assets/img/gallery/dot-bg.png`, attrs: { style: { 'background-position': 'top left', 'background-size': 'auto',} }, className: 'bg-size' })
+    .container 
+      .row 
+        +BlogCard(blog[0])    
+        +BlogCard(blog[1])    
+        +BlogCard(blog[2])    
+        +BlogCard(blog[3])    

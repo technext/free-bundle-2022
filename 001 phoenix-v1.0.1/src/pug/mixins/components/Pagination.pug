@@ -1,0 +1,86 @@
+mixin Example
+  nav(aria-label='Page navigation example')
+    ul.pagination.mb-0
+      li.page-item
+        = '\n'
+        a.page-link(href='#')  
+          = '\n'
+          span.fas.fa-chevron-left 
+          = '\n'
+      li.page-item
+        = '\n'
+        a.page-link(href='#') 1
+      li.page-item
+        = '\n'
+        a.page-link(href='#') 2
+      li.page-item
+        = '\n'
+        a.page-link(href='#') 3
+      li.page-item.active(aria-current='page')
+        = '\n'
+        a.page-link(href='#') 4
+      li.page-item
+        = '\n'
+        a.page-link(href='#') 5
+      li.page-item
+        = '\n'
+        a.page-link(href='#') 
+          span.fas.fa-chevron-right
+
+mixin PaginationSizingDdemo
+  nav(aria-label='Page navigation example')
+    ul.pagination.mb-0&attributes(attributes)
+      li.page-item
+        a.page-link(href='#')  
+          span.fas.fa-chevron-left 
+      li.page-item
+        a.page-link(href='#') 1
+      li.page-item
+        a.page-link(href='#') 2
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item.active(aria-current='page')
+        a.page-link(href='#') 4
+      li.page-item
+        a.page-link(href='#') 5
+      li.page-item
+        a.page-link(href='#') 
+          span.fas.fa-chevron-right 
+
+
+mixin PaginationAlignment
+  // Center
+  nav(aria-label='Page navigation example')
+    ul.pagination.justify-content-center
+      li.page-item
+        a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+      li.page-item
+        a.page-link(href='#') 1
+      li.page-item
+        a.page-link(href='#') 2
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item.active(aria-current='page')
+        a.page-link(href='#') 4
+      li.page-item
+        a.page-link(href='#') 5
+      li.page-item
+        a.page-link(href='#') Next
+  = '\n'
+  // End
+  nav(aria-label='Page navigation example')
+    ul.pagination.justify-content-end
+      li.page-item
+        a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+      li.page-item
+        a.page-link(href='#') 1
+      li.page-item
+        a.page-link(href='#') 2
+      li.page-item
+        a.page-link(href='#') 3
+      li.page-item.active(aria-current='page')
+        a.page-link(href='#') 4
+      li.page-item
+        a.page-link(href='#') 5
+      li.page-item
+        a.page-link(href='#') Next

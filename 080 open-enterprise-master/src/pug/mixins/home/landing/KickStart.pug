@@ -1,0 +1,35 @@
+append variables
+    -
+        var members = [
+            {
+                name:'Dillon Kydd',
+                text:'100 SHARES',
+                image:`${CWD}assets/img/gallery/user1.png`
+            },
+            {
+                name:'Anna Olsen',
+                text:'100 SHARES',
+                image:`${CWD}assets/img/gallery/user2.png`
+            },
+            {
+                name:'Kas Moss',
+                text:'100 SHARES',
+                image:`${CWD}assets/img/gallery/user3.png`
+            },
+        ]
+
+mixin KickStart
+    +Section#contribute
+        .row.align-items-center
+            .col-md-6
+                +InfoText({
+                    img:`${CWD}assets/img/icons/icon1.png`,
+                    title:'Kickstart an organization with your co-founders',
+                    details:'It’s the early days, you just had a long conversation with two friends about a meaningful challenge that you’re all passionate about and have a potential solution for. You’re ready to embark the startup journey.'
+                })
+            .col-md-6.col-xl-4.offset-xl-1
+                .card.box-shadow-rb.my-4
+                    .card-body.my-3.mx-4
+                        h1.mb-4.pb-2 Members
+                        each member in members
+                            +Member(member)

@@ -1,0 +1,72 @@
+.team-area{
+    .single-cat{
+        @include transition(.4s);
+        z-index: 1;
+        margin-bottom: 90px;
+        @media #{$sm}{
+             margin-bottom: 40px;
+        }
+        @media #{$xs}{
+             margin-bottom: 30px;
+        }
+        .cat-icon{
+            img{
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+        }
+        .cat-cap{
+            span{
+                color: #6785FF;
+                font-size: 46px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                display: block;
+            }
+            h5{
+             & > a{
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 14px;
+                display: block;
+                @include transition(.2s);
+                text-transform: capitalize;
+                color: #fff;
+                @media #{$sm}{
+                    font-size: 21px;
+                }
+                @media #{$xs}{
+                    font-size: 23px;
+                }
+              }
+            }
+            p{
+                color: #A5A7C5;
+                font-size: 17px;
+                @include transition(.2s);
+                margin: 0;
+                line-height: 1.5;
+                @media #{$sm}{
+                    font-size: 15px;
+
+                }
+            }
+            a{
+                color: #1c165c;
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+            }
+        }
+        // Hover Effect In single 
+        &:hover{
+            .cat-cap{
+                h5{
+                    color: #000;
+                }
+
+            }
+       }
+    }
+}
+

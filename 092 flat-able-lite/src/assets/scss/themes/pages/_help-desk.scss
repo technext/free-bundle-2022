@@ -1,0 +1,267 @@
+/**  =====================
+      Help Desk Application css start
+==========================  **/
+.hd-body {
+    .excerpt {
+        padding: 15px;
+        background: $theme-background;
+        border: 1px solid $theme-border;
+    }
+
+    .ticket-customer,
+    .ticket-type-icon {
+        display: block;
+        text-transform: capitalize;
+    }
+
+    &:hover .hover-blk {
+        transform: scale(1);
+    }
+}
+
+.sm-view {
+    .card-body {
+        .excerpt,
+        ul.list-inline {
+            display: none;
+        }
+    }
+}
+
+.md-view {
+    .excerpt {
+        display: none;
+    }
+}
+
+.md-view,
+.sm-view {
+    .col-auto {
+        ul {
+            li:nth-child(1),
+            li:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+.hover-blk {
+    background: #fff;
+    width: 270px;
+    left: calc(100% + 10px);
+    transform: scale(0);
+    z-index: 5;
+    transition: all 0.1s ease-out;
+
+    .img-txt p {
+        display: inline-block;
+    }
+}
+
+.topic-name {
+    h1 {
+        float: left;
+        font-weight: normal;
+    }
+
+    .btn-star {
+        float: right;
+    }
+}
+
+.dicon-blk {
+    top: 0;
+    right: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.hd-detail {
+    .col-right {
+        .edit-del {
+            opacity: 0;
+
+            i {
+                opacity: 0.2;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .edit-del {
+            opacity: 1;
+        }
+    }
+}
+
+.hdd-user {
+    i {
+        bottom: 0;
+    }
+}
+
+.ticket-block {
+    .hd-body {
+        border-left: 3px solid #ccc;
+    }
+
+    .col.border-right {
+        border-color: #ccc!important;
+    }
+
+    .ticket-type-icon {
+        font-weight: 500;
+        color: #111;
+    }
+
+    .excerpt {
+        h6 {
+            color: #686c71;
+            font-weight: 500;
+
+            a {
+                color: #686c71;
+
+                &:hover {
+                    text-decoration: underline!important;
+                    color: #111;
+                }
+            }
+        }
+    }
+}
+
+.ticket-block.open-tic {
+    .hd-body {
+        border-color: #ea394a;
+        // background-color: rgba(234, 57, 74,0.1);
+    }
+}
+
+.ticket-block.close-tic {
+    .hd-body {
+        border-color: #5AC17F;
+        // background-color: rgba(90,193,127,0.1);
+    }
+}
+
+.right-col {
+    .card-footer {
+        label {
+            font-weight: 500;
+        }
+    }
+}
+
+.q-view {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1030;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .content {
+        width: 585px;
+        height: 100vh;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        background-color: #fff;
+        padding-top: 20px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+        right: -765px;
+        transition: right 0.195s ease-in, visibility 0s linear 0.195s;
+        min-height: 100vh;
+        overflow: auto;
+    }
+}
+
+.q-view.active {
+    visibility: visible;
+
+    .content {
+        right: 0;
+        transition: right 0.225s ease-out;
+    }
+}
+
+.select2-container--default {
+    margin-bottom: 10px;
+
+    .select2-selection {
+        border-color: $theme-border;
+    }
+}
+
+.hdd-right-side {
+    width: 495px;
+
+    .hdd-right-inner {
+        position: fixed;
+        width: 465px;
+    }
+}
+
+.span-content {
+    a {
+        padding: 0 7px;
+    }
+}
+
+.file-btn {
+    position: relative;
+    overflow: hidden;
+
+    input {
+        position: absolute;
+        font-size: 50px;
+        opacity: 0;
+        right: 0;
+        top: 0;
+    }
+}
+@media (max-width: 992px) {
+    .hd-detail .col-right .edit-del {
+        opacity: 1;
+    }
+}
+@media only screen and(max-width:767px) {
+    .hdd-right-side {
+        width: 100%;
+
+        .hdd-right-inner {
+            position: static;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .q-view .content {
+        width: 450px;
+    }
+}
+@media (max-width: 380px) {
+    .q-view .content {
+        width: 300px;
+    }
+}
+/**====== Help Desk Application css start ======**/

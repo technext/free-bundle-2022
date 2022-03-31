@@ -1,0 +1,149 @@
+
+.founder-img {
+	margin-left: -15px;
+}
+
+.testimonial-area{
+    .testimonial-caption{
+        position: relative;
+         img {
+            position: absolute;
+            top: -69px;
+            left: -80px;
+            z-index: -1;
+            @media #{$xs}{
+                display: none;
+            }
+         }
+        p{
+            font-size: 19px;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 46px;
+
+            @media #{$lg}{
+                margin-bottom: 40px;
+            }
+            @media #{$sm}{
+                width: 99%;
+            }
+            @media #{$xs}{
+                margin-bottom: 33px;
+            }
+        }
+    }
+    .single-testimonial{
+        padding: 100px 10px 0 100px;
+        @media #{$sm}{
+            padding: 100px 10px 0 80px;
+        }
+        @media #{$xs}{
+            padding: 11px 16px 0 18px;
+        }
+    }
+    .rattiong-caption{
+        span{
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+           font-family:$font_1;
+            span{
+                color: #fff;
+                font-size: 16px;
+                text-transform: capitalize;
+                padding-left: 15px;
+            }
+        }
+    }
+    .founder-text {
+        margin-left: 24px;
+        span{
+
+            color: #fff;
+            font-weight: 500;
+            line-height: 1.5;
+            font-size: 22px;
+        }
+        p {
+            color: #fff;
+            font-size: 14px;
+            @media #{$xs}{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Homepage1 Testimonial */
+.h1-testimonial-active{
+    button.slick-arrow {
+        position: absolute;
+        border: 0;
+        padding: 10px;
+        cursor: pointer;
+        background: none;
+        @include transition(.4s);
+        right: 77px;
+        margin: 0 10px;
+        font-size: 20px;
+        color:rgba(255, 255, 255,.3);
+        bottom: 0px;
+        z-index: 1;
+        transform: rotate(-45deg) !important;
+        &:hover{
+            color:#fff;
+        }
+    } 
+   button.slick-next {
+        // left: 55px !important;
+        right: -10px;
+        transform: rotate(45deg) !important;
+       
+	}
+	
+
+    // slick-dot style
+    &.dot-style{
+        .slick-dots {
+            bottom: 5%;
+            right: 41px;
+            position: absolute;
+            @media #{$lg}{
+               
+            }
+            @media #{$sm}{
+               
+            }
+            @media #{$xs}{
+               
+            }
+        }
+        .slick-dots li {
+            display: inline-block;
+        }
+        .slick-dots button {
+            // padding: 0;
+            margin-right: 7px;
+            cursor: pointer;
+            background:none;
+            color: #fff;
+            border: 0;
+            font-size: 16px;
+            padding:0;
+        }
+        .slick-active button{
+            // position: relative;
+            // text-decoration: underline;
+            // text-decoration-style: solid;
+            // padding-bottom: 5px;
+            color: #fff;
+        }
+    }
+// End dot style
+}
+
+.slick-initialized .slick-slide {
+    outline: 0;
+}
+

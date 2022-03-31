@@ -1,0 +1,60 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Colors
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Color',
+      description: 'Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/colors/`,
+      linkText: 'Color on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Colors',
+        id: '#colors',
+
+      },
+      {
+        name: 'Opacity',
+        id: '#opacity',
+        subItem: [
+          {
+            name: 'How it works',
+            id: '#how-it-works'
+          },
+          {
+            name: 'Example',
+            id: '#example',
+          }
+        ]
+      },
+    ]
+
+append component
+
+  +ComponentCard({title: 'Colors', anchor: true}).my-5
+    +ColorExample
+
+  h3(data-anchor) Opacity
+  p.text-700 Color opacity allows for real-time color changes without compilation and dynamic alpha transparency changes.
+
+  .card.border.border-300.overflow-hidden.my-5 
+    .card-header.border-bottom.border-300
+      h3.mb-1(data-anchor) How it works 
+      p.text-700.mb-0 Consider our default 
+        code .text-primary 
+        | utility.
+    .card-body.p-0
+      
+      +ComponentCardLib('css').
+        .text-primary {
+          --bs-text-opacity: 1;
+          color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+        }
+
+
+  +ComponentCard({title: 'Example', anchor: true}).my-5 
+    +ColorOpacityExample 

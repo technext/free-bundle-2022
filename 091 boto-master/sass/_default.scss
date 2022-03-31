@@ -1,0 +1,87 @@
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+
+// Google Font load
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+ html,
+ body {
+	 height: 100%;
+	 font-family: $font_1;
+	 -webkit-font-smoothing: antialiased;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+	 margin: 0;
+	 color: $heading_color;
+	 font-family: $font_1;
+	 font-weight: 700;
+ }
+ 
+ h1 {
+	 font-size: 70px;
+ }
+ 
+ h2 {
+	 font-size: 36px;
+	 line-height: 1.4;
+ }
+ 
+ h3 {
+	 font-size: 30px;
+ }
+ 
+ h4 {
+	 font-size: 24px;
+ }
+ 
+ h5 {
+	 font-size: 18px;
+ }
+ 
+ h6 {
+	 font-size: 16px;
+ }
+ 
+ p {
+	 font-size: 16px;
+	 color: $p_color;
+	 line-height: 1.8;
+ }
+ 
+ img {
+	 max-width: 100%;
+ }
+ 
+ input,
+ select,
+ button,
+ textarea {
+	 &:focus {
+		 outline: none;
+	 }
+ }
+ 
+ a:hover,
+ a:focus {
+	 text-decoration: none;
+	 outline: none;
+ }
+ 
+ ul,
+ ol {
+	 padding: 0;
+	 margin: 0;
+ }
+
+ @media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+ }

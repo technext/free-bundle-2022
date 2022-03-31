@@ -1,0 +1,43 @@
+mixin Client(config)
+  .col-12
+    .card.testimonial-bg.card-span.text-white.mt-10.mt-md-7.mt-lg-8.mx-4.mx-md-0
+      .card-body.pt-0.p-md-0
+        .d-flex.flex-column.flex-md-row.align-items-center
+          .card-span-img
+            .circle-wrapper
+              img.rounded-circle.w-100(src=`${CWD}assets/img/team/${config.userImage}`  alt='')
+          .mt-n6.mt-md-0.text-center.text-md-start.px-md-6.px-xl-8.px-xxl-10
+            h4.mb-0.fw-medium.text-white=config.name
+            p.fw-normal.mb-0.text-primary=config.designation
+            p.card-text.text-200.mt-3=config.text
+
+mixin Clients 
+  +Section('container-fluid px-0').py-8
+    .row.g-0 
+      .col-12.col-xxl-11.offset-xxl-1
+        h2.text-light.text-center Our Awesome Clients
+        #carouselExampleIndicators.carousel.slide(data-bs-ride='carouse')
+          .carousel-inner.ps-md-5.ps-lg-11.py-4.py-md-5.py-lg-4.pb-lg-9
+            .carousel-item.active
+              .row.h-100
+                +Client({userImage: '1.jpg', title:'What our customer are saying',name:'Charlize Theron',designation:'Founder Circle',text:'“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”',})            
+            .carousel-item
+              .row.h-100
+                +Client({userImage: '2.jpg', title:'What our customer are saying',name:'Edward Newgate',designation:'Founder Circle',text:'“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”',})            
+            .carousel-item
+              .row.h-100
+                +Client({userImage: '3.jpg', title:'What our customer are saying',name:'Charlize Theron',designation:'Founder Circle',text:'“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”',})            
+          
+          .row.justify-content-center.justify-content-xl-end.me-auto.mt-xl-n7.pe-xl-8
+            .col-2.text-end.position-relative.z-index-2
+              button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+              button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+  
+              .carousel-indicators
+                button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+                button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')  

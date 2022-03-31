@@ -1,0 +1,60 @@
+append variables 
+  -
+    var testimonialList = [
+      {
+        id: 0,
+        author: 'Mike taylor',
+        img: 'author.png',
+        position: 'Lahore, Pakistan',
+        text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.'
+      },
+      {
+        id: 1,
+        author: 'Thomas Wagon',
+        img: 'author2.png',
+        position: 'CEO of Red Button',
+        text: 'Jadoo is recognized as one of the finest travel agency in the world. When it came to planning a trip, I found them to be dependable.'
+      },
+      {
+        id: 2,
+        author: 'Kelly Willium',
+        img: 'author3.png',
+        position: 'Khulna, Bangladesh',
+        text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.'
+      }
+    ]
+
+
+mixin Testimonial  
+  +Section#testimonial
+    .row 
+      .col-lg-5 
+        .mb-8.text-start 
+          +SectionTitle('Testimonials', 'What people say about Us.')
+      .col-lg-1
+      .col-lg-6
+        .pe-7.ps-5.ps-lg-0 
+          .carousel.slide.carousel-fade.position-static#testimonialIndicator(data-bs-ride="carousel")
+            .carousel-indicators 
+              each item in testimonialList 
+                button(type="button" data-bs-target="#testimonialIndicator" data-bs-slide-to=`${item.id}` class=`${item.id === 0 && 'active'}` aria-current="true" aria-label=`Testimonial ${item.id}`)
+            .carousel-inner 
+              each item in testimonialList 
+                +TestimonialCard(item)
+            .carousel-navigation.d-flex.flex-column.flex-between-center.position-absolute.end-0.top-lg-50.bottom-0.translate-middle-y.z-index-1.me-3.me-lg-0(style="height:60px;width:20px;") 
+              button.carousel-control-prev.position-static(type="button" data-bs-target="#testimonialIndicator" data-bs-slide="prev")
+                img(src=`${CWD}assets/img/icons/up.svg`, width='16' alt="icon")
+              button.carousel-control-next.position-static(type="button" data-bs-target="#testimonialIndicator" data-bs-slide="next")
+                img(src=`${CWD}assets/img/icons/down.svg`, width='16' alt="icon")
+
+
+mixin TestimonialCard(props)
+  div(class=`carousel-item position-relative ${props.id === 0 ? 'active': ''}`) 
+    .card.shadow(style="border-radius:10px;")
+      .position-absolute.start-0.top-0.translate-middle 
+        img.rounded-circle.fit-cover(src=`${CWD}assets/img/testimonial/${props.img}`, height="65" width='65' alt="")
+      .card-body.p-4 
+        p.fw-medium.mb-4= `"${props.text}"`
+        h5.text-secondary= props.author
+        p.fw-medium.fs--1.mb-0= props.position
+    .card.shadow-sm.position-absolute.top-0.z-index--1.mb-3.w-100.h-100(style="border-radius:10px;transform:translate(25px, 25px)") 

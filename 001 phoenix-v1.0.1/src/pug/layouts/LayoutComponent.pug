@@ -1,0 +1,33 @@
+extends LayoutTheme
+include ../mixins/common/PageHeader
+include ../mixins/common/CopyNotificationToast
+
+append variables
+  - var attrsContent = { class: 'pt-5' };
+
+block content
+
+  if pageHeader
+    +PageHeader(pageHeader)
+  
+  if rightNav
+    .mt-4
+      .row.g-4
+        .col-12.col-xl-10.order-1.order-xl-0
+          block component  
+        .col-12.col-xl-2
+          .position-sticky(style="top: 80px;")
+            h5.lh-1 On this page 
+            hr.text-300
+            ul.nav.nav-vertical.flex-column.doc-nav
+              each item, index in rightNav
+                li.nav-item 
+                  a.nav-link(href=item.id)=item.name
+                  if item.subItem 
+                    ul.nav.flex-column
+                      each subItem, index in item.subItem 
+                        li.nav-item 
+                          a.nav-link(href=subItem.id)=subItem.name 
+  else 
+    block component
+  +CopyNotificationToast

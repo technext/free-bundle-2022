@@ -1,0 +1,88 @@
+.favourite-place{
+    .single-place{
+        .place-img{
+            overflow: hidden;
+            border-radius: 6px 6px 0 0;
+            img{
+                width: 100%;
+                 @include transform(scale (1));
+                transition: all 0.5s ease-out 0s;
+            }
+        }
+        .place-cap{
+            padding:28px 40px;
+            border: 1px solid #f0f1f2;
+            border-top: 0;
+            @media #{$lg}{
+                padding: 28px 18px;
+            }
+            @media #{$xs}{
+                padding: 28px 18px;
+            }
+            .place-cap-top{
+                border-bottom: 1px solid#f6f7f7;
+                margin-bottom: 24px;
+                span{
+                    margin-bottom: 5px;
+                    display: inline-block;
+    
+                    i{
+                        color: #ffa800;
+                        font-size: 18px;
+                        margin-right: 10px;
+                    }
+                    span{
+                        font-family: $font_1;
+                        color: #939ca3;
+                        font-size: 16px;
+    
+                    }
+                }
+                h3{
+                    a{
+                        font-weight: 600;
+                        font-size: 24px;
+                        color:#072740;
+                        line-height: 1.2;
+                        margin-bottom: 20px;
+                        @media #{$lg}{
+                            font-size: 23px;
+                        }
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                }
+                p.dolor{
+                    color: #4cafa4;
+                    font-weight: 600;
+                    font-family: $font_1;
+                    font-size: 20px;
+                    span{
+                        color: #99a1a7;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .place-cap-bottom{
+                ul{
+                    li{
+                        display: inline-block;
+                        margin-right: 18px;
+                        color: #9da5ab;
+                        i{
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.single-place:hover{
+    .place-img img{
+        @include transform(scale(1.1));
+    }
+}

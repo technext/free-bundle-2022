@@ -1,0 +1,42 @@
+append variables
+  -
+    var items= [
+      {
+        image:'published.png',
+        number :'768',
+        text: 'COURSES PUBLISHED',
+      },
+      {
+        image:'instructors.png',
+        number :'120',
+        text: 'EXPERT INSTRUCTORS',
+      },
+      {
+        image: 'learners.png',
+        number :'8300',
+        text: 'HAPPY LEARNERS',
+      },
+      {
+        image: 'awards.png',
+        number :'32',
+        text: 'AWARDS ACHIEVED',
+      },
+
+    ];
+
+
+mixin FunfactItem(config)
+  .col-sm-6.col-lg-3.text-center.mb-5
+    img(src=`${CWD}assets/img/gallery/${config.image}` height="100" alt='...')
+    h1.my-2=config.number
+    p.text-info.fw-bold=config.text 
+
+mixin FunFactsTwo
+  section
+    +Background({image: `${CWD}assets/img/gallery/funfacts-2-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: '' })
+    .container
+      .row
+        +FunfactItem(items[0])
+        +FunfactItem(items[1])
+        +FunfactItem(items[2])
+        +FunfactItem(items[3])

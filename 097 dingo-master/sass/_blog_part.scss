@@ -1,0 +1,130 @@
+/**************** blog part css start ****************/
+.blog_item_section{
+    .single_blog_item {
+        @media #{$small_mobile}{
+            margin-bottom: 20px;
+        }
+        @media #{$large_mobile}{
+            margin-bottom: 20px;
+        }
+        @media #{$tab_device}{
+            margin-bottom: 20px;
+        }
+        @media #{$medium_device}{
+        
+        }
+        &:hover {
+            .single_blog_text {
+                border: 1px solid transparent;
+                box-shadow: 0px 15px 30px rgba(115, 113, 127, .10);
+
+                background-color: $white_color;
+            }
+            .btn_3{ 
+                color: $btn_bg;
+                a{
+                    color: $btn_bg;
+                }
+                img{
+                    transform: rotateX(-180deg);
+                    margin-bottom: 7px;
+                }
+            }
+        }
+    }
+    .single_blog_img{
+        img{
+            width: 100%;
+        }
+    }
+    .single_blog_text{
+        padding: 40px 30px;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 100px 0px 623px 77px / 0px 50px 128px 58px;
+        background-color: $white_color;
+        @include transform_time(0.5s);
+        @media #{$small_mobile}{
+            padding: 20px 15px;
+
+        }
+        @media #{$large_mobile}{
+            padding: 20px 15px;
+        
+        }
+        @media #{$tab_device}{
+            padding: 25px 15px;
+        }
+        @media #{$medium_device}{
+        
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            @media #{$small_mobile}{
+                font-size: 20px;
+
+            }
+            @media #{$large_mobile}{
+                font-size: 20px;
+            
+            }
+            @media #{$tab_device}{
+                font-size: 20px;
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+        .btn_3{
+            color: #2c3033;
+            margin-top: 28px;
+            text-transform: capitalize;
+        }
+    }
+}
+.blog_section{
+    .single_blog_text{
+        .date{
+            .date_item{
+                color: #2c3033;
+                font-size: 15px;
+                margin-right: 19px;
+                span{
+                    color: $btn_bg;
+                }
+            }
+        }
+        h3{
+            font-size: 24px;
+            color: rgb(44, 48, 51);
+            line-height: 1.458;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            a{
+                color: rgb(44, 48, 51);
+            }
+            @media #{$small_mobile}{
+                font-size: 20px;
+            }
+            @media #{$large_mobile}{
+                font-size: 20px;
+            }
+            @media #{$tab_device}{
+            
+            }
+            @media #{$medium_device}{
+            
+            }
+        }
+        .btn_3{
+            margin-top: 25px;
+            img{
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+  

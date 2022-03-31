@@ -1,0 +1,10 @@
+.bt-wizard{
+    .nav{
+        background: $body-bg;
+        .nav-link{
+            &.active{
+                box-shadow: 0px 0px 5px 2px transparentize(theme-color('primary'),0.7);
+            }
+        }
+    }
+}

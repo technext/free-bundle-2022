@@ -1,0 +1,64 @@
+append variables
+  -
+    var courses= [
+      {
+        image:'design.png',
+        title :'User Research for User Experience Design',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'psychology.png',
+        title :'Buddhism and Modern Psychology',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'philosophy.png',
+        title :'Introduction to Philosophy',
+        text: 'Duke University',
+      },
+      {
+        image:'photographs.png',
+        title :'Advance on Seeing Through Photographs',
+        text: 'Duke University',
+      },
+      {
+        image:'arguments.png',
+        title :'Think Again I: How to Understand Arguments',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'experience-design.png',
+        title :'User Research for User Experience Design',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'user-research.png',
+        title :'User Research for User Experience Design',
+        text: 'The Museum of Modern Art',
+      },
+      {
+        image:'critical-thinking.png',
+        title :'Introduction to Logic and Critical Thinking',
+        text: 'Duke University',
+      },
+      {
+        image:'art-design.png',
+        title :'Modern and Contemporary Art and Design',
+        text: 'The Museum of Modern Art',
+      },
+    ];
+
+        
+mixin FeaturedCourses 
+  +Section 
+    .row 
+      h1.text-center.mb-5  Top Featured Courses
+      +Courses(courses[0])
+      +Courses(courses[1])
+      +Courses(courses[2])
+      +Courses(courses[3])
+      +Courses(courses[4])
+      +Courses(courses[5])
+      +Courses(courses[6])
+      +Courses(courses[7])
+      +Courses(courses[8])

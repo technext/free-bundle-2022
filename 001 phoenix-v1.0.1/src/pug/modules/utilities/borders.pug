@@ -1,0 +1,86 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Borders
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Borders',
+      description: 'Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/borders/`,
+      linkText: 'Borders on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Border',
+        id: '#border',
+        subItem: [
+          {
+            name: 'Additive',
+            id: '#additive'
+          },
+          {
+            name: 'Subtractive',
+            id: '#subtractive',
+          }
+        ]
+
+      },
+      {
+        name: 'Border color',
+        id: '#border-color',
+      },
+      {
+        name: 'Border width',
+        id: '#border-width'
+      },
+      {
+        name: 'Border radius',
+        id: '#border-radius'
+      },
+      {
+        name: 'Border sizes',
+        id: '#border-sizes'
+      },
+    ]
+
+
+append component
+  +ComponentCard({title: 'Border', anchor: true, hideNavTab: true}).my-5
+    +BorderDoc
+
+  +ComponentCard({title: 'Additive', anchor: true}).my-5.border-component
+    +BorderAdditive
+
+  +ComponentCard({title: 'Subtractive', anchor: true}).my-5.border-component
+    +BorderSubtractive
+  
+  +ComponentCard({
+      title: 'Border Color', 
+      anchor: true,
+      description: 'Change the border color using utilities built on our theme colors.'
+    }).my-5.border-component
+    +BorderColorWidth
+
+  +ComponentCard({
+      title: 'Border Width',
+      anchor: true,
+      description: 'You can control border width using helper classes <code>border-{1|2|3|4|5}</code>. In addition, you can also use <code> border-top-2</code>, <code> border-end-2</code>, <code> border-bottom-2</code>, <code> border-start-2</code>'
+    }).my-5.border-component
+    +BorderWidth
+
+  +ComponentCard({
+      title: 'Border Radius',
+      anchor: true,
+      description: 'Add classes to an element to easily round its corners.'
+    }).my-5.border-component
+    +BorderRadius
+
+  +ComponentCard({
+      title: 'Border Sizes',
+      anchor: true,
+      description: 'Use the scaling classes for larger or smaller rounded corners. Sizes range from <code>0</code> to <code>3</code>, and can be configured by modifying the utilities API.'
+    }).my-5.border-component
+    +BorderRadiusSizeDemo
+

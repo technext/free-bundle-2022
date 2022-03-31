@@ -1,0 +1,1453 @@
+/* =================================
+------------------------------------
+  Game Warrior Template
+  Version: 1.0
+ ------------------------------------ 
+ ====================================*/
+
+
+$color1: #ffb320;
+$color2: #131313;
+
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  color: #131313;
+}
+
+h1{
+  font-size: 70px;
+}
+
+h2{
+  font-size: 36px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+h6{
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: #878787;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+select,
+button,
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+a:hover {
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------
+  Helper CSS
+-----------------------*/
+.section-title {
+  text-align: center;
+  margin-bottom: 75px;
+  h2{
+    padding-top: 10px;
+    font-size: 36px;
+  }
+}
+.set-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.spad {
+  padding-top: 97px;
+  padding-bottom: 97px;
+}
+
+.text-white {
+  h1,h2,h3,h4,h5,h6,p,span,li,a{
+    color: #fff;
+  } 
+}
+
+.rating {
+  i{
+    color: #fbb710;
+  }
+  .is-fade {
+    color: #e0e3e4;
+  }
+}
+
+
+
+/*---------------------
+  Commom elements
+-----------------------*/
+/* buttons */ 
+.site-btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  color: #131313;
+  padding: 16px 30px;
+  min-width: 153px;
+  border-radius: 50px;
+  font-weight: 500;
+  border: none;
+  background: $color1;
+  cursor: pointer;
+  &.btn-sm {
+    padding: 10px 30px;
+    min-width: 163px;
+  }
+  &:hover {
+    color: #131313;
+  }
+}
+
+.cata {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  padding: 6px 25px;
+  &.new {
+    background: #ff205f;
+  }
+  &.strategy {
+    background: #4eae60;
+  }
+  &.racing {
+    background: #694eae;
+  }
+  &.adventure {
+    background: #40abf5;
+  }
+}
+
+
+/* Preloder */
+
+#preloder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: #fff;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+  -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+
+/*------------------
+  Header section
+---------------------*/
+.header-section {
+  background: #131313;
+  clear: both;
+  overflow: hidden;
+  padding: 18px 0;
+  border-bottom: 1px solid $color1;
+}
+.site-logo {
+  display: inline-block;
+  float: left;
+  padding-top: 6px;
+}
+
+.user-panel {
+  float: right;
+  font-weight: 500;
+  background: $color1;
+  padding: 8px 28px;
+  border-radius: 30px;
+  a {
+    font-size: 14px;
+    color: #131313;
+  }
+}
+.main-menu {
+  float: right;
+  margin-right: 170px;
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+      a {
+        display: inline-block;
+        font-size: 16px;
+        color: #fff;
+        margin-left: 35px;
+        font-weight: 500;
+        padding:10px 5px;
+        &:hover {
+          color: $color1;
+        }
+      }
+    }
+  }
+}
+
+.header-btn {
+  float: right;
+  margin-right: 0;
+}
+
+.nav-switch {
+  display: none;
+}
+
+/*------------------
+  Hero Section
+---------------------*/
+.hero-section {
+
+}
+
+.hero-slider {
+  .hs-item {
+    height: 865px;
+    display: table;
+    width: 100%;
+  }
+  .hs-text {
+    display: table-cell;
+    vertical-align: middle;
+    h2 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 60px;
+      margin-bottom: 30px;
+      position: relative;
+      top: -80px;
+      opacity: 0;
+      span {
+        color: $color1;
+      }
+    }
+    p{
+      color: #fff;
+      margin-bottom: 30px;
+      position: relative;
+      position: relative;
+      top: -90px;
+      opacity: 0;
+    }
+    .site-btn {
+      position: relative;
+      top: -100px;
+      opacity: 0;
+    }
+  }
+  .owl-item.active .hs-item {
+    h2,p,.site-btn {
+      top: 0;
+      opacity: 1;
+    }
+    h2 {
+      -webkit-transition: all 0.5s ease 1s;
+      -o-transition: all 0.5s ease 1s;
+      transition: all 0.5s ease 1s;
+    }
+    p {
+      -webkit-transition: all 0.5s ease 0.8s;
+      -o-transition: all 0.5s ease 0.8s;
+      transition: all 0.5s ease 0.8s;
+    }
+    .site-btn {
+      -webkit-transition: all 0.5s ease 0.6s;
+      -o-transition: all 0.5s ease 0.6s;
+      transition: all 0.5s ease 0.6s;
+    }
+  }
+  .owl-dots {
+    position: relative;
+    max-width: 1146px;
+    margin: -33px auto 0;
+    top: -67px;
+    z-index: 5;
+    .owl-dot {
+      display: inline-block;
+      margin-right: 13px;
+      width: 33px;
+      height: 33px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      padding-top: 7px;
+      border-radius: 40px;
+      background: #dbe2ec;
+      &.active {
+        background: $color1;
+      }
+    }
+  }
+}
+
+
+
+
+/*---------------------
+  Latest News section
+-----------------------*/
+.latest-news-section {
+  overflow: hidden;
+  display: block;
+  clear: both;
+  background: #131313;
+  padding: 24px 0;
+  position: relative;
+}
+.ln-title {
+    position: absolute;
+    height: 100%;
+    width: 29%;
+    left: 0;
+    top: 0;
+    text-align: right;
+    padding-top: 24px;
+    padding-right: 66px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: $color1;
+    z-index: 1;
+}
+.news-ticker {
+  width: 71%;
+  float: right;
+  overflow: hidden;
+  display: inline-block;
+}
+.news-ticker-contant {
+  .nt-item {
+    margin-right: 35px;
+    color: #fff;
+    span {
+      margin-right: 35px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      padding: 4px 20px;
+      &.new {
+        background: #ff205f;
+      }
+      &.strategy {
+        background: #4eae60;
+      }
+      &.racing {
+        background: #694eae;
+      }
+    }
+    display: inline-block;
+  }
+}
+
+
+
+
+
+/*------------------
+  Feature Section
+---------------------*/
+.feature-item {
+  height: 415px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: .65;
+  }
+  .cata {
+    position: relative;
+    margin-top: 28px;
+    margin-left: 29px;
+    z-index: 3;
+  }
+  .fi-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0 26px 24px;
+    z-index: 2;
+    h5 {
+      margin-bottom: 18px;
+    }
+    .fi-comment {
+      font-size: 12px;
+      opacity: .54;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+  Recent Game Section
+------------------------*/
+.recent-game-section {
+  background-color: #eef2f6;
+  border-top: 1px solid #d6dee7;
+  border-bottom: 1px solid #d6dee7;
+}
+
+
+.recent-game-item {
+  .rgi-thumb {
+    height: 204px;
+    padding: 25px 28px;
+  }
+  .rgi-content {
+    padding: 34px 22px 20px;
+    background: #fff;
+    border: 1px solid #d6dee7;
+    border-top: none;
+    position: relative;
+    h5 {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .comment {
+      font-size: 12px;
+      color: #737373;
+    }
+  }
+  .rgi-extra {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    .rgi-star,.rgi-heart{
+      height: 35px;
+      width: 35px;
+      float: left;
+      display: block;
+      padding: 6px 8px 0;
+    }
+    .rgi-star {
+      background: $color1;
+    }
+    .rgi-heart {
+      background: #ff205f;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+/*----------------------
+  Tournaments Section
+------------------------*/
+.tournaments-section {
+  background-image: url("../img/pattern.png");
+  background-repeat: repeat;
+}
+.tournament-title {
+  display: inline-block;
+  padding: 7px 25px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  background: #fb6e10;
+}
+.tournament-item {
+  background: #252525;
+  .ti-notic {
+    display: inline-block;
+    padding: 8px 21px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #131313;
+    text-transform: uppercase;
+    background: $color1;
+  }
+  .ti-content {
+    padding: 38px 24px;
+    overflow: hidden;
+  }
+  .ti-thumb {
+    width: 168px;
+    height: 178px;
+    float: left;
+  }
+  .ti-text {
+    padding-left: 195px;
+    h4 {
+      color: $color1;
+      margin-bottom: 20px;
+    }
+    ul{
+      list-style: none;
+      margin-bottom: 20px;
+      li{
+        color: #fff;
+        font-size: 12px;
+        margin-bottom: 6px;
+        span {
+          color: #9a9a9a;
+        }
+      }
+    }
+    p{
+      font-size: 12px;
+      margin-bottom: 0;
+      span {
+        font-weight: 500;
+        color: $color1;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/*----------------------
+  Review Section
+------------------------*/
+.review-section {
+  background-position: right top;
+}
+.review-item {
+  .review-cover {
+    position: relative;
+    margin-bottom: 30px;
+    height: 345px;
+    .score {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      top: -27px;
+      left: 26px;
+      padding-top: 15px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      border-radius:50%;
+      z-index: 1;
+      &.yellow {
+        background: #ffb320;
+      }
+      &.purple {
+        background: #694eae;
+      }
+      &.pink {
+        background: #ff20ae;
+      }
+      &.green {
+        background: #4eae60;
+      }
+    }
+  }
+  .review-text {
+    text-align: center;
+    h5 {
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .rating {
+    margin-bottom: 20px;
+    i{
+      font-size: 12px;
+    }
+  }
+}
+
+/*----------------------
+  Footer top Section
+------------------------*/
+.footer-top-section {
+  background-image: url("../img/pattern.png");
+  background-repeat: repeat;
+  padding: 72px 0;
+  .container {
+    position: relative;
+  }
+}
+
+.footer-top-bg {
+  position: absolute;
+  left: -30px;
+  bottom: -85px;
+  z-index: 2;
+}
+
+.footer-logo {
+  img {
+    margin-bottom: 35px;
+  }
+}
+
+.footer-widget {
+  padding: 40px 30px 7px;
+  background: #252525;
+  border: 1px solid #4a4a4a;
+  .fw-title {
+    color: #fff;
+    margin-bottom: 40px;
+  }
+}
+.latest-blog {
+  .lb-item {
+    margin-bottom: 23px;
+    overflow: hidden;
+    .lb-thumb {
+      width: 97px;
+      height: 97px;
+      float: left;
+    }
+    .lb-content {
+      padding-left: 110px;
+      .lb-date {
+        font-size: 12px;
+        color: $color1;
+        margin-bottom: 8px;
+      }
+      p{
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: #d3d3d3;
+      }
+      .lb-author{
+        font-size: 12px;
+        color: #d3d3d3;
+        opacity: 0.45;
+      }
+    }
+  }
+}
+
+.top-comment {
+  overflow: hidden;
+  .tc-item {
+    margin-bottom: 23px;
+    overflow: hidden;
+    .tc-thumb {
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+      float: left;
+    }
+    .tc-content {
+      padding-left: 100px;
+      p{
+        font-size: 12px;
+        color: #d3d3d3;
+        margin-bottom: 5px;
+        a{
+          color: #ff205f;
+        }
+        span {
+          color: #7a7a7a;
+        }
+      }
+      .tc-date {
+        font-size: 12px;
+        color: $color1;
+      }
+    }
+  }
+}
+
+/*----------------------
+  Footer Section
+------------------------*/
+.footer-section{
+  padding: 18px 0 16px;
+  overflow: hidden;
+  background: #252525;
+}
+.footer-menu {
+  list-style: none;
+  float: right;
+  li{
+    display: inline;
+    a{
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #aeaeae;
+      margin-left: 30px;
+    }
+  }
+}
+
+
+.copyright {
+  float: left;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #aeaeae;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------
+  Other Pages
+--------------------
+====================*/
+.page-info-section {
+  height: 499px;
+  position: relative;
+  .pi-content {
+    position: absolute;
+    width: 100%;
+    bottom: 65px;
+    left: 0;
+    z-index: 2;
+    h2{
+      font-size: 60px;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+  }
+}
+
+.site-pagination {
+  padding-top: 50px;
+  a,span{
+    width: 33px;
+    height: 33px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 7px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    color: #131313;
+    margin-right: 10px;
+  }
+  .active {
+    background: $color1;
+  }
+  &.sp-style-2{
+    a,span {
+       background: #e5e5e5;
+    }
+    .active {
+      background: $color1;
+    }
+  }
+}
+
+.widget-item {
+  margin-bottom: 73px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .widget-title {
+    margin-bottom: 40px;
+  }
+  .latest-blog .lb-item .lb-content p,
+  .top-comment .tc-item .tc-content p {
+    color: #131313;
+  }
+  .latest-blog .lb-item .lb-content .lb-author {
+    color: #737373;
+  }
+  .top-comment .tc-item .tc-content {
+    padding-right: 20px;
+  }
+  .review-item {
+    background: #eff2f5;
+    .review-text {
+      padding: 0 35px 20px;
+    }
+  }
+}
+
+.search-widget {
+  position: relative;
+  input{
+    width: 100%;
+    height: 41px;
+    border: 1px solid #d6dee7;
+    padding-left: 22px;
+    padding-right: 45px;
+    font-size: 12px;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    padding-right: 15px;
+    color: #878787;
+    cursor: pointer;
+  }
+}
+
+/*-----------------
+  Categories page
+--------------------*/
+.recent-game-page {
+  .recent-game-item {
+    margin-bottom: 42px;
+  }
+}
+
+
+/*-----------------
+  Single blog page
+--------------------*/
+
+.single-blog-page{
+  .blog-thumb {
+    height: 424px;
+    padding-top: 24px;
+    padding-left: 29px;
+    margin-bottom: 40px;
+    position: relative;
+    .rgi-extra {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 70px;
+      .rgi-star,.rgi-heart{
+        height: 35px;
+        width: 35px;
+        float: left;
+        display: block;
+        padding: 6px 8px 0;
+      }
+      .rgi-star {
+        background: $color1;
+      }
+      .rgi-heart {
+        background: #ff205f;
+      }
+    }
+
+  }
+  .blog-content {
+    h3{
+      margin-bottom: 10px;
+    }
+    .meta-comment {
+      display: block;
+      font-size: 12px;
+      color: #737373;
+      margin-bottom: 25px;
+    }
+    p{
+      margin-bottom: 25px;
+    }
+  }
+}
+.comment-warp {
+  padding-top: 50px;
+}
+.comment-title {
+    margin-bottom: 45px;
+}
+.comment-list {
+  list-style: none;
+  li{
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+  .comment {
+    .comment-avator {
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+      float: left;
+    }
+    .comment-content {
+      padding-left: 100px;
+      h5 {
+        font-size: 12px;
+        color: #131313;
+        font-weight: 400;
+        margin-bottom: 10px;
+        span {
+          color: $color1;
+          padding-left: 18px;
+        }
+      }
+      p{
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      .reply {
+        font-size: 12px;
+        color: #ff1d55;
+      }
+    }
+  }
+}
+
+.comment-form-warp{
+  padding-top: 30px;
+}
+.comment-form {
+  input[type=text],
+  input[type=email],
+  textarea {
+    width: 100%;
+    height: 41px;
+    border: 1px solid #d6dee7;
+    padding-left: 22px;
+    padding-right: 45px;
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  textarea {
+    height: 243px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 38px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------
+  Review page
+--------------------*/
+
+.review-page {
+  .review-item {
+    margin-bottom: 63px;
+  }
+  .review-item .review-text h4 {
+    margin-bottom: 10px;
+  }
+}
+.review-dark {
+  .review-item .review-text p {
+    color: #b5b5b5;
+  }
+}
+.review-section.review-dark {
+  background-position: center top;
+} 
+
+
+
+
+
+/*-----------------
+  Community page
+--------------------*/
+.community-page{
+  .site-pagination {
+    padding-top: 62px;
+  }
+}
+.community-warp {
+  max-width: 1367px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .28);
+}
+.community-post-list {
+  list-style: none;
+  li{
+    padding: 33px 55px 65px;
+    margin-bottom: 21px;
+    overflow: hidden;
+    border: 1px solid #878787;
+    background: #1f2225;
+  }
+  .community-post {
+    .author-avator {
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+      float: left;
+    }
+    .post-content {
+      padding-left: 100px;
+      h5 {
+        font-size: 16px;
+        color: #ff205f;
+        font-weight: 400;
+        margin-bottom: 10px;
+        span {
+          color: #7a7a7a;
+          padding-left: 18px;
+        }
+      }
+      p{
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      .post-date {
+        font-size: 12px;
+        color: $color1;
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .attachment-file {
+    padding-top: 60px;
+    max-width: 435px;
+  }
+}
+
+.community-top-title {
+  margin-bottom: 50px;
+}
+.community-filter {
+  margin-bottom: 80px;
+  label {
+    font-size: 18px;
+    color: #1f2225;
+    font-weight: 500;
+    padding-right: 10px;
+  }
+  select {
+    width: 201px;
+    height: 42px;
+    font-size: 14px;
+    padding: 0 18px;
+    color: #1f2225;
+    font-weight: 500;
+  }
+}
+
+
+
+
+/*-----------------
+  Contact page
+--------------------*/
+.map {
+  height: 515px;
+  background: #ddd;
+  margin-bottom: 90px;
+}
+
+.contact-info-list {
+  padding-top: 55px;
+  padding-bottom: 20px;
+  list-style: none;
+  li{
+    margin-bottom: 30px;
+  }
+  .cf-left {
+    width: 95px;
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color1;
+  }
+  .cf-right {
+    color: #878787;
+    font-size: 15px;
+    padding-left: 100px;
+  }
+}
+
+.social-links {
+  a {
+    color: #474747;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+
+/*------------------
+  Responsive
+---------------------*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1176px;
+  }
+}
+
+
+/* Medium screen : 992px. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-menu {
+    margin-right: 90px;
+  }
+  .hero-slider .owl-dots {
+    max-width: 930px;
+  }
+  .review-section {
+    background-position: right 10% top;
+  }
+  .review-item .review-cover {
+    height: 280px;
+  }
+  .latest-blog .lb-item .lb-thumb {
+    width: 55px;
+    height: 55px;
+  }
+  .latest-blog .lb-item .lb-content {
+    padding-left: 67px;
+  }
+  .top-comment .tc-item .tc-content {
+    padding-left: 95px;
+  }
+  .footer-top-bg {
+    max-width: 370px;
+  }
+  .page-info-section .pi-content h2 {
+    font-size: 50px;
+  }
+}
+
+/* Tablet :768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .site-logo {
+    max-width: 130px;
+  }
+  .main-menu {
+    margin-right: 25px;
+    ul li a {
+      margin-left: 15px;
+    }
+  }
+  .user-panel {
+    padding: 8px 15px;
+  }
+  .hero-slider .hs-text h2 {
+    font-size: 50px;
+  }
+  .hero-slider .owl-dots {
+    max-width: 690px;
+  }
+  .recent-game-item{
+    margin-bottom: 42px;
+  }
+  .tournament-item .ti-thumb {
+    width: 100%;
+    height: 230px;
+    float: none;
+  }
+  .tournament-item .ti-text {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .review-section {
+    background-position: left top;
+  }
+  .review-item {
+    margin-bottom: 63px;
+  }
+  .footer-logo {
+    margin-bottom: 50px;
+  }
+  .latest-blog .lb-item .lb-thumb {
+    width: 80px;
+    height: 80px;
+  }
+  .latest-blog .lb-item .lb-content {
+    padding-left: 95px;
+  }
+  .footer-top-bg {
+    display: none;
+  }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (max-width: 767px) {
+  .header-section {
+    overflow: visible;
+    padding: 23px 0;
+    .container {
+      position: relative;
+    }
+  }
+  .site-logo {
+    float: none;
+    padding-top: 0;
+  }
+  .main-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 24px);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 999;
+    ul li {
+      display: block;
+      border-bottom: 1px solid #ececec;
+    }
+    ul li a {
+      margin-left:0;
+          color: #131313;
+          padding: 13px 26px;
+    }
+  }
+  .nav-switch {
+    color: #fff;
+    display: block;
+    float: right;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .user-panel {
+    display: none;
+  }
+  .hero-slider .hs-item {
+    height: 700px;
+  }
+  .hero-slider .hs-text h2 {
+    font-size: 36px;
+  }
+  .hero-slider .owl-dots {
+    max-width: 510px;
+  }
+  .ln-title {
+    padding-right: 30px;
+  }
+  .feature-item  {
+    margin-bottom: 30px;
+  }
+  .recent-game-item{
+    margin-bottom: 42px;
+  }
+  .review-section {
+    background-position: left top;
+  }
+  .review-item {
+    margin-bottom: 63px;
+  }
+  .footer-logo {
+    margin-bottom: 50px;
+  }
+  .footer-top-bg {
+    display: none;
+  }
+  .footer-section {
+    padding: 30px 0 20px;
+    text-align: center;
+  }
+  .footer-menu li:first-child a {
+    margin-left: 0;
+  }
+  .footer-menu,.copyright{
+    float: none;
+  }
+  .copyright{
+    padding-top: 15px;
+  }
+  .community-post-list li {
+    padding: 30px 25px 30px;
+  }
+  .page-info-section .pi-content h2 {
+    font-size: 50px;
+  }
+}
+
+/* Medium Mobile :480px. */
+@media only screen and (max-width: 576px){
+  .hero-slider .owl-dots {
+    padding: 0 15px;
+  }
+  .feature-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .community-post-list .community-post .author-avator {
+    float: none;
+  }
+  .community-post-list .community-post .post-content {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+}
+
+/* Small Mobile :320px. */
+@media only screen and (max-width: 479px) {
+  .hero-slider .hs-item {
+    height: auto;
+    padding: 150px 0;
+  }
+  .ln-title {
+    display: none;
+  }
+  .news-ticker {
+    width: 100%;
+  }
+  .tournament-item .ti-thumb {
+    width: 100%;
+    height: 230px;
+    float: none;
+  }
+  .tournament-item .ti-text {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .latest-blog .lb-item .lb-thumb {
+    width: 55px;
+    height: 55px;
+  }
+  .latest-blog .lb-item .lb-content {
+    padding-left: 67px;
+  }
+  .top-comment .tc-item .tc-content {
+    padding-left: 85px;
+  }
+  .site-btn {
+    padding: 11px 30px;
+    min-width: 145px;
+  }
+  .comment-list .comment .comment-avator {
+    float: none;
+  }
+  .comment-list .comment .comment-content {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .footer-widget {
+    padding: 40px 15px 7px;
+  }
+  .page-info-section .pi-content h2 {
+    font-size: 40px;
+  }
+}

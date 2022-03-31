@@ -1,0 +1,154 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Button
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Buttons',
+      description: 'Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/buttons/`,
+      linkText: 'Buttons on Bootstrap',
+      breadcrumb:[
+        {
+          name:'Components',
+          link:'#!'
+        },
+        {
+          name:'Button',
+          active:true
+        },
+      ]
+    }
+  
+  -
+    var rightNav = [
+      {
+        name: 'Phoenix Buttons',
+        id: '#phoenix-buttons',
+      },
+      {
+        name: 'Solid Buttons',
+        id: '#solid-buttons',
+      },
+      {
+        name: 'Soft Buttons',
+        id: '#soft-buttons',
+      },
+      {
+        name: 'Outline Buttons',
+        id: '#outline-buttons',
+      },
+      {
+        name: 'Close Buttons',
+        id: '#close-buttons',
+      },
+      {
+        name: 'Close buttons white variant',
+        id: '#close-buttons-white-variant',
+      },
+      {
+        name: 'Button Sizes',
+        id: '#button-sizes',
+      },
+      {
+        name: 'Button Capsule',
+        id: '#button-capsule',
+      },
+      {
+        name: 'Button Group',
+        id: '#button-group',
+      },
+      {
+        name: 'Button Toolbar',
+        id: '#button-toolbar',
+      },
+      {
+        name: 'Button toolbar with input group',
+        id: '#button-toolbar-with-input-group',
+      },
+      {
+        name: 'Button group sizing',
+        id: '#button-group-sizing',
+      },
+      {
+        name: 'Button group vertical variation',
+        id: '#button-group-vertical-variation',
+      },
+      {
+        name: 'Disabled state',
+        id: '#disabled-state',
+      },
+      {
+        name: 'Block buttons',
+        id: '#block-buttons',
+      },
+    ]
+
+block component
+  +ComponentCard({title:'Phoenix Buttons'}).my-4
+    +PhoenixButtonsDemo
+
+  +ComponentCard({title:'Solid Buttons'}).my-4
+    +SolidButtonsDemo
+    
+  +ComponentCard({title:'Soft Buttons'}).my-4
+    +SoftButtonsDemo
+
+  +ComponentCard({
+    title:'Outline Buttons',
+    description:'In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors on any button.'
+  }).my-4
+    +ButtonOutlineDemo
+
+  +ComponentCard({
+    title:'Close Buttons',
+    description: 'Provide an option to dismiss or close a component with <code>.btn-close</code>. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default <code>background-image</code>. <strong>Be sure to include text for screen readers</strong>, as we’ve done with <code>aria-label</code>.'
+  }).my-4
+    +CloseButtonExample
+
+  +ComponentCard({
+    title:'Close buttons white variant',
+    description: 'Change the default <code>.btn-close</code> to be white with the <code>.btn-close-white</code> class. This class uses the <code>filter</code> property to invert the <code>background-image</code>.'  
+  }).my-4
+    .bg-1000.rounded-1.p-3.light
+      +CloseButtonWhiteVariant
+
+  +ComponentCard({
+    title:'Button Sizes',
+    description: 'Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.'
+  }).my-4
+    +ButtonSizesDemo
+
+  +ComponentCard({title:'Button Capsule'}).my-4
+    +ButtonCapsuleDemo
+
+  +ComponentCard({title:'Button Group'}).my-4
+    = '\n'
+    +ButtonGroupDemo
+
+  +ComponentCard({title:'Button Toolbar'}).my-4
+    +ButtonToolbarDemo
+
+  +ComponentCard({title:'Button toolbar with input group'}).my-4
+    +ButtonToolbarWithInputGroupDemo
+
+  +ComponentCard({title:'Button group sizing'}).my-4
+    +ButtonGroupSizeDemo
+
+  +ComponentCard({title:'Button group vertical variation'}).my-4
+    +ButtonGroupVerticalDemo
+
+  //- +ComponentCard({title:'Vertical variation with dropdown'}).my-4
+  //-   +ButtonGroupVerticalWithDropdownDemo
+
+  +ComponentCard({title:'Disabled state'}).my-4
+    +ButtonDisableStateDemo
+
+  +ComponentCard({title:'Block buttons'}).my-4
+    +BlockButtonsDemo
+
+
+
+
+
+

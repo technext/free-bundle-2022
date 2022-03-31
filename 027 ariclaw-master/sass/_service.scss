@@ -1,0 +1,195 @@
+/**************** service_part css start ****************/
+.service_part {
+   position: relative;
+   z-index: 1;
+   &:after{
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #f3f1ef;
+      z-index: -1;
+      @media #{$small_mobile}{
+         width: 100%;
+         left: 0;
+      }
+      @media #{$large_mobile}{
+         width: 100%;
+         left: 0;
+      }
+      @media #{$tab_device}{
+         width: 100%;
+         left: 0;
+      }
+      @media #{$medium_device}{
+      
+      }
+   }
+   .single_service_part {
+      text-align: center;
+      height: 330px;
+      background-color: $white_color;
+      display: table;
+      width: 100%;
+      @media #{$small_mobile} {
+         margin-bottom: 15px;
+         height: 300px;
+      }
+
+      @media #{$large_mobile} {
+         margin-bottom: 15px;
+         height: 300px;
+      }
+
+      @media #{$tab_device} {
+         margin-bottom: 15px;
+         height: 300px;
+      }
+
+      @media #{$medium_device} {
+         margin-bottom: 15px;
+         height: 300px;
+      }
+
+      .single_service_text {
+         @include transform_time(.4s);
+         display: table-cell;
+         vertical-align: middle;
+         padding: 0 15px;
+
+         span {
+            width: 90px;
+            height: 90px;
+            padding: 0;
+            line-height: 90px;
+            @include transform_time(.4s);
+            font-size: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            color: $white_color;
+            background: -moz-linear-gradient( 0deg, rgb(171,118,54) 0%, rgb(215,175,126) 100%);
+            background: -webkit-linear-gradient( 0deg, rgb(171,118,54) 0%, rgb(215,175,126) 100%);
+            background: -ms-linear-gradient( 0deg, rgb(171,118,54) 0%, rgb(215,175,126) 100%);
+         }
+
+         h2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 34px;
+            @include transform_time(.4s);
+
+            @media #{$small_mobile} {
+               font-size: 18px !important;
+            }
+
+            @media #{$large_mobile} {
+               font-size: 18px !important;
+            }
+
+            @media #{$tab_device} {
+               font-size: 18px !important;
+            }
+
+            @media #{$medium_device} {
+               font-size: 18px !important;
+            }
+         }
+
+         p {
+            display: none;
+            @include transform_time(1s);
+            list-style: 1.8;
+         }
+      }
+
+      &:hover {
+         background-image: -moz-linear-gradient(-117deg, rgb(171, 118, 54) 0%, rgb(215, 175, 126) 100%);
+         background-image: -webkit-linear-gradient(-117deg, rgb(171, 118, 54) 0%, rgb(215, 175, 126) 100%);
+         background-image: -ms-linear-gradient(-117deg, rgb(171, 118, 54) 0%, rgb(215, 175, 126) 100%);
+
+         h2 {
+            font-size: 22px;
+            text-transform: capitalize;
+            margin-top: 32px;
+            color: $white_color;
+
+            @media #{$small_mobile} {
+               font-size: 18px !important;
+            }
+
+            @media #{$large_mobile} {
+               
+            }
+
+            @media #{$tab_device} {}
+
+            @media #{$medium_device} {
+               font-size: 18px !important;
+            }
+         }
+
+         p {
+            display: block;
+            margin-top: 20px;
+            color: $white_color;
+         }
+
+         span {
+            background: rgb(255, 255, 255);
+            width: 72px;
+            height: 72px;
+            line-height: 72px;
+            font-size: 30px;
+            color: $btn_bg;
+         }
+      }
+
+   }
+
+   @media #{$small_mobile} {}
+
+   @media #{$large_mobile} {}
+
+   @media #{$tab_device} {}
+
+   @media #{$medium_device} {}
+}
+
+/********** single service *************/
+.single_service{
+   padding: 130px 0 32px;
+   .single_single_service{
+      text-align: center;
+      margin-bottom: 95px;
+      @media #{$small_mobile}{
+         margin-bottom: 40px;
+      }
+      @media #{$large_mobile}{
+         margin-bottom: 40px;
+      }
+      @media #{$tab_device}{
+         margin-bottom: 40px;
+      }
+      @media #{$medium_device}{
+      
+      }
+      h4{
+         font-size: 22px;
+         margin: 35px 0px 25px;
+         @media #{$small_mobile}{
+            margin: 15px 0px 10px;
+         }
+         @media #{$large_mobile}{
+            margin: 15px 0px 10px;
+         }
+         @media #{$tab_device}{
+            margin: 15px 0px 10px;
+         }
+         @media #{$medium_device}{
+         
+         }
+      }
+   }
+}

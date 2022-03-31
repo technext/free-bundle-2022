@@ -1,0 +1,37 @@
+.card{
+  border: none;
+
+  &.service-card{
+    &:before{
+      content: '';
+      position: absolute;
+      left: toRem(10);
+      bottom: toRem(10);
+      width: toRem(100);
+      height: toRem(100);
+      background-color: $orange;
+      border-radius: toRem(30) 0 toRem(10) 0;
+      z-index: -1;
+      transition: $transition-base;
+  
+      @include media-breakpoint-down(md){
+        width: toRem(60);
+        height: toRem(60);
+        border-radius: toRem(20) 0 toRem(8) 0;
+      }
+    }
+  
+    &:hover{
+      &:before{
+        left: toRem(-30);
+        bottom: toRem(-35);
+  
+        @include media-breakpoint-down(md){
+          left: toRem(-15);
+          bottom: toRem(-25);
+        }
+      }
+    }
+  }
+}
+

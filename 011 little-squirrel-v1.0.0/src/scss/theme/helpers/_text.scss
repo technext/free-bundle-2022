@@ -1,0 +1,55 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                    Text                                    */
+/* -------------------------------------------------------------------------- */
+
+.text-smallcaps {
+  font-variant: small-caps;
+}
+.text-superscript {
+  vertical-align: super;
+}
+.text-word-break {
+  word-break: break-word;
+}
+
+
+/*-----------------------------------------------
+|   Font family
+-----------------------------------------------*/
+// .text-serif { font-family: $font-family-serif; }
+.font-sans-serif {
+  font-family: $font-family-sans-serif;
+}
+.font-base {
+  font-family: $font-family-base;
+}
+.font-cursive{
+  font-family: $font-family-cursive;
+}
+
+/*-----------------------------------------------
+|   Error Page
+-----------------------------------------------*/
+.fs-error {
+  font-size: 7rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 10rem;
+  }
+}
+
+/*-----------------------------------------------
+|   Text alignment
+-----------------------------------------------*/
+.text-justify{
+  text-align: justify !important;
+}
+
+//shape
+
+.text-gradient{
+  // font-size: 16px;
+  background: linear-gradient(50deg, rgba(251,60,0,1),rgba(255,184,0,1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

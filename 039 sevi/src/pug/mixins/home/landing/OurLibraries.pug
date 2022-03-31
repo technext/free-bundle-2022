@@ -1,0 +1,13 @@
+mixin OurLibraries
+  section#libraries
+    +Background({ image: `${CWD}assets/img/illustrations/libraries-bg.png`, attrs: { style: { 'background-position': 'left bottom', 'background-size': 'contain',} }, className: '' })
+    .container
+      .row.g-xl-0.align-items-center
+        .col-md-5.col-lg-7.text-xl-center
+          img.img-fluid.mb-5.mb-md-0(src=`${CWD}assets/img/illustrations/our-libraries.png` width='620'  alt='')
+        .col-md-7.col-lg-4.text-center.text-md-start.offset-lg-1.offset-xxl-0
+          h1.fw-semi-bold.text-warning Our 
+            span.text-1100 libraries
+          p.pt-3.lh-lg Your reading list is a good place to start, but you will be expected to read more widely too. Use Sevi to search for information on your topic, and to find books, journal articles and other materials in the Library.
+          .py-3
+            button.btn.btn-lg.btn-primary.rounded-pill.font-base(type='submit') Learn More 

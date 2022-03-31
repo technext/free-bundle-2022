@@ -1,0 +1,251 @@
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        margin: 0 16px;
+    }
+    #banner1 a.carousel-control-prev {
+        left: 25%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        margin: 0 9px;
+        font-size: 15px;
+    }
+    .text-bg h1 {
+        font-size: 56px;
+    }
+    .text-bg span {
+        font-size: 32px;
+        line-height: 39px;
+    }
+    #banner1 a.carousel-control-next {
+        left: 37%;
+    }
+    #banner1 a.carousel-control-prev {
+        left: 30%;
+    }
+    .titlepage h2 {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header {
+        padding: 50px 50px;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .text-bg h1 {
+        font-size: 70px;
+        line-height: 63px;
+        padding-bottom: 28px;
+    }
+    #banner1 .carousel-control-next,
+    #banner1 .carousel-control-prev {
+        top: 100%;
+    }
+    #banner1 a.carousel-control-next {
+        left: 37%;
+    }
+    #banner1 a.carousel-control-prev {
+        left: 27%;
+    }
+    .services_main .ho {
+        left: 47px;
+    }
+    .services_main h3 {
+        font-size: 21px;
+    }
+    .d_none {
+        display: none;
+    }
+    .titlepage h2 {
+        font-size: 37px;
+    }
+    .subscribe_main h3 {
+        font-size: 30px;
+    }
+    .enter_form {
+        width: 63%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        padding: 50px 50px;
+    }
+    .logo {
+        width: 166px;
+    }
+    .d_none {
+        display: none;
+    }
+    .text-bg h1 {
+        font-size: 51px;
+    }
+    .text-bg span {
+        font-size: 33px;
+    }
+    .text_img {
+        margin-top: 20px;
+    }
+    #banner1 .carousel-control-next,
+    #banner1 .carousel-control-prev {
+        top: 100%;
+    }
+    #banner1 a.carousel-control-prev {
+        left: 17%;
+    }
+    .titlepage h2 {
+        font-size: 27px;
+    }
+    .services_main .ho {
+        left: 95px;
+    }
+    .subscribe_main h3 {
+        font-size: 31px;
+    }
+    .enter_form {
+        width: 68%;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+        padding-top: 12px;
+    }
+    .navigation .navbar-collapse {
+        background: #17094c;
+        padding: 20px;
+        margin-top: 44px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #fff;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        border: inherit;
+        float: right;
+        padding: 0;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+    .margin_bottom1 {
+        margin-bottom: 30px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 30px 15px;
+    }
+    .white_bg {
+        padding: 40px 6px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 6px;
+        float: left;
+    }
+    .text-bg span {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .text-bg h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    #banner1 .carousel-control-next,
+    #banner1 .carousel-control-prev {
+        top: 100%;
+    }
+    #banner1 a.carousel-control-prev {
+        left: 12%;
+    }
+    .titlepage h2 {
+        font-size: 19px;
+        line-height: 15px;
+    }
+    .services_main .ho {
+        left: 111px;
+    }
+    .bitcoins .titlepage h2,
+    .wallet .titlepage h2 {
+        line-height: 28px;
+    }
+    .subscribe_main h3 {
+        font-size: 24px;
+    }
+    .enter_form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .blog_box h3 {
+        padding-top: 30px;
+    }
+    .padd_right {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .text_img {
+        margin-top: 30px;
+    }
+    .blog_box h3 {
+        font-size: 22px;
+        line-height: 30px;
+        padding-top: 30px;
+    }
+    .marketing_Carousel .test_box h3 {
+        font-size: 36px;
+        line-height: 36px;
+        padding-top: 58px;
+    }
+    .why .read_more {
+        width: 136px;
+        margin: inherit;
+    }
+    .navigation.navbar {
+        float: right;
+        display: inherit !important;
+        padding: 0;
+        width: 100%;
+        margin-top: -38px;
+    }
+    .navigation .navbar-collapse {
+        background: #17094c;
+        padding: 20px;
+        margin-top: 67px;
+        position: absolute;
+        width: 100%;
+        margin-right: 20px;
+        z-index: 999;
+    }
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: #fff;
+    }
+    .navigation.navbar-dark .navbar-toggler {
+        float: right;
+        margin-right: 2px;
+        border: inherit;
+    }
+    .testimonial_box {
+        padding: 0px 19px 40px 20px;
+    }
+    .navigation.navbar-dark .navbar-toggler-icon {
+        background: url(../images/menu_icon.png);
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,21 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                 Google Map                                 */
+/* -------------------------------------------------------------------------- */
+
+.googlemap .gm-style-iw.gm-style-iw-c{
+  box-shadow: $box-shadow !important;
+  padding: 1rem !important;
+  button[title="Close"]{
+    margin-top: 1rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+html[dir="rtl"]{
+  .googlemap .gm-style-iw.gm-style-iw-c{
+    button[title="Close"]{
+      left: unset !important;
+      right: 0 !important;
+    }
+  }
+}

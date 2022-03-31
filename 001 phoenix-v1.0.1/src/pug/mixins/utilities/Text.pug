@@ -1,0 +1,107 @@
+
+mixin TextAlignmentDemo
+  p.text-start Start aligned text on all viewport sizes.
+  p.text-center Center aligned text on all viewport sizes.
+  p.text-end End aligned text on all viewport sizes.
+  p.text-sm-start Start aligned text on viewports sized SM (small) or wider.
+  p.text-md-start Start aligned text on viewports sized MD (medium) or wider.
+  p.text-lg-start Start aligned text on viewports sized LG (large) or wider.
+  p.text-xl-start Start aligned text on viewports sized XL (extra-large) or wider.
+
+
+mixin TextWrappingOverflowDemo
+  .badge.bg-primary.text-wrap.mb-3(style='width: 6rem;') This text should wrap.
+  .text-nowrap.bg-300(style='width: 8rem;') This text should overflow the parent.
+
+mixin WordBreakDemo 
+  p.text-break
+    | mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+mixin TextTransformationDemo
+  p.text-lowercase Lowercased text.
+  p.text-uppercase Uppercased text.
+  p.text-capitalize CapiTaliZed text.
+
+mixin FontSizeDemo
+  h6.fs--2 .fs--2
+  h6.fs--1 .fs--1
+  h6.fs-0 .fs-0
+  h6.fs-1 .fs-1
+  h6.fs-2 .fs-2
+  h6.fs-3 .fs-3
+  h6.fs-4 .fs-4
+  h6.fs-5 .fs-5
+  h6.fs-6 .fs-6
+  h6.fs-7 .fs-7
+  h6.fs-8 .fs-8
+  .mt-3
+    h6.fs-sm-0 .fs-sm-0
+    h6.fs-md-1 .fs-md-1
+    h6.fs-lg-2 .fs-lg-2
+    h6.fs-xl-3 .fs-xl-3
+
+mixin FontWeightDemo
+  .fw-light Font weight 300
+  .fw-normal Font weight 400
+  .fw-medium Font weight 500
+  .fw-semi-bold Font weight 600
+  .fw-bold Font weight 700
+  .fw-bolder Font weight 800
+  .fw-black Font weight 900
+
+mixin LineHeightDemo
+  p.lh-1
+    | This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.
+    = '\n'
+  p.lh-sm
+    | This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.
+  p.lh-base
+    | This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.
+  p.lh-lg
+    | This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.
+
+
+mixin FontFamilyDemo
+  .font-sans-serif Nunit sans
+  = '\n'
+  .font-base Open Sans
+  = '\n'
+  code.text-monospace Monospace
+
+mixin ResetColorDemo 
+  p.text-muted
+    | Muted text with a 
+    a.text-reset(href='#') reset link
+    |.
+
+mixin TextDecorationDemo
+  p.text-decoration-underline This text has a line underneath it.
+  p.text-decoration-line-through This text has a line going through it.
+  = '\n'
+  a.text-decoration-none(href='#') This link has its text decoration removed
+
+mixin TypographyHeadingDemo
+  h1 h1. Heading
+  h2 h2. Heading
+  h3 h3. Heading
+  h4 h4. Heading
+  h5 h5. Heading
+  h6 h6. Heading
+
+
+mixin TypographyHeadingClassDemo
+  p.h1 h1. Heading
+  p.h2 h2. Heading
+  p.h3 h3. Heading
+  p.h4 h4. Heading
+  p.h5 h5. Heading
+  p.h6 h6. Heading
+
+mixin TypographyDisplayHeadingDemo
+  h1.display-1.mb-3 Display 1
+  h1.display-2.mb-3 Display 2
+  h1.display-3.mb-3 Display 3
+  h1.display-4.mb-3 Display 4
+  h1.display-5.mb-3 Display 5
+  h1.display-6.mb-3 Display 6

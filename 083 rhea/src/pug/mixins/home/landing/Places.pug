@@ -1,0 +1,51 @@
+mixin PlacesCard(config)
+  .col-md-4.mb-3.mb-md-0
+    .card.h-100.text-white.hover-top
+      img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}`    alt='').h-100
+      .card-img-overlay.ps-0.d-flex.flex-column.justify-content-between.bg-dark-gradient
+        .pt-3
+          span.badge.bg-primary=config.price
+        .ps-3.d-flex.justify-content-between.align-items-center  
+          h5.text-white=config.country
+          h6.text-600=config.days
+   
+mixin Places(config)
+  +Section#places
+    .row.flex-md-center
+      .col-md-11.col-lg-4.py-md-3.px-4.px-md-3.px-lg-0.px-xl-2.order-lg-1
+        h1.fw-bold.fs-md-3.fs-xl-5 Amazing places to enjoy your travel
+        hr.text-primary.my-4.my-lg-3.my-xl-4(style="height:3px; width:70px;") 
+        p.lh-lg Etiam facilisis, sapien quis porta dignissim, orci nisi pharetra dui, varius vehicula ligula nulla sit amet lorem. Aenean in vestibulum quam. Cras commodo varius neque, non gravida diam ultrices nec. Cras nulla mauris, fermentum nec libero in.
+        a.btn.btn-lg.btn-primary.hover-top(href='#' role='button')
+          | Explore
+ 
+      .col-lg-8.order-lg-0.order-1.px-4.px-md-3.py-8.py-md-3
+        #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+          .carousel-inner
+            .carousel-item.active
+              .row.h-100
+                +PlacesCard({image:'maldives.png', country:'Maldives', days:'3 days', price:'$860'})
+                +PlacesCard({image:'indonesia.png', country:'Indonesia', days:'7 days', price:'$860'})
+                +PlacesCard({image:'kathmandu.png', country:'Kathmandu', days:'5 days', price:'$340'})
+                      
+            .carousel-item
+              .row.h-100
+                +PlacesCard({image:'maldives.png', country:'Maldives', days:'5 days', price:'$340'})
+                +PlacesCard({image:'indonesia.png', country:'Indonesia', days:'5 days', price:'$540'})
+                +PlacesCard({image:'kathmandu.png', country:'Kathmandu', days:'6 days', price:'$640'})
+
+            .carousel-item
+              .row.h-100
+                +PlacesCard({image:'kathmandu.png',country:'Kathmandu', days:'5 days', price:'$540'})
+                +PlacesCard({image:'maldives.png', country:'Maldives', days:'3 days', price:'$860'})
+                +PlacesCard({image:'indonesia.png', country:'Indonesia', days:'7 days', price:'$860'})
+                
+          .position-relative.mt-5
+            a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselExampleControlsNoTouching' role='button' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            a.carousel-control-next.carousel-icon.z-index-2(href='#carouselExampleControlsNoTouching' role='button' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+
+        

@@ -1,0 +1,60 @@
+.breadcrumb_bg{
+	@include background("../img/breadcrumb.png");
+}
+.breadcrumb{
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	&:after{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			content: "";
+			opacity: 0.6;
+			z-index: -1;
+	}
+	.breadcrumb_iner{
+			height: 300px;
+			width: 100%;
+			display: table;
+			.breadcrumb_iner_item{
+					display: table-cell;
+					vertical-align: middle;
+					h2{
+							color: $white_color;
+							font-size: 45px;
+							font-weight: 600;
+							margin-bottom: 10px;
+							text-transform: capitalize;
+							@media #{$small_mobile}{
+								font-size: 35px;
+							}
+							@media #{$large_mobile}{
+								font-size: 35px;
+							}
+							@media #{$tab_device}{
+								font-size: 40px;
+							}
+							@media #{$medium_device}{
+							
+							}
+					}
+					p{
+							font-size: 15px;
+							color: $white_color;
+					}
+					span{
+							margin: 0px 5px;
+							font-size: 12px;
+					}
+
+			}
+	}
+	
+}
+.breadcrumb{
+	margin-bottom: 0px !important;
+}

@@ -1,0 +1,49 @@
+append variables
+  -
+    var cta= [
+      {
+        place:'London',
+      },
+      {
+        place:'Bristol',
+      },
+      {
+        place:'Birmingham',
+      },
+      
+    ];
+
+mixin CtaItem(config)
+  .col-12
+    .text-light.text-center.py-2
+      h5.display-4.fw-normal.text-400.fw-normal.mb-4 visit our Outlets in
+      h1.display-1.text-white.fw-normal.mb-8=config.place
+      a.btn.btn-lg.text-light.fs-1(href='#!' role='button') See Addresses
+        svg.bi.bi-arrow-right-short(xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='currentColor' viewBox='0 0 16 16')
+          path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')     
+
+mixin Cta
+  section.py-11
+    +Background({ image: `${CWD}assets/img/gallery/cta.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover'} }, className: 'overlay overlay-0' })
+    .container 
+      .row
+        .col-12
+          #carouseCta.carousel.slide.carousel-fade(data-bs-ride="carousel")
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.align-items-center.g-2                
+                  +CtaItem(cta[0])                                                                                                                                                                                                       
+              .carousel-item(data-bs-interval='5000')
+                .row.h-100.align-items-center.g-2                                                                                    
+                  +CtaItem(cta[1])                                                                                        
+              .carousel-item(data-bs-interval='3000')
+                .row.h-100.align-items-center.g-2                                                                                                   
+                  +CtaItem(cta[2])                       
+              .row
+                button.carousel-control-prev(type='button' data-bs-target='#carouseCta' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouseCta' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next 
+        

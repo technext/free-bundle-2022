@@ -1,0 +1,32 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/Starter
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/CarInsurance
+//- include mixins/home/landing/Services
+include mixins/home/landing/Clients
+include mixins/home/landing/RecentNews
+include mixins/home/landing/Partners
+include mixins/home/landing/Contact
+include mixins/home/landing/Footer
+
+
+
+append variables
+
+
+append styles  
+
+prepend scripts
+ 
+
+block content 
+  +HeroSection
+  +CarInsurance
+  //- +Services
+  +Clients
+  +RcentNews
+  +Partners
+  +Contact
+  +PreFooter
+
+ 

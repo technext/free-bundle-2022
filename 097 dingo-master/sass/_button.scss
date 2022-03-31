@@ -1,0 +1,263 @@
+/* Main Button Area css
+============================================================================================ */
+.submit_btn{
+	width: auto;
+	display: inline-block;
+	background: $white_color;
+	padding: 0px 50px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 50px;
+	border-radius: 5px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $border_color;
+	cursor: pointer;
+	@include transform_time(0.5s);
+	&:hover{
+		background: transparent;
+		
+	}
+}
+.btn_1{
+	display: inline-block;
+	padding: 9.5px 28px;
+	border-radius: 50px;
+	background-color: $white_color;
+	font-size: 14px;
+	font-weight: 400;
+	color: $common_color;
+	@include transform_time(.5s);
+	text-transform: capitalize;
+	&:hover{
+		color: $common_color;
+		background-color: #ff6426;
+	}
+	@media #{$small_mobile}{
+		padding: 9.5px 28px;
+		margin-top: 25px;
+	}
+	@media #{$large_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$tab_device}{
+		padding: 9.5px 28px;
+	}
+	@media #{$medium_device}{
+	
+	}
+}
+.single_page_btn{
+	display: inline-block;
+	padding: 9.5px 28px;
+	border-radius: 50px;
+	background-color: #ff6426;
+	font-size: 14px;
+	font-weight: 400;
+	color: $white_color;
+	@include transform_time(.5s);
+	text-transform: capitalize;
+	border: 2px solid transparent;
+	&:hover{
+		color: $common_color;
+		background-color: $white_color;
+		border: 2px solid $common_color;
+	}
+	@media #{$small_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$large_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$tab_device}{
+		padding: 9.5px 28px;
+	}
+	@media #{$medium_device}{
+	
+	}
+
+}
+.btn_2{
+	display: inline-block;
+	font-size: 15px;
+	color: #1d272f;
+	text-transform: capitalize;
+	@include transform_time(.5s);
+	position: relative;
+	&:after{
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		content: "";
+		top: 17px;
+		border-radius: 50%;
+		z-index: -1;
+		background-color: rgb(255, 238, 231);
+		right: 34px;
+		@include transform_time(0.5s);
+		  
+	}
+	  
+	img{
+		@include transform_time(0.5s);
+		margin-left: 13px;
+		margin-bottom: 5px;
+		padding-right: 15px;
+	}
+	&:hover{
+		
+	}
+	@media #{$small_mobile}{
+		
+	}
+	@media #{$large_mobile}{
+		
+	}
+	@media #{$tab_device}{
+		
+	}
+	@media #{$medium_device}{
+	
+	}
+}
+.btn_3{
+	display: inline-block;
+	font-size: 15px;
+	color: #1d272f;
+	text-transform: capitalize;
+	@include transform_time(.5s);
+	position: relative;
+    z-index: 1;
+	&:after{
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		content: "";
+		top: 2px;
+		border-radius: 50%;
+		z-index: -1;
+		background-color: #ffeee7;
+		right: 19px;
+	}
+	  
+	img{
+		margin-left: 18px;
+		@include transform_time(.5s);
+		margin-top: 2px
+	}
+	&:hover{
+		img{
+			transform: rotateX(-180deg);
+			margin-bottom: 7px;
+		}
+	}
+	@media #{$small_mobile}{
+		
+	}
+	@media #{$large_mobile}{
+		
+	}
+	@media #{$tab_device}{
+		
+	}
+	@media #{$medium_device}{
+	
+	}
+}
+.btn_4{
+	display: inline-block;
+	font-size: 14px;
+	color: $white_color;
+	text-transform: capitalize;
+	@include transform_time(.5s);
+	padding: 14.5px 43px;
+	background-color: $common_color;
+	margin-top: 20px;
+	&:hover{
+		color: $white_color;
+		background-color: #e04000;
+		a{
+			color: $white_color !important;
+		}
+	}
+	
+	@media #{$small_mobile}{
+		
+	}
+	@media #{$large_mobile}{
+		
+	}
+	@media #{$tab_device}{
+		
+	}
+	@media #{$medium_device}{
+	
+	}
+}
+
+/*=================== custom button rule start ====================*/
+
+.button{
+	display: inline-block;
+	border: 1px solid transparent;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 12px 54px;
+	border-radius: 4px;
+	color: $white_color;
+	border: 1px solid #ff6426;
+	text-transform: uppercase;
+	background-color: #ff6426;
+	cursor: pointer;
+	@include transform_time(0.5s);
+
+	@media(max-width: 767px){
+		font-size: 13px;
+		padding: 9px 24px;
+	}
+
+	&:hover{
+		color: $white_color;
+	}
+
+
+	&-link{
+		letter-spacing: 0;
+		color: #3b1d82;
+		border: 0;
+		padding: 0;
+
+		&:hover{
+			background: transparent;
+			color: #3b1d82;
+		}
+	}
+
+	&-header{
+		color: $white_color;
+		border-color: $border_color;
+
+		&:hover{
+			background: #b8024c;
+			color: $white_color;
+		}
+	}
+
+	&-contactForm{
+		color: $white_color;
+		border-color: $border_color;
+		padding: 12px 25px;
+
+		&:hover{
+			// border-color: $title-color;
+			// background: $title-color;
+			// color: $white_color;
+		}
+	}
+}
+
+
+/* End Main Button Area css
+============================================================================================ */

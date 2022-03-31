@@ -1,0 +1,18 @@
+/*-----------------------------------------------
+|   Dropdown
+-----------------------------------------------*/
+.dropdown-menu {
+  font-size: map_get($font-sizes, '-1');
+  border-radius: $border-radius-lg;
+}
+
+.dropdown-caret-none {
+  &:after,
+  &:before {
+    display: none !important;
+  }
+}
+
+.dropdown-md {
+  min-width: 16.625rem;
+}

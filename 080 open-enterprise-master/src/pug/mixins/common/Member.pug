@@ -1,0 +1,6 @@
+mixin Member({image,name,text})
+    .d-flex.align-items-center.mt-3
+        +Avatar(image,70)
+        .ms-3
+            h3 #{name}
+            p.mb-0 #{text}

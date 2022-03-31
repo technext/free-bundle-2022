@@ -1,0 +1,82 @@
+append variables
+  -
+    var arrivals= [
+      {
+        image:'full-body.png',
+        title:'Flat Hill Slingback',
+        subTitle:'Jumper set for Women',
+        price:'$175',
+         
+      },
+      {
+        image:'formal-coat.png',
+        title:'Ocean Blue Ring',
+        subTitle:'Jumper set for Women',
+        price:'$175',
+      },
+      {
+        image:'ocean-blue.png',
+        title:'Brown Leathered Wallet',
+        subTitle:'Jumper set for Women',
+        price:'$175',
+      },
+      {
+        image:'sweater.png',
+        title:'Silverside Wristwatch',
+        subTitle:'Jumper set for Women',
+        price:'$175',
+      },
+      
+    ];
+
+
+mixin NewArrivalsItems(config)
+  .col-sm-6.col-md-3.mb-3.mb-md-0.h-100
+    .card.card-span.h-100.text-white
+      img.card-img(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+      .card-img-overlay.bg-dark-gradient.d-flex.flex-column-reverse
+        h6.text-primary=config.price
+        p.text-400.fs-1=config.subTitle
+        h4.text-light=config.title
+      a.stretched-link(href='#')
+      
+mixin NewArrivals
+  section.py-0
+    .container
+      .row.h-100
+        .col-lg-7.mx-auto.text-center.mb-6
+          h5.fs-3.fs-lg-5.lh-sm.mb-3 Checkout New Arrivals
+        .col-12
+          #carouselNewArrivals.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.align-items-center.g-2                
+                  +NewArrivalsItems(arrivals[0])                                                                    
+                  +NewArrivalsItems(arrivals[1])                                                                    
+                  +NewArrivalsItems(arrivals[2])                                                                    
+                  +NewArrivalsItems(arrivals[3])                                                                    
+              .carousel-item(data-bs-interval='5000')
+                .row.h-100.align-items-center.g-2                
+                  +NewArrivalsItems(arrivals[0])                                                                    
+                  +NewArrivalsItems(arrivals[1])                                                                    
+                  +NewArrivalsItems(arrivals[2])
+                  +NewArrivalsItems(arrivals[3])                     
+              .carousel-item(data-bs-interval='3000')
+                .row.h-100.align-items-center.g-2                                  
+                  +NewArrivalsItems(arrivals[0])                                                                    
+                  +NewArrivalsItems(arrivals[1])                                                                    
+                  +NewArrivalsItems(arrivals[2])
+                  +NewArrivalsItems(arrivals[3])                       
+              .carousel-item
+                .row.h-100.align-items-center.g-2          
+                  +NewArrivalsItems(arrivals[0])                                                                    
+                  +NewArrivalsItems(arrivals[1])                                                                    
+                  +NewArrivalsItems(arrivals[2]) 
+                  +NewArrivalsItems(arrivals[3])   
+              .row
+                button.carousel-control-prev(type='button' data-bs-target='#carouselNewArrivals' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                button.carousel-control-next(type='button' data-bs-target='#carouselNewArrivals' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next 

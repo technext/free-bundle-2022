@@ -1,0 +1,90 @@
+append variables
+  -
+    var sItems= [
+      {
+        image:'search-pizza.png',
+        title:'pizza',
+      },
+      {
+        image:'burger.png',
+        title:`Burger`,
+      },
+      {
+        image:'noodles.png',
+        title:'Noodles',
+      },
+      {
+        image:'sub-sandwich.png',
+        title:'Sub-sandwiches',
+      },
+      {
+        image:'chowmein.png',
+        title:'Chowmein',
+      },
+      {
+        image:'steak.png',
+        title:'Steak',
+      },
+
+    ];
+mixin SearchByFood(config)
+  .col-sm-6.col-md-4.col-xl.mb-5.h-100
+    .card.card-span.h-100.rounded-circle
+      img.img-fluid.rounded-circle.h-100(src=`${CWD}assets/img/gallery/${config.image}` alt='...')  
+      .card-body.ps-0
+        h5.text-center.fw-bold.text-1000.text-truncate.mb-2=config.title 
+  
+
+mixin SearchByFoods
+  +Section.py-8.overflow-hidden
+    .row.flex-center.mb-6
+      .col-lg-7
+        h5.fw-bold.fs-3.fs-lg-5.lh-sm.text-center.text-lg-start Search by Food
+      .col-lg-4.text-lg-end.text-center
+        a.btn.btn-lg.text-800.me-2(href='#' role='button') VIEW ALL  
+          i.fas.fa-chevron-right.ms-2
+      .col-lg-auto.position-relative
+        button.carousel-control-prev.s-icon-prev.carousel-icon(type='button' data-bs-target='#carouselSearchByFood' data-bs-slide='prev')
+          span.carousel-control-prev-icon.hover-top-shadow(aria-hidden='true')
+          span.visually-hidden Previous
+        button.carousel-control-next.s-icon-next.carousel-icon(type='button' data-bs-target='#carouselSearchByFood' data-bs-slide='next')
+          span.carousel-control-next-icon.hover-top-shadow(aria-hidden='true')
+          span.visually-hidden Next
+      
+
+    .row.flex-center
+      .col-12
+        #carouselSearchByFood.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+          .carousel-inner
+            .carousel-item.active(data-bs-interval='10000')
+              .row.h-100.align-items-center            
+                +SearchByFood(sItems[0])                                                                    
+                +SearchByFood(sItems[1])                                                                    
+                +SearchByFood(sItems[2])                                                                    
+                +SearchByFood(sItems[3])                                                                    
+                +SearchByFood(sItems[4])                                                                    
+                +SearchByFood(sItems[5])                                                                    
+            .carousel-item(data-bs-interval='5000')
+              .row.h-100.align-items-center             
+                +SearchByFood(sItems[0])                                                                    
+                +SearchByFood(sItems[1])                                                                    
+                +SearchByFood(sItems[2])
+                +SearchByFood(sItems[3])                     
+                +SearchByFood(sItems[4])
+                +SearchByFood(sItems[5])                      
+            .carousel-item(data-bs-interval='3000')
+              .row.h-100.align-items-center                                 
+                +SearchByFood(sItems[0])                                                                    
+                +SearchByFood(sItems[1])                                                                    
+                +SearchByFood(sItems[2])
+                +SearchByFood(sItems[3])                       
+                +SearchByFood(sItems[4])
+                +SearchByFood(sItems[5])                        
+            .carousel-item
+              .row.h-100.align-items-center      
+                +SearchByFood(sItems[0])                                                                    
+                +SearchByFood(sItems[1])                                                                    
+                +SearchByFood(sItems[2]) 
+                +SearchByFood(sItems[3])   
+                +SearchByFood(sItems[4])
+                +SearchByFood(sItems[5]) 

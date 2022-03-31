@@ -1,0 +1,21 @@
+extends ../layouts/LayoutComponent
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Design',
+      description: `We have designed ${title} initially directly with code. After receiving multiple requests from our customers for design files, we recreated the design in Figma.`
+    }
+
+block component
+  +ComponentCard({title: 'Figma file',hideNavTab: true}).my-4
+    p This is an early demo of Figma files. All the design is not yet recreated with Figma. But hopefully, we will port all the layouts in the next couple of weeks.
+      h5(data-anchor) To play with the design:
+      ul
+        li 
+          a(href="https://www.figma.com/" target="_blank") Download Figma
+        li Open the Figma link from the 
+          code README.md
+        li This file is 
+          code "read-only". 
+          | So, to customize the design on your own, you have to duplicate the Figma file and start the editing process on the copied file.

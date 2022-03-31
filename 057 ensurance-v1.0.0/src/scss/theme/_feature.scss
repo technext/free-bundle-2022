@@ -1,0 +1,9 @@
+.feature-img{
+	max-width: 100%;
+	height: auto;
+  border: 1px solid $primary;  
+	border-radius: 1.125rem;
+	@include media-breakpoint-up(xl) {
+		border-radius: 3.125rem;
+	}
+}

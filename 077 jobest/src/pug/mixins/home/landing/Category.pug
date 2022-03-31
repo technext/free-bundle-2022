@@ -1,0 +1,59 @@
+append variables
+  -
+    var categories= [
+      {
+        image:'finance.png',
+        title  :'Accounting',
+        text: '100 open position',
+      },
+      {
+        image:'design.png',
+        title  :'Design/Creative',
+        text: '100 open position',
+      },
+      {
+        image:'programmer.png',
+        title  :'Programmer',
+        text: '100 open position',
+      },
+      {
+        image:'production.png',
+        title  :'Production',
+        text: '100 open position',
+      },
+
+      {
+        image:'education.png',
+        title  :'Education',
+        text: '100 open position',
+      },
+      {
+        image:'consultancy.png',
+        title  :'Consultancy',
+        text: '100 open position',
+      },
+    ];
+
+mixin Category(config)
+  .col-sm-6.col-lg-4.pb-lg-6.px-lg-4.pb-4
+    .card.py-4.shadow-sm.h-100.hover-top
+      .text-center 
+        img(src=`${CWD}assets/img/illustrations/${config.image}` height="120" alt='')
+        .card-body.px-2
+          h6.fw-bold.fs-1.heading-color=config.title
+          p.mb-0.card-text=config.text
+
+mixin Categories
+  section.py-5
+    +Background({ image: `${CWD}assets/img/illustrations/category-bg.png`, attrs: { style: { 'background-position': 'right top', 'background-size': '200px 320px'} }, className: 'd-none d-sm-block' })
+    .container
+      .row.justify-content-center
+        .col-md-9.col-lg-6.text-center.mb-3
+          h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3 Browse jobs by category
+          p.mb-5 Choose from the list of most popular categories
+      .row.flex-center.h-100
+        .col-10.col-xl-9
+          .row
+            each category in categories
+              +Category(category)
+            

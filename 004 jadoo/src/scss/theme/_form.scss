@@ -1,0 +1,27 @@
+.input-group-icon{
+  position: relative;
+  .input-box{
+    padding-left: 2.8rem;
+    vertical-align: middle;
+  }
+  .input-box-icon{
+    position: absolute;
+    top:50%;
+    left: 1rem;
+    color:#212529;
+    transform: translateY(-50%);
+  }
+}
+
+.form-little-squirrel-control{
+  border-radius: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #39425D;
+  padding: 1rem 1rem 1rem 2.7rem;
+  border: none;
+  font-size: 14px;
+  @include hover-focus{
+    background-color: #ffffff;
+  }
+}

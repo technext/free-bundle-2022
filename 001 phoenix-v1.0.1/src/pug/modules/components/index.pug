@@ -1,0 +1,337 @@
+extends ../../layouts/LayoutTheme
+include ../../mixins/common/Avatar
+
+
+
+append variables
+  -
+    var roadMapUsers = [
+      {
+        img:'team/1-thumb.png',
+      },
+      {
+        img:'team/2-thumb.png',
+      },
+      {
+        img:'team/3-thumb.png',
+      },
+      {
+        more:'+1',
+      },
+    ];
+
+
+append styles  
+
+prepend scripts
+
+
+block content
+  +ComponentCard({title:'Alert Soft Examples'}).my-4
+  //- +ComponentCard
+  //-   button.btn.btn-soft-primary.btn-lg.me-2 Request Payout
+  .row 
+    .col
+      hr
+      .p-3
+        .my-2
+          button.btn.btn-soft-primary.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-primary.me-2 Request Payout
+          button.btn.btn-soft-primary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-soft-secondary.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-secondary.me-2 Request Payout
+          button.btn.btn-soft-secondary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-soft-success.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-success.me-2 Request Payout
+          button.btn.btn-soft-success.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-soft-danger.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-danger.me-2 Request Payout
+          button.btn.btn-soft-danger.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-soft-warning.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-warning.me-2 Request Payout
+          button.btn.btn-soft-warning.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-soft-info.btn-lg.me-2 Request Payout
+          button.btn.btn-soft-info.me-2 Request Payout
+          button.btn.btn-soft-info.btn-sm.me-2 Request Payout
+
+      .p-3
+        .my-2
+          button.btn.btn-primary.btn-lg.me-2 Request Payout
+          button.btn.btn-primary.me-2 Request Payout
+          button.btn.btn-primary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-secondary.btn-lg.me-2 Request Payout
+          button.btn.btn-secondary.me-2 Request Payout
+          button.btn.btn-secondary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-success.btn-lg.me-2 Request Payout
+          button.btn.btn-success.me-2 Request Payout
+          button.btn.btn-success.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-danger.btn-lg.me-2 Request Payout
+          button.btn.btn-danger.me-2 Request Payout
+          button.btn.btn-danger.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-warning.btn-lg.me-2 Request Payout
+          button.btn.btn-warning.me-2 Request Payout
+          button.btn.btn-warning.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-info.btn-lg.me-2 Request Payout
+          button.btn.btn-info.me-2 Request Payout
+          button.btn.btn-info.btn-sm.me-2 Request Payout
+
+      .p-3
+        .my-2
+          button.btn.btn-phoenix-secondary.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-secondary.me-2 Request Payout
+          button.btn.btn-phoenix-secondary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-phoenix-primary.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-primary.me-2 Request Payout
+          button.btn.btn-phoenix-primary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-phoenix-success.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-success.me-2 Request Payout
+          button.btn.btn-phoenix-success.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-phoenix-danger.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-danger.me-2 Request Payout
+          button.btn.btn-phoenix-danger.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-phoenix-warning.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-warning.me-2 Request Payout
+          button.btn.btn-phoenix-warning.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-phoenix-info.btn-lg.me-2 Request Payout
+          button.btn.btn-phoenix-info.me-2 Request Payout
+          button.btn.btn-phoenix-info.btn-sm.me-2 Request Payout
+
+      .p-3
+        .my-2
+          button.btn.btn-outline-primary.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-primary.me-2 Request Payout
+          button.btn.btn-outline-primary.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-outline-success.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-success.me-2 Request Payout
+          button.btn.btn-outline-success.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-outline-danger.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-danger.me-2 Request Payout
+          button.btn.btn-outline-danger.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-outline-warning.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-warning.me-2 Request Payout
+          button.btn.btn-outline-warning.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-outline-info.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-info.me-2 Request Payout
+          button.btn.btn-outline-info.btn-sm.me-2 Request Payout
+        .my-2
+          button.btn.btn-outline-secondary.btn-lg.me-2 Request Payout
+          button.btn.btn-outline-secondary.me-2 Request Payout
+          button.btn.btn-outline-secondary.btn-sm.me-2 Request Payout
+
+      .p-3
+        .my-2
+          button.btn.btn-link Request Payout
+
+
+      .p-3
+        h1 Header 1
+        h2 Header 2
+        h3 Header 3
+        h4 Header 4
+        h5 Header 5
+        h6 Header 6
+      .p-3
+        p.fs--3 .fs--3
+        p.fs--2 .fs--2
+        p.fs--1 .fs--1
+        p.fs-0 .fs-0
+        p.fs-1 .fs-1
+        p.fs-2 .fs-2
+        p.fs-3 .fs-3
+        p.fs-4 .fs-4
+        p.fs-5 .fs-5
+      .p-3
+      p.display-1 display-1
+      p.display-2 display-2
+      p.display-3 display-3
+    //- .row.mx-0
+      .col-6
+        .alert.alert-soft-primary(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-soft-success(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-soft-danger(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-soft-warning(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-soft-info(role='alert')
+          | A simple primary alert—check it out!
+      .col-6
+        .alert.alert-outline-primary(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-outline-success(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-outline-danger(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-outline-warning(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-outline-info(role='alert')
+          | A simple primary alert—check it out!
+      .col-6
+        .alert.alert-default-primary(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-default-success(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-default-danger(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-default-warning(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-default-info(role='alert')
+          | A simple primary alert—check it out!
+      .col-6
+        .alert.alert-solid-primary(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-solid-success(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-solid-danger(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-solid-warning(role='alert')
+          | A simple primary alert—check it out!
+        .alert.alert-solid-info(role='alert')
+          | A simple primary alert—check it out!
+
+    //- .row.g-3.m-3
+      .col-3
+        .card(style='width:310px;')
+          img.card-img-top(src=`${CWD}assets/img/crane.png`, alt='...')
+          .card-body
+            h5.mb-1.text-success 64%
+            .progress.mb-3
+              .progress-bar.bg-success.rounded-3(role='progressbar' style='width: 64%' aria-valuenow='64' aria-valuemin='0' aria-valuemax='100')
+            p.card-text
+              | Here is the example of the Multiple Container Sortable feature of the 
+            .d-flex 
+              .me-3 
+                span.far.fa-clock.text-800.me-1(data-fa-transform="shrink-1") 
+                span.fw-semi-bold.fs--1.text-800 Jan 25
+              .me-3 
+                span.fas.fa-paperclip.text-800.me-1(data-fa-transform="shrink-1") 
+                span.fw-semi-bold.fs--1.text-800 25
+              .me-3 
+                span.far.fa-check-square.text-800.me-1(data-fa-transform="shrink-1") 
+                span.fw-semi-bold.fs--1.text-800 5/34
+              .avatar-group
+                each user in roadMapUsers
+                  +Avatar(Object.assign({size: 's'},user))
+
+    //- .row.mb-6
+      ul#myTab.nav.nav-tabs(role='tablist')
+        li.nav-item
+          a#home-tab.nav-link.active(data-bs-toggle='tab' href='#tab-home' role='tab' aria-controls='tab-home' aria-selected='true') Home
+        li.nav-item
+          a#profile-tab.nav-link(data-bs-toggle='tab' href='#tab-profile' role='tab' aria-controls='tab-profile' aria-selected='false') Profile
+        li.nav-item
+          a#contact-tab.nav-link(data-bs-toggle='tab' href='#tab-contact' role='tab' aria-controls='tab-contact' aria-selected='false') Contact
+      #myTabContent.tab-content.p-3
+        #tab-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+          | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        #tab-profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+          | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic.
+        #tab-contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+          | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+
+      ul#pill-myTab.nav.nav-underline(role='tablist')
+        li.nav-item
+          a#pill-home-tab.nav-link.active(data-bs-toggle='tab' href='#pill-tab-home' role='tab' aria-controls='pill-tab-home' aria-selected='true') Home
+        li.nav-item
+          a#pill-profile-tab.nav-link(data-bs-toggle='tab' href='#pill-tab-profile' role='tab' aria-controls='pill-tab-profile' aria-selected='false') Profile
+        li.nav-item
+          a#pill-contact-tab.nav-link(data-bs-toggle='tab' href='#pill-tab-contact' role='tab' aria-controls='pill-tab-contact' aria-selected='false') Contact
+      #pill-myTabContent.tab-content.p-3
+        #pill-tab-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+          | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        #pill-tab-profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+          | Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic.
+        #pill-tab-contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+          | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+    nav(aria-label='Page navigation example')
+      ul.pagination
+        li.page-item
+          a.page-link(href='#!' aria-label='Previous')
+            span(aria-hidden='true') «
+        li.page-item.active
+          a.page-link(href='#!') 1
+        li.page-item
+          a.page-link(href='#!') 2
+        li.page-item
+          a.page-link(href='#!') 3
+        li.page-item
+          a.page-link(href='#!' aria-label='Next')
+            span(aria-hidden='true') »
+    .toast.show.mb-3(role='alert' aria-live='assertive' aria-atomic='true' data-bs-autohide='false')
+      .toast-header
+        strong.me-auto Bootstrap
+        small 11 mins ago
+        button.btn-close(type='button' data-bs-dismiss='toast' data-bs-autohide='false' aria-label='Close')
+      .toast-body
+        | Hello, world! This is a toast message.
+
+    button.btn.btn-secondary(type='button' data-bs-toggle='tooltip' data-bs-placement='top' title='Tooltip on top')
+      | Tooltip on top
+    .m-3.ms-0
+      button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+        | Launch demo modal
+      #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h4#exampleModalLabel.modal-title Modal title
+              button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+              | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima molestiae minus quae, excepturi earum dolorum rem non corporis iste fugiat dolorem totam, saepe, necessitatibus quidem odit ut maiores quibusdam id!
+            .modal-footer
+              button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+              button.btn.btn-primary(type='button') Save changes
+    .my-3
+      input.form-control(type='text' placeholder='Default input' aria-label='default input example')
+
+    .mb-3
+      label.form-label(for='exampleFormControlInput1') Email address
+      input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')
+    .form-floating.mb-3
+      input#floatingInput.form-control(type='email' placeholder='name@example.com')
+      label(for='floatingInput') Email address
+
+
+    .my-3
+      input.form-control.form-control-underlined(type='text' placeholder='Default input' aria-label='default input example')
+
+    .mb-3
+      label.form-label(for='exampleFormControlInput1') Email address
+      input#exampleFormControlInput1.form-control.form-control-underlined(type='email' placeholder='name@example.com')
+    .form-floating.mb-3
+      input#floatingInput.form-control.form-control-underlined(type='email' placeholder='name@example.com')
+      label(for='floatingInput') Email address
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+.nav-tabs,
+.nav-underline {
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    font-weight: $font-weight-bold;
+    font-size: map-get($font-sizes, '-1');
+    @include border-top-radius($nav-tabs-border-radius);
+    &.disabled {
+      color: var(--#{$variable-prefix}black);
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}
+.nav-tabs {
+  border-bottom: 0px solid transparent;
+  .nav-link {
+    border: none;
+    color: $primary;
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $gray-1100;
+    background-color: transparent;
+  }
+}
+
+.nav-underline {
+  border-bottom: 1px solid var(--#{$variable-prefix}border-color);
+  .nav-link {
+    border: var(--#{$variable-prefix}border-color);
+    color: $gray-900;
+  }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: var(--#{$variable-prefix}primary);
+    background-color: transparent;
+    border-bottom: 3px solid var(--#{$variable-prefix}primary);
+  }
+}

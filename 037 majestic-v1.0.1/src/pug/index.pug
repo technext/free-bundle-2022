@@ -1,0 +1,34 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/BestDeals
+include mixins/home/landing/ExclusiveCollection
+include mixins/home/landing/NewArrivals
+include mixins/home/landing/ShopCategory
+include mixins/home/landing/Collection
+include mixins/home/landing/BestSellers
+include mixins/home/landing/Summer
+include mixins/home/landing/GentleFormalLooks
+include mixins/home/landing/Blog
+include mixins/home/landing/cta
+include mixins/home/landing/Footer
+
+
+
+append variables
+  - var currentPage = 'index'
+
+prepend scripts
+  
+append content
+  +HeroHeader
+  +BestDeals
+  +ExclusiveCollection
+  +NewArrivals
+  +ShopCategory
+  +Collection
+  +BestSellers
+  +Summer
+  +GentleFormalLooks
+  +Blog
+  +Cta
+  +Footer

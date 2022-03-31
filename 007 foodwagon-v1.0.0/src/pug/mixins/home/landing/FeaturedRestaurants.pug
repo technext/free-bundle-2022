@@ -1,0 +1,130 @@
+append variables
+  -
+    var restaurants= [
+      {
+        image:'food-world.png',
+        logo:'food-world-logo.png',
+        name:'Food world',
+        time:'Fast',
+        discount:'20% off',
+        rating:'46' ,
+        status:'Opens Tomorrow',
+        badgeBg:'bg-soft-danger', 
+        badgeTextColor:'text-danger',
+      },
+      {
+        image:'pizza-hub.png',
+        logo:'pizzahub-logo.png',
+        name:'Pizza hub',
+        time:'Fast',
+        discount:'10% off',
+        rating:'40',
+        status:'Opens Tomorrow',
+        badgeBg:'bg-soft-danger',
+        badgeTextColor:'text-danger',
+      },
+      {
+        image:'donuts-hut.png',
+        logo:'donuts-hut-logo.png',
+        name:'Donuts hut',
+        time:'Fast',
+        discount:'15% off',
+        rating:'20',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+      {
+        image:'donuthut.png',
+        logo:'donut-hut-logo.png',
+        name:'Donuts hut',
+        time:'Fast',
+        discount:'15% off',
+        rating:'50',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+      {
+        image:'ruby-tuesday.png',
+        logo:'ruby-tuesday-logo.png',
+        name:'Ruby tuesday',
+        time:'Fast',
+        discount:'10% off',
+        rating:'50',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+      {
+        image:'kuakata.png',
+        logo:'kuakata-logo.png',
+        name:'Kuakata Fried Chicken',
+        time:'Fast',
+        discount:'10% off',
+        rating:'50',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+      {
+        image:'red-square.png',
+        logo:'red-square-logo.png',
+        name:'Kuakata Fried Chicken',
+        time:'Fast',
+        discount:'10% off',
+        rating:'50',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+      {
+        image:'taco-bell.png',
+        logo:'taco-bell-logo.png',
+        name:'Taco bell',
+        time:'Fast',
+        discount:'10% off',
+        rating:'50',
+        status:'Open Now',
+        badgeBg:'bg-soft-success',
+        badgeTextColor:'text-success',
+      },
+
+    ];
+
+
+mixin FeaturedRestaurant(config)
+  .col-sm-6.col-md-4.col-lg-3.h-100.mb-5
+    .card.card-span.h-100.text-white.rounded-3
+      img.img-fluid.rounded-3(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+      .card-img-overlay.ps-0
+        span.badge.bg-danger.p-2.ms-3
+          i.fas.fa-tag.me-2.fs-0
+          span.fs-0=config.discount
+          
+        span.badge.bg-primary.ms-2.me-1.p-2
+          i.fas.fa-clock.me-1.fs-0
+          span.fs-0=config.time      
+      .card-body.ps-0 
+        .d-flex.align-items-center.mb-3
+            img(src=`${CWD}assets/img/gallery/${config.logo}` alt='').img-fluid
+            .flex-1.ms-3
+              h5.mb-0.fw-bold.text-1000=config.name 
+              span.text-primary.fs--1.me-1
+                i.fas.fa-star
+              span.mb-0.text-primary=config.rating
+
+        span.badge(class=`${config.badgeBg}`).p-2
+          span.fw-bold.fs-1(class=`${config.badgeTextColor}`)=config.status 
+mixin  FeaturedRestaurants
+  section#testimonial
+    .container
+      .row.h-100
+        .col-lg-7.mx-auto.text-center.mb-6
+          h5.fw-bold.fs-3.fs-lg-5.lh-sm.mb-3 Featured Restaurants
+      .row.gx-2 
+        each item in restaurants
+          +FeaturedRestaurant(item)
+        .col-12.d-flex.justify-content-center.mt-5                                            
+          a.btn.btn-lg.btn-primary(href='#!') View All 
+            i.fas.fa-chevron-right.ms-2              

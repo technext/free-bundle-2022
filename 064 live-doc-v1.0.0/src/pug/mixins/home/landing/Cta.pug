@@ -1,0 +1,19 @@
+mixin Cta 
+  section.bg-primary
+    +Background({image: `${CWD}assets/img/gallery/cta-bg.png`, attrs: { style: { 'background-position': 'center right', 'margin-top': '-8.125rem', 'background-size': 'contain',} }, className: 'bg-size' })
+    .container
+      .row 
+        .col-lg-6
+          h2.fw-bold.text-light Get an update every week
+          p.text-soft-primary Livedoc was created in order to improve the patient experience. 
+            br
+            | Providing world-class tests, and a wide range of other services.
+        .col-lg-6 
+          h5.mb-3.text-soft-primary SUBSCRIBE TO NEWSLETTER  
+          form.row.gx-2.gy-2.align-items-center
+            .col
+              .input-group-icon
+                label.visually-hidden(for='inputEmailCta') Address
+                input.form-control.form-livedoc-control.form-cta-control.text-soft-primary#inputEmailCta(type='email' placeholder='Email' )
+            .d-grid.gap-3.col-sm-auto
+              button.btn.btn-lg.btn-light.rounded-3.px-5.py-3(type='submit') Subscribe

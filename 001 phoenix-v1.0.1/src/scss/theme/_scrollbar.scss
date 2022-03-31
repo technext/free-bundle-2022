@@ -1,0 +1,36 @@
+/*-----------------------------------------------
+|   Scrollbar style for windows
+-----------------------------------------------*/
+
+.scrollbar {
+  @include chrome-scrollbar;
+}
+.navbar-vibrant {
+  .scrollbar {
+    @include chrome-scrollbar(rgba($white, 0.4));
+  }
+}
+
+.firefox {
+  .scrollbar {
+    @include firefox-scrollbar;
+  }
+  .navbar-vibrant {
+    .scrollbar {
+      @include firefox-scrollbar(rgba($white, 0.4));
+    }
+  }
+}
+
+.os-theme-dark {
+  & > .os-scrollbar {
+    & > .os-scrollbar-track > .os-scrollbar-handle {
+      background: $scrollbar-bg;
+    }
+    @include hover-focus {
+      & > .os-scrollbar-track > .os-scrollbar-handle {
+        background: $scrollbar-bg;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mixin Clearfix
+  .bg-primary.progress-bar-striped.clearfix
+    = '\n'
+    button.btn.btn-secondary.float-start(type='button') Example Button floated left
+    = '\n'
+    button.btn.btn-secondary.float-end(type='button') Example Button floated right
+    = '\n'
+
+mixin ClearfixExampleDescription
+  p&attributes(attributes) Easily clear floats by adding 
+    code .clearfix
+    |  to the parent element. Can also be used as a mixin.
+
+mixin ClearfixDemoDescription
+  p&attributes(attributes) The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.

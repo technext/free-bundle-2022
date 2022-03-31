@@ -1,0 +1,242 @@
+.br-theme-bars-1to10 {
+    .br-widget {
+        a {
+            background-color: lighten(theme-color("warning"),30%);
+
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("warning");
+            }
+        }
+
+        .br-current-rating {
+            color: theme-color("warning");
+        }
+    }
+
+    .br-readonly {
+        a {
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("warning");
+            }
+        }
+
+        .br-current-rating {
+            color: lighten(theme-color("warning"),20%);
+        }
+    }
+}
+
+.br-theme-bars-horizontal {
+    .br-widget {
+        a {
+            background-color: lighten(theme-color("warning"),30%);
+
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("warning");
+            }
+        }
+
+        .br-current-rating {
+            color: theme-color("warning");
+        }
+    }
+
+    .br-readonly {
+        a {
+            &.br-active,
+            &.br-selected {
+                background-color: lighten(theme-color("warning"),30%);
+            }
+        }
+
+        .br-current-rating {
+            color: lighten(theme-color("warning"),30%);
+        }
+    }
+}
+
+.br-theme-bars-movie {
+    .br-widget {
+        height: auto;
+
+        a {
+            background-color: lighten(theme-color("primary"),30%);
+
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("primary");
+            }
+        }
+
+        .br-current-rating {
+            color: theme-color("primary");
+        }
+    }
+
+    .br-readonly {
+        a {
+            &.br-active,
+            &.br-selected {
+                background-color: lighten(theme-color("primary"),20%);
+            }
+        }
+
+        .br-current-rating {
+            color: lighten(theme-color("primary"),20%);
+        }
+    }
+}
+
+.br-theme-bars-pill {
+    .br-widget {
+        a {
+            background-color: lighten(theme-color("success"),45%);
+            color: theme-color("success");
+
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("success");
+            }
+        }
+    }
+
+    .br-readonly a {
+        &.br-active,
+        &.br-selected {
+            background-color: lighten(theme-color("success"),10%);
+        }
+    }
+}
+
+.br-theme-bars-reversed {
+    .br-widget {
+        a {
+            background-color: lighten(theme-color("info"),45%);
+            color: theme-color("info");
+
+            &.br-active,
+            &.br-selected {
+                background-color: theme-color("info");
+            }
+        }
+
+        .br-current-rating {
+            color: theme-color("info");
+            width: 100%;
+            padding: 0;
+            margin-top: 15px;
+        }
+    }
+
+    .br-readonly {
+        a {
+            &.br-active,
+            &.br-selected {
+                background-color: lighten(theme-color("info"),10%);
+            }
+        }
+
+        .br-current-rating {
+            color: lighten(theme-color("info"),10%);
+        }
+    }
+}
+
+.br-theme-bars-square {
+    .br-widget {
+        a {
+            border: 2px solid lighten(theme-color("danger"),25%);
+            color: lighten(theme-color("danger"),25%);
+
+            &.br-active,
+            &.br-selected {
+                border: 2px solid theme-color("danger");
+                color: theme-color("danger");
+            }
+        }
+    }
+
+    .br-readonly a {
+
+        &.br-active,
+        &.br-selected {
+            border: 2px solid lighten(theme-color("danger"),10%);
+            color: lighten(theme-color("danger"),10%);
+        }
+    }
+}
+
+.br-theme-bootstrap-stars {
+    .br-widget {
+        a {
+            &:after {
+                color: darken($body-bg,3%);
+            }
+
+            &.br-active:after,
+            &.br-selected:after {
+                color: theme-color("war");
+            }
+        }
+    }
+}
+
+.br-theme-css-stars {
+    .br-widget {
+        a {
+            &:after {
+                color: darken($body-bg,3%);
+            }
+
+            &.br-active:after,
+            &.br-selected:after {
+                color: theme-color('warning');
+            }
+        }
+    }
+}
+
+.br-theme-fontawesome-stars {
+    .br-widget {
+
+        a {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 18px;
+            &:after {
+                content: "\f005";
+                color: darken($body-bg,3%);
+            }
+
+            &.br-active:after,
+            &.br-selected:after {
+                color: theme-color('warning');
+            }
+        }
+    }
+}
+
+.br-theme-fontawesome-stars-o .br-widget {
+    a {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 18px;
+        &:after {
+            content: "\f005";
+            color: darken($body-bg,3%);
+        }
+
+        &.br-active:after,
+        &.br-selected:after {
+            color: theme-color('success');
+        }
+
+        &.br-fractional:after {
+            content: "\f5c0";
+            color: theme-color('success');
+        }
+    }
+}

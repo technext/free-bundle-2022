@@ -1,0 +1,26 @@
+mixin HeroHeader
+  section(style="padding-top: 7rem;")
+    +Background({image: `${CWD}assets/img/hero/hero-bg.svg`})
+    .container
+      .row.align-items-center
+        .col-md-5.col-lg-6.order-0.order-md-1.text-end
+          img.pt-7.pt-md-0.hero-img(src=`${CWD}assets/img/hero/hero-img.png` alt='hero-header')
+        .col-md-7.col-lg-6.text-md-start.text-center.py-6
+          h4.fw-bold.text-danger.mb-3 Best Destinations around the world
+          h1.hero-title Travel, enjoy and live a new and full life
+          p.mb-4.fw-medium Built Wicket longer admire do barton vanity itself do in it.
+            br.d-none.d-xl-block
+            | Preferred to sportsmen it engrossed listening. Park gate
+            br.d-none.d-xl-block
+            | sell they west hard for the.
+          .text-center.text-md-start 
+            a.btn.btn-primary.btn-lg.me-md-4.mb-3.mb-md-0.border-0.primary-btn-shadow(href='#!' role='button') Find out more
+            .w-100.d-block.d-md-none
+            a(href='#!' role='button' data-bs-toggle="modal" data-bs-target="#popupVideo")
+              span.btn.btn-danger.round-btn-lg.rounded-circle.me-3.danger-btn-shadow 
+                img(src=`${CWD}assets/img/hero/play.svg` width="15" alt="paly")
+            span.fw-medium Play Demo
+            .modal.fade#popupVideo(tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true")
+              .modal-dialog.modal-dialog-centered.modal-lg
+                .modal-content 
+                  iframe.rounded(style="width:100%;max-height:500px;" height="500px" src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)

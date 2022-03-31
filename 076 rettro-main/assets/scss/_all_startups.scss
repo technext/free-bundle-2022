@@ -1,0 +1,142 @@
+.all-starups-area{
+    display: flex;
+    align-items: center;
+    @media #{$md}{
+      display: block;
+    }
+    @media #{$xs}{
+      display: block;
+    }
+    @media #{$sm}{
+      display: block;
+    }
+    // left Contents
+    .starups{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        // Padding Left
+        padding-left: 19%;
+        @media #{$laptop}{
+            padding-left: 5%;
+            padding-right: 0px;
+        }
+        @media #{$large2}{
+            padding-left: 10%;
+        }
+        @media #{$lg}{
+            padding-left: 8%;
+        }
+        @media #{$sm}{
+            padding: 0 30px;
+        }
+        @media #{$xs}{
+            padding: 0 30px;
+        }
+        // BG
+        background-image: url(../img/gallery/section_bg03.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+        background: #071112;
+        height: 700px;
+        @media #{$md}{
+            width: 100%;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+        @media #{$sm}{
+            width: 100%;
+            height: 500px;
+        }
+        // content Area
+        .starups-details{
+            // padding-right: 117px;
+            @media #{$laptop}{
+                padding-right: 0px;
+            }
+
+            span{
+                margin-bottom: 22px; 
+                display: block;
+               color: #fff;;
+            }
+            h3{
+                font-size: 58px;
+                display: block;
+                font-weight: 400;
+                line-height: 1.3;
+                margin-bottom: 35px;
+                color: #fff;
+                @media #{$lg}{
+                    font-size: 41px;
+                }
+                @media #{$sm}{
+                    font-size: 31px;
+                }
+                @media #{$xs}{
+                    font-size: 27px;
+                }
+            }
+            p{
+                @media #{$xs}{
+                    font-size: 15px;
+                }
+                @media #{$md}{
+                    font-size: 13px;
+                }
+                color: #ffff;
+                margin-bottom: 42px;
+            }
+            // 
+            .starups-list{
+                ul{
+                    display: flex;
+                    margin-bottom: 18px;
+                    li{
+                        svg{
+                            position: relative;
+                            top:4px;
+                        }
+                        p{
+                            padding-left: 20px;
+                            color: #9fabbe;
+                            @media #{$sm}{
+                                padding-left: 9px;
+                            }
+                            @media #{$xs}{
+                                padding-left: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // -Right Contents
+    .starups-img{
+        width: 50%;
+        // BG
+        background-image: url(../img/gallery/startup_bg.png);
+        background-size: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+        height: 700px;
+         @media #{$xs}{
+            width: 100%;
+            height: 500px;
+        }
+        @media #{$sm}{
+            width: 100%;
+            height: 500px;
+        }
+        @media #{$md}{
+            width: 100%;
+            height: 400px;
+        }
+
+    }
+}

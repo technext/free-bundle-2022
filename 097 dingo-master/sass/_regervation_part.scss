@@ -1,0 +1,59 @@
+/**************** regervation_part css start ****************/
+.regervation_part{
+    @include background("../img/booking_tabel_bg.png");
+    .section_tittle{
+        p{
+            color: $white_color;
+        }
+        h2{
+            color: $white_color;
+        }
+    }
+    .regervation_part_iner{
+        input{
+            color: #888 !important;
+        }
+        .form-control{
+            background-color: transparent;
+            color: #888 !important;
+            border: 0px solid transparent;
+            border-bottom: 2px solid #a1a5a5;
+            border-radius: 0px;
+            padding: .375rem 0rem;
+            font-size: 14px;
+            font-family: $font_stack_1;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            height: 40px;
+        }
+        textarea.form-control{
+            height: 100px !important;
+            border-bottom: 1px solid #a1a5a5;
+        }
+        
+    }
+    .ti-calendar{
+        color: #a1a5a5 !important;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    .nice-select {
+        width: 100%;
+        line-height: 17px;
+        &:after{
+            top: 36%;
+        }
+    }
+    .gj-picker{
+        max-width: 300px !important;
+    }
+    a{
+        &:hover{
+            color: $white_color !important;
+        }
+    }
+    .btn_4{
+        margin-top: 8px;
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,8 @@
+mixin Hero({title,subtitle,image,className})
+    .row.align-items-center&attributes(attributes)
+        .col-lg.order-lg-1.text-center
+            img.img-fluid(src=`${CWD}assets/img/${image}`, alt="")
+        .col-lg.mt-5.mt-lg-0
+            h1.lh-sm.font-cursive.fw-medium(class=className.title) !{title}
+            p.mt-4(class = className.subtitle) !{subtitle}
+            button.btn.btn-success.mt-4 Request early access

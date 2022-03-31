@@ -1,0 +1,38 @@
+mixin Appointment  
+  +Section.py-5
+    .row 
+      .col-12.py-3
+        +Background({image: `${CWD}assets/img/gallery/people.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+        h1.text-center APPOINTMENT
+
+  section.py-8
+    .container  
+      .row 
+        +Background({image: `${CWD}assets/img/gallery/dot-bg.png`, attrs: { style: { 'background-position': 'bottom right', 'background-size': 'auto',} }, className: 'bg-size' })    
+        .col-lg-6.z-index-2.mb-5
+          img.w-100(src=`${CWD}assets/img/gallery/appointment.png` alt='...')
+        .col-lg-6.z-index-2
+          form.row.g-3
+            .col-md-6
+              label.visually-hidden(for='inputName') Name
+              input.form-control.form-livedoc-control#inputName(type='text' placeholder='Name')
+            .col-md-6
+              label.visually-hidden(for='inputPhone') Phone
+              input.form-control.form-livedoc-control#inputPhone(type='text' placeholder='Phone')  
+            .col-md-6
+              label.form-label.visually-hidden(for='inputCategory') Category
+              select#inputCategory.form-select
+                option(selected) Category
+                option  Category One
+                option  Category Two
+                option  Category Three
+            .col-md-6
+              label.form-label.visually-hidden(for='inputEmail') Email
+              input.form-control.form-livedoc-control#inputEmail(type='email'  placeholder='Email')
+            .col-md-12
+              label.form-label.visually-hidden(for='validationTextarea') Message
+              textarea.form-control.form-livedoc-control#validationTextarea(placeholder='Message' style='height: 250px;' required)
+            
+            .col-12
+              .d-grid 
+                button.btn.btn-primary.rounded-pill(type='submit') Sign in

@@ -1,0 +1,33 @@
+extends Layout
+include ../mixins/navbars/Navbar
+include ../mixins/Variables
+
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+ 
+
+
+append headScripts
+
+block prepend styles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap' rel='stylesheet')
+  link(href=`${CWD}vendors/prism/prism.css`, rel='stylesheet')
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  script(src=`${CWD}vendors/prism/prism.js`)
+  
+
+block mainContent
+  +Navbar
+  block content
+   
+block afterMainContent
+

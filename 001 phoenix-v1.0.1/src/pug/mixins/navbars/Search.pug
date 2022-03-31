@@ -1,0 +1,46 @@
+mixin SearchResultTitle(config)
+  h6.dropdown-header.fw-medium.text-uppercase.px-card.fs--2.pt-0.pb-2&attributes(attributes)=config.text
+
+mixin RecentlyBrowsedItems(items)
+  each item in items
+    a(href=item.url).dropdown-item.fs--1.px-card.py-1.hover-primary
+      .d-flex.align-items-center
+        = '\n'
+        span.fas.fa-circle.me-2.text-300.fs--2
+        = '\n'
+        .fw-normal.title!=item.text
+    = '\n'
+
+mixin SearchSuggestion(items) 
+  each item in items
+    a(href=item.url).dropdown-item.px-card.py-2
+      .d-flex.align-items-center
+        if item.file
+          .file-thumbnail.me-2
+            img(src=item.img, alt="")&attributes(item.imgAttrs)
+        if item.icon 
+          +Avatar(item.icon).me-2
+        .flex-1
+          h6.mb-0.title(class=item.titleClass)=item.title
+          if item.text
+            p.fs--2.mb-0.d-flex!=item.text
+    = '\n'
+
+mixin SuggestedFilter(items)
+  each item in items
+    a(href=item.url).dropdown-item.px-card.py-1.fs-0
+      .d-flex.align-items-center
+        span.badge.fw-medium.text-decoration-none.me-2(class=`badge-soft-${item.type}`) #{item.key}:
+        .flex-1.fs--1.title=item.text
+    = '\n'
+
+mixin Search({placeholder,inputClass})
+  .search-box&attributes(attributes)
+    form.position-relative(data-bs-toggle="search" data-bs-display="static")
+      input.form-control.form-control-sm.search-input.search(type='search' class=inputClass placeholder=placeholder, aria-label='Search')
+      = '\n'
+      span.fas.fa-search.search-box-icon
+      = '\n'
+    //- button.btn-close.position-absolute.end-0.top-50.translate-middle.shadow-none.p-1.me-1.fs--2(type="button" data-bs-dismiss="search")
+    //- .btn-close-falcon-container.position-absolute.end-0.top-50.translate-middle.shadow-none(data-bs-dismiss="search")
+    //-   .btn-close-falcon(aria-label="Close")

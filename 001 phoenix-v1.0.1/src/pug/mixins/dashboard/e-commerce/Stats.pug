@@ -1,0 +1,30 @@
+mixin SingleStat(stat)
+  .d-flex.align-items-center
+    img(src=`${CWD}assets/img/icons/${stat.icon}` alt="" height=46 width=46)
+    .ms-3
+      h4.mb-0=stat.title
+      p.text-800.fs--1.mb-0=stat.subTitle
+
+mixin Stats
+  -
+    const stats = [
+      {
+        icon:'illustrations/4.png',
+        title:'57 new orders',
+        subTitle:'Awating processing'
+      },
+      {
+        icon:'illustrations/2.png',
+        title:'5 orders',
+        subTitle:'On hold'
+      },
+      {
+        icon:'illustrations/3.png',
+        title:'15 products',
+        subTitle:'Out of stock'
+      },
+    ]
+  .row.align-items-center.g-4
+    each stat in stats
+      .col-12.col-md-auto
+        +SingleStat(stat)

@@ -1,0 +1,42 @@
+append variables
+  -
+    var resources=[
+      {
+        image:'researchers.png',
+        title: 'Researchers' ,
+        text:'Register online Discover tools and manage alerts Learn about how to access' ,
+      },
+       {
+        image:'librarian.png',
+        title:'Librarian' ,
+        text: 'Manage your account View products and solutions Find resources and support',
+      },
+       {
+        image:'societies.png',
+        title:'Societies' ,
+        text:'Publish with Wiley Explore our resource library Learn about topics and trends' ,
+      },
+       {
+        image:'authors.png',
+        title:'Authors' ,
+        text:'Submit a paper Track your article Learn about Open Access' ,
+      },
+    ]
+
+
+mixin Resource(config) 
+  .col-sm-6.col-lg-3.mb-4.mb-lg-0.text-center
+    .px-0.px-lg-3
+      img.img-fluid.mb-4(src=`${CWD}assets/img/gallery/${config.image}` width="100"  alt='...')
+      h3.h5.mb-4.font-base=config.title
+      p.lh-lg=config.text
+
+mixin Resources
+  +Section
+    .row.justify-content-center
+      .col-auto.mb-5.mb-md-7
+        h1.fw-semi-bold.text-warning Our 
+          span.text-1100 resources
+    .row
+      each item in resources
+        +Resource(item)       

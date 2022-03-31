@@ -1,0 +1,41 @@
+append variables
+    -
+        var items = [
+            {
+                title:'Ideate a list of features based on the Sociocracy model',
+                details:'We’re looking for someone interested in business theory and research that’ll help us bridge the gap between our s...'
+            },
+            {
+                title:'Update documentation with FAQs',
+                details:'Review our community chat for the most frequently asked questions and document answers for our product docs.'
+            },
+            {
+                title:'Tutorial video series',
+                details:'Create a series of video tutorials that cover everything from start to finish on using Open Enterprise.'
+            },
+            {
+                title:'Ideate a list of features based on the Sociocracy model',
+                details:'We’re looking for someone interested in business theory and research that’ll help us bridge the gap between our s...'
+            },
+            {
+                title:'Update documentation with FAQs',
+                details:'Review our community chat for the most frequently asked questions and document answers for our product docs.'
+            },
+            {
+                title:'Tutorial video series',
+                details:'Create a series of video tutorials that cover everything from start to finish on using Open Enterprise.'
+            },
+        ]
+mixin Slider({id})
+    +Section
+        +TitleText({
+            title : 'Help us improve Open Enterprise',
+            subTitle : 'As an Open Enterprise ourselves, we are actively looking for new talent to join our mission of improving and delivering the Open Enterprise model to the world. Apply for open tasks and earn a stake in our success.'
+        })
+        .mt-4
+            .swiper-container.pb-4(data-pagination-target=id) 
+                .swiper-wrapper
+                    each item in items
+                        .swiper-slide.h-auto
+                            +SliderCard(item) 
+            .swiper-pagination(id=id)

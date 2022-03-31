@@ -1,0 +1,11 @@
+mixin TotalSalesChart
+  .row.flex-between-center.mb-4.g-3
+    .col-auto
+      h3 Total sells
+      p.text-700.lh-sm.mb-0 Payment received across all channels
+    .col-8.col-sm-4
+      select.form-select.form-select-sm.mt-2#select-gross-revenue-month
+        option Mar 1 - 31, 2022
+        option April 1 - 30, 2022
+        option May 1 - 31, 2022
+  .echart-total-sales-chart(style='min-height:320px;width:100%')

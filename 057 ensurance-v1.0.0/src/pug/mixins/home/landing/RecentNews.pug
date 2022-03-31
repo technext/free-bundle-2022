@@ -1,0 +1,51 @@
+append variables
+  -
+    var news= [
+      {
+        date:'24 July, 2021',
+        category:'Thoughts',
+        title  :'A pandemic may cause life insurance coverage',
+        text:`In the aftermath of the Covid epidemic, life insurance firms have been more cautious and have tightened underwriting standards for policies with large cash values.......`,
+      },
+      {
+        date:'29 July, 2021',
+        category:'Health',
+        title :'Top 10 health insurance companies in the Germany',
+        text:`There are numerous private healthcare insurance experts in Germany. Insurance protects against financial loss and reduces uncertainty. It ensures safety and security.......`,
+      },
+      {
+        date:'15 August, 2021',
+        category:'Life',
+        title  :'Why do you need several life insurance policies?',
+        text:`In the event of the insured's death, life insurance protects the nominees financially. It is possible to have several life insurance policies with various insurance providers.......`, 
+      },
+      
+    ];
+
+mixin NewsCard(config)
+  .col-md-6.col-lg-4.mb-4
+    .card.p-3.h-100.card-soft-primary
+      .card-body
+        .d-flex.flex-between-center
+          p.fw-normal.mb-0.text-400=config.date
+          h6
+            span.badge.rounded-pill.text-primary(style="background:#224E8F;")=config.category
+        h5.fw-bold.fs-2.text-200.my-3=config.title
+        p.text-400=config.text
+        a.link-primary(href='#!') 
+          svg.bi.bi-arrow-right.text-primary(xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='currentColor' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')
+       
+mixin RcentNews 
+  +Section#news
+    .row
+      h2.text-light.text-center.my-5 Recent News
+    .row.flex-center.h-100.circle-blend.circle-blend-left.circle-primary
+      .col-12
+        .row.align-items-center.circle-blend.circle-blend-right.circle-warning
+          each item in news
+            +NewsCard(item)
+        .my-5.text-center.text-sm-end
+          a.link-primary(href='#!') View all 
+            svg.bi.bi-arrow-right(xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='currentColor' viewBox='0 0 16 16')
+              path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')     

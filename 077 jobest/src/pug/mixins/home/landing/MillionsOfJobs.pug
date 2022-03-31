@@ -1,0 +1,16 @@
+append variables
+  -
+    var mfeatures = [
+      {
+        image:'jobs.png',
+        title:'Million of jobs, finds <br> the one thats rights for you',
+        text:'Get your blood tests delivered at home collect a sample from the news your blood tests.'
+      },
+      
+      ]
+
+mixin MillionsOfJobs
+  +Section.py-0
+    each item in mfeatures
+      +Feature(item)
+    

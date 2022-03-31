@@ -1,0 +1,39 @@
+mixin Onboard
+    +Section
+        .row.flex-between-center
+            .col-md-6.order-md-1
+                +InfoText({
+                    img:`${CWD}assets/img/icons/icon2.png`,
+                    title:'Onboard users, investors and advisors as you grow',
+                    details:'You’ve bootstrapped and delivered an MVP, and some investors and advisors are interested in having a chat with you. As an Open Enterprise, you can onboard them seamlessly into your digital organization and align them with your success.'
+                })
+            .col-md-6.col-xl-5
+                .card.my-4
+                    .card-body.p-0.p-lg-3.my-3.mx-4
+                        .card-title
+                            +Member({
+                                name:'Jassir Jonis',
+                                text:'Pre-seed angel investor',
+                                image:`${CWD}assets/img/gallery/user4.png`
+                            })
+                        .card-text.mt-4
+                            p Hey guys, love what you’re doing and I’m convinced that together we’ll achieve amazing things.
+                        .card-text.mt-4
+                            .row.gx-4
+                                +CardFooter({
+                                    title:'COMMIT',
+                                    subtitle:'10,000 DAI'
+                                })
+                                +CardFooter({
+                                    title:'SHARES',
+                                    subtitle:'20'
+                                })
+                        .mt-3.pt-2
+                            button.btn.btn-dark.btn-lg.w-100 Go to vote
+
+mixin CardFooter({title,subtitle})
+    .col
+        p.mb-1 #{title}
+        h3 #{subtitle}
+
+            

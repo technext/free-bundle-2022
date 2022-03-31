@@ -1,0 +1,56 @@
+mixin CategoryCard(config)
+  .col-6.col-sm-4.col-xl-2.mb-3.hover-top.px-2
+    .card.h-100.w-100.text-white
+      a(href='!#').stretched-link
+        img.img-fluid(src=`${CWD}assets/img/gallery/${config.image}`  alt='')
+      .card-img-overlay.d-flex.align-items-end.bg-dark-gradient
+        h5.text-white.fs--1=config.category
+        
+mixin Category
+  +Section.pt-5
+    .row.flex-center.mb-5
+      .col-lg-8.text-center 
+        h1.fw-bold.fs-md-3.fs-lg-4.fs-xl-5 Travel categories
+        hr.mx-auto.text-primary.my-4(style="height:3px; width:70px;")
+        p.mx-auto Maecenas et eros non quam ultricies interdum. Proin ac dolor vel neque ullamcorper blandit vitae et felis. Morbi ante urna, imperdiet vel neque vitae, porta ullamcorper metus. Quisque bibendum venenatis eros sed commodo. Nullam ultrices tortor non diam ullamcorper auctor. In urna tellus, auctor sit amet est ut, scelerisque volutpat diam.
+    
+    .row.h-100.flex-center 
+      .row.flex-lg-center 
+        .col-md-12
+          #carouselCategory.carousel.slide(data-bs-touch="false" data-bs-interval="false")
+            .carousel-inner
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100
+                  +CategoryCard({image:'food.png', category:'Food'})
+                  +CategoryCard({image:'backpacking.png', category:'Backpacking'})
+                  +CategoryCard({image:'beaches.png',category:'Beaches,coast and island'})
+                  +CategoryCard({image:'art-culture.png', category:'Art and culture',})
+                  +CategoryCard({image:'wild.png', category:'Wildlife and nature',})
+                  +CategoryCard({image:'hill.jpg', category:'Hill and nature',})
+                        
+              .carousel-item(data-bs-interval='2000')
+                .row.h-100
+                  +CategoryCard({image:'food.png', category:'Food'})
+                  +CategoryCard({image:'backpacking.png', category:'Backpacking'})
+                  +CategoryCard({image:'beaches.png',category:'Beaches,coast and island'})
+                  +CategoryCard({image:'art-culture.png', category:'Art and culture',})
+                  +CategoryCard({image:'wild.png', category:'Wildlife and nature',})
+                  +CategoryCard({image:'hill.jpg', category:'Hill and nature',})
+
+              .carousel-item
+                .row.h-100.offset-lg-2
+                  +CategoryCard({image:'food.png', category:'Food'})
+                  +CategoryCard({image:'backpacking.png', category:'Backpacking'})
+                  +CategoryCard({image:'beaches.png',category:'Beaches,coast and island'})
+                  +CategoryCard({image:'art-culture.png', category:'Art and culture',})
+                  +CategoryCard({image:'wild.png', category:'Wildlife and nature',})
+                  
+            
+            .row.mt-4
+              .col-12.position-relative
+                a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselCategory' role='button' data-bs-slide='prev')
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                a.carousel-control-next.carousel-icon.z-index-2(href='#carouselCategory' role='button' data-bs-slide='next')
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next

@@ -1,0 +1,110 @@
+.hero-section {
+  padding-top: 250px;
+  padding-bottom: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  margin-bottom: 300px;
+}
+
+.banner-image {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero {
+  &-bg-1 {
+    position: absolute;
+    left: 30px;
+    top: 200px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-3 {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-4 {
+    top: 210px;
+    right: 40%;
+    position: absolute;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-5 {
+    position: absolute;
+    top: 250px;
+    right: 17%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-6 {
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-7 {
+    position: absolute;
+    left: 20%;
+    bottom: -17%;
+    z-index: 1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-8 {
+    position: absolute;
+    bottom: -30%;
+    right: 50%;
+    z-index: 1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-bg-9 {
+    position: absolute;
+    right: 20%;
+    bottom: -10%;
+    z-index: 1;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

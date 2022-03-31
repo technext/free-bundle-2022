@@ -1,0 +1,80 @@
+extends ../layouts/LayoutComponent
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Getting Started',
+    }
+
+block component
+  +ComponentCard({title: 'Quick start',hideNavTab: true}).my-4
+    p.mb-0 Looking to start your project quickly? Just unzip the 
+        code #{theme}.zip
+        | . We have precompiled and packaged everything in the 
+        code public
+        |  directory for you. Start editing the 
+        code public/pages/starter.html
+        |  with a text or code editor, save it, and open the file in your favourite browser to see the changes.
+
+  +ComponentCard({title: 'Setting up Build system', hideNavTab: true}).my-4
+    p Unzip the 
+      code #{theme}.zip
+      |  to any folder and open a command line or terminal at that location.
+      | theme's dev tools require 
+      a(href='https://nodejs.org/en/' target='_blank') Node
+      |  and 
+      a(href='https://git-scm.com/' target='_blank') Git
+      |  . If you do not have them in your machine, please install their latest stable version from their corresponding website. As you have 
+      span.fw-black.text-black Node and Git installed and accessible from your terminal or command line
+      | , install the rest of the theme’s dependencies with: 
+    pre
+      code.lang-html.
+        npm i
+
+    p.mt-4 Now to start webpack development server run:
+    pre
+      code.lang-html.
+        npm start
+
+    p.mt-4 Webpack will compile the SCSS, transpile the typescript/javascript and will open a browser window to 
+      code public/index.html
+    p All of the files from 
+      code src 
+      | folder are monitored for changes, which will tell the browser to reload automatically after any changes are made:
+
+    p.mt-4 Now you can edit any 
+      code pug
+      |  file from 
+      code src/pug
+      | , change SCSS variable with 
+      code scss/_user-variables.scss
+      | , or write your own SCSS code in 
+      code scss/_user.scss
+      |  and add or update 
+      code javaScript
+      |  from 
+      code src/js
+      |  directory. All files will be compiled and will be served from public folder.
+
+
+    .alert.alert-soft-warning In development mode webpack will not write the compiled file to disk. It will be served from browser memory. 
+
+    
+    p.mt-4 By default dev server will compile pug files from 
+      code ./src/pug 
+      | folder. If you don't use pug, in 
+      code ./webpack/webpack-utils.js 
+      | file change  
+      code pugBased 
+      | variable to 
+      code false 
+    pre
+      code.lang-html.
+        const pugBased = false; //change this variable to false
+        //...
+
+    p.mt-4 Hit 
+      code Ctrl+C
+      |  or just close the command line window to stop the server.
+
+    p Happy editing!

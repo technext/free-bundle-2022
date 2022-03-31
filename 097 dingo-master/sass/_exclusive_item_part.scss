@@ -1,0 +1,53 @@
+/**************** exclusive_item_part css start ****************/
+.exclusive_item_part{
+    position: relative;
+    z-index: 1;
+    &:after{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        bottom: -250px;
+        z-index: -1;
+        background: url(../img/about_overlay.png) bottom right no-repeat;
+        background-size: 15% 65%;
+        right: 0px;
+        @media #{$small_mobile}{
+            display: none;
+        }
+        @media #{$large_mobile}{
+            display: none;        
+        }
+        @media #{$tab_device}{
+            display: none;  
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+    @media #{$small_mobile}{
+        padding-top: 70px;
+        margin-bottom: -20px;
+        .single_blog_item{
+            margin-bottom: 20px;
+        }
+    }
+    @media #{$large_mobile}{
+        padding-top: 70px;
+        margin-bottom: -20px;
+        .single_blog_item{
+            margin-bottom: 20px;
+        }
+    }
+    @media #{$tab_device}{
+        padding-top: 70px;
+        margin-bottom: -20px;
+        .single_blog_item{
+            margin-bottom: 20px;
+        }
+    }
+    @media #{$medium_device}{
+    
+    }
+}
+  

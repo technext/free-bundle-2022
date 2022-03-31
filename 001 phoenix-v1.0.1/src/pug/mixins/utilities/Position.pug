@@ -1,0 +1,69 @@
+
+mixin PositionCenterElementsDemo
+  .position-relative.bg-200(style="height: 200px;")
+    .light.p-3.bg-900.rounded-1.position-absolute.top-0.start-50.translate-middle-x
+    .light.p-3.bg-900.rounded-1.position-absolute.top-50.start-0.translate-middle-y
+    .light.p-3.bg-900.rounded-1.position-absolute.top-50.start-50.translate-middle
+    .light.p-3.bg-900.rounded-1.position-absolute.top-50.end-0.translate-middle-y
+    .light.p-3.bg-900.rounded-1.position-absolute.bottom-0.start-50.translate-middle-x
+
+mixin PositionCenterElementsDescription
+  p&attributes(attributes) In addition, you can also center the elements with the transform utility classes 
+    code .translate-middle
+    |, 
+    code .translate-middle-x 
+    |, 
+    code .translate-middle-y
+    |. Responsive variations also exist for 
+    code transform-middle
+    |, For example: 
+    code transform-{xxl|xl|lg|md|sm}-middle-{x|y}
+    |.
+
+mixin PositionArrangeElementsDescription
+  p&attributes(attributes) Arrange elements easily with the edge positioning utilities. The format is 
+    code {property}-{position}. 
+    | #{name} has special utility class 
+    code .all-0 
+    | to give full height/width to child element of parent element.
+
+mixin PositionArrangeElementsDemo
+  .position-relative.bg-200.mb-4(style="height: 200px;")
+    .light.p-3.bg-900.rounded-1.position-absolute.top-0.start-0
+    .light.p-3.bg-900.rounded-1.position-absolute.top-0.end-0
+    .light.p-3.bg-900.rounded-1.position-absolute.top-50.start-50
+    .light.p-3.bg-900.rounded-1.position-absolute.bottom-50.end-50
+    .light.p-3.bg-900.rounded-1.position-absolute.bottom-0.start-0
+    .light.p-3.bg-900.rounded-1.position-absolute.bottom-0.end-0
+
+  .position-relative.light(style="height: 100px; width: 100px")
+    .bg-900.rounded-1.text-white.d-flex.flex-center.position-absolute.all-0 .all-0
+
+mixin PositionCommonValuesDescription
+  p.mb-2 Quick positioning classes are available, though they  responsive. 
+  p.mb-0 The classes are named using the format 
+    code position-{option}
+    |  for 
+    code xs
+    |  and 
+    code position-{breakpoint}-{option}
+    |  for 
+    code sm
+    | ,
+    code md
+    | ,
+    code lg, 
+    code xl
+    | , and 
+    code xxl
+    | .
+
+mixin PositionDemo
+  pre.rounded-3
+    code.lang-css.
+      #{'.position-static'}
+      #{'.position-relative'}
+      #{'.position-absolute'}
+      #{'.position-sticky'}
+      #{'.fixed-top'}
+      #{'.fixed-bottom'}

@@ -1,0 +1,15 @@
+@each $color, $value in $grays {
+  .link-#{$color} {
+    color: $value !important;
+
+    &:hover,
+    &:focus {
+      @if $color == '900' {
+        color: $primary !important;
+      } @else {
+        color: lighten($value, 15%) !important;
+      }
+    }
+  }
+}
+

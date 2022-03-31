@@ -1,0 +1,45 @@
+mixin FloatHeaderDescription
+  p&attributes(attributes) These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the 
+    a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/float')
+      | CSS 
+      code float
+      |  property
+    | . 
+    code !important
+    |  is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
+  
+  p.mb-0  The classes are named using the format 
+    code float-{option}
+    |  for 
+    code xs
+    |  and 
+    code float-{breakpoint}-{option}
+    |  for 
+    code sm
+    | ,
+    code md
+    | ,
+    code lg, 
+    code xl
+    | , and 
+    code xxl
+    | .
+
+mixin FloatDemo
+  .float-start Float left on all viewport sizes
+  br
+  .float-end Float right on all viewport sizes
+  br
+  .float-none Don't float on all viewport sizes
+          
+mixin FloatResponsiveDemo 
+  .float-sm-start Float start on viewports sized SM (small) or wider
+  br
+  .float-md-start Float start on viewports sized MD (medium) or wider
+  br
+  .float-lg-start Float start on viewports sized LG (large) or wider
+  br
+  .float-xl-start Float start on viewports sized XL (extra-large) or wider
+  br
+
+

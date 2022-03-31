@@ -1,0 +1,19 @@
+.box-shadow-rb {
+    transition:  all 0.4s ease-in-out;
+    box-shadow: 10px 10px $green;
+    @include hover-focus() {
+        transform: translate3d(-5px, -5px, 0);
+        box-shadow: 20px 20px $green;
+    }
+}
+.box-shadow-all {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.box-shadow-b {
+    transition:  all 0.4s ease-in-out;
+    box-shadow: 0px 15px 0px -8px $green;
+    @include hover-focus() {
+        transform: translate3d(0,-5px,0);
+        box-shadow: 0px 20px 0px -8px $green;
+    }
+}

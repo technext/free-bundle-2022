@@ -1,0 +1,80 @@
+mixin ListGroupBasicExampleDemo
+  ul.list-group
+    li.list-group-item News Feed
+    li.list-group-item Messages
+    li.list-group-item Events
+    li.list-group-item Groups
+    li.list-group-item Pages
+
+mixin ListGroupActiveItemDemo
+  .list-group
+    a.list-group-item.list-group-item-action.active(href='#') News Feed
+    = '\n'
+    a.list-group-item.list-group-item-action(href='#') Messages
+    = '\n'
+    a.list-group-item.list-group-item-action(href='#') Events
+    = '\n'
+    a.list-group-item.list-group-item-action(href='#') Groups
+    = '\n'
+    a.list-group-item.list-group-item-action.disabled(href='#') Pages
+    = '\n'
+
+mixin ListGroupFlushDemo
+  ul.list-group.list-group-flush
+    li.list-group-item Messages
+    li.list-group-item Events
+    li.list-group-item Groups
+    li.list-group-item Pages
+   
+mixin ListGroupBadgeDemo
+  ul.list-group
+    li.list-group-item.d-flex.justify-content-between.align-items-center Messages
+      span.badge.badge-soft-primary.rounded-pill 14
+    li.list-group-item.d-flex.justify-content-between.align-items-center Events
+      span.badge.badge-soft-primary.rounded-pill 2
+    li.list-group-item.d-flex.justify-content-between.align-items-center Groups
+      span.badge.badge-soft-primary.rounded-pill 1
+    li.list-group-item.d-flex.justify-content-between.align-items-center Pages
+      span.badge.badge-soft-primary.rounded-pill 9
+
+mixin ListGroupBackgroundDemo
+  ul.list-group
+    li.list-group-item.py-3 Example with background
+    li.list-group-item.list-group-item-primary.py-3 A simple primary list group item
+    li.list-group-item.list-group-item-secondary.py-3 A simple secondary list group item
+    li.list-group-item.list-group-item-success.py-3 A simple success list group item
+    li.list-group-item.list-group-item-danger.py-3 A simple danger list group item
+    li.list-group-item.list-group-item-warning.py-3 A simple warning list group item
+    li.list-group-item.list-group-item-info.py-3 A simple info list group item
+    li.list-group-item.list-group-item-light.py-3 A simple light list group item
+    li.list-group-item.list-group-item-dark.py-3 A simple dark list group item
+
+mixin ListGroupLinkDemo
+  .list-group
+    = '\n'
+    a.list-group-item.list-group-item-action.flex-column.align-items-start.p-3.p-sm-4.light.active(href='#')
+      .d-flex.flex-column.flex-sm-row.justify-content-between.mb-1.mb-md-0
+        h5.mb-1.text-white List group · Bootstrap
+        = '\n'
+        small 3 days ago
+      p.mb-1 The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed. 
+      = '\n'
+      small  The most basic list group
+    = '\n'
+    a.list-group-item.list-group-item-action.flex-column.align-items-start.p-3.p-sm-4(href='#')
+      .d-flex.flex-column.flex-sm-row.justify-content-between.mb-1.mb-md-0
+        h5.mb-1 What is list group?
+        = '\n'
+        small.text-muted 3 days ago
+      p.mb-1 Creating List Groups with Bootstrap. The list groups are very useful and flexible component for displaying lists of elements in a beautiful manner.
+      = '\n'
+      small.text-muted Donec id elit non mi porta.
+    = '\n'
+    a.list-group-item.list-group-item-action.flex-column.align-items-start.p-3.p-sm-4(href='#')
+      .d-flex.flex-column.flex-sm-row.justify-content-between.mb-1.mb-md-0
+        h5.mb-1 What is ordered list?
+        = '\n'
+        small.text-muted 3 days ago
+      p.mb-1 An ordered list typically is a numbered list of items. HTML 3.0 gives you the ability to control the sequence number - to continue where the previous list left off, or to start at a particular number.
+      = '\n'
+      small.text-muted An ordered list

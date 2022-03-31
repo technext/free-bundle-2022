@@ -1,0 +1,31 @@
+mixin Booking(config)
+  section#booking
+    +Background({ image: `${CWD}assets/img//gallery/booking.png`, attrs: { style: { 'background-position':'center', 'background-size': 'cover', } }, className: '' }) 
+    .container
+      .row
+        .col-12.py-8.text-white
+          .d-flex.flex-column.flex-center
+            h2.text-white.fs-2.fs-md-3 WE WILL SEE YOU
+            h1.text-white.fs-2.fs-sm-4.fs-lg-7.fw-bold Enjoy 30% Off On First Trip
+
+          form.row.gy-2.gx-md-2.gx-lg-4.flex-center.my-6
+            .col-6.col-md-3
+              label.visually-hidden(for='inlineFormSelectPref') Destinations
+              select#inlineFormSelectPref.form-select
+                option(selected='') Destinations
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            .col-6.col-md-3
+              label.visually-hidden(for='autoSizingSelect') Package
+              select#autoSizingSelect.form-select
+                option(selected='') Package
+                option(value='1') One
+                option(value='2') Two
+                option(value='3') Three
+            .col-6.col-md-3
+              label.visually-hidden(for='date') Date
+              .input-group 
+                input#date.form-control(type='date')
+            .col-6.col-md-auto
+              button.btn.btn-lg.btn-primary(type='submit') Book Now

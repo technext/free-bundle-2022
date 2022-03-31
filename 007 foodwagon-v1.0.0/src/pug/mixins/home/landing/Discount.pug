@@ -1,0 +1,59 @@
+append variables
+  -
+    var discount= [
+      {
+        image:'discount-item-1.png',
+        title:'Flat Hill Slingback',
+        discount:'15',
+        percentage:'% off',
+        text:'off',
+        days:'6 days Remaining',
+      },
+      {
+        image:'discount-item-2.png',
+        title:'Ocean Blue Ring',
+        discount:'10',
+        percentage:'% off',
+        days:'6 days Remaining',
+      },
+      {
+        image:'discount-item-3.png',
+        title:'Brown Leathered Wallet',
+        discount:'25',
+        percentage:'% off',
+        days:'6 days Remaining',
+      },
+      {
+        image:'discount-item-4.png',
+        title:'Silverside Wristwatch',
+        discount:'20',
+        percentage:'% off',
+        days:'6 days Remaining',
+      },
+
+    ];
+
+
+mixin Discounts(config)
+  .col-sm-6.col-lg-3.mb-3.mb-md-0.h-100.pb-4
+    .card.card-span.h-100
+      .position-relative    
+        img.img-fluid.rounded-3.w-100(src=`${CWD}assets/img/gallery/${config.image}` alt='...')
+        .card-actions
+          .badge.badge-foodwagon.bg-primary.p-4
+            .d-flex.flex-between-center
+              .text-white.fs-7!=config.discount
+              .d-block.text-white.fs-2 %  
+                br
+                .fw-normal.fs-1.mt-2 Off
+      .card-body.px-0
+        h5.fw-bold.text-1000.text-truncate=config.title 
+        span.badge.bg-soft-danger.py-2.px-3
+          span.fs-1.text-danger=config.days 
+      a.stretched-link(href='#')
+    
+mixin Discount
+  +Section.py-0
+    .row.h-100.gx-2.mt-7
+      each item in discount
+        +Discounts(item)

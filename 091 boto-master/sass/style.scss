@@ -1,0 +1,47 @@
+/* =================================
+------------------------------------
+  Boto | Photography HTML Template
+  Version: 1.0
+  Copyright By: ColorLib
+ ------------------------------------
+ ====================================*/
+ @import 'varriable';
+ @import '_mixins';
+
+
+// default
+@import 'default';
+
+//loader
+@import 'loader';
+
+// helper
+@import 'helper';
+
+// Header
+@import 'header';
+
+// Menu
+@import 'menu';
+ 
+//hero
+@import 'hero';
+
+//About Page
+@import 'footer';
+
+//About Page
+@import 'about-page';
+
+//Gallery Page
+@import 'gallery';
+
+//Blog Page
+@import 'blog-page';
+ 
+//Blog single Page
+@import 'blog-single';
+ 
+//Contact Page
+@import 'contact-page';
+ 

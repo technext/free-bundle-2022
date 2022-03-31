@@ -1,0 +1,52 @@
+
+.cta_area{
+    background-color: #ab7636;
+    padding: 115.5px 0px;
+    text-align: center;
+    h2{
+        color: $white_color;
+        font-size: 36px;
+        @media #{$small_mobile}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media #{$large_mobile}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media #{$tab_device}{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+    .cta_btn{
+        padding: 14.5px 50px;
+        background-color: #fff;
+        display: inline-block;
+        margin-top: 45px;
+        color: #161d22;
+        font-size: 16px;
+        font-family: 400;
+        &:hover{
+            color: $btn_bg;
+        }
+        @media #{$small_mobile}{
+            margin-top: 15px;
+            padding: 14.5px 30px;
+        }
+        @media #{$large_mobile}{
+            margin-top: 15px;
+            padding: 14.5px 30px;
+        }
+        @media #{$tab_device}{
+            margin-top: 15px;
+            padding: 14.5px 30px;
+        }
+        @media #{$medium_device}{
+        
+        }
+    }
+}

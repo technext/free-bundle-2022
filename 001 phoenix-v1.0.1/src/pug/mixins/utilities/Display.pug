@@ -1,0 +1,171 @@
+mixin DisplayProperty
+  p Display utility classes that apply to all breakpoints, from 
+    code xs 
+    | to 
+    code xl 
+    | , have no breakpoint abbreviation in them. This is because those classes are applied from 
+    code min-width: 0;
+    | and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+
+  p.mt-3 As such, the classes are named using the format:
+
+  ul
+    li
+      code .d-{value} 
+      |  for 
+      code xs 
+    li
+      code .d-{breakpoint}-{value} 
+      |  for 
+      code  sm
+      | ,
+      code  md
+      | ,
+      code  lg
+      | , and
+      code  xl
+      | ,
+  p.mt-3 Where value is one of:
+
+  ul
+    li
+      code none
+    li
+      code inline
+    li
+      code inline-block
+    li
+      code block
+    li
+      code table
+    li
+      code table-cell
+    li
+      code table-row
+    li
+      code flex
+    li
+      code inline-flex
+
+  p The display values can be altered by changing the 
+    code $displays 
+    | variable and recompiling the SCSS.
+  p The media queries effect screen widths with the given breakpoint or larger. For example,
+    code .d-lg-none 
+    | sets 
+    code display: none;
+    | on both 
+    code lg 
+    | and 
+    code xl 
+    | screens.
+
+
+mixin DisplayInHide
+  p For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
+
+  p To hide elements simply use the
+    code .d-none 
+    | class or one of the
+    code .d-{sm,md,lg,xl}-none 
+    | classes for any responsive screen variation.
+
+  p To show an element only on a given interval of screen sizes you can combine one
+    code .d-*-none class with a
+    code .d-*-* class, for example
+    code .d-none .d-md-block .d-xl-none 
+    | will hide the element for all screen sizes except on medium and large devices.
+
+  table.table.table-bordered
+    thead
+      tr
+        th Screen Size
+        th Class
+    tbody
+      tr
+        td Hidden on all
+        td
+          code .d-none
+      tr
+        td Hidden only on xs
+        td
+          code .d-none .d-sm-block
+      tr
+        td Hidden only on sm
+        td
+          code .d-sm-none .d-md-block
+      tr
+        td Hidden only on md
+        td
+          code .d-md-none .d-lg-block
+      tr
+        td Hidden only on lg
+        td
+          code .d-lg-none .d-xl-block
+      tr
+        td Hidden only on xl
+        td
+          code .d-xl-none
+      tr
+        td Visible on all
+        td
+          code .d-block
+      tr
+        td Visible only on xs
+        td
+          code .d-block .d-sm-none
+      tr
+        td Visible only on sm
+        td
+          code .d-none .d-sm-block .d-md-none
+      tr
+        td Visible only on md
+        td
+          code .d-none .d-md-block .d-lg-none
+      tr
+        td Visible only on lg
+        td
+          code .d-none .d-lg-block .d-xl-none
+      tr
+        td Visible only on xl
+        td
+          code .d-none .d-xl-block
+
+
+mixin DisplayPrintDescription
+  p Change the 
+    code display 
+    | value of elements when printing with our print display utility classes. Includes support for the same 
+    code display 
+    | values as our responsive 
+    code .d-* utilities. 
+  ul
+    li
+      code .d-print-none
+    li
+      code .d-print-inline
+    li
+      code .d-print-inline-block
+    li
+      code .d-print-block
+    li
+      code .d-print-table
+    li
+      code .d-print-table-row
+    li
+      code .d-print-table-cell
+    li
+      code .d-print-flex
+    li
+      code .d-print-inline-flex
+  p.mb-0 The print and display classes can be combined.
+
+
+mixin DisplayBasicExample
+  .d-inline.bg-primary.p-2.text-white d-inline
+  .d-block.bg-primary.p-2.text-white.mt-3 d-block
+
+mixin DisplayPrintDemo
+  .d-print-none Screen Only (Hide on print only)
+  .d-none.d-print-block Print Only (Hide on screen only)
+  .d-none.d-lg-block.d-print-block Hide up to large on screen, but always show on print

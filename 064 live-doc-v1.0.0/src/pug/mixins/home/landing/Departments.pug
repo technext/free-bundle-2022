@@ -1,0 +1,61 @@
+append variables
+  -
+    var department= [
+      {
+        image:'neurology.png',
+        hoverImage:'neurology.svg',
+        text: 'Neurology',
+      },
+      {
+        image:'eye-care.png',
+        hoverImage:'eye-care.svg',
+        text: 'Eye care',
+      },
+      {
+        image: 'cardiac.png',
+        hoverImage: 'cardiac.svg',
+        text: 'Cardiac care',
+      },
+      {
+        image: 'heart.png',
+        hoverImage: 'heart.svg',
+        text: 'Heart care',
+      },
+      {
+        image: 'osteoporosis.png',
+        hoverImage: 'osteoporosis.svg',
+        text: 'Osteoporosis',
+      },
+      {
+        image: 'ent.png',
+        hoverImage: 'ent.svg',
+        text: 'ENT',
+      },
+      
+    ];
+
+
+mixin Department(config)
+  .col-auto.col-md-4.col-lg-auto.text-xl-start
+    .d-flex.flex-column.align-items-center
+      .icon-box.text-center
+        a.text-decoration-none(href="#!")
+          img.mb-3.deparment-icon(src=`${CWD}assets/img/icons/${config.image}` alt='...' )  
+          img.mb-3.deparment-icon-hover(src=`${CWD}assets/img/icons/${config.hoverImage}` alt='...' )
+          p.fs-1.fs-xxl-2.text-center=config.text
+
+mixin Departments
+  +Section.py-5#departments
+    .row
+      .col-12.py-3
+        +Background({image: `${CWD}assets/img/gallery/bg-departments.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+        h1.text-center OUR DEPARTMENTS
+  +Section.py-0     
+    .row.py-5.align-items-center.justify-content-center.justify-content-lg-evenly  
+      +Department(department[0])
+      +Department(department[1])
+      +Department(department[2])
+      +Department(department[3])
+      +Department(department[4])  
+      +Department(department[5])  
+

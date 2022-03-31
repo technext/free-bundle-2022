@@ -1,0 +1,111 @@
+.pricing-card-area{
+    .single-card{
+        padding: 40px 0px;
+        border: 1px solid #DBDBDB;
+
+        overflow: hidden !important;
+        position: relative;
+        .card-top{
+            img{
+                margin-bottom: 30px;
+            }
+            p{
+                color: #838a9b;
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+            h4{
+                color: #072366;
+                font-size: 25px;
+                font-weight: 800;
+                padding-right: 3px;
+                line-height: 1.3;
+            }
+        }
+
+        .card-mid{
+            margin-bottom: 21px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #DBDBDB;
+            h4{
+                color: $theme-color;
+                font-size: 30px;
+                font-weight: 600;
+                font-family: $font_2;
+                padding-right: 3px;
+                span{
+                    color: #838a9b;
+                    font-size: 12px;
+                }
+            }
+        }
+        .card-bottom{
+            padding: 0 25px;
+            ul{
+                li{
+                    color:#717081;
+                    font-weight: 300;
+                    margin-bottom: 23px;
+                    font-size: 16px;
+                    &:last-child{
+                        margin-bottom: 62px;
+                    }
+                }
+            }
+        }
+
+        // Hover
+        &:hover{
+            .card-mid{
+               
+                span{
+                   
+                }
+                h4{
+                    
+                }
+            }
+            .card-bottom{
+                ul{
+                    li{
+                       
+
+                    }
+                }
+                .border-btn{
+                    transform: scaleY(1);
+                    border: 1px solid transparent;
+                    color: #fff !important;
+                    background: #071112;
+                }
+            }
+
+        }
+    }
+}
+
+.work-company{
+    .single-logo img {
+        @media #{$lg}{
+            width: 100%;
+        }
+    }
+}
+.border-btn.get-btn {
+	width: 100%;
+}
+
+.stiker {
+    position: absolute;
+    top: 44px;
+    left: -50px;
+    background: #3B2D82;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 51px;
+    border-radius: 0;
+    text-transform: capitalize;
+    transform: rotate(-45deg);
+    letter-spacing: 2px;
+}

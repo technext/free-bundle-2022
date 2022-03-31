@@ -1,0 +1,52 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Position
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Position',
+      description: 'Use these shorthand utilities for quickly configuring the position of an element.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/position/`,
+      linkText: 'Position on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Position values',
+        id: '#position-values',
+      },
+      {
+        name: 'Arrange elements',
+        id: '#arrange-elements',
+      },
+      {
+        name: 'Center elements',
+        id: '#center-elements',
+      },
+    ]
+
+block component
+  .card.border.border-300.my-5
+    .card-header.border-bottom.border-300
+      h3(data-anchor).mb-2 Position values 
+      p.text-700 Quick positioning classes are available, though they are not responsive.
+    .card-body
+      +PositionDemo
+
+  +ComponentCard({
+    title: 'Arrange Elements',
+    anchor: true,
+    description: `Arrange elements easily with the edge positioning utilities. The format is <code>{property}-{position}. </code> has special utility class <code>.all-0 </code>to give full height/width to child element of parent element.`,
+    descriptionClass: '.mt-2.mb-0'
+  }).my-5
+    +PositionArrangeElementsDemo
+
+  +ComponentCard({
+    title: 'Center Elements',
+    anchor: true,
+    description: `In addition, you can also center the elements with the transform utility classes <code>.translate-middle</code>, <code>.translate-middle-x </code>, <code>.translate-middle-y</code>. Responsive variations also exist for <code>transform-middle</code>, For example: <code>transform-{xxl|xl|lg|md|sm}-middle-{x|y}</code>.`,
+    descriptionClass: '.mt-2.mb-0'
+  }).my-5
+    +PositionCenterElementsDemo
+

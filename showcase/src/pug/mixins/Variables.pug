@@ -1,0 +1,840 @@
+append variables
+  - var title = 'Showcase | One Hundred Pre-build website';
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.0';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: 'container', 'data-layout': ENV === 'PROD' ? 'container' : false }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = ['black', 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 'white'];
+  - var colorsAll = colors.concat(grays);
+  - var footer = true;
+  - var currentPage = 'index'
+  - 
+    var data = [
+      {
+      title: 'Phoenix',
+      link: 'https://themewagon.com/themes/phoenix-admin-dashboard-webapp-template/',
+      preview: 'https://prium.github.io/phoenix/v1.0.0/index.html',
+      img: 'img001.png',
+      item: 'admin',
+      category: 'Admin & DashBoard'
+      },
+      {
+      title: 'Elaadmin',
+      link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-admin-dashboard-template-elaadmin/',
+      preview: 'https://technext.github.io/elaadmin/index.html',
+      img: 'img12.png',
+      item: 'admin',
+      category: 'Admin & DashBoard'
+      },
+      {
+      title: 'AppLab',
+      link: 'https://themewagon.com/themes/free-responsive-bootstrap-5-html5-multipurpose-landing-page-template-applab/',
+      preview: 'https://technext.github.io/applab_2/v1.0.0/',
+      img: 'img10.png',
+      item: 'multipurpose ',
+      category: 'Multipurpose '
+      },
+      {
+      title: 'Jadoo',
+      link: 'https://themewagon.com/themes/free-bootstrap-5-html5-travel-agency-website-template-jadoo/',
+      preview: 'https://technext.github.io/jadoo/v1.0.0/index.html',
+      img: 'img05.png',
+      item: 'travel',
+      category: 'Travel & Booking'
+      },
+      {
+      title: 'LaslesVPN',
+      link: 'https://themewagon.com/themes/free-bootstrap-5-html5-multipurpose-website-template-laslesvpn/',
+      preview: 'https://technext.github.io/LaslesVPN/v1.0.0/',
+      img: 'img07.png',
+      item: 'multipurpose ',
+      category: 'Multipurpose '
+      },
+      {
+      title: 'Purple Admin',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-admin-dashboard-purple-admin/',
+      preview: 'https://www.bootstrapdash.com/demo/purple-admin-free/',
+      img: 'img16.png',
+      item: 'admin',
+      category: 'Admin & DashBoard'
+    },
+      {
+        title: 'FoodWagon ',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-restaurant-food-website-template-foodwagon/',
+        preview: 'https://technext.github.io/foodwagon/v1.0.0/index.html',
+        img: 'img002.png',
+        item: 'food',
+        category: 'Food & Restaurant'
+    }, 
+      {
+        title: 'Eshopper',
+        link: 'https://themewagon.com/themes/eshopper-free-responsive-bootstrap-4-e-commerce-website-template/',
+        preview: 'https://technext.github.io/eshopper/index.html',
+        img: 'img003.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+    },
+      {
+        title: 'Sneat',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-5-html5-admin-template-sneat/',
+        preview: 'https://demos.themeselection.com/sneat-bootstrap-html-admin-template-free/html/',
+        img: 'img73.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+    },
+      {
+      title: 'Skydash',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html-5-admin-dashboard-website-template-skydash/',
+      preview: 'https://technext.github.io/skydash/',
+      img: 'img55.png',
+      item: 'admin',
+      category: 'Admin & Dashboard'
+    },
+      {
+        title: 'Little Squirrel',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-education-website-template-little-squirrel/',
+        preview: 'https://technext.github.io/little-squirrel/v1.0.0/index.html',
+        img: 'img23.png',
+        item: 'other',
+        category: 'other'
+    },
+
+
+      {
+        title: 'Zay Shop',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-ecommerce-website-template-zay-shop/',
+        preview: 'https://technext.github.io/zay-shop/',
+        img: 'img03.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+      {
+        title: 'Titan',
+        link: 'https://themewagon.com/themes/titan/',
+        preview: 'https://technext.github.io/titan/',
+        img: 'img04.png',
+        item: 'multipurpose ',
+        category: 'Multipurpose '
+      },
+
+      {
+        title: 'Karma',
+        link: 'https://themewagon.com/themes/free-reponsive-bootstrap-4-html5-ecommerce-website-template-karma/',
+        preview: 'https://technext.github.io/karma/index.html',
+        img: 'img06.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+      {
+        title: 'Original ',
+        link: 'https://themewagon.com/themes/free-bootstrap-blog-website-template-original/',
+        preview: 'https://technext.github.io/original/',
+        img: 'img08.png',
+        item: 'other',
+        category: 'Other'
+      },
+      {
+        title: 'Shoppers',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerece-website-template-shoppers/',
+        preview: 'https://technext.github.io/shoppers/index.html',
+        img: 'img09.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+
+      {
+        title: 'SeoGram ',
+        link: 'https://themewagon.com/themes/seogram-free-multipage-bootstrap-4-landing-page-website-template/',
+        preview: 'https://technext.github.io/seogram/html/index.html',
+        img: 'img13.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'CakeZone',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-cake-shop-website-template-cakezone/',
+        preview: 'https://technext.github.io/cakezone/',
+        img: 'img14.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'EcoHosting ',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-hosting-website-template-ecohosting/',
+        preview: 'https://technext.github.io/ecohosting/index.html',
+        img: 'img15.png',
+        item: 'other',
+        category: 'Other'
+      },
+      {
+        title: 'FoodeiBlog',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-blog-template-foodeiblog/',
+        preview: 'https://technext.github.io/foodeiblog/index.html',
+        img: 'img17.png',
+        item: 'food',
+        category: 'Food & Restaurant'
+      },
+      {
+        title: 'Softy Pinko',
+        link: 'https://themewagon.com/themes/free-html5-bootstrap-4-corporate-business-website-template-softy-pinko/',
+        preview: 'https://technext.github.io/softy-pinko/index.html',
+        img: 'img18.png',
+        item: 'business',
+        category: 'Business '
+      },
+      {
+        title: 'Windmill',
+        link: 'https://themewagon.com/themes/free-tailwind-css-admin-dashboard-template-windmill/',
+        preview: 'https://windmill-dashboard.vercel.app/',
+        img: 'img19.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+      },
+      {
+        title: 'Graindashboard',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-admin-dashboard-template-graindashboard/',
+        preview: 'https://graindashboard.com/',
+        img: 'img20.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+      },
+      {
+        title: 'Cleopatra ',
+        link: 'https://themewagon.com/themes/free-responsive-tailwind-css-admin-dashboard-website-template-cleopatra/',
+        preview: 'https://moesaid.github.io/cleopatra/index.html',
+        img: 'img21.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+      },
+      {
+        title: 'Appco ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-landing-page-template-appco/',
+        preview: 'https://technext.github.io/appco/index.html',
+        img: 'img22.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+
+      {
+        title: 'Neat',
+        link: 'https://themewagon.com/themes/download-free-responsive-html5-portfolio-template-neat/',
+        preview: 'https://technext.github.io/karma/index.html',
+        img: 'img24.png',
+        item: 'portfolio',
+        category: 'Portfolio'
+      },
+      {
+        title: 'Ariclaw',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-law-firm-website-template-ariclaw/',
+        preview: 'https://technext.github.io/ariclaw/index.html',
+        img: 'img25.png',
+        item: 'law',
+        category: 'Law Firm'
+      },
+      {
+        title: 'Eventalk',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-event-management-website-template-eventalk/',
+        preview: 'https://technext.github.io/eventalk/index.html',
+        img: 'img26.png',
+        item: 'other',
+        category: 'other'
+      },
+      {
+        title: 'Carbook',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-car-rental-website-template-carbook/',
+        preview: 'https://technext.github.io/carbook/index.html',
+        img: 'img27.png',
+        item: 'travel',
+        category: 'Travel & booking'
+      },
+      {
+        title: 'Tournest',
+        link: 'https://themewagon.com/themes/tournest-free-responsive-travel-website-template/',
+        preview: 'https://technext.github.io/tournest/',
+        img: 'img28.png',
+        item: 'agency',
+        category: 'Travel Agency'
+      },
+      {
+        title: 'Medino ',
+        link: 'https://themewagon.com/themes/free-html5-bootstrap-4-medicine-website-template-medino/',
+        preview: 'https://technext.github.io/medino/index.html',
+        img: 'img29.png',
+        item: 'medical',
+        category: 'Medical & Health Care'
+      },
+      {
+        title: 'DeerHost ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-hosting-website-template-deerhost/',
+        preview: 'https://technext.github.io/deerhost/index.html',
+        img: 'img30.png',
+        item: 'other',
+        category: 'Other'
+      },
+      {
+        title: 'Ultim8',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-business-website-template-ultim8/',
+        preview: 'https://technext.github.io/ultim8/index.html',
+        img: 'img31.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Satner',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-web-developer-portfolio-website-template-satner/',
+        preview: 'https://technext.github.io/satner/index.html',
+        img: 'img32.png',
+        item: 'portfolio',
+        category: 'Portfolio'
+      },
+      {
+        title: 'More',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-agency-portfolio-website-template-more/',
+        preview: 'https://technext.github.io/more/index.html',
+        img: 'img33.png',
+        item: 'portfolio',
+        category: 'Portfolio'
+      },
+      {
+        title: 'Paper Dashboard',
+        link: 'https://themewagon.com/themes/free-responsive-admin-dashboard-template-download/',
+        preview: 'https://demos.creative-tim.com/bs3/paper-dashboard/dashboard.html',
+        img: 'img34.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+      },
+      {
+        title: 'Majestic ',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-ecommerce-website-template-majestic/',
+        preview: 'https://technext.github.io/majestic-2/v1.0.1/',
+        img: 'img35.png',
+        item: 'ecommerce ',
+        category: 'E-Commerce '
+      },
+      {
+        title: 'Winkel',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-winkel/',
+        preview: 'https://technext.github.io/winkel/index.html',
+        img: 'img36.png',
+        item: 'ecommerce ',
+        category: 'E-Commerce '
+      },
+      {
+        title: 'Sevi',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-5-html5-landing-page-template-sevi/',
+        preview: 'https://technext.github.io/sevi/v1.0.0/',
+        img: 'img37.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Nova',
+        link: 'https://themewagon.com/themes/project-app-showasing-onepage-bootstrap-template-free-nova/',
+        preview: 'https://technext.github.io/Nova/',
+        img: 'img38.png',
+        item: 'other',
+        category: 'other'
+      },
+
+      {
+        title: 'DrPro',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-medical-website-template-drpro/',
+        preview: 'https://technext.github.io/drpro/index.html',
+        img: 'img39.png',
+        item: 'medical',
+        category: 'Medical & Health Care'
+      },
+
+      {
+        title: 'Pacific',
+        link: 'https://themewagon.com/themes/free-modern-bootstrap-4-html5-travel-website-template-pacific/',
+        preview: 'https://technext.github.io/pacific/index.html',
+        img: 'img40.png',
+        item: 'travel',
+        category: 'Travel & Booking'
+      },
+
+      {
+        title: 'Boxus',
+        link: 'https://themewagon.com/themes/free-creative-agency-website-template-boxus/',
+        preview: 'https://technext.github.io/boxus/',
+        img: 'img41.png',
+        item: 'other',
+        category: 'other'
+      },
+
+      {
+        title: 'Asentus ',
+        link: 'https://themewagon.com/themes/asentus-free-responsive-bootstrap-corporate-agency-html5-template/',
+        preview: 'https://technext.github.io/Asentus/HTML/',
+        img: 'img42.png',
+        item: 'business',
+        category: 'Business & Corporate'
+      },
+
+      {
+        title: 'Amado',
+        link: 'https://themewagon.com/themes/free-html5-e-commerce-template-bootstrap4-amado/',
+        preview: 'https://technext.github.io/amado/',
+        img: 'img43.png',
+        item: 'ecommerce',
+        category: 'E-Commerce'
+      },
+
+      {
+        title: 'Glint',
+        link: 'https://themewagon.com/themes/free-digital-agency-website-template-glint/',
+        preview: 'https://technext.github.io/glint/',
+        img: 'img44.png',
+        item: 'other',
+        category: 'other'
+      },
+
+      {
+        title: 'Flusk',
+        link: 'https://themewagon.com/themes/flusk-responsive-multi-purpose-website-template/',
+        preview: 'https://technext.github.io/Flusk/',
+        img: 'img45.png',
+        item: 'multipurpose',
+        category: 'Multi-Purpose'
+      },
+
+      {
+        title: 'Notes',
+        link: 'https://themewagon.com/themes/notes-free-responsive-product-launching-landing-page-template/',
+        preview: 'https://technext.github.io/notes-html-template/',
+        img: 'img46.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+
+      {
+        title: 'Justice',
+        link: 'https://themewagon.com/themes/free-one-page-html5-template-justice/',
+        preview: 'https://technext.github.io/Justice/',
+        img: 'img47.png',
+        item: 'other',
+        category: 'other'
+      },
+
+      {
+        title: 'Cozastore ',
+        link: 'https://themewagon.com/themes/free-html5-ecommerce-website-template/',
+        preview: 'https://technext.github.io/cozastore/',
+        img: 'img48.png',
+        item: 'ecommerce',
+        category: 'E-Commerce'
+      },
+
+      {
+        title: 'Coffee',
+        link: 'https://themewagon.com/themes/free-coffee-shop-bootstrap-template-coffee/',
+        preview: 'https://technext.github.io/coffee/',
+        img: 'img49.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+      {
+        title: 'Shop',
+        link: 'https://themewagon.com/themes/download-free-responsive-ecommerce-template-shop-sales-pages/',
+        preview: 'https://technext.github.io/shop/',
+        img: 'img50.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+      {
+        title: 'Anime ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-gaming-anime-website-template-anime/',
+        preview: 'https://technext.github.io/anime/index.html',
+        img: 'img51.png',
+        item: 'game',
+        category: 'Game & Anime'
+      },
+
+
+      {
+        title: 'Karl',
+        link: 'https://themewagon.com/themes/free-html5-responsive-ecommerce-template/',
+        preview: 'https://technext.github.io/karl/',
+        img: 'img53.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+      {
+        title: 'Woody',
+        link: 'https://themewagon.com/themes/responsive-free-bootstrap-5-html5-business-template-woody/',
+        preview: 'https://technext.github.io/woody/',
+        img: 'img54.png',
+        item: 'business',
+        category: 'Business'
+      },
+
+      {
+        title: 'Violet ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-website-template-violet/',
+        preview: 'https://technext.github.io/violet/index.html',
+        img: 'img56.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+
+      {
+        title: 'Ensurance',
+        link: 'https://themewagon.com/themes/ensurance-free-responsive-bootstrap-5-healthcare-website-template/',
+        preview: 'https://technext.github.io/ensurance/v1.0.0/index.html',
+        img: 'img58.png',
+        item: 'other',
+        category: 'Other'
+      },
+      {
+        title: 'DGital',
+        link: 'https://themewagon.com/themes/dgital-free-responsive-bootstrap-5-creative-agency-template/',
+        preview: 'https://technext.github.io/digital-1/',
+        img: 'img59.png',
+        item: 'agency',
+        category: 'Agency'
+      },
+      {
+        title: 'Famms',
+        link: 'https://themewagon.com/themes/famms-free-responsive-bootstrap-4-e-commerce-website-template/',
+        preview: 'https://technext.github.io/famms/index.html',
+        img: 'img60.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+      {
+        title: 'Material kit 2',
+        link: 'https://themewagon.com/themes/material-kit-2-free-responsive-bootstrap-5-website-template/',
+        preview: 'https://technext.github.io/material-kit-2/',
+        img: 'img61.png',
+        item: 'multipurpose',
+        category: 'Multipurpose'
+      },
+      {
+        title: 'Chain',
+        link: 'https://themewagon.com/themes/chain-free-bootstrap-5-html5-landing-page-template/',
+        preview: 'https://technext.github.io/chain/',
+        img: 'img62.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Patrix ',
+        link: 'https://themewagon.com/themes/patrix-free-responsive-bootstrap-5-landing-page-template/',
+        preview: 'https://technext.github.io/patrix/index.html',
+        img: 'img63.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Dtox',
+        link: 'https://themewagon.com/themes/dtox-free-bootstrap-4-html5-landing-page-template/',
+        preview: 'https://technext.github.io/dtox/index.html',
+        img: 'img64.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Livedoc',
+        link: 'https://themewagon.com/themes/livedoc-free-responsive-bootstrap-5-html5-medical-website-template/',
+        preview: 'https://technext.github.io/live-doc/v1.0.0/index.html',
+        img: 'img65.png',
+        item: 'medical',
+        category: 'Medical & Health'
+      },
+      {
+        title: 'Zinc',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-business-website-template-zinc/',
+        preview: 'https://technext.github.io/zinc/',
+        img: 'img66.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Simple',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-landing-page-website-template-simple/',
+        preview: 'https://technext.github.io/simple/',
+        img: 'img67.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Ioniq',
+        link: 'https://themewagon.com/themes/ioniq-free-bootstrap-5-html5-business-website-template/',
+        preview: 'https://technext.github.io/ioniq/',
+        img: 'img68.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Nubis',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-business-website-template-nubis/',
+        preview: 'https://technext.github.io/nubis/',
+        img: 'img69.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Medic Care',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-healthcare-website-template-medic-care/',
+        preview: 'https://technext.github.io/medic-care/',
+        img: 'img70.png',
+        item: 'medical',
+        category: 'Medical & Health'
+      },
+
+      {
+        title: 'Makan',
+        link: 'https://themewagon.com/themes/makan-free-responsive-bootstrap-5-html5-business-website-template/',
+        preview: 'https://technext.github.io/makan/',
+        img: 'img02.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Yavin',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-business-website-template-yavin/',
+        preview: 'https://technext.github.io/yavin/',
+        img: 'img71.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Soft UI',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-admin-dashboard-template-soft-ui/',
+        preview: 'https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html',
+        img: 'img72.png',
+        item: 'admin',
+        category: 'Admin & Dashboard'
+      },
+      {
+        title: 'Convid',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-medical-website-template-convid/',
+        preview: 'https://technext.github.io/convid/index.html',
+        img: 'img74.png',
+        item: 'medical',
+        category: 'Medical & Health Care'
+      },
+      {
+        title: 'Digitalex ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-financial-website-template-digitalex/',
+        preview: 'https://technext.github.io/karma/index.html',
+        img: 'img75.png',
+        item: 'financial',
+        category: 'Financial'
+      },
+      {
+        title: 'Eden',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-magazine-website-template-eden/',
+        preview: 'https://technext.github.io/eden/index.html',
+        img: 'img76.png',
+        item: 'other',
+        category: 'other'
+      },
+      {
+        title: 'Rettro',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-photography-website-template-rettro/',
+        preview: 'https://technext.github.io/rettro/index.html',
+        img: 'img77.png',
+        item: 'photography ',
+        category: 'Photography '
+      },
+      {
+        title: 'JoBest',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-multipurpose-landing-page-template-jobest/',
+        preview: 'https://technext.github.io/karma/index.html',
+        img: 'img78.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+      title: 'Corona',
+      link: 'https://themewagon.com/themes/corona-free-responsive-bootstrap-4-admin-dashboard-template/',
+      preview: 'https://technext.github.io/corona-free-dark-bootstrap-admin-template/index.html',
+      img: 'img01.png',
+      item: 'admin',
+      category: 'Admin & DashBoard'
+      },
+      {
+        title: 'Purple Buzz',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-commercial-template-purple-buzz/',
+        preview: 'https://technext.github.io/karma/index.html',
+        img: 'img79.png',
+        item: 'other',
+        category: 'Other'
+      },
+      {
+        title: 'Open Enterprise',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-business-corporate-websites-template-open-enterprise/',
+        preview: 'https://technext.github.io/open-enterprise/v1.0.0/#',
+        img: 'img80.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Karmo',
+        link: 'https://themewagon.com/themes/creative-responsive-html5-website-template-free-download/',
+        preview: 'https://technext.github.io/karmo/',
+        img: 'img81.png',
+        item: '',
+        category: ''
+      },
+      {
+        title: 'Celestial ',
+        link: 'https://themewagon.com/themes/celestial-free-responsive-bootstrap-4-admin-dashboard-template/',
+        preview: 'https://technext.github.io/celestialAdmin-free-admin-template/',
+        img: 'img82.png',
+        item: 'admin',
+        category: 'Admin & DashBoard'
+      },
+      {
+        title: 'Rhea',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-traveling-landing-page-template-rhea/',
+        preview: 'https://technext.github.io/Rhea/v1.0.0/',
+        img: 'img83.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'DataWarehouse',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html-5-landing-page-template-datawarehouse/',
+        preview: 'https://technext.github.io/dataWarehouse/v1.0.0/',
+        img: 'img84.png',
+        item: 'landing',
+        category: 'Landing Page'
+      },
+      {
+        title: 'Mosaic ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-architectural-business-website-template-mosaic/',
+        preview: 'https://technext.github.io/mosaic/index.html',
+        img: 'img85.png',
+        item: 'business',
+        category: 'Business'
+      },
+      {
+        title: 'Cial',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-professional-business-website-template-cial/',
+        preview: 'https://technext.github.io/cial/index.html',
+        img: 'img86.png',
+        item: '',
+        category: ''
+      },
+      {
+        title: 'Ashion ',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-ecommerce-website-template-ashion/',
+        preview: 'https://technext.github.io/ashion/index.html',
+        img: 'img87.png',
+        item: 'ecommerce',
+        category: 'E-commerce'
+      },
+      {
+        title: 'Podcast',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-musical-website-template-podcast/',
+        preview: 'https://technext.github.io/podcast/index.html',
+        img: 'img88.png',
+        item: 'music',
+        category: 'Music'
+      },
+      {
+        title: 'Rezume',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-portfolio-website-template-rezume/',
+        preview: 'https://technext.github.io/rezume/index.html',
+        img: 'img89.png',
+        item: 'portfolio',
+        category: 'Portfolio'
+      },
+      {
+        title: 'Hightech',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-agency-website-template-hightech/',
+        preview: 'https://technext.github.io/hightech/index.html',
+        img: 'img90.png',
+        item: 'other',
+        category: 'other'
+      },
+      {
+        title: 'Boto',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-photo-gallery-website-template-boto/',
+        preview: 'https://technext.github.io/boto/index.html',
+        img: 'img91.png',
+        item: 'photography',
+        category: 'Photography'
+      },
+      {
+        title: 'Flat Able',
+        link: 'https://themewagon.com/themes/flat-able-free-bootstrap-4-html5-admin-dashboard-template/',
+        preview: 'https://technext.github.io/flat_able/',
+        img: 'img92.png',
+        item: 'admin',
+        category: 'Admin & DashBoard'
+      },
+      {
+        title: 'Tinydash',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-admin-template-tinydash/',
+        preview: 'https://technext.github.io/tinydash/index.html',
+        img: 'img93.png',
+        item: 'admin',
+        category: 'Admin & DashBoard'
+      },
+      {
+        title: 'Game Warrior',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-gaming-website-template-game-warrior/',
+        preview: 'https://technext.github.io/game-warrior/index.html',
+        img: 'img94.png',
+        item: 'anime',
+        category: 'Game & Anime'
+      },
+      {
+        title: 'Meranda',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-magazine-website-template-meranda/',
+        preview: 'https://technext.github.io/meranda/index.html',
+        img: 'img95.png',
+        item: 'magazine',
+        category: 'Magazine'
+      },
+      {
+        title: 'React Reduction',
+        link: 'https://themewagon.com/themes/free-react-bootstrap-4-admin-dashboard-template-react-reduction/',
+        preview: 'https://reduction-admin.github.io/react-reduction/',
+        img: 'img96.png',
+        item: 'admin',
+        category: 'Admin & DashBoard'
+      },
+      {
+        title: 'Dingo ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-restaurant-website-template-dingo/',
+        preview: 'https://technext.github.io/dingo/index.html',
+        img: 'img97.png',
+        item: 'food',
+        category: 'Food & Restaurant'
+      },
+      {
+        title: 'GoTrip',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-travel-website-template-gotrip/',
+        preview: 'https://technext.github.io/gotrip/index.html',
+        img: 'img98.png',
+        item: 'travel',
+        category: 'Travel & Booking'
+      },
+      {
+        title: 'Studio',
+        link: 'https://themewagon.com/themes/free-bootstrap-photography-template-studio/',
+        preview: 'https://technext.github.io/studio/',
+        img: 'img99.png',
+        item: 'photography ',
+        category: 'Photography '
+      },
+      {
+        title: 'Newsboxs',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-news-website-template-newsbox/',
+        preview: 'https://technext.github.io/newsbox/index.html',
+        img: 'img100.png',
+        item: 'news ',
+        category: 'News '
+      }
+        ];

@@ -1,0 +1,21 @@
+extends layouts/LayoutTheme
+include mixins/common/Cta
+include mixins/common/Footer
+include mixins/common/StudentFeedback
+include mixins/user-research/Header
+include mixins/user-research/WebVsUxDesigner
+
+
+
+append variables
+  - var currentPage = 'user-research'
+
+prepend scripts
+  
+append content
+  +UserHeader
+  +WebVsUxDesigner
+  +StudentFeedback
+  +Cta 
+  +PreFooter
+  

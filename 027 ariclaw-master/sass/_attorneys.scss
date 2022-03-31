@@ -1,0 +1,30 @@
+.single_attorneys{
+    padding: 130px 60px;
+    @media #{$small_mobile}{
+        padding: 70px 40px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 40px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 40px;
+    }
+    @media #{$medium_device}{
+        padding: 80px 40px;
+    }
+    .single_offer_part{
+        margin-bottom: 70px;
+        @media #{$small_mobile}{
+            margin-bottom: 30px;
+        }
+        @media #{$large_mobile}{
+            margin-bottom: 30px;
+        }
+        @media #{$tab_device}{
+            margin-bottom: 30px;
+        }
+        @media #{$medium_device}{
+            margin-bottom: 40px;
+        }
+    }
+}

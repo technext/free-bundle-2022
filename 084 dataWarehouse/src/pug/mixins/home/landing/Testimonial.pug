@@ -1,0 +1,160 @@
+mixin Items(config)
+  .col-md-4.mb-3.mb-md-0
+    .card.h-100.py-3
+      .card-body.my-2
+        .d-flex.align-items-center
+          img(src=`${CWD}assets/img/gallery/${config.image}` width="70" alt='').img-fluid.me-3.me-md-2.me-lg-3
+          .flex-1.align-items-center
+            h6.mb-0.fs--1.text-1000.fw-medium=config.name 
+            p.fs--2.fw-normal.text-info.mb-0=config.designation
+        
+        p.card-text.ps-7.ps-md-0.ps-xl-7.pt-md-4.pt-lg-3.pt-xl-0=config.text
+
+mixin Testimonial
+  section.py-5
+    .container-lg.bg-info.p-5.p-md-5.p-xl-7.rounded-3
+      .row.flex-center
+        .col-12
+          h2.text-light.fw-bold Testimonials
+      #carouselExampleDark.carousel.slide(data-bs-ride='carousel').pt-6
+        .carousel-inner
+          .carousel-item.active(data-bs-interval='10000')
+            .row.h-100
+              +Items({image: '1.png', name:'John Fang ',designation:'wordfaang.com', 
+                text:'“Wow...I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.',
+              })
+              +Items({image: '2.png', name:'Jeny Doe',designation:'UX Engineer', 
+                text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+              +Items({image: '3.png', name:'William',designation:'Web Designer', 
+                  text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+                      
+          .carousel-item(data-bs-interval='2000')
+            .row.h-100
+              +Items({image: '1.png', name:'Viezh Robert',designation:'arsaw, Poland', 
+                text:'“Wow...I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.',
+              })
+              +Items({image: '2.png', name:'Kim Young Jou',designation:'UX Engineer', 
+                text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+              +Items({image: '3.png', name:'Kim Young Jou',designation:'Web Designer', 
+                  text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+            
+          .carousel-item
+            .row.h-100
+              +Items({image: '1.png', name:'Viezh Robert',designation:'arsaw, Poland', 
+                text:'“Wow...I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.',
+              })
+              +Items({image: '2.png', name:'Kim Young Jou',designation:'UX Engineer', 
+                text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+              +Items({image: '3.png', name:'Kim Young Jou',designation:'Web Designer', 
+                  text:'“I like it because I like to travel far and still can connect with high speed.”',
+              })
+              
+      
+        .row.px-3.px-md-0.mt-4
+          .col-6.position-relative
+            ol.carousel-indicators
+              li.active(data-bs-target='#carouselExampleDark' data-bs-slide-to='0')
+              li(data-bs-target='#carouselExampleDark' data-bs-slide-to='1')
+              li(data-bs-target='#carouselExampleDark' data-bs-slide-to='2')
+          .col-6.position-relative
+            a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselExampleDark' role='button' data-bs-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.visually-hidden Previous
+            a.carousel-control-next.carousel-icon.z-index-2(href='#carouselExampleDark' role='button' data-bs-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.visually-hidden Next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- mixin Testimonial
+//-   section
+//-     +Background({ image: `${CWD}assets/img/gallery/testimonial-bg.png`, attrs: { style: { 'background-position': 'center center', 'background-size': 'contain',} }, className: '' }) 
+//-     .container
+//-       .card.bg-info.p-7
+//-         h1.mb-5.fw-bold.text-light Testimonials
+//-         //- .row      
+//-           //- .col-12.col-md-9.col-lg-8.col-xl-7.col-xxl-6
+          
+//-         #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+//-           .carousel-inner.active
+//-             //- .card.py-sm-6.px-sm-5.testimonial-card-shadow.shadow-sm(style="transform: translateY(52px) scale(.9)")
+//-             //- .card.py-sm-6.px-sm-5.testimonial-card-shadow.shadow-sm(style="transform: translateY(32px) scale(.934)")
+//-             //- .card.py-sm-6.px-sm-5.testimonial-card-shadow.shadow-sm
+//-             .carousel-item.active
+//-               .row.h-100
+//-                 .col-md-6
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam.Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+//-                 .col-md-6   
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam.Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+                    
+//-             .carousel-item.z-index-1
+//-               .row.h-100
+//-                 .col-md-6
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body.z-index-1
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam.Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+//-                 .col-md-6   
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body.z-index-1
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam.Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+//-             .carousel-item.z-index-1
+//-               .row.h-100
+//-                 .col-md-6
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body.z-index-1
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam.Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+//-                 .col-md-6   
+//-                   .card.py-4.px-3.py-sm-6.px-sm-5.px-xl-7
+//-                     +Background({ image: `${CWD}assets/img/gallery/q.png`, attrs: { style: { 'background-position': 'center top', 'background-size': '150px',} }, className: 'mt-4' }) 
+//-                     .card-body.z-index-1
+//-                       p.card-text.fs-2.text-center Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.
+            
+//-           .row.mt-8
+//-             .col-6.position-relative
+//-               ol.carousel-indicators
+//-                 li.active(data-bs-target='#carouselExampleDark' data-bs-slide-to='0')
+//-                 li(data-bs-target='#carouselExampleDark' data-bs-slide-to='1')
+//-                 li(data-bs-target='#carouselExampleDark' data-bs-slide-to='2')
+//-             .col-6.position-relative.text-end
+//-               a.carousel-control-prev(href='#carouselExampleControls' role='button' data-bs-slide='prev')
+//-                 span.carousel-control-prev-icon(aria-hidden='true')
+//-                 span.visually-hidden Previous
+//-               a.carousel-control-next(href='#carouselExampleControls' role='button' data-bs-slide='next')
+//-                 span.carousel-control-next-icon(aria-hidden='true')
+//-                 span.visually-hidden Next
+        
+

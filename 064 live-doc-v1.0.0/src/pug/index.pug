@@ -1,0 +1,28 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Departments
+include mixins/home/landing/EyeCare
+include mixins/home/landing/About
+include mixins/home/landing/OurDoctors
+include mixins/home/landing/PeopleWhoLoves
+include mixins/home/landing/Appointment
+include mixins/home/landing/BlogPost
+include mixins/home/landing/Cta
+include mixins/home/landing/Footer
+
+
+
+prepend scripts
+  script(src='https://scripts.sirv.com/sirvjs/v3/sirv.js')
+  
+append content
+  +HeroHeader
+  +Departments
+  +EyeCare
+  +AboutUs
+  +OurDoctors
+  +People
+  +Appointment
+  +BlogPost
+  +Cta
+  +PreFooter

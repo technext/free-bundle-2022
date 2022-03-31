@@ -1,0 +1,41 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Collapse
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Collapse',
+      description: 'Toggle the visibility of content across your project with a few classes and our JavaScript plugins.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/collapse/`,
+      linkText: 'Collapse on Bootstrap',
+      breadcrumb:[
+        {
+          name:'Components',
+          link:'#!'
+        },
+        {
+          name:'Collapse',
+          active:true
+        },
+      ]
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Basic Example',
+        id: '#basic-example',
+      },
+      {
+        name: 'Multiple Targets',
+        id: '#multiple-targets',
+      }
+    ]
+
+block component
+  +ComponentCard({title:'Basic Example'}).my-4
+    +CollapseExampleDemo
+  +ComponentCard({
+    title:'Multiple Targets',
+    description:"A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide multiple elements by referencing them with a selector in its <code>href</code> or <code>data-bs-target</code> attribute.Multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> can show and hide an element if they each reference it with their <code>href</code> or <code>data-bs-target</code> attribute."
+  }).my-6
+    +MultipleTargetsDemo

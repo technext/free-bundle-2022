@@ -1,0 +1,169 @@
+/**************** food_menu css start ****************/
+.food_menu{
+    padding: 130px 0px 80px;
+    @media #{$small_mobile}{
+        padding: 70px 0px 50px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px 50px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px 50px;
+    }
+    @media #{$medium_device}{
+        padding: 70px 0px 40px;
+    }
+    .nav-tabs {
+        border-bottom: 0px solid #dee2e6;
+        position: relative;
+        a{
+            font-size: 16px;
+            color: #0d1c26;
+            padding: 45px 25px 25px;
+            position: relative;
+            @media #{$small_mobile}{
+                padding: 5px 10px 15px;
+            }
+            @media #{$large_mobile}{
+                padding: 20px 25px 25px;
+            }
+            @media #{$tab_device}{
+                padding: 20px 25px 25px;
+            }
+            @media #{$medium_device}{
+                padding: 35px 15px 15px;
+            }
+            &:last-child{
+                padding: 45px 0px 20px 20px;
+                @media #{$small_mobile}{
+                    padding: 5px 10px 15px;
+                }
+                @media #{$large_mobile}{
+                    padding: 20px 0px 20px 20px;
+                }
+                @media #{$tab_device}{
+                    padding: 20px 0px 20px 20px;
+                }
+                @media #{$medium_device}{
+                    padding: 35px 0px 15px 15px;
+                }
+            }
+            img{
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: rotate(90deg);
+            }
+        }
+        .active {
+            img{
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: rotate(90deg);
+                height: 14px;
+                width: 10px;
+                bottom: 8px;
+            }
+            color: $btn_bg;
+        }
+        #Sneaks-tab{
+            img{
+                left: 25px;
+            }
+        }
+    }
+    .single_food_item{
+        margin-bottom: 50px;
+        background-color: $white_color;
+        @media #{$small_mobile}{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        @media #{$large_mobile}{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        @media #{$tab_device}{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        @media #{$medium_device}{
+            margin-bottom: 30px;
+        }
+        img{
+            border-right: 10px solid $section_bg;
+            @media #{$small_mobile}{
+                border-right: 0px solid $section_bg;
+                margin: 0 auto;
+                display: block;
+                margin-right: auto !important;
+                text-align: center;
+                border-radius: 50%;
+            }
+            @media #{$large_mobile}{
+                border-right: 0px solid $section_bg;
+                margin: 0 auto;
+                display: block;
+                margin-right: auto !important;
+                text-align: center;
+                border-radius: 50%;
+            }
+            @media #{$tab_device}{
+                border-right: 0px solid $section_bg;
+                margin: 0 auto;
+                display: block;
+                margin-right: auto !important;
+                text-align: center;
+                border-radius: 50%;
+            }
+            @media #{$medium_device}{
+            
+            } 
+        }
+        .media-body{
+            padding-left: 26px;
+            @media #{$small_mobile}{
+                margin-top: 10px;
+                padding-left: 00px;
+                text-align: center;
+            }
+            @media #{$large_mobile}{
+                margin-top: 10px;
+                padding-left: 00px;
+                text-align: center;
+            }
+            @media #{$tab_device}{
+                margin-top: 10px;
+                padding-left: 00px;
+                text-align: center;
+            }
+            @media #{$medium_device}{
+                padding-left: 0px;
+            }
+            h3{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            h5{
+                font-size: 20px;
+                font-weight: 700;
+                color: $common_color;
+                margin-top: 20px;
+                @media #{$small_mobile}{
+                    margin-top: 10px;
+                }
+                @media #{$large_mobile}{
+                    margin-top: 10px;
+                }
+                @media #{$tab_device}{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

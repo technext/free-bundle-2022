@@ -1,0 +1,21 @@
+{
+  "bootstrap": {
+    "src": ["dist/js/bootstrap.min.js", "dist/js/bootstrap.min.js.map"],
+    "dest": "bootstrap"
+  },  
+ 
+  "feather-icons": {
+    "src": "dist/feather.min.js",
+    "dest": "feather-icons"
+  },
+
+  "@popperjs": {
+    "src": "core/dist/umd/popper.min.js",
+    "dest": "@popperjs"
+  },
+
+  "is_js": {
+    "src": "is.min.js",
+    "dest": "is"
+  }
+}

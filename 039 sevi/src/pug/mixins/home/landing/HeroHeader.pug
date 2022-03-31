@@ -1,0 +1,18 @@
+mixin HeroHeader
+  section.py-0#home
+    +Background({ image: `${CWD}assets/img/illustrations/hero-section.png`, attrs: { style: { 'background-position': 'right bottom', 'background-size': 'contain'} }, className: 'd-none d-md-block' })
+    +Background({image: `${CWD}assets/img/illustrations/hero-bg.png`, attrs: { style: { 'background-position': 'right top', 'background-size': 'contain'} }, className: 'd-block d-md-none' })
+    .container
+      .row.align-items-center.min-vh-md-75
+        .col-md-7.col-lg-6.py-6.text-sm-start.text-center
+          h1.mt-6.mb-sm-4.display-4.fw-semi-bold.lh-sm.fs-4.fs-lg-6.fs-xxl-7 Today's research, 
+            br.d-block.d-lg-none.d-xl-block
+            |tomorrow's innovation
+          p.mb-4.fs-1 Accelerating research discovery to shape a better future  
+          .pt-3
+            form
+              .input-group.w-xl-75.w-xxl-50.d-flex.flex-end-center
+                input#formGroupExampleInput.form-control.rounded-pill.border-0.font-base(type='text' placeholder='Search books, articles, keywords' )
+                img(src=`${CWD}assets/img/illustrations/search.png` width="18" alt='').input-box-icon.me-3
+
+              

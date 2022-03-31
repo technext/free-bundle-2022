@@ -1,0 +1,35 @@
+mixin FeatureList(config)
+  .card.px-5.px-md-3.py-lg-5
+    .row.flex-center
+      +Background({ image: `${CWD}assets/img/illustrations/${config.bgimage}`, attrs: { style: { 'background-position': 'center', 'background-size': 'contain',} }, className: 'z-index-1 d-none d-lg-block' })
+      +Background({ image: `${CWD}assets/img/illustrations/${config.bgimage}`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: 'z-index-1 d-block d-lg-none' })
+      .col-md-4.pe-0.pe-md-0.text-center
+        img.img-fluid(src=`${CWD}assets/img/illustrations/${config.image}`  alt='')  
+      .col-md-8.ps-md-3.pe-md-2.text-center.text-md-start.z-index-2
+        .card-body.px-0
+          h4.card-title.pt-md-5=config.title
+          p.mb-0!=config.text
+          div
+            a.btn.btn-lg.ps-0.pe-3(href='#' role='button') Learn more
+            svg.bi.bi-arrow-right(xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='#9C69E2' viewBox='0 0 16 16')
+              path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')
+
+mixin Features
+  section.py-6
+    .container-lg
+      .row.flex-center.mb-5
+        .col-auto.text-center.my-4
+          h1.mb-4.fw-bold Features
+          p Some of the features and advantages that we provide for those of you 
+            br
+            |who store data in this Data Warehouse.
+      .row  
+        .col-md-6.mb-4
+          +FeatureList({bgimage:'feature-bg-1.png',image:'feature-search.png',title:'Search Data',text:'Don’t worry if your data is very <br class="d-none d-lg-block"> large, the Data Warehoue <br class="d-none d-lg-block"> provides a search engine, <br class="d-none d-lg-block"> which is useful for making it <br class="d-none d-lg-block"> easier to find data effectively<br class="d-none d-lg-block">saving time.  '})
+        .col-md-6.mb-4
+          +FeatureList({bgimage:'feature-bg-2.png',image:'feature-hour.png',title:'24 Hours Access ',text:'Don’t worry if your data is very <br class="d-none d-lg-block"> large, the Data Warehoue <br class="d-none d-lg-block"> provides a search engine, <br class="d-none d-lg-block"> which is useful for making it <br class="d-none d-lg-block"> easier to find data effectively<br class="d-none d-lg-block">saving time.  '})
+        .col-md-6.mb-4
+          +FeatureList({bgimage:'feature-bg-3.png',image:'feature-print.png',title:'Print Out',text:'Don’t worry if your data is very <br class="d-none d-lg-block"> large, the Data Warehoue <br class="d-none d-lg-block"> provides a search engine, <br class="d-none d-lg-block"> which is useful for making it <br class="d-none d-lg-block"> easier to find data effectively<br class="d-none d-lg-block">saving time.  '})
+        .col-md-6.mb-4
+          +FeatureList({bgimage:'feature-bg-4.png',image:'feature-security.png',title:'Security Code',text:'Don’t worry if your data is very <br class="d-none d-lg-block"> large, the Data Warehoue <br class="d-none d-lg-block"> provides a search engine, <br class="d-none d-lg-block"> which is useful for making it <br class="d-none d-lg-block"> easier to find data effectively<br class="d-none d-lg-block">saving time.  '})
+          

@@ -1,0 +1,12 @@
+mixin CardText(config) 
+  .card.card-span.mb-3.shadow-lg
+    .card-body.py-0
+      .row.justify-content-center
+        .col-md-5.col-xl-7.col-xxl-8.g-0(class=`${config.order}`)
+          img.img-fluid.w-100.fit-cover.h-100(src=`${CWD}assets/img/gallery/${config.image}` alt='...' class=`${config.rounded}`)  
+        .col-md-7.col-xl-5.col-xxl-4.p-4.p-lg-5
+          h1.card-title.mt-xl-5.mb-4!=config.title
+          p.fs-1!=config.text
+          .d-grid.bottom-0
+            a.btn.btn-lg.btn-primary.mt-xl-6(href='#!') PROCEED TO ORDER
+              i.fas.fa-chevron-right.ms-2

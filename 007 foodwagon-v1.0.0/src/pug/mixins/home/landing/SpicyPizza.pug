@@ -1,0 +1,17 @@
+append variables
+  -
+    var pizza = [
+      {
+        image:'pizza.png',
+        rounded:'rounded-top rounded-md-end rounded-md-top-0',
+        order: 'order-0 order-md-1',
+        title:'Wanna eat hot &  <span class="text-primary">spicy Pizza?</span>',
+        text:'Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals.'
+      },
+    ]
+
+mixin SpicyPizza 
+  +Section.pt-5 
+    .row 
+      .col-12
+        +CardText(pizza[0])

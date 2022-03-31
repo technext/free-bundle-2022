@@ -1,0 +1,153 @@
+/**************** chefs_part css start ****************/
+.artist_part {
+    padding: 130px 0px 200px;
+    @media #{$small_mobile}{
+        padding: 70px 0px 60px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px 60px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px 60px;
+    }
+    @media #{$medium_device}{
+        padding: 70px 0px 140px;
+    }
+    .single_blog_item {
+        position: relative;
+        @include transform_time(0.5s);
+        @media #{$small_mobile}{
+            margin-bottom: 80px;
+            .single_blog_img{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        @media #{$large_mobile}{
+            margin-bottom: 80px;
+            .single_blog_img{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        @media #{$tab_device}{
+            margin-bottom: 80px;
+        }
+        @media #{$medium_device}{
+            
+        }
+        &:hover{
+            .single_blog_text{
+                padding:  34px 15px 22px;
+            }
+            .social_icon{
+                transform: scaleX(1);
+                @include transform_time(0.5s);
+            }
+            .single_text {
+                box-shadow: 0px 15px 30px 0px rgba(48, 56, 59, 0.1);
+                bottom: -68px;
+            }
+        }
+        h3 {
+            margin-bottom: 12px !important;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .social_icon {
+            margin-top: 25px;
+            transform: scaleX(0);
+            @include transform_time(0.5s);
+            @media #{$small_mobile}{
+                margin-top: 15px
+            }
+            @media #{$large_mobile}{
+                margin-top: 15px;            
+            }
+            @media #{$tab_device}{
+                margin-top: 15px;            
+            }
+            @media #{$medium_device}{
+            
+            }
+            a {
+                border: 1px solid rgb(226, 229, 231);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                font-size: 12px;
+                display: inline-block;
+                color: #949798;
+                line-height: 30px;
+                margin: 0px 5px;
+                @media #{$small_mobile}{
+                    margin: 0px 5px;
+                }
+                @media #{$large_mobile}{
+                    margin: 0px 5px;            
+                }
+                @media #{$tab_device}{
+                
+                }
+                @media #{$medium_device}{
+                }
+                &:hover {
+                    background-color: $btn_bg;
+                    color: $white_color !important;
+                    border: 1px solid $btn_bg;
+                }
+            }
+        }
+    }
+    .single_text {
+        position: absolute;
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        bottom: -123px;
+        @include transform_time(0.5s);
+    }
+    .single_blog_text {
+        @include transform_time(0.5s);
+        padding: 34px 15px 22px;
+        border: 0px solid transparent !important;
+        background-color: $white_color;
+        @media #{$small_mobile}{
+            padding: 22px 15px 22px !important;
+        }
+        @media #{$large_mobile}{
+            padding: 22px 15px 22px !important;
+        }
+        @media #{$tab_device}{
+            padding: 22px 15px 22px !important;
+        }
+        @media #{$medium_device}{
+            padding: 22px 15px 22px !important;
+        }
+        
+    }
+}
+.single_page_artist{
+    padding: 130px 0px 70px;
+    @media #{$small_mobile}{
+        padding: 70px 0px 5px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px 5px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px 5px;
+    }
+    @media #{$medium_device}{
+        padding: 70px 0px 10px;
+    }
+    .single_blog_item{
+        margin-bottom: 130px;
+    }
+}
+

@@ -1,0 +1,1 @@
+{"version":3,"sources":["theme/dropdown.scss"],"names":[],"mappings":"AAAA,eACI,eAAgB,CAChB,QAAS,CACT,eAAgB,CAChB,uBAAe,CAAf,eAAe,CACf,wBAAyB","file":"dropdown.min.css","sourcesContent":[".dropdown-menu {\r\n    min-width: 16rem;\r\n    border: 0;\r\n    border-radius: 0;\r\n    box-shadow:none;\r\n    background-color: #F0F4F9;\r\n}"]}

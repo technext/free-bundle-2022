@@ -1,0 +1,20 @@
+extends layouts/LayoutTheme
+include mixins/common/PreFooter
+include mixins/common/Footer
+include mixins/common/ItemCard
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Frame
+include mixins/home/landing/Item
+
+
+
+
+prepend scripts
+
+append content
+
+  +HeroHeader
+  +Section("container-fluid px-5").py-0
+    +NavbarShowcase
+    +Item
+  +PreFooter

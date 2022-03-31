@@ -1,0 +1,80 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Spinners
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Spinners',
+      description: 'Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/spinners/`,
+      linkText: 'Spinners on Bootstrap',
+      breadcrumb:[
+        {
+          name:'Components',
+          link:'#!'
+        },
+        {
+          name:'Spinners',
+          active:true
+        },
+      ]
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Basic Example',
+        id: '#basic-example',
+      },
+      {
+        name: 'Colors',
+        id: '#colors',
+      },
+      {
+        name: 'Growing spinner',
+        id: '#growing-spinner',
+      },
+      {
+        name: 'Growing colors',
+        id: '#growing-colors',
+      },
+      {
+        name: 'Size',
+        id: '#size',
+      },
+      {
+        name: 'Buttons',
+        id: '#buttons',
+      },
+    ]
+
+block component
+
+  +ComponentCard({title:'Basic Example'}).my-4
+    +SpinnerBasicExampleDemo
+
+  +ComponentCard({
+    title:'Colors',
+    description:"The border spinner uses <code>currentColor </code>for its <code>border-color</code>, meaning you can customize the color with text color utilities. You can use any of our text color utilities on the standard spinner."
+  }).my-4
+    +SpinnerColorsDemo
+
+  +ComponentCard({
+    title:'Growing spinner',
+    description:"If you don’t fancy a border spinner, switch to the grow spinner. While it doesn’t technically spin, it does repeatedly grow!"
+  }).my-4
+    +SpinnerGrowingDemo
+
+  +ComponentCard({
+    title:'Growing colors'
+  }).my-4
+    +SpinnerGrowingColorDemo
+
+  +ComponentCard({
+    title:'Size'
+  }).my-4
+    +SpinnerSizeDemo
+
+  +ComponentCard({
+    title:'Buttons'
+  }).my-4
+    +SpinnerButtonDemo

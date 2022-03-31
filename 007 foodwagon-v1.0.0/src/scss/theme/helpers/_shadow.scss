@@ -1,0 +1,30 @@
+.hover-top-shadow {
+  transform: translateY(0) translateZ(0);
+  transition: all 0.3s ease-out;
+  &.hover-top-shadow-lg {
+    &:hover,
+    &:focus {
+      transform: translateY(-0.3125rem) translateZ(0);
+    }
+  }
+  &:hover,
+  &:focus {
+    transform: translateY(-0.125rem) translateZ(0);
+    // box-shadow: 0.5rem 0.5rem 1.5rem rgba(22, 28, 45, 0.1) !important;
+    box-shadow: 0 0 .5rem 0 rgba($warning, 0.8)!important;
+  }
+}
+
+
+.shadow-transition {
+  box-shadow:  0 1.5625rem 2.8125rem rgba($gray-900, .075);
+  transition: box-shadow 0.4s ease;
+}
+
+.shadow-warning {
+  box-shadow: 0 0 3rem 0 rgba($warning, 0.3)!important;
+}
+
+.shadow-icon{
+  filter: drop-shadow(5px 5px 5px  rgba($warning, 0.3));
+}

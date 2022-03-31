@@ -1,0 +1,73 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/components/Toast
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Toasts',
+      description: 'Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/components/toasts/`,
+      linkText: 'Toasts on Bootstrap',
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Basic Example',
+        id: '#basic-example',
+      },
+      {
+        name: 'Placement',
+        id: '#placement',
+      },
+      {
+        name: 'Live Toast',
+        id: '#live-toast',
+      },
+      {
+        name: 'Translucent',
+        id: '#translucent',
+      },
+      {
+        name: 'Color schemes',
+        id: '#color-schemes',
+      },
+      {
+        name: 'Custom Content',
+        id: '#custom-content',
+      },
+    ]
+
+block component
+
+  +ComponentCard({title:'Basic Example'}).my-4
+    +ToastBasicExampleDemo
+
+  +ComponentCard({
+    title:'Placement',
+    description: 'Place toasts with the helper classes as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.'
+  }).mt-4.rounded-bottom-0
+    +ToastRightPlaceDemo
+  +ComponentCard({
+    title: '',
+    description:'You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.'
+  }).border-top-0.rounded-top-0.mb-4
+    +ToastMiddlePlaceDemo
+    
+  +ComponentCard({title:'Live Toast'}).my-4
+    +LiveToastDemo
+    
+  +ComponentCard({
+    title:'Translucent',
+    description: 'Toasts are slightly translucent, too, so they blend over whatever they might appear over.',
+    bodyClass:'bg-dark'
+  }).my-4
+    +TranslucentDemo
+    
+  +ComponentCard({title:'Color schemes'}).my-4
+    +ToastColorSchemesDemo
+    
+  +ComponentCard({
+    title:'Custom Content',
+    description:'You can also add additional controls and components to toasts.',
+  }).my-4
+    +CustomContentDemo

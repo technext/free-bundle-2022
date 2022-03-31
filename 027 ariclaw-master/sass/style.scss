@@ -1,0 +1,37 @@
+// variable scss
+@import "variables";
+
+// mixin scss
+@import "mixins";
+@import "extends";
+// default scss
+@import "common";
+
+// button scss
+@import "button";
+
+@import "blog";
+@import "single_blog";
+// body scss
+@import "menu";
+@import "banner";
+@import "about";
+@import "service";
+@import "our_offer";
+@import "cta_area";
+@import "priceing_part";
+@import "regervation_part";
+@import "artist_part";
+@import "review";
+@import "blog_part";
+@import "copyright_part";
+@import "team";
+@import "contact";
+@import "elements";
+@import "attorneys";
+@import "footer";
+// breadcrumb scss
+@import "breadcrumb";
+
+
+

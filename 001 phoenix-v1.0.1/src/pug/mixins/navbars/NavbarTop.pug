@@ -1,0 +1,19 @@
+include Mixins
+include ../common/Avatar
+//- include ../common/Card
+//- include ../common/Notification
+
+mixin NavbarTop(config)
+  nav.navbar.navbar-light.navbar-top&attributes(attributes)
+    +NavbarLogo(config.toggleID)
+    //- if config.search
+    //- .d-flex.align-items-center.flex-1
+    .collapse.navbar-collapse
+      +NavbarSearch
+      if config.links || config.simpleNav
+        div(id=config.navbarCollapseID ? config.navbarCollapseID : config.toggleID).collapse.navbar-collapse.scrollbar
+          if config.links
+            +NewTopNav({combo:false})
+          else
+            +NewTopNav({combo:true})
+      +NavbarIcons

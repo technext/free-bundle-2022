@@ -1,0 +1,33 @@
+extends ../../../layouts/LayoutTheme
+include ../../../layouts/LayoutSimpleAuth
+
+
+block wrapperContent
+  +LayoutBasic
+    .text-center.mb-7
+      h3 Sign In
+      p.text-700 Get access to your account
+    +SocialButtons({title:'Sign in'})
+    .position-relative.mt-4
+      hr.bg-200
+      .divider-content-center or use email
+    .mb-3.text-start
+      label.form-label(for='email') Email address
+      .form-icon-container
+        input#email.form-control.form-icon-input(type='email' placeholder='name@example.com')
+        span.fas.fa-user.text-900.fs--1.form-icon
+    .mb-3.text-start
+      label.form-label(for='password') Password
+      .form-icon-container
+        input.form-control.form-icon-input(type='password' placeholder='Password')
+        span.fas.fa-user.text-900.fs--1.form-icon
+    .row.flex-between-center.mb-7
+      .col-auto
+        .form-check.mb-0
+          input#basic-checkbox.form-check-input(type='checkbox', checked='checked')
+          label.form-check-label.mb-0(for='basic-checkbox') Remember me
+      .col-auto
+        a.fs--1.fw-semi-bold(href='#!') Forgot Password?
+    button.btn.btn-primary.w-100.mb-3 Sign In
+    .text-center
+      a.fs--1.fw-bold(href=`${CWD}${paths['simple-signup']}`) Create an account

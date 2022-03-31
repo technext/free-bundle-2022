@@ -1,0 +1,71 @@
+append variables
+  -
+    var blogs= [
+      {
+        image:'shoes-blog-1.png',
+        authorImage:'author-1.png',
+        name:'Kelly Hudson . <span class="fw-normal">Fashion actiKelly Hudson . </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
+        time:'5 min Read',
+        title:'How important are shoes in your style?',
+        text:'Is it possible to assess a person just on the basis of their footwear? Obviously, nobody should criticize, but certainly, shoes say a lot about someone. It matters for the outsiders that we meet every day...', 
+      },
+      {
+        image:'fashion-blog-2.png',
+        authorImage:'author-2.png',
+        time:'5 min Read',
+        name:'Rotondwa Johnny . <span class="fw-normal">Fashion activist </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
+        title:'Fashion trend forecast for  Summer 2021',
+        text:'While the fashion industry has had a calm year, this season has seen some beautiful pieces. Over the previous several weeks, commanding coats, and elegant face masks have ruled Fashion Weeks...',
+      },
+      {
+        image:'spring-dress-blog-3.png',
+        authorImage:'author-3.png',
+        time:'5 min Read',
+        name:'Martin . <span class="fw-normal">Fashion activist </span>',
+        views:'35',
+        like:'23',
+        reply:'14',
+        title:'Spring exclusive collection for Men & Women',
+        text:'Explore the first real-time photographic fashion magazine NOWFASHION to broadcast exclusive live fashion shows. Some of the most beautiful spring collection i want to share. See the....',
+      },
+      
+    ];
+
+mixin BlogItems(config)
+  .col-sm-9.col-md-4.mb-3.mb-md-0.h-100
+    .card.card-span.text-white.h-100
+      img.img-card(src=`${CWD}assets/img/gallery/${config.image}`  alt='...').h-100
+      .card-body.px-xl-5.px-md-3.pt-0.pb-7
+        .d-flex.justify-content-between.align-items-center.bg-100.mt-n5.me-auto
+          img(src=`${CWD}assets/img/gallery/${config.authorImage}` width='60' alt='...')
+          .d-flex.flex-1.justify-content-around 
+            span.text-900.text-center
+              i(data-feather='eye') 
+              span.text-900.ms-2=config.views
+            span.text-900.text-center
+              i(data-feather='heart') 
+              span.text-900.ms-2=config.like
+            span.text-900.text-center
+              i(data-feather='corner-up-right') 
+              span.text-900.ms-2=config.reply 
+        h6.text-900.mt-3!=config.name      
+        h3.fw-bold.text-1000.mt-5.text-truncate=config.title 
+        p.text-900.mt-3=config.text
+        a.btn.btn-lg.text-900.fs-1.px-0.hvr-icon-forward(href='#!' role='button') Read more
+          svg.bi.bi-arrow-right-short.hover-icon(xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z')  
+
+mixin Blog
+  +Section('container-fluid container-lg').py-0.pb-8
+    .row.h-100.g-2.justify-content-center
+      +BlogItems(blogs[0])
+      +BlogItems(blogs[1])
+      +BlogItems(blogs[2])
+      
+       

@@ -1,0 +1,317 @@
+/**************** common css start ****************/
+@import url('https://fonts.googleapis.com/css?family=Cardo|Roboto:400,400i|Rufina');
+body{
+    font-family: $font_stack_1;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+.message_submit_form:focus{
+    outline: none;
+}
+input:hover, input:focus{
+    outline: none !important;
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0rem transparent !important;
+}
+.gray_bg{
+    background-color: $section_bg;
+}
+.section_bg{
+    background-color: $section_bg;
+}
+.form-row>.col, .form-row>[class*=col-] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.section_padding {
+    padding: 130px 0px;
+    @media #{$medium_device}{
+        padding: 80px 0px;
+    }
+    @media #{$tab_device}{
+        padding: 70px 0px;
+    }
+    @media #{$small_mobile}{
+        padding: 70px 0px;
+    }
+    @media #{$large_mobile}{
+        padding: 70px 0px;
+    }
+}
+.single_padding_top{
+    padding-top: 140px !important;
+    @media #{$medium_device}{
+        padding-top: 70px !important;
+    }
+    @media #{$tab_device}{
+        padding-top: 70px !important;
+    }
+    @media #{$small_mobile}{
+        padding-top: 70px !important;
+    }
+    @media #{$large_mobile}{
+        padding-top: 80px !important;
+    } 
+}
+.padding_top{
+    padding-top: 140px;
+    @media #{$medium_device}{
+        padding-top: 80px;
+    }
+    @media #{$tab_device}{
+        padding-top: 70px;
+    }
+    @media #{$small_mobile}{
+        padding-top: 70px;
+    }
+    @media #{$large_mobile}{
+        padding-top: 70px;
+    } 
+}
+a{
+    text-decoration: none;
+    @include transform_time(.5s);
+    &:hover{
+        text-decoration: none;
+        @include transform_time(.5s);
+    }
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading_color;
+    font-family: $font_stack_1;
+}
+p{
+    font-family: $font_stack_2;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: $p_color;
+}
+  
+.Seed_spirit_replenish_cattle_one_moved_air_crea {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(119, 119, 119);
+   
+    text-align: right;
+    position: absolute;
+    left: 1073.988px;
+    top: 1367.25px;
+    width: 441px;
+    height: 95px;
+    z-index: 477;
+  }
+  
+
+
+h2 {
+    font-size: 44px;
+    line-height: 28px;
+    color: $heading_color;
+    font-weight: 600;
+    line-height: 1.222;
+    @media #{$small_mobile}{
+        font-size: 22px;
+        line-height: 25px;
+        
+    }
+    @media #{$large_mobile}{
+        font-size: 24px;
+        line-height: 25px;
+        
+    }
+}
+h3 {
+    font-size: 24px;
+    line-height: 25px;
+    @media #{$small_mobile}{
+        font-size: 20px;
+        
+    }
+}
+
+
+.blog_right_sidebar .widget_title {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-style: inherit; 
+    font-weight: 600;
+    color: #2a2a2a;
+}
+h5 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+img {
+    max-width: 100%;
+}
+a:focus, .button:focus, button:focus, .btn:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    @include transform_time(1s);
+}
+
+.section_tittle{
+    margin-bottom: 81px;
+    text-align: center;
+    @media #{$small_mobile}{
+        margin-bottom: 30px;
+    }
+    @media #{$large_mobile}{
+        margin-bottom: 30px;
+    }
+    @media #{$tab_device}{
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    @media #{$medium_device}{
+        margin-bottom: 30px;
+    }
+    img{
+        margin-bottom: 13px;
+    }
+    h2{
+        font-size: 36px;
+        color: $heading_color;
+        line-height: 1.25;
+        font-weight: 700;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 27px;
+        @media #{$small_mobile}{
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 15px;
+        }
+        @media #{$large_mobile}{
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 15px;
+        }
+        @media #{$tab_device}{
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+        @media #{$medium_device}{
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+    p{
+        color: $font_6;
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.mb_110{
+    margin-bottom: 110px;
+    @media #{$small_mobile}{
+        margin-bottom: 220px;
+    }
+    
+}
+.mt_130{
+    margin-top: 130px;
+    @media #{$small_mobile}{
+        margin-top: 70px;
+    }
+    @media #{$large_mobile}{
+        margin-top: 70px;
+    }
+    @media #{$tab_device}{
+        margin-top: 70px;
+    }
+    @media #{$medium_device}{
+        margin-top: 70px;
+    }
+}
+.mb_130{
+    margin-bottom: 130px;
+    @media #{$small_mobile}{
+        margin-bottom: 70px;
+    }
+    @media #{$large_mobile}{
+        margin-bottom: 70px;
+    }
+    @media #{$tab_device}{
+        margin-bottom: 70px;
+    }
+    @media #{$medium_device}{
+        margin-bottom: 70px;
+    }
+}
+.padding_less_40{
+    margin-bottom: -50px;
+}
+.z_index{
+    z-index: 9 !important;
+    position: relative;
+}
+.gj-datepicker{
+    width: 100% !important;
+}
+@media #{$small_mobile}{
+    .container-fluid{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .media{
+        display: block;
+     }
+}
+@media #{$large_mobile}{
+    .container-fluid{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .media{
+        display: block;
+     }
+}
+@media #{$tab_device}{
+    .container-fluid{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .media{
+        display: block;
+     }
+}
+@media #{$extra_big_screen}{
+    .container {
+        max-width: 1170px;
+    }
+}
+@media (max-width: 1200px) {
+    [class*="hero-ani-"] {
+        display: none !important;
+    }
+}
+.mr_bottom{
+    margin-bottom: 130px;
+    @media #{$small_mobile}{
+        margin-bottom: 70px;
+    }
+    @media #{$large_mobile}{
+        margin-bottom: 70px;
+    }
+    @media #{$tab_device}{
+        margin-bottom: 80px;
+    }
+    @media #{$medium_device}{
+    }
+}
+/**************** common css end ****************/

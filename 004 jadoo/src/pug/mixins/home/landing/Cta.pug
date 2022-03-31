@@ -1,0 +1,19 @@
+mixin Cta
+  +Section.pt-6
+    .py-8.px-5.position-relative.text-center(style="background-color: rgba(223, 215, 249, 0.199);border-radius: 129px 20px 20px 20px;")
+      .position-absolute.start-100.top-0.translate-middle.ms-md-n3.ms-n4.mt-3 
+        img(src=`${CWD}assets/img/cta/send.png` style="max-width:70px;" alt="send icon")
+      .position-absolute.end-0.top-0.z-index--1 
+        img(src=`${CWD}assets/img/cta/shape-bg2.png`, width='264' alt="cta shape")
+      .position-absolute.start-0.bottom-0.ms-3.z-index--1.d-none.d-sm-block 
+        img(src=`${CWD}assets/img/cta/shape-bg1.png`, style="max-width: 340px;" alt="cta shape")
+      .row.justify-content-center 
+        .col-lg-8.col-md-10 
+          h2.text-secondary.lh-1-7.mb-7 Subscribe to get information, latest news and other interesting offers about Cobham
+          form.row.g-3.align-items-center.w-lg-75.mx-auto     
+            .col-sm 
+              .input-group-icon
+                input.form-control.form-little-squirrel-control(type='email' placeholder='Enter email ' aria-label='email')
+                img.input-box-icon(src=`${CWD}assets/img/cta/mail.svg` width="17" alt="mail")
+            .col-sm-auto
+              button.btn.btn-danger.orange-gradient-btn.fs--1 Subscribe

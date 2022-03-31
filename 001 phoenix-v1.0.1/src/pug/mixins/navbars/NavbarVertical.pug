@@ -1,0 +1,121 @@
+include Mixins
+
+mixin LinkTopParent(config)
+  - var config = Object.assign({}, config)
+  - var { url, icon, text, badge, hasHash, isDisabled } = config;
+  - var href = hasHash ? text!=='modal' ? `${CWD}${url}.html` : `${CWD}${url}` : url
+  a.nav-link(
+    href=href
+    class=isDisabled ? 'nav-link-disable' :  href.includes(pathName) ? 'active' : ''
+  )&attributes(attributes)
+    .d-flex.align-items-center
+      if !hasHash
+        .dropdown-indicator-icon.d-flex.flex-center
+          span.fas.fa-caret-right.fs-0
+      if icon
+        span.nav-link-icon
+          span(data-feather=icon)
+        //- span(data-feather='message-square')
+      span.nav-link-text
+        +cleanText(text)
+      if badge
+        span.badge.rounded-pill.ms-2(class=`badge-soft-${badge.type}`)=badge.text
+
+
+
+mixin PageLooper(page,label, depth = 0)
+  -
+    function show(pages){
+      
+      const checkLink = (page)=>{
+        if(page.path === pathName){
+          return true;
+        }
+        return page.hasOwnProperty('pages') && page.pages.some(checkLink)
+      }
+      return pages.some(checkLink)
+    }
+  if page.pages
+    ul.nav.collapse.parent(class=`${ show(page.pages) ? 'show': ''}` id=page.name)
+      each innerPage in page.pages
+        li.nav-item
+          +LinkTopParent({
+            url: innerPage.pages ? `#${innerPage.name}`:`${innerPage.path}`,
+            text: innerPage.name,
+            badge: innerPage.badge,
+            icon: innerPage.icon,
+            isDisabled: innerPage.disabled,
+            hasHash: innerPage.pages ? false : true,
+          })(
+            class= innerPage.pages ? 'dropdown-indicator': ''
+            data-bs-toggle=innerPage.pages? "collapse" : innerPage.name === "modal" ? 'modal': ''
+            aria-expanded=innerPage.pages && show(innerPage.pages) ? 'true' : 'false'
+            aria-controls=innerPage.pages && page.name
+          )
+          // more inner pages
+          +PageLooper(innerPage,label, depth + 1)
+
+mixin Looper(sitemap)
+  -
+    function show(pages){
+      const checkLink = (page)=>{
+        if(page.path === pathName){
+          return true;
+        }
+        return page.hasOwnProperty('pages') && page.pages.some(checkLink)
+      }
+      return pages.some(checkLink)
+    }
+  each item, index in sitemap
+    li.nav-item
+      if item.label && !item.labelDisabled
+        // label
+        p.navbar-vertical-label
+          +cleanText(`${item.label}`)
+
+      if item.pages
+        each page in item.pages
+          // parent pages
+          +LinkTopParent({
+            url: page.pages ? `#${page.name}`: `${page.path}`,
+            icon: page.icon,
+            text: `${page.name}`,
+            badge: page.badge, 
+            hasHash: page.pages? false: true, 
+            isDisabled: page.disabled,
+          })(
+            role="button"
+            class= page.pages? 'dropdown-indicator': ''
+            data-bs-toggle=page.pages? "collapse" : page.name ==="modal" ? 'modal': ''
+            aria-expanded=page.pages && show(page.pages) ? 'true' : 'false'
+            aria-controls=page.pages && page.name
+          )
+          //- data-bs-target=page.name==="modal" && "#authentication-modal"
+          +PageLooper(page,item.label)
+      else
+        +LinkTopParent({
+          url: item.path,
+          text: item.name,
+          badge: item.badge,
+          icon: item.icon,
+          isDisabled: item.disabled,
+          hasHash: true,
+        })
+
+
+mixin NavbarVertical(config)
+  - var config = Object.assign({comboNav: false}, config)
+  //- .d-flex.align-items-center.position-fixed.top-0.z-index-2(style='width:15.875rem')
+  //-     .toggle-icon-wrapper
+  //-       +NavbarToggleIcon.navbar-vertical-toggle(data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation")
+  //-     +NavbarBrand({ wrapperClass: 'py-3'})
+  nav.navbar.navbar-light.navbar-vertical.navbar-vibrant&attributes(attributes)
+    #navbarVerticalCollapse.collapse.navbar-collapse
+      .navbar-vertical-content.scrollbar
+        ul.navbar-nav.flex-column#navbarVerticalNav
+          +Looper(sitemap)
+      .navbar-vertical-footer
+        a.btn.btn-link.border-0.fw-semi-bold.d-flex.ps-0(href="#!")
+          span.navbar-vertical-footer-icon(data-feather='log-out')
+          span Settings
+

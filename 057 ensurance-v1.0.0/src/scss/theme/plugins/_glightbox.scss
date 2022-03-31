@@ -1,0 +1,31 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Glightbox                                 */
+/* -------------------------------------------------------------------------- */
+
+.glightbox-open{
+  overflow: unset !important;
+}
+.gscrollbar-fixer{
+  margin-right: 0 !important;
+}
+[data-gallery] {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+// [data-gallery="video"] {
+//   cursor: -webkit-zoom-in;
+//   cursor: pointer;
+// }
+// .glightbox-clean .gslide-description {
+//   background: transparent;
+//   opacity: 0.5;
+// }
+// .glightbox-clean .gslide-title {
+//   color: #fafafa;
+// }
+// #glightbox-body {
+//   .plyr__video-wrapper.plyr__video-embed iframe{ z-index: 2; }
+//   .plyr__control{
+//     display: none;
+//   }
+// }

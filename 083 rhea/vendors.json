@@ -1,0 +1,26 @@
+{
+  "bootstrap": {
+    "src": ["dist/js/bootstrap.min.js", "dist/js/bootstrap.min.js.map"],
+    "dest": "bootstrap"
+  },  
+ 
+  "@fortawesome/fontawesome-free": {
+    "src": "js/all.min.js",
+    "dest": "fontawesome"
+  },
+
+  "@popperjs": {
+    "src": "core/dist/umd/popper.min.js",
+    "dest": "@popperjs"
+  },
+
+  "is_js": {
+    "src": "is.min.js",
+    "dest": "is"
+  },
+
+  "plyr": {
+    "src": ["dist/plyr.polyfilled.min.js", "dist/plyr.css"],
+    "dest": "plyr"
+  }
+}

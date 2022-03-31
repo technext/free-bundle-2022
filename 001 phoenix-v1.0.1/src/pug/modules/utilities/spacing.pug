@@ -1,0 +1,107 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Spacing
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Spacing',
+      description: 'Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/spacing/`,
+      linkText: 'Spacing on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Margin and padding',
+        id: '#margin-and-padding',
+        subItem: [
+          {
+            name: 'Notations',
+            id: '#notations',
+          },
+          {
+            name: 'Examples',
+            id: '#examples'
+          },
+          {
+            name: 'Horizontal centering',
+            id: '#horizontal-centering'
+          }
+        ]
+      },
+      {
+        name: 'Negative margins',
+        id: '#negative-margins',
+      },
+      {
+        name: 'Gap',
+        id: '#gap'
+      }
+    ]
+
+block component
+  .card.border.border-300.my-5 
+    .card-header.border-bottom.border-300
+      h3(data-anchor) Margin and padding
+    .card-body
+      p Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from .25rem to 3rem.
+
+      p.mb-0 Using the CSS Grid layout module? Consider using the 
+        a(href="https://getbootstrap.com/docs/5.1/utilities/spacing/#gap") gap utility.</a>
+    
+  .card.border.border-300.my-5
+    .card-header.border-bottom.border-300 
+      h3.mb-0(data-anchor) Notations 
+    .card-body
+      +SpacingDoc
+
+
+  .card.border.border-300.my-5 
+    .card-header.border-bottom.border-300
+      h3.mb-1(data-anchor) Examples
+      p.text-700.mb-0 Here are some representative examples of these classes:
+    .card-body.p-0
+      +ComponentCardLib('css')
+        +SpacingExample
+
+
+
+  +ComponentCard({
+    title: 'Horizontal centering',
+    anchor: true,
+    description: 'Additionally, Bootstrap also includes an <code>.mx-auto</code> class for horizontally centering fixed-width block level content—that is, content that has <code>display: block</code> and <code>a width</code> set—by setting the horizontal margins to <code>auto</code>.'
+  }).my-5
+    +SpacingHorizontalCentering
+
+  .card.border.border-300.my-5 
+    .card-header.border-bottom.border-300
+      h3.mb-1(data-anchor) Negative margins
+      p.text-700.mb-0 In CSS, 
+        code margin 
+        | properties can utilize negative values (
+        code padding 
+        | cannot). These negative margins are 
+        strong disabled 
+        | by default, but can be enabled in Sass by setting 
+        code $enable-negative-margins: true
+        |.
+
+        | The syntax is nearly the same as the default, positive margin utilities, but with the addition of 
+        code n 
+        | before the requested size. Here’s an example class that’s the opposite of 
+        code .mt-1
+        |:
+    .card-body.p-0
+      +ComponentCardLib('css')
+        +SpacingNegativeMargin
+
+  +ComponentCard({
+    title: 'Gap',
+    anchor: true,
+    description: 'When using <code>display: grid</code>, you can make use of <code>gap</code> utilities on the parent grid container. This can save on having to add margin utilities to individual grid items (children of a <code>display: grid</code> container). Gap utilities are responsive by default, and are generated via our utilities API, based on the <code>$spacers</code> Sass map.'
+  }).my-5
+    +GapDoc
+
+
+

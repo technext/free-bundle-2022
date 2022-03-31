@@ -1,0 +1,13 @@
+.input-group{
+  position: relative;
+  .input-box{
+    padding-left: 2.2rem;
+    vertical-align: middle;
+  }
+  .input-box-icon{
+    position: absolute;
+    top:50%;
+    // left: 19.9rem;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,73 @@
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.text-dark.fs--1.text-decoration-none(href='#!')
+        =item
+
+mixin PreFooter
+  +Section.py-6
+    .row.flex-center.px-3         
+      .col-12.col-md-6.px-md-0.order-1.order-md-0
+        .text-center.text-md-start
+          p.mb-0 This template is made with&nbsp;
+            svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#9C69E2' viewBox='0 0 16 16')
+              path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+            |&nbsp;by&nbsp;
+            a(href='https://themewagon.com/' target='_blank').text-1000 ThemeWagon 
+            
+      .col-12.col-md-6.text-center.text-md-end.mb-3.mb-md-0 
+        a(href='#')
+          img.img-fluid(src=`${CWD}assets/img/icons/pre-footer.png` height="14" alt=''  )
+
+mixin Footer
+  +Section.py-6.pb-0
+    hr.text-info.opacity-25
+    .row.py-7.justify-content-sm-between.text-center.text-md-start
+      .col-md-6
+        h1.fw-bold Try for free!
+        p Get limited 1 week free try our features!
+      .col-md-6.text-lg-end
+        a.btn.btn-lg.btn-danger.rounded-pill.me-4.me-md-3.me-lg-4(href='#' role='button')
+          | Learn more
+        a.btn.btn-light.rounded-pill.shadow.fw-bold(href='#' role='button') Request Demo 
+          svg.bi.bi-arrow-right(xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='#9C69E2' viewBox='0 0 16 16')
+            path(fill-rule='evenodd' d='M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z')
+         
+    .row.justify-content-lg-around
+      .col-12.col-sm-12.col-lg-3.mb-4.order-0.order-sm-0
+        a(href='#').text-decoration-none
+          img.img-fluid.me-3(src=`${CWD}assets/img/icons/logo.png` alt='' )
+          span.fw-bold.fs-1.text-1000 DataWarehouse
+
+        p.mt-4 Warehouse Society, 234 
+          br
+          |Bahagia Ave Street PRBW 29281
+
+        p info@warehouse.project
+          br
+          |1-232-3434 (Main) 
+
+      .col-6.col-sm-4.col-lg-3.mb-3.order-2.order-sm-1
+        h6.lh-lg.fw-bold.mb-4 About
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Profile','Features','Careers','DW News')
+
+      .col-6.col-sm-4.col-lg-3.mb-3.order-3.order-sm-2
+        h6.lh-lg.fw-bold.mb-4  Help 
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Support','Sign Up ','Guide','Reports','Q&A')
+          
+      .col-12.col-sm-4.col-lg-3.mb-3.order-1.order-sm-3
+        h6.lh-lg.fw-bold.mb-4 Social Media 
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          li.list-inline-item
+            a.text-dark.fs--1.text-decoration-none(href='#!')
+              img.img-fluid(src=`${CWD}assets/img/icons/f.png` width="40" alt=''  )
+          li.list-inline-item
+            a.text-dark.fs--1.text-decoration-none(href='#!')
+              img.img-fluid(src=`${CWD}assets/img/icons/t.png` width="40" alt=''  )    
+          li.list-inline-item
+            a.text-dark.fs--1.text-decoration-none(href='#!')
+              img.img-fluid(src=`${CWD}assets/img/icons/i.png` width="40" alt=''  )
+  +PreFooter         

@@ -1,0 +1,89 @@
+append variables 
+  -
+    var stetData = [
+      {
+        theme: 'primary',
+        img: 'selection.svg',
+        title: 'Choose Destination',
+        text: 'Choose your favourite place. No matter <br class="d-none d-sm-block"> where you travel inside the World.'
+      },
+      {
+        theme: 'danger',
+        img: 'water-sport.svg',
+        title: 'Make Payment',
+        text: 'After find your perfect spot, make your <br class="d-none d-sm-block"> payment and get ready to travel.'
+      },
+      {
+        theme: 'info',
+        img: 'taxi.svg',
+        title: 'Reach Airport on Selected Date',
+        text: 'Lastly, you have to arrive at the airport <br class="d-none d-sm-block"> on time and enjoy the vacation.'
+      }
+    ]
+
+    var icons = [
+      {
+        icon: 'leaf.svg'
+      },
+      {
+        icon: 'map.svg'
+      },
+      {
+        icon: 'send.svg'
+      }
+    ]
+
+mixin Booking 
+  +Section#booking
+    .row.align-items-center 
+      .col-lg-6 
+        .mb-4.text-start
+          +SectionTitle('Easy and Fast', 'Book your next trip in 3 easy steps')
+        each val in stetData
+          +Step(val)
+
+      .col-lg-6.d-flex.justify-content-center.align-items-start
+        .card.position-relative.shadow(style="max-width: 370px;")
+          .position-absolute.z-index--1.me-10.me-xxl-0(style="right:-160px;top:-210px;") 
+            img(src=`${CWD}assets/img/steps/bg.png`, style="max-width:550px;"  alt="shape")
+          .card-body.p-3   
+            img.mb-4.mt-2.rounded-2.w-100(src=`${CWD}assets/img/steps/booking-img.jpg` alt="booking") 
+            div 
+              h5.fw-medium Trip To Greece
+              p.fs--1.mb-3.fw-medium 14-29 June | by Robbin joseph
+              .icon-group.mb-4 
+                each val in icons
+                  +Icon(val)
+              .d-flex.align-items-center.justify-content-between
+                .d-flex.align-items-center.mt-n1
+                  img.me-3(src=`${CWD}assets/img/steps/building.svg` width='18' alt="building") 
+                  span.fs--1.fw-medium 24 people going
+                .show-onhover.position-relative
+                  .card.hideEl.shadow.position-absolute.end-0.start-xl-50.bottom-100.translate-xl-middle-x.ms-3(style="width: 260px;border-radius:18px;")    
+                    .card-body.py-3 
+                      .d-flex 
+                        div(style="margin-right: 10px") 
+                          img.rounded-circle(src=`${CWD}assets/img/steps/favorite-placeholder.png` width="50" alt="favorite")
+                        div
+                          p.fs--1.mb-1.fw-medium Ongoing 
+                          h5.fw-medium.mb-3 Trip to rome
+                          h6.fs--1.fw-medium.mb-2!= '<span>40%</span> completed'
+                          .progress(style="height: 6px;") 
+                            .progress-bar(role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+                  button.btn 
+                    img(src=`${CWD}assets/img/steps/heart.svg` width='20' alt="step")
+
+                
+
+mixin Icon(props)
+  span.btn.icon-item 
+    img(src=`${CWD}assets/img/steps/${props.icon}`, alt="")
+
+
+mixin Step(props)
+  .d-flex.align-items-start.mb-5 
+    div(class=`bg-${props.theme} me-sm-4 me-3 p-3` style="border-radius: 13px") 
+      img(src=`${CWD}assets/img/steps/${props.img}` width='22' alt="steps")
+    .flex-1  
+      h5.text-secondary.fw-bold.fs-0!= props.title 
+      p!= props.text

@@ -1,0 +1,47 @@
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.footer-link(href='#!')
+        =item
+
+mixin Footer 
+  +Section.py-0.bg-primary
+    .row.justify-content-md-between.justify-content-evenly.py-4
+      .col-12.col-sm-8.col-md-6.col-lg-auto.text-center.text-md-start 
+        p.fs--1.my-2.fw-bold.text-200 All rights Reserved &copy; Your Company, 2021
+      .col-12.col-sm-8.col-md-6
+        p.fs--1.my-2.text-center.text-md-end.text-200  Made with&nbsp;
+          svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='#F95C19' viewBox='0 0 16 16')
+            path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+          |&nbsp;by&nbsp;
+          a(href='https://themewagon.com/' target='_blank').fw-bold.text-info ThemeWagon 
+
+mixin PreFooter 
+  section.py-0.bg-secondary
+    +Background({image: `${CWD}assets/img/gallery/dot-bg.png`, attrs: { style: { 'background-position': 'top left', 'margin-top': '-3.125rem', 'background-size': 'auto',} }, className: 'opacity-25' })
+    .container
+      .row.py-8
+        .col-12.col-sm-12.col-lg-6.mb-4.order-0.order-sm-0
+          a(href='#').text-decoration-none
+            img(src=`${CWD}assets/img/gallery/footer-logo.png` height="51" alt='' ) 
+
+          p.text-light.my-4 The world's most trusted 
+            br
+            |telehealth company.
+          
+        .col-6.col-sm-4.col-lg-2.mb-3.order-2.order-sm-1
+          h5.lh-lg.fw-bold.mb-4.text-light.font-sans-serif Departments
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('Eye care','Cardiac are','Heart care')
+
+        .col-6.col-sm-4.col-lg-2.mb-3.order-3.order-sm-2
+          h5.lh-lg.fw-bold.text-light.mb-4.font-sans-serif Membership
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('Free trial','Silver','Premium')
+        
+        .col-6.col-sm-4.col-lg-2.mb-3.order-3.order-sm-2
+          h5.lh-lg.fw-bold.text-light.mb-4.font-sans-serif  Customer Care
+          ul.list-unstyled.mb-md-4.mb-lg-0
+            +FooterList('About Us','Contact US','Get Update')
+    +Footer

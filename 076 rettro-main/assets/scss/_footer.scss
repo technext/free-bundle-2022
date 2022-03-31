@@ -1,0 +1,108 @@
+.footer-wrappper{
+    background: #071112;
+}
+.footer-area{
+  /* 2. header */
+
+    .main-menu2{
+        padding: 20px 0;
+        ul {
+            li {
+                display: inline-block;
+                position: relative;
+                a {
+                    font-family: $font_2;
+                    color: #9DA4AB;
+                    display: block;
+                    font-weight: 400;
+                    padding: 18px 26px;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    text-decoration: underline transparent;
+
+                    @media #{$md}{
+                        padding: 18px 11px;
+                    }
+                    @media #{$sm}{
+                        padding: 18px 11px;
+                    }
+                    @media #{$xs}{
+                        padding: 18px 11px;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+//copy Right 
+.footer-bottom-area {
+    .footer-border{
+        // border-top: 1px solid #d7e7fe;
+        padding: 33px 0px 20px;
+    }
+    .footer-copy-right{
+        p{
+            color: #646D77;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 12px;
+            i{
+                color:#fff
+            }
+            a{
+                color: #fff;
+                &:hover{
+                    // color: #fff;
+                }
+                 
+            }
+        }
+    }
+}
+
+// footer social
+.footer-social{
+    a{
+        background: rgba(50, 157, 35,.06);
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 14px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 8px;
+        border: 1px solid #9DA4AB;
+        &:hover{
+            color: #000;
+            background: #fff;
+            border: 1px solid transparent;
+            i{
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+            }
+        }
+        i{
+                display:inline-block;
+                @include transition(.4s);
+                transform: rotateY(0deg);
+                -webkit-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);
+        }
+    }
+}
+

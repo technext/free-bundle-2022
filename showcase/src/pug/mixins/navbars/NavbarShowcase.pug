@@ -1,0 +1,35 @@
+mixin NavbarShowcase
+  nav.navbar.navbar-expand.navbar-light.rounded.border.mt-6.justify-content-center
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link.active.fw-medium(href="javascript: void(0)" data-filter="*" data-bs-nav) All
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".admin" data-bs-nav) Admin & Dashboard
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".business" data-bs-nav) Business & Corporate
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".landing" data-bs-nav) Landing Pages
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".ecommerce" data-bs-nav) E-commerce
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".food" data-bs-nav) Food & Restaurant
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".medical" data-bs-nav) Medical & Health Care
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".travel" data-bs-nav) Travel & Booking
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".multipurpose" data-bs-nav) Multipurpose
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".portfolio" data-bs-nav) Portfolio
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".photography" data-bs-nav) Photography
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".game" data-bs-nav) Game & Anime  
+      li.nav-item
+        a.nav-link.fw-medium(href="javascript: void(0)" data-filter=".other" data-bs-nav) Other
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle.fw-medium(href="javascript: void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") More
+        .dropdown-menu.dropdown-menu-end.category-list(aria-labelledby="navbarDropdown")
+  a.back-to-top.bg-info(href="#")
+    i.fas.fa-angle-double-up 
+

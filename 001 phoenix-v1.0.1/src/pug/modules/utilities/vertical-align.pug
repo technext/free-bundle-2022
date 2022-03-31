@@ -1,0 +1,40 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/VerticalAlign
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Vertical Align',
+      description: 'Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/vertical-align/`,
+      linkText: 'Vertical align on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Example',
+        id: '#example',
+      },
+      {
+        name: 'Vertical Alignment With Table Cells example',
+        id: '#vertical-alignment-with-table-cells',
+      }
+    ]
+
+append component
+
+  +ComponentCard({
+    title: 'Example',
+    descriptionEl:`<p class="mb-0 pt-1 mt-2">Change the alignment of elements with the vertical-alignment utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+    <br> Choose from <code>.align-baseline,</code> <code>.align-top,</code> <code>.align-middle,</code> <code>.align-bottom,</code> <code>.align-text-bottom,</code> and <code>.align-text-top</code> as needed.
+    <br>Multiple links and tap targets are not recommended with stretched links. However, some <code>position </code>and <code>z-index </code>styles can help should this be required.
+  </p>`
+  }).mb-4
+    +VerticalAlignExampleDemo
+
+  +ComponentCard({
+    title: 'Vertical Alignment With Table Cells',
+  }).mb-4
+    +VerticalAlignExampleTable
+
+

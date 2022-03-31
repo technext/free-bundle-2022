@@ -1,0 +1,242 @@
+/**************menu part start*****************/
+.home_menu{
+	.main-menu-item {
+		padding-right: 100px;
+	}
+	.menu_btn{
+		&:hover a{
+			color: $white-color !important;
+		}
+	}
+}
+.main_menu {
+	.navbar-brand {
+		padding-top: 0rem;
+		padding-bottom: 0px;
+	}
+
+	.navbar {
+		padding: 22px 0px;
+	}
+	.main-menu-item {
+		text-align: center !important;
+		justify-content: center !important;
+		ul {
+			li a {
+				color: $menu_color !important;
+				font-size: 16px;
+				padding: 0px 22px !important;
+				font-family: $font_stack_1;
+				@media #{$medium_device}{
+					padding: 0px 16px !important;
+				}
+				@media #{$tab_device}{
+					padding: 10px 16px !important;
+				}
+				@media #{$large_mobile}{
+					padding: 10px 16px !important;
+				}
+				@media #{$small_mobile}{
+					padding: 10px 16px !important;
+				}
+
+				&:hover{
+					color: $btn_bg !important;
+				}
+			}
+			
+		}
+	}
+}
+
+.home_menu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.menu_fixed {
+	position: fixed;
+	z-index: 9999 !important;
+	width: 100%;
+	background-color: $white-color;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+	top: 0;
+
+	span {
+		color: #000 !important;
+	}
+	.btn_1{
+		border: 2px solid $btn_bg;
+		&:hover{
+			border: 2px solid transparent;
+		}
+	}
+	.main-menu-item {
+		padding-right: 0px;
+	}
+}
+.dropdown-menu{
+	border: 0px solid rgba(0,0,0,.15) !important;
+	background-color: #fafafa;
+}
+
+.dropdown {
+    .dropdown-menu {
+        transition: all 0.5s;
+        overflow: hidden;
+        transform-origin: top center;
+        transform: scale(1,0);
+		display: block;
+		margin-top: 18px;
+		.dropdown-item{
+			font-size: 14px;
+			padding: 9px 18px !important;
+			font-family: "Lora", serif;
+		}
+    }
+    &:hover {
+        .dropdown-menu {
+            transform: scale(1);
+        }
+    }
+}
+@media #{$small_mobile} {
+	.navbar-brand img{
+		max-width: 100px;
+	}
+	.navbar-light .navbar-toggler{
+		border-color: transparent;
+		position: absolute;
+        right: 0;
+	}
+	.navbar-collapse {
+		z-index: 9999 !important;
+		position: absolute;
+		left: 0;
+		top: 71px;
+		width: 100%;
+		background-color: $white-color;
+		text-align: center !important;
+		
+	}
+	.main_menu .main-menu-item{
+		text-align: left !important;
+	}
+	.dropdown {
+		.dropdown-menu {
+			transform: scale(1,0);
+			display: none;
+		}
+		&:hover {
+			.dropdown-menu {
+				transform: scale(1);
+				display: block;
+			}
+		}
+	}
+}
+
+@media #{$large_mobile} {
+	.navbar-light .navbar-toggler{
+		border-color: transparent;
+		position: absolute;
+		right: auto;
+		left: 0;
+	}
+	.navbar{
+		.navbar-brand{
+			text-align: center;
+			margin: 0 auto;
+			padding-left: 16%;
+		}
+	}
+	
+	.navbar-collapse {
+		z-index: 9999 !important;
+		position: absolute;
+		left: 0;
+		top: 71px;
+		width: 100%;
+		background-color: $white-color;
+		text-align: center !important;
+	}
+	.main_menu .main-menu-item{
+		text-align: left !important;
+		.nav-item{
+			padding: 3px 15px !important;
+		}
+	}
+	.dropdown {
+		.dropdown-menu {
+			transform: scale(1,0);
+			display: none;
+		}
+		&:hover {
+			.dropdown-menu {
+				transform: scale(1);
+				display: block;
+			}
+		}
+	}
+}
+
+@media #{$tab_device} {
+	.navbar-light .navbar-toggler{
+		border-color: transparent;
+		position: absolute;
+		right: auto;
+		left: 0;
+	}
+	.navbar{
+		.navbar-brand{
+			text-align: center;
+			margin: 0 auto;
+			padding-left: 16%;
+		}
+	}
+	
+	.navbar-collapse {
+		z-index: 9999 !important;
+		position: absolute;
+		left: 0;
+		top: 71px;
+		width: 100%;
+		background-color: $white-color;
+		text-align: center !important;
+	}
+	.main_menu .main-menu-item{
+		text-align: left !important;
+		.nav-item{
+			padding: 3px 15px !important;
+		}
+		.dropdown {
+			.dropdown-menu {
+				transform: scale(1,0);
+				display: none;
+			}
+			&:hover {
+				.dropdown-menu {
+					transform: scale(1);
+					display: block;
+				}
+			}
+		}
+	}
+	@media #{$medium_device}{
+		.dropdown {
+			.dropdown-menu {
+				transform: scale(1,0);
+				display: none;
+			}
+			&:hover {
+				.dropdown-menu {
+					transform: scale(1);
+					display: block;
+				}
+			}
+		}
+	}
+}

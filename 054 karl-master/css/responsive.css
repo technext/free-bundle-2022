@@ -1,0 +1,146 @@
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .welcome_slide_text > h2,
+    .single_catagory_area h2 {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-toggler {
+        padding: 0;
+        font-size: 20px;
+        line-height: 1;
+        background-color: #ff084e;
+        border: none;
+        border-radius: 0;
+        width: 80px;
+        height: 35px;
+        color: #fff;
+        line-height: 28px;
+    }
+    #karl-navbar {
+        padding: 15px;
+        background-color: #f4f2f8;
+    }
+    .single_footer_area {
+        margin-bottom: 100px;
+    }
+    .welcome_slide_text > h2,
+    .single_catagory_area h2 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .catagories-side-menu {
+        width: 260px;
+    }
+    #wrapper.karl-side-menu-open {
+        left: 260px;
+    }
+    .top_logo a img {
+        max-width: 80px;
+    }
+    .cart > a {
+        font-size: 12px;
+    }
+    .header-right-side-menu > a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .header-social-area {
+        margin-bottom: 30px;
+    }
+    .main_header_area {
+        height: auto;
+        padding: 30px 0;
+    }
+    .navbar-toggler {
+        padding: 0;
+        font-size: 20px;
+        line-height: 1;
+        background-color: #ff084e;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        height: 35px;
+        color: #fff;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    #karl-navbar {
+        padding: 15px;
+        background-color: #f4f2f8;
+        margin-bottom: 30px;
+    }
+    .single_footer_area {
+        margin-bottom: 100px;
+    }
+    .footer_social_area > a {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    .subscribtion_form .submit {
+        padding: 0 20px;
+    }
+    .top-discount-area .single-discount-area {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 40px 15px;
+        background-color: #b8b8b8;
+        text-align: center;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+    }
+    .welcome_slide_text > h2,
+    .single_catagory_area h2 {
+        font-size: 30px;
+    }
+    .single_slide.height-800 {
+        height: 500px !important;
+    }
+    .single_catagory_area {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        width: 100%;
+    }
+    .section_heading h2,
+    .offer-content-area h2 {
+        font-size: 24px;
+    }
+    .offer-product-price h3 {
+        font-size: 18px;
+    }
+    .shop_grid_product_area,
+    .single_product_desc {
+        margin-top: 100px;
+    }
+    .cart_area .update-checkout a,
+    .cart_area .back-to-shop a {
+        display: block;
+        height: 40px;
+        line-height: 36px;
+        min-width: 100px;
+        padding: 0 5px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .cart_area .update-checkout a:first-child {
+        margin-bottom: 10px;
+    }
+    .order-details-confirmation {
+        margin-top: 100px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .top_logo a img {
+        max-width: 120px;
+    }
+}

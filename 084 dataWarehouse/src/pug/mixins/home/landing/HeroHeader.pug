@@ -1,0 +1,22 @@
+mixin HeroHeader
+  +Section.py-5
+    .row.align-items-center
+      .col-md-5.col-lg-7.order-md-1.pt-8
+        img.img-fluid(src=`${CWD}assets/img/illustrations/hero-header.png`  alt='')  
+
+      .col-md-7.col-lg-5.text-center.text-md-start.pt-5.pt-md-9
+        h1.mb-4.display-2.fw-bold Save your data 
+          br.d-block.d-lg-none.d-xl-block
+          |storage here.
+        
+        p.mt-3.mb-4 Data Warehouse is a data storage area that 
+          br
+          |has been tested for security, so you can store
+          br
+          | your data here safely but not be afraid of 
+          br
+          |being stolen by others.
+
+        a.btn.btn-lg.btn-info.rounded-pill(href='#' role='button')
+          | Learn more
+        

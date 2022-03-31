@@ -1,0 +1,21 @@
+mixin HeroHeader
+  section.py-11.bg-light-gradient.border-bottom.border-white.border-5
+    +Background({ image: `${CWD}assets/img/gallery/header-bg.png`, attrs: { style: {'background-size':'cover'} }, className: 'overlay overlay-light' })
+    .container 
+      .row.flex-center
+        .col-12.mb-10
+          .d-flex.align-items-center.flex-column
+            h1.fw-normal  With an outstanding style, only for you
+            h1.fs-4.fs-lg-8.fs-md-6.fw-bold Exclusively designed for you
+  +Section.py-0#header(style='margin-top: -23rem !important;')
+    .row.g-0 
+      .col-md-6   
+        .card.card-span.h-100.text-white  
+          img.img-fluid(src=`${CWD}assets/img/gallery/her.png` width='790' alt='...')
+          .card-img-overlay.d-flex.flex-center  
+            a.btn.btn-lg.btn-light(href='#!') For Her
+      .col-md-6 
+        .card.card-span.h-100.text-white  
+          img.img-fluid(src=`${CWD}assets/img/gallery/him.png` width='790' alt='...')
+          .card-img-overlay.d-flex.flex-center  
+            a.btn.btn-lg.btn-light(href='#!') For Him     

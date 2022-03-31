@@ -1,0 +1,20 @@
+/*---------------------
+   Footer section
+ -----------------------*/
+.footer__copyright__text {
+  text-align: center;
+  padding-bottom: 5px;
+  p {
+    font-size: 16px;
+  }
+  i {
+    color: #d32a2a;
+  }
+  a {
+    color: $p_color;
+    text-decoration: underline;
+    &:hover {
+      color:  $primary_color;
+    }
+  }
+}

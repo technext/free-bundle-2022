@@ -1,0 +1,119 @@
+extends ../../layouts/LayoutTheme
+
+block content
+  .container
+    .p-3
+      .my-2
+        .progress
+          .progress-bar(role='progressbar' style='width: 60%' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100') 50
+      .my-2
+        .progress(style="height:0.625rem;")
+          .progress-bar.rounded-3(role='progressbar' style='width: 60%' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100') 50
+      .my-2
+        .progress(style="height:0.625rem;")
+          .progress-bar.rounded-3(role='progressbar' style='width: 100%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+      .my-2
+        .progress(style="height:0.625rem;")
+          .progress-bar.rounded-3(role='progressbar' style='width: 20%' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+
+    .p-3 
+      .my-2 
+        h5.mb-1 64%
+        .progress
+          .progress-bar.bg-success.rounded-3(role='progressbar' style='width: 64%' aria-valuenow='64' aria-valuemin='0' aria-valuemax='100')
+
+    .p-3 
+      .my-3
+        .mb-2.d-flex.justify-content-between  
+          h5.mb-0 Progress 
+          h5.mb-0 100%
+        .progress
+          .progress-bar.bg-success.rounded-3(role='progressbar' style='width: 100%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+      .my-3
+        .mb-2.d-flex.justify-content-between  
+          h5.mb-0 Progress 
+          h5.mb-0 76%
+        .progress
+          .progress-bar.bg-700.rounded-3(role='progressbar' style='width: 76%' aria-valuenow='76' aria-valuemin='0' aria-valuemax='100')
+      .my-3
+        .mb-2.d-flex.justify-content-between  
+          h5.mb-0 Progress 
+          h5.mb-0 89%
+        .progress
+          .progress-bar.rounded-3(role='progressbar' style='width: 89%' aria-valuenow='89' aria-valuemin='0' aria-valuemax='100')
+      .my-3
+        .mb-2.d-flex.justify-content-between  
+          h5.mb-0 Progress 
+          h5.mb-0 32%
+        .progress
+          .progress-bar.bg-700.rounded-3(role='progressbar' style='width: 32%' aria-valuenow='32' aria-valuemin='0' aria-valuemax='100')
+
+    .p-3 
+      .my-2 
+        .progress.progress-stack
+          .progress-bar(role='progressbar' style='width: 19%' aria-valuenow='19' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 22%' aria-valuenow='22' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-danger(role='progressbar' style='width: 16%' aria-valuenow='16' aria-valuemin='0' aria-valuemax='100')
+      .my-2 
+        .progress.progress-stack
+          .progress-bar(role='progressbar' style='width: 35%' aria-valuenow='35' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 2%' aria-valuenow='2' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 45%' aria-valuenow='45' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-danger(role='progressbar' style='width: 6%' aria-valuenow='6' aria-valuemin='0' aria-valuemax='100')
+      .my-2 
+        .progress.progress-stack
+          .progress-bar(role='progressbar' style='width: 16%' aria-valuenow='16' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 55%' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 21%' aria-valuenow='21' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-danger(role='progressbar' style='width: 8%' aria-valuenow='8' aria-valuemin='0' aria-valuemax='100')
+      .my-2 
+        .progress.progress-stack
+          .progress-bar(role='progressbar' style='width: 15%' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-danger(role='progressbar' style='width: 5%' aria-valuenow='5' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 70%' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100')
+      .my-2 
+        .progress.progress-stack
+          .progress-bar.bg-danger(role='progressbar' style='width: 5%' aria-valuenow='5' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 20%' aria-valuenow='20' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar(role='progressbar' style='width: 45%' aria-valuenow='45' aria-valuemin='0' aria-valuemax='100')
+      .my-2 
+        .progress.progress-stack
+          .progress-bar(role='progressbar' style='width: 23%' aria-valuenow='23' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 14%' aria-valuenow='14' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-warning(role='progressbar' style='width: 11%' aria-valuenow='11' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-danger(role='progressbar' style='width: 5%' aria-valuenow='5' aria-valuemin='0' aria-valuemax='100')
+          .progress-bar.bg-success(role='progressbar' style='width: 32%' aria-valuenow='32' aria-valuemin='0' aria-valuemax='100')
+
+    .p-3 
+      .my-2.d-flex 
+        .form-check.form-switch
+          input.form-check-input(type='checkbox' role='switch' checked='')
+
+        .form-check.form-switch
+          input.form-check-input(type='checkbox' role='switch')
+
+      .my-2.d-flex 
+        .form-check.form-switch.form-switch-lg
+          input.form-check-input.form-check-input(type='checkbox' role='switch' checked='')
+        .form-check.form-switch.form-switch-lg
+          input.form-check-input.form-check-input(type='checkbox' role='switch')
+
+      .my-2.d-flex 
+        .form-check
+          input.form-check-input(type='checkbox' value='')
+        .form-check
+          input.form-check-input(type='checkbox' value='' checked='')
+        .form-check.form-check-light
+          input.form-check-input(type='checkbox' value='')
+        .form-check.form-check-light
+          input.form-check-input(type='checkbox' value='' checked='')
+
+      .my-2.d-flex 
+        .form-check.form-check-lg
+          input.form-check-input(type='checkbox' value='')
+        .form-check.form-check-lg
+          input.form-check-input(type='checkbox' value='' checked='')
+

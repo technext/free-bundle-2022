@@ -1,0 +1,50 @@
+mixin CardNotification
+  .card.card-notification.shadow-none&attributes(attributes)
+    .card-header
+      .row.justify-content-between.align-items-center
+        .col-auto
+          h6.card-header-title.mb-0 Notifications
+
+mixin ComponentCard(config)
+  - var config = Object.assign({ anchor: true, }, config);
+  - var previewId = `${config.title.toLowerCase().split(' ').join('-')}-preview`;
+  - var codeId = `${config.title.toLowerCase().replace('(','').replace(')','').split(' ').join('-')}-code`;
+  .card.shadow-none.border.border-300(data-component-card)&attributes(attributes)
+    .card-header.p-4.border-bottom.border-300.bg-soft(class=config.cardHeaderClass)
+      .row.g-3.justify-content-between(class=`${config.description ? 'align-items-end' : 'align-items-center'}`)
+        .col-12.col-md
+          if config.title
+            h3.text-900.mb-0(data-anchor=config.anchor ? true : false)=config.title
+          if config.titleEl
+            div!=config.titleEl
+          if config.description
+            p.mb-0.mt-2.text-800!=config.description
+          if config.descriptionEl
+            .mt-2.text-800(class=config.descriptionClass && config.descriptionClass)!=config.descriptionEl
+        if !config.hideNavTab
+          .col.col-md-auto
+            nav.nav.nav-underline.justify-content-end.border-0.doc-tab-nav.align-items-center(role='tablist')
+              button.btn.btn-link.px-2.text-900.copy-code-btn(type='button')
+                .fas.fa-copy.me-1
+                | Copy Code
+              a.btn.btn-sm.btn-phoenix-primary.code-btn.ms-2(data-bs-toggle='collapse', href=`#${codeId}`, role='button', aria-controls=codeId, aria-expanded='false') 
+                span.me-2(data-feather="code")
+                | View code
+              a.btn.btn-sm.btn-phoenix-primary.preview-btn.ms-2
+                span.me-2(data-feather="eye")
+                | Preview
+    .card-body.p-0(class=config.bodyClass && config.bodyClass)
+      .collapse.code-collapse(id=`${codeId}`)
+        pre.scrollbar(style="max-height:420px")
+          code.language-html
+            +escape
+              block
+      .p-4.code-to-copy
+        block
+    
+
+mixin ComponentCardLib(lang = 'html')
+  pre&attributes(attributes)
+    code(class=`language-${lang}`)
+      +escape
+        block

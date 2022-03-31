@@ -1,0 +1,32 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/utilities/Opacity
+
+append variables
+  
+  -
+    var pageHeader = {
+      title: 'Opacity',
+      description: 'Control the opacity of elements.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/opacity/`,
+      linkText: 'Opacity on Bootstrap'
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Example',
+        id: '#example',
+      },
+    ]
+
+block component
+
+  +ComponentCard({
+    title: 'Example',
+    description: `The opacity property sets the opacity level for an element. The opacity level describes the transparency level, where 1 is not transparent at all, .5 is 50% visible, and 0 is completely transparent. <br />Set the opacity of an element using .opacity-{value} utilities.`,
+    anchor:true,
+    descriptionClass:'mt-2'
+
+  }).my-5.opacity-docs
+    +OpacityExample
+
+  

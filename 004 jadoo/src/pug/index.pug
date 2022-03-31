@@ -1,0 +1,26 @@
+extends layouts/LayoutTheme
+include mixins/common/Footer
+include mixins/common/ServiceCard
+include mixins/common/DestinationCard
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Service
+include mixins/home/landing/Destination
+include mixins/home/landing/Booking
+include mixins/home/landing/Testimonial
+include mixins/home/landing/Partner
+include mixins/home/landing/Cta
+
+
+
+
+prepend scripts
+  
+append content
+  +HeroHeader
+  +Service
+  +Destination
+  +Booking
+  +Testimonial
+  +Partner
+  +Cta
+  +Footer

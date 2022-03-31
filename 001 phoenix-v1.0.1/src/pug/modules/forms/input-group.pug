@@ -1,0 +1,135 @@
+extends ../../layouts/LayoutComponent
+include ../../mixins/common/Avatar
+
+append variables
+  -
+    var pageHeader = {
+      title: 'Input group',
+      description: 'Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.',
+      url: `https://getbootstrap.com/docs/${bootstrapVersion}/forms/input-group/`,
+      linkText: 'Input group on Bootstrap',
+    }
+  -
+    var rightNav = [
+      {
+        name: 'Basic example',
+        id: '#basic-example',
+      },
+      {
+        name: 'Wrapping',
+        id: '#wrapping',
+      },
+      {
+        name: 'Sizing',
+        id: '#sizing',
+      },
+      {
+        name: 'Checkboxes and Radios',
+        id: '#checkboxes-and-radios',
+      },
+      {
+        name: 'Multiple inputs',
+        id: '#multiple-inputs',
+      },
+      {
+        name: 'Multiple Addons',
+        id: '#multiple-addons',
+      },
+    ]
+
+block component
+  +ComponentCard({title:'Basic example'}).my-4
+    .input-group.mb-3
+      = '\n'
+      span#basic-addon1.input-group-text @
+      = '\n'
+      input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
+    .input-group.mb-3
+      = '\n'
+      input.form-control(type='text' placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby='basic-addon2')
+      = '\n'
+      span#basic-addon2.input-group-text @example.com
+    = '\n'
+    label.form-label(for='basic-url') Your vanity URL
+    .input-group.mb-3
+      = '\n'
+      span#basic-addon3.input-group-text https://example.com/users/
+      = '\n'
+      input#basic-url.form-control(type='text' aria-describedby='basic-addon3')
+    .input-group.mb-3
+      = '\n'
+      span.input-group-text $
+      = '\n'
+      input.form-control(type='text' aria-label='Amount (to the nearest dollar)')
+      = '\n'
+      span.input-group-text .00
+    .input-group
+      = '\n'
+      span.input-group-text With textarea
+      = '\n'
+      textarea.form-control(aria-label='With textarea')
+      | .
+
+  +ComponentCard({title:'Wrapping'}).my-4
+    .input-group.flex-nowrap
+      = '\n'
+      span#addon-wrapping.input-group-text @
+      = '\n'
+      input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
+
+  +ComponentCard({title:'Sizing'}).my-4
+    .input-group.input-group-sm.mb-3
+      = '\n'
+      span#inputGroup-sizing-sm.input-group-text Small
+      = '\n'
+      input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm')
+      = '\n'
+    .input-group.mb-3
+      = '\n'
+      span#inputGroup-sizing-default.input-group-text Default
+      = '\n'
+      input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default')
+    .input-group.input-group-lg
+      = '\n'
+      span#inputGroup-sizing-lg.input-group-text Large
+      = '\n'
+      input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-lg')
+
+  +ComponentCard({title:'Checkboxes and Radios'}).my-4
+    .input-group.mb-3
+      .input-group-text
+        = '\n'
+        input.form-check-input(type='checkbox' value='' aria-label='Checkbox for following text input')
+      = '\n'
+      input.form-control(type='text' aria-label='Text input with checkbox')
+    .input-group
+      .input-group-text
+        = '\n'
+        input.form-check-input(type='radio' value='' aria-label='Radio button for following text input')
+      = '\n'
+      input.form-control(type='text' aria-label='Text input with radio button')
+
+  +ComponentCard({title:'Multiple inputs'}).my-4
+    .input-group
+      = '\n'
+      span.input-group-text First and last name
+      = '\n'
+      input.form-control(type='text' aria-label='First name')
+      = '\n'
+      input.form-control(type='text' aria-label='Last name')
+
+  +ComponentCard({title:'Multiple Addons'}).my-4
+    .input-group.mb-3
+      = '\n'
+      span.input-group-text $
+      = '\n'
+      span.input-group-text 0.00
+      = '\n'
+      input.form-control(type='text' aria-label='Dollar amount (with dot and two decimal places)')
+    .input-group
+      = '\n'
+      input.form-control(type='text' aria-label='Dollar amount (with dot and two decimal places)')
+      = '\n'
+      span.input-group-text $
+      = '\n'
+      span.input-group-text 0.00

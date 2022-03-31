@@ -1,0 +1,8 @@
+.hover-actions-trigger.btn-reveal-trigger {
+  .hover-actions {
+    right: 3rem;
+    [dir='rtl'] & {
+      right: 3rem;
+    }
+  }
+}

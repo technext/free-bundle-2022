@@ -1,0 +1,279 @@
+mixin DropdownOverview 
+  p  Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is 
+    a(href='https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/') an intentional design decision
+    |.
+  p Dropdowns are built on a third party library, 
+    a(href='https://popper.js.org/') Popper
+    | , which provides dynamic positioning and viewport detection. Be sure to include 
+    a(href='https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js') popper.min.js
+    |  before Bootstrap’s JavaScript or use 
+    code bootstrap.bundle.min.js
+    |  / 
+    code bootstrap.bundle.js
+    |  which contains Popper. Popper isn’t used to position dropdowns in navbars though as dynamic positioning isn’t required.
+
+
+mixin DropdownContent
+  = '\n'
+  a.dropdown-item(href="#") Action
+  = '\n'
+  a.dropdown-item(href="#") Another action
+  = '\n'
+  a.dropdown-item(href="#") Something else here
+  = '\n'
+  .dropdown-divider
+  = '\n'
+  a.dropdown-item(href="#") Separated link
+
+mixin DropdownExampleDemo
+  .dropdown.font-sans-serif.d-inline-block
+    = '\n'
+    button#dropdownMenuButton.btn.btn-phoenix-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown button
+    .dropdown-menu.dropdown-menu-end.py-0(aria-labelledby='dropdownMenuButton')
+      +DropdownContent
+
+mixin DropdownLinkDemo
+  .dropdown.font-sans-serif
+    = '\n'
+    a#dropdownMenuLink.btn.btn-falcon-default.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      | Dropdown link
+    .dropdown-menu.dropdown-menu-end.py-0(aria-labelledby='dropdownMenuLink')
+      +DropdownContent
+
+mixin DropdownButtonVarientDemo
+  each color in colors
+    .btn-group.me-1
+      = '\n'
+      button.btn.dropdown-toggle.mb-1(type="button" class=`btn-${color}` data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        +cleanText(color)
+      .dropdown-menu
+        = '\n'
+        +DropdownContent
+
+mixin DropdownButtonSplitDemo
+  each color in colors
+    .btn-group.mb-1.me-1
+      = '\n'
+      button.btn(type="button" class=`btn-${color}`)
+        +cleanText(color)
+      = '\n'
+      button.btn.dropdown-toggle.dropdown-toggle-split(type="button" class=`btn-${color}` data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        span.sr-only Toggle Dropdown
+
+      .dropdown-menu
+        = '\n'
+        +DropdownContent
+
+mixin DropdownSizingDemo
+  .btn-group.mb-1.mb-md-0.me-1
+    = '\n'
+    button.btn.btn-primary.btn-lg.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      | Large button
+    .dropdown-menu
+      +DropdownContent
+  .btn-group.mb-1.mb-md-0.me-1
+    = '\n'
+    button.btn.btn-primary.btn-md.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      | Regular button
+    .dropdown-menu
+      +DropdownContent
+  .btn-group.mb-1.mb-md-0.me-1
+    = '\n'
+    button.btn.btn-primary.btn-sm.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      | Small button
+    .dropdown-menu
+      +DropdownContent
+  hr 
+
+  .btn-group.mb-1.me-1
+    = '\n'
+    button.btn.btn-primary.btn-lg(type="button")
+      | Large split button
+    = '\n'
+    button.btn.btn-lg.btn-primary.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      span.sr-only Toggle Dropdown
+    = '\n'
+    .dropdown-menu
+      +DropdownContent
+  .btn-group.mb-1.me-1
+    = '\n'
+    button.btn.btn-primary.btn-md(type="button")
+      | Regular split button
+    = '\n'
+    button.btn.btn-md.btn-primary.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      span.sr-only Toggle Dropdown
+    .dropdown-menu
+      +DropdownContent
+  .btn-group.mb-1.me-1
+    = '\n'
+    button.btn.btn-primary.btn-sm(type="button")
+      | Small split button
+    = '\n'
+    button.btn.btn-sm.btn-primary.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      span.sr-only Toggle Dropdown
+    .dropdown-menu
+      +DropdownContent
+
+mixin DropdownDirectionsDemo
+  // Default dropup button
+  .d-flex.flex-column.flex-sm-row.justify-content-between
+    .btn-group.dropend.mt-2
+      = '\n'
+      button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        | Dropend
+      .dropdown-menu
+        +DropdownContent
+    .btn-group.dropup.mt-2
+      = '\n'
+      button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        | Dropup
+      .dropdown-menu
+        +DropdownContent
+    .btn-group.dropstart.mt-2
+      = '\n'
+      button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        | Dropstart
+      .dropdown-menu
+        +DropdownContent
+  hr
+
+  .d-flex.flex-column.flex-md-row.justify-content-between
+
+    .btn-group.dropend.mt-2
+      button.btn.btn-primary(type="button")
+        | Split dropend
+      = '\n'
+      button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        span.sr-only Toggle Dropdown
+      = '\n'
+      .dropdown-menu
+        +DropdownContent
+
+    .btn-group.dropup.mt-2
+      button.btn.btn-primary(type="button")
+        | Split dropup
+      = '\n'
+      button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        span.sr-only Toggle Dropdown
+      .dropdown-menu
+        +DropdownContent
+
+    .btn-group.mt-2
+      .btn-group.dropstart(role='group')
+        = '\n'
+        button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+          span.sr-only Toggle Dropstart
+        .dropdown-menu
+          +DropdownContent
+      = '\n'
+      button.btn.btn-primary(type='button')
+        | Split dropstart
+
+mixin DropdownMenuItemsDemo
+  .dropdown
+    = '\n'
+    button#dropdownMenu2.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+      | Dropdown
+    .dropdown-menu(aria-labelledby='dropdownMenu2')
+      = '\n'
+      button.dropdown-item(type='button') Action
+      = '\n'
+      button.dropdown-item(type='button') Another action
+      = '\n'
+      button.dropdown-item(type='button') Something else here
+      = '\n'
+
+  p.mt-3 You can also create non-interactive dropdown items with 
+    code .dropdown-item-text
+    |. Feel free to style further with custom CSS or text utilities.
+
+  = '\n'
+  button#dropdownMenu3.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+    | Dropdown with text
+
+  .dropdown-menu(aria-labelledby='dropdownMenu3')
+    = '\n'
+    span.dropdown-item-text Dropdown item text
+    = '\n'
+    a.dropdown-item(href='#') Action
+    = '\n'
+    a.dropdown-item(href='#') Another action
+    = '\n'
+    a.dropdown-item(href='#') Something else here
+    = '\n'
+
+mixin DropdownActiveLinkDemo
+  button#activeLinkExample.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+  .dropdown-menu(aria-labelledby='activeLinkExample')
+    = '\n'
+    a.dropdown-item(href='#') Regular link
+    = '\n'
+    a.dropdown-item.active(href='#') Active link
+    = '\n'
+    a.dropdown-item(href='#') Another link
+    = '\n'
+
+mixin DropdownDisabledLinkDemo
+  button#disabledLinkExample.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+  .dropdown-menu(aria-labelledby='disabledLinkExample')
+    = '\n'
+    a.dropdown-item(href='#') Regular link
+    = '\n'
+    a.dropdown-item.disabled(href='#') Disabled link
+    = '\n'
+    a.dropdown-item(href='#') Another link
+    = '\n'
+
+mixin DropdownAlignmentDemo
+  .btn-group
+    = '\n'
+    button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false")
+      | Right-aligned menu
+    = '\n'
+    .dropdown-menu.dropdown-menu-end
+      +DropdownContent
+    = '\n'
+
+mixin DropdownHeaderDemo
+  button#headerExample.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+  .dropdown-menu(aria-labelledby='headerExample')
+    h6.dropdown-header Dropdown Header
+    = '\n'
+    a.dropdown-item(href='#') Regular link
+    = '\n'
+    a.dropdown-item(href='#') Another action link
+    = '\n'
+    .dropdown-divider
+    = '\n'
+    a.dropdown-item(href='#') Another link
+    = '\n'
+
+mixin DropdownDividerDemo
+  button#dividerExample.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Dropdown
+  .dropdown-menu(aria-labelledby='dividerExample')
+    +DropdownContent
+
+mixin DropdownFormsDemo
+  .btn-group
+    = '\n'
+    button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false")
+      | Forms in dropdown
+    = '\n'
+    .dropdown-menu.py-0
+      .card.shadow-none.border-0(style="width: 22rem;")
+        .card-body                  
+          .row.text-start.justify-content-between.align-items-center.mb-2
+            .col-auto
+              h5.mb-0 Log in
+            .col-auto
+              p.fs--1.text-600.mb-0 or 
+                a(href=`${CWD}${paths['simple-register']}`) Create an account
+          +LoginForm({
+            layout:'simple',
+            email: { attrs: { placeholder: 'Email address' } },
+            password: { attrs: { placeholder: 'Password' } },
+            checkbox: { attrs: { id: 'basic-checkbox', checked: true } },
+          })
+          +SocialButtons({ title: 'log in' }).mt-4
+
+

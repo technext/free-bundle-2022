@@ -1,0 +1,87 @@
+@mixin navbar-vertical-variant(
+  $bg-color,
+  $bg-image,
+  $shadow,
+  $link-color,
+  $link-hover-color,
+  $link-active-color,
+  $link-disable-color,
+  $hr-color,
+  $navbar-vertical-label-color
+) {
+  .navbar-collapse {
+    @if $bg-color {
+      background-color: $bg-color;
+    }
+    @if $bg-image {
+      background-image: $bg-image;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      backface-visibility: hidden;
+    }
+    @if $shadow {
+      box-shadow: $shadow !important;
+    }
+  }
+  .navbar-nav .nav-item {
+    .navbar-vertical-label-wrapper {
+      min-height: 1.125rem;
+    }
+    .navbar-vertical-label {
+      color: $navbar-vertical-label-color;
+    }
+    .nav-link {
+      color: $link-color;
+      &.dropdown-indicator:after {
+        border-color: $link-color;
+      }
+      @include hover-focus {
+        color: $link-hover-color;
+        &.dropdown-indicator:after {
+          border-color: $link-hover-color;
+        }
+      }
+      &.active {
+        color: $link-active-color;
+      }
+      &.nav-link-disable {
+        color: $link-disable-color !important;
+      }
+    }
+  }
+  .navbar-vertical-divider {
+    background-color: $hr-color;
+  }
+}
+
+@mixin navbar-vertical-scrollbar($type, $color) {
+  .windows {
+    &.chrome {
+      .navbar-vertical {
+        @if ($type) {
+          &.navbar-#{$type} .scrollbar::-webkit-scrollbar-thumb {
+            background-color: $color;
+          }
+        } @else {
+          .scrollbar::-webkit-scrollbar-thumb {
+            background-color: $color;
+          }
+        }
+      }
+    }
+    &.firefox {
+      .navbar-vertical {
+        @if ($type) {
+          &.navbar-#{$type} .scrollbar {
+            scrollbar-color: $color transparent;
+          }
+        } @else {
+          .scrollbar {
+            scrollbar-color: $color transparent;
+          }
+        }
+      }
+    }
+  }
+}

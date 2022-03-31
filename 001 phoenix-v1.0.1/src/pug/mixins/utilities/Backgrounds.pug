@@ -1,0 +1,56 @@
+mixin ColorPalette(val, index, gradient, arr)
+  .p-3.d-flex.flex-center(class=`bg-${val} ${gradient? gradient:''} ${(val === 'white' || val === 'light' || val === 100 || val === 200 || val === 'soft') && 'border border-300'}` style='height: 180px')
+    = '\n'
+    pre.text-center
+      if gradient
+        code(class=`${(index < 8 && val !== 'light') ? 'text-white' : 'text-black'}`) .bg-gradient
+      
+      //- else
+        code(class=`${(index < 8 && val !== 'light') ? 'text-white' : 'text-black'}`) .text-#{val} 
+      br
+      code(class=`${(index < 8 && val !== 'light') ? 'text-white' : 'text-black'}`) .bg-#{val}  
+      if arr
+        p.mt-2(class=`${(index < 8 && val !== 'light') ? 'text-white' : 'text-black'}`)=arr[val]
+      
+mixin ThemeColorsDemo
+  .row.g-0
+    each val, index in colors
+      .col-6.col-sm-4.col-lg-3
+        +ColorPalette(val, index, null, themeColor)
+  
+mixin GrayShadeDemo
+  .row.g-0
+    each val, index in grays
+      .col-6.col-sm-4.col-lg-3
+        +ColorPalette(val, index, null, graysColor)
+
+mixin BackgroundGradientDescription
+  p&attributes(attributes)
+    | By adding a 
+    code .bg-gradient
+    |  class, a linear gradient is added as background image to the backgrounds. This gradient starts with a semi-transparent white which fades out to the bottom.
+  p.mb-0
+    | Do you need a gradient in your custom CSS? Just add 
+    code background-image: var(--bs-gradient);
+    | .
+
+mixin BackgroundGradientDemo
+  .row.g-0
+    each val, index in colors
+      .col-6.col-sm-4.col-lg-3
+        +ColorPalette(val, index, 'bg-gradient')
+
+mixin SoftColorsDemo
+  .row.g-0
+    each val, index in colors
+      .col-6.col-sm-4.col-lg-3
+        .p-3(class=`bg-soft-${val}` style='height: 180px')
+          code(class=`${val !== 'light' ? `text-${val}` : 'text-black'}`) .text-#{val}
+          br
+          code(class=`${val !== 'light' ? `text-${val}` : 'text-black'}`) .bg-soft-#{val}
+
+mixin BrandColorsDemo
+  .row.g-0
+    each val, index in ['facebook', 'google-plus', 'twitter', 'linkedin', 'youtube', 'github']
+      .col-6.col-sm-4.col-lg-3.light
+        +ColorPalette(val, index)

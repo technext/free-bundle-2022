@@ -1,0 +1,21 @@
+extends Layout
+include ../mixins/navbars/NavbarMajestic
+include ../mixins/Variables
+
+prepend scripts
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  script(src=`${CWD}vendors/feather-icons/feather.min.js`)
+  script.
+    feather.replace();
+ 
+ 
+append footerStyles
+  link(href='https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+block mainContent 
+  +NavbarMajestic
+  block wrapperContent 
+    block beforeContent
+    block content
+    block afterContent
+

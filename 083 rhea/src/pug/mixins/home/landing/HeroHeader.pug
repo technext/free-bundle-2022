@@ -1,0 +1,18 @@
+mixin HeroHeader
+  section.py-0
+    +Background({ image: `${CWD}assets/img/illustrations/hero.png`, attrs: { style: { 'background-position':'right bottom', 'background-size': 'contain', } }, className: 'd-none d-md-block' }) 
+    .container.position-relative
+      .row.align-items-center.min-vh-75.my-lg-8
+        .col-md-7.col-lg-6.text-center.text-md-start.py-8
+          h1.mb-4.display-1.lh-sm Travel around 
+            br.d-block.d-lg-none.d-xl-block
+            | the world
+          p.mt-4.mb-5.fs-1.lh-base Plan and book your perfect trip with expert advice, 
+            br.d-none.d-lg-block
+            |travel tips, destination information and 
+            br.d-none.d-lg-block 
+            |inspiration from us.
+           
+          a.btn.btn-lg.btn-primary.hover-top(href='#' role='button')
+            | Sign Up Now
+         

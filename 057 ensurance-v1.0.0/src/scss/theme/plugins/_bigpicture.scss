@@ -1,0 +1,12 @@
+[data-bp]{
+    cursor: zoom-in;
+  }
+  #bp_container{
+    z-index: 11000 !important;
+    img{
+      border-radius: 5px;
+    }
+    svg{
+      height: 3rem ;
+    }
+  }

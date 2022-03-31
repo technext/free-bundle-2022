@@ -1,0 +1,43 @@
+mixin PeopleWhoLoves(config)
+  .col-sm-3.text-center
+    img(src=`${CWD}assets/img/gallery/${config.userImage}` width="100" alt='')
+    h5.mt-3.fw-medium.text-secondary=config.name
+    p.fw-normal.mb-0=config.designation
+  .col-sm-9.text-center.text-sm-start.pt-3.pt-sm-0
+    h2=config.title
+    .my-2
+      i.fas.fa-star.me-2
+      i.fas.fa-star.me-2
+      i.fas.fa-star.me-2
+      i.fas.fa-star-half-alt.me-2
+      i.far.fa-star
+    p=config.text
+
+mixin People
+  +Section.py-5
+    .row 
+      .col-12.py-3
+        +Background({image: `${CWD}assets/img/gallery/people.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'contain',} }, className: 'bg-size' })
+        h1.text-center PEOPLE WHO LOVE US
+  section.py-8
+    +Background({image: `${CWD}assets/img/gallery/people-bg-1.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: 'bg-size' })
+    .container 
+      .row.align-items-center.offset-sm-1   
+        #carouselPeople.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner
+            .carousel-item.active(data-bs-interval='10000')
+              .row.h-100
+                +PeopleWhoLoves({userImage: 'people-who-loves.png', title:'Fantastic Response!',name:'Edward Newgate',designation:'Founder Circle',text:'This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.',})                   
+            .carousel-item(data-bs-interval='2000')
+              .row.h-100
+                +PeopleWhoLoves({userImage: 'people-who-loves.png', title:'Fantastic Response!',name:'Jhon Doe',designation:'UI/UX Designer',text:'This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.',})
+            .carousel-item
+              .row.h-100
+                +PeopleWhoLoves({userImage: 'people-who-loves.png', title:'Fantastic Response!',name:'Jeny Doe',designation:'Web Designer',text:'This medical and health care facility distinguishes itself from the competition by providing technologically advanced medical and health care. A mobile app and a website are available via which you can easily schedule appointments, get online consultations, and see physicians, who will assist you through the whole procedure. And all of the prescriptions, medications, and other services they offer are 100% genuine, medically verified, and proved. I believe that the Livedoc staff is doing an outstanding job. Highly recommended their health care services.',})
+          
+          .row
+            .position-relative.z-index-2.mt-5
+              ol.carousel-indicators
+                li.active(data-bs-target='#carouselPeople' data-bs-slide-to='0')
+                li(data-bs-target='#carouselPeople' data-bs-slide-to='1')
+                li(data-bs-target='#carouselPeople' data-bs-slide-to='2') 

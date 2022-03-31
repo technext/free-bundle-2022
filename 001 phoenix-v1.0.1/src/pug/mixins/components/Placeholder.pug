@@ -1,0 +1,64 @@
+include Card
+
+mixin PlaceholeHolderExample
+  .d-flex.justify-content-center
+    +CardBasicDemo
+    .card.overflow-hidden.ms-3(style='width: 20rem;' aria-hidden='true')
+      .card-img-top(style='width: 320px;height: 180px')
+        span.placeholder.w-100.h-100
+      .card-body
+        h5.card-title.placeholder-glow
+          span.placeholder.col-6
+        p.card-text.placeholder-glow
+          = '\n'
+          span.placeholder.col-7
+          = '\n'
+          span.placeholder.col-4
+          = '\n'
+          span.placeholder.col-4
+          = '\n'
+          span.placeholder.col-6
+          = '\n'
+          span.placeholder.col-8
+        = '\n'
+        a.btn.btn-primary.disabled.placeholder.col-6(href='#', tabindex='-1')
+
+mixin PlaceholderWidth
+  span.placeholder.col-6
+  = '\n'
+  span.placeholder.w-75
+  = '\n'
+  span.placeholder(style='width: 25%;')
+
+mixin PlaceholderColor
+  <span class="placeholder col-12 bg-primary"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-secondary"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-success"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-danger"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-warning"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-info"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-light"></span>
+  = '\n'
+  <span class="placeholder col-12 bg-dark"></span>
+
+mixin PlaceholderSizing
+  span.placeholder.col-12.placeholder-lg
+  = '\n'
+  span.placeholder.col-12
+  = '\n'
+  span.placeholder.col-12.placeholder-sm
+  = '\n'
+  span.placeholder.col-12.placeholder-xs
+
+mixin PlaceholderAnimation
+  p.placeholder-glow
+    span.placeholder.col-12
+  p.placeholder-wave
+    span.placeholder.col-12
+

@@ -1,0 +1,31 @@
+/*-----------------------------------------------
+|   Isotope
+-----------------------------------------------*/
+.sortable{
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-family-sans-serif;
+    color: $gray-700;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+    font-size: map_get($font-sizes, '-1');
+    letter-spacing: 0.02rem;
+    .isotope-nav{
+      cursor: pointer;
+      padding: map_get($spacers, 1) map_get($spacers, 2);
+      margin-bottom: map_get($spacers, 2);
+      border: 1px solid transparent;
+      border-radius: $border-radius;
+      transition: $transition-base;
+      margin-right: map_get($spacers, 1);
+      &:last-child{
+        margin-right: 0;
+      }
+      &.active{
+        background: linear-gradient(311.75deg, rgba(116, 30, 255, 0.1) -18.72%, rgba(255, 55, 187, 0.1) 120.42%);
+        color: $secondary;
+      }
+    }
+  }
+}
