@@ -55,7 +55,9 @@ const navbarInit = () => {
 	let navbarLink = document.querySelectorAll('.nav-link');
 
 	document.addEventListener('click', function (e) {
-		navbarLinks.forEach(link => link.classList.remove('active'));
+		for (let x = 0; x < navbarLink.length; x++) {
+			navbarLink[x].classList.remove('active');
+		}
 
 		e.target.closest('li').classList.add('active');
 	});

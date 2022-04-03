@@ -334,9 +334,10 @@ var navbarInit = function navbarInit() {
   });
   var navbarLink = document.querySelectorAll('.nav-link');
   document.addEventListener('click', function (e) {
-    navbarLinks.forEach(function (link) {
-      return link.classList.remove('active');
-    });
+    for (var x = 0; x < navbarLink.length; x++) {
+      navbarLink[x].classList.remove('active');
+    }
+
     e.target.closest('li').classList.add('active');
   });
 };
