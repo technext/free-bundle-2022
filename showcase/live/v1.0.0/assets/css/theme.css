@@ -19492,6 +19492,12 @@ iframe {
   overflow: unset;
 }
 
+.bg-header-gradient {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(-11.17%, #0d2974), color-stop(110.39%, #3498db));
+  background-image: -o-linear-gradient(left, #0d2974 -11.17%, #3498db 110.39%);
+  background-image: linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);
+}
+
 .card {
   border: none;
   background: transparent;
