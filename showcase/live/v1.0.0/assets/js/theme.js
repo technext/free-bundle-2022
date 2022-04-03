@@ -241,88 +241,14 @@ var detectorInit = function detectorInit() {
   is.windows() && addClass(html, 'windows');
   navigator.userAgent.match('CriOS') && addClass(html, 'chrome');
 };
-/*eslint-disable*/
 
-/*-----------------------------------------------
-|   Top navigation opacity on scroll
------------------------------------------------*/
-
-
-var navbarInit = function navbarInit() {
-  var Selector = {
-    NAV_ITEM: '.nav-item',
-    NAVBAR: '.navbar',
-    DROPDOWN: '.dropdown'
-  };
-  utils.resize(function () {
-    var navElements = document.querySelectorAll('.nav-item');
-    navElements.forEach(function (item) {
-      item.removeAttribute('style');
-    });
-    var dropElements = document.querySelectorAll('.category-list');
-    dropElements.forEach(function (item) {
-      item.innerHTML = ' ';
-    });
-    navbar();
+var backToTop = function backToTop() {
+  var btnBackToTop = document.querySelector('[data-back-to-top]');
+  window.addEventListener('scroll', function () {
+    var _window2 = window,
+        scrollY = _window2.scrollY;
+    scrollY >= 540 ? btnBackToTop.style.opacity = '1' : btnBackToTop.style.opacity = '0';
   });
-
-  var navbar = function navbar() {
-    var totalWidth = 0;
-    var nav = document.querySelector(Selector.NAVBAR).clientWidth;
-    var dropdown = document.querySelector('.dropdown').clientWidth; // let navbarNav = document.querySelector('.navbar-nav').clientWidth;
-
-    var navbarWidth = nav - dropdown;
-    var elements = document.querySelectorAll('.nav-item');
-    elements.forEach(function (item) {
-      var itemWidth = item.clientWidth;
-      totalWidth = totalWidth + itemWidth;
-
-      if (totalWidth > navbarWidth) {
-        if (!item.classList.contains('dropdown')) {
-          item.style.display = 'none';
-          var link = item.firstChild;
-          var linkItem = link.cloneNode(true);
-          document.querySelector('.category-list').appendChild(linkItem);
-        }
-      }
-    });
-    var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
-    dropdownMenu.forEach(function (item) {
-      item.classList.remove('nav-link');
-      item.classList.add('dropdown-item');
-    });
-  };
-
-  window.addEventListener('load', function (event) {
-    navbar();
-  });
-  navbar(); // Toggle bg class on window resize
-
-  var backToToP = document.querySelector('.back-to-top');
-  var navbarEl = document.querySelector('.navbar');
-
-  var myScrollFunc = function myScrollFunc() {
-    var y = window.scrollY;
-
-    if (y >= 540) {
-      backToToP.style.opacity = '1';
-      navbarEl.classList.add('sticky-top');
-      navbarEl.classList.add('bg-white');
-    } else {
-      backToToP.style.opacity = '0';
-      navbarEl.classList.remove('bg-light');
-    }
-  };
-
-  var navbarLink = document.querySelectorAll('.nav-link');
-  document.addEventListener('click', function (e) {
-    for (var x = 0; x < navbarLink.length; x++) {
-      navbarLink[x].classList.remove('active');
-    }
-
-    e.target.closest('li').classList.add('active');
-  });
-  window.addEventListener('scroll', myScrollFunc);
 };
 /*eslint-disable*/
 
@@ -341,10 +267,8 @@ var isotopeFilter = function isotopeFilter() {
       }
     });
     var filtersElem = document.querySelectorAll('[data-bs-nav]');
-    filtersElem.forEach(function (element) {
+    filtersElem.forEach(function () {
       document.addEventListener('click', function (event) {
-        console.log(event.target.id);
-
         if (event.target.id != 'navbarDropdown') {
           var filterValue = event.target.getAttribute('data-filter');
           iso.arrange({
@@ -355,28 +279,65 @@ var isotopeFilter = function isotopeFilter() {
     });
   });
 };
-/* -------------------------------------------------------------------------- */
+/*eslint-disable*/
 
-/*                                Scroll To Top                               */
+/*-----------------------------------------------
+|   Top navigation opacity on scroll
+-----------------------------------------------*/
 
-/* -------------------------------------------------------------------------- */
 
-
-var scrollToTop = function scrollToTop() {
-  document.querySelectorAll('[data-anchor] > a, [data-scroll-to]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var _utils$getData;
-
-      e.preventDefault();
-      var el = e.target;
-      var id = utils.getData(el, 'scroll-to') || el.getAttribute('href');
-      window.scroll({
-        top: (_utils$getData = utils.getData(el, 'offset-top')) !== null && _utils$getData !== void 0 ? _utils$getData : utils.getOffset(document.querySelector(id)).top - 100,
-        left: 0,
-        behavior: 'smooth'
-      });
-      window.location.hash = id;
+var navbarInit = function navbarInit() {
+  var Selector = {
+    NAV_ITEM: '[data-nav-item]',
+    NAVBAR: '[data-navbar]',
+    DROPDOWN: '[data-more-item]',
+    CATEGORY_LIST: '[data-category-list]'
+  };
+  utils.resize(function () {
+    var navElements = document.querySelectorAll(Selector.NAV_ITEM);
+    var dropElements = document.querySelectorAll(Selector.CATEGORY_LIST);
+    navElements.forEach(function (item) {
+      return item.removeAttribute('style');
     });
+    dropElements.forEach(function (item) {
+      return item.innerHTML = '';
+    });
+    navbar();
+  });
+
+  var navbar = function navbar() {
+    var navbarWidth = document.querySelector(Selector.NAVBAR).clientWidth;
+    var dropdown = document.querySelector(Selector.DROPDOWN).clientWidth;
+    var navbarContainerWidth = navbarWidth - dropdown;
+    var elements = document.querySelectorAll(Selector.NAV_ITEM);
+    var totalItemsWidth = 0;
+    elements.forEach(function (item) {
+      var itemWidth = item.clientWidth;
+      totalItemsWidth = totalItemsWidth + itemWidth;
+
+      if (totalItemsWidth > navbarContainerWidth && !item.classList.contains('dropdown')) {
+        item.style.display = 'none';
+        var link = item.firstChild;
+        var linkItem = link.cloneNode(true);
+        document.querySelector('.category-list').appendChild(linkItem);
+      }
+    });
+    var dropdownMenu = document.querySelectorAll('.dropdown-menu .nav-link');
+    dropdownMenu.forEach(function (item) {
+      item.classList.remove('nav-link');
+      item.classList.add('dropdown-item');
+    });
+  };
+
+  window.addEventListener('load', function () {
+    return navbar();
+  });
+  var navbarLink = document.querySelectorAll('.nav-link');
+  document.addEventListener('click', function (e) {
+    navbarLinks.forEach(function (link) {
+      return link.classList.remove('active');
+    });
+    e.target.closest('li').classList.add('active');
   });
 };
 /* -------------------------------------------------------------------------- */
@@ -388,6 +349,6 @@ var scrollToTop = function scrollToTop() {
 
 docReady(navbarInit);
 docReady(detectorInit);
-docReady(scrollToTop);
 docReady(isotopeFilter);
+docReady(backToTop);
 //# sourceMappingURL=theme.js.map

@@ -8,7 +8,7 @@ const replace = require("gulp-replace");
 const concat = require("gulp-concat");
 const clone = require("gulp-clone");
 const merge = require("merge-stream");
-const webpackStream = require("webpack-stream");
+// const webpackStream = require("webpack-stream");
 
 const {
   // eslint-disable-next-line no-unused-vars
@@ -21,22 +21,22 @@ const {
 /* -------------------------------------------------------------------------- */
 /*                       JavaScript Compile with Webpack                      */
 /* -------------------------------------------------------------------------- */
-gulp.task("script:webpack", () => {
-  return gulp
-    .src(`./src/js/theme.js`)
-    .pipe(
-      webpackStream({
-        mode: "development",
-        entry: {
-          "bootstrap-navbar": "./src/js/bootstrap-navbar.js",
-        },
-        output: {
-          filename: "[name].js",
-        },
-      })
-    )
-    .pipe(gulp.dest(`${baseDir}/assets/js`));
-});
+// gulp.task("script:webpack", () => {
+//   return gulp
+//     .src(`./src/js/theme.js`)
+//     .pipe(
+//       webpackStream({
+//         mode: "development",
+//         entry: {
+//           "bootstrap-navbar": "./src/js/bootstrap-navbar.js",
+//         },
+//         output: {
+//           filename: "[name].js",
+//         },
+//       })
+//     )
+//     .pipe(gulp.dest(`${baseDir}/assets/js`));
+// });
 
 /* -------------------------------------------------------------------------- */
 /*                             JavaScript Compile                             */

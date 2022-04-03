@@ -1,49 +1,50 @@
 // Tabs
 //
 
-
 .majestic-tabs {
-  border-bottom:0;
+	border-bottom: 0;
 
-  .nav-link {
+	.nav-link {
+		border: 2px solid transparent;
+		color: $gray-800;
+		&:hover,
+		&:focus {
+			border-color: transparent;
+		}
+	}
 
-    border: 2px solid transparent;
-    color:$gray-800;
-    &:hover,
-    &:focus {
-      border-color: transparent;
-    }
-  }
-
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-bottom-color: $nav-tabs-link-active-color;
-  }
+	.nav-link.active,
+	.nav-item.show .nav-link {
+		border-bottom-color: $nav-tabs-link-active-color;
+	}
 }
-.nav-link{
-  white-space: nowrap;
-}
-
-.back-to-top{
-   position: fixed;
-    bottom: toRem(20);
-    right: toRem(20);
-    height:toRem(40);
-    width:toRem(40);
-    text-align: center;
-    line-height: toRem(40);
-    text-align: center;
-    opacity: 0;
-    border-radius: 50%;
-    color: #fff;
-    transition: all 0.4s ease-in-out;
-    z-index: 999;
-
-
+.nav-link {
+	white-space: nowrap;
 }
 
-.sticky-top{
-  top:toRem(30);
+.back-to-top {
+	position: fixed;
+	bottom: toRem(20);
+	right: toRem(20);
+	height: toRem(40);
+	width: toRem(40);
+	text-align: center;
+	line-height: toRem(40);
+	text-align: center;
+	opacity: 0;
+	border-radius: 50%;
+	color: #fff;
+	transition: $transition-base;
+	z-index: $zindex-sticky;
+}
+
+.back-to-top:hover {
+	background-color: #4bdde6 !important ;
+	color: white;
+}
+
+.sticky-top {
+	top: toRem(30);
 }
 
 // .clearfix::after {

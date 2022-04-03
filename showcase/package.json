@@ -49,7 +49,6 @@
 		"pretty": "^2.0.0",
 		"require-dir": "^1.2.0",
 		"through2": "^4.0.2",
-		"webpack-stream": "^6.1.0",
 		"yargs": "^15.4.0"
 	},
 	"dependencies": {

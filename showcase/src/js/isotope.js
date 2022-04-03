@@ -1,6 +1,5 @@
 /*eslint-disable*/
 
-import utils from './utils';
 /*-----------------------------------------------
 |                     Isotope
 -----------------------------------------------*/
@@ -17,10 +16,8 @@ const isotopeFilter = () => {
 
 		let filtersElem = document.querySelectorAll('[data-bs-nav]');
 
-		filtersElem.forEach(element => {
-			document.addEventListener('click', function (event) {
-				console.log(event.target.id);
-
+		filtersElem.forEach(() => {
+			document.addEventListener('click', event => {
 				if (event.target.id != 'navbarDropdown') {
 					let filterValue = event.target.getAttribute('data-filter');
 
