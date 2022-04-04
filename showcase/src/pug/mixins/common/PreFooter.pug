@@ -26,15 +26,26 @@ append variables
 
 
 mixin PreFooter
-  +Section("container-fluid").py-0.bg-header-gradient
-    +Background(footerbackground)
-    +Background(footerframe)
+  +Section(footerbackground,"px-0").py-0.bg-header-gradient
+    .z-index-1.w-100.position-absolute.top-0
+      svg(xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 141" fill="none")
+        g( clip-path="url(#clip0_223_878)")
+          path( d="M1915.92 115.369C1211.46 233.028 983.471 -105.24 -3.97559 115.369C-31.0306 121.414 -3.97559 7 -3.97559 7H1915.92C1915.92 7 1943.1 110.83 1915.92 115.369Z" fill="url(#paint0_linear_223_878)")
+          path( d="M1927.85 64.6982C1219.04 134.942 989.641 -67.0087 -3.90137 64.6982C-31.1233 68.3068 -3.90137 0 -3.90137 0H1927.85C1927.85 0 1955.19 61.9883 1927.85 64.6982Z" fill="white")
+        defs
+          linearGradient(id="paint0_linear_223_878" x1="-15.9999" y1="-138.999" x2="1928" y2="-135" gradientUnits="userSpaceOnUse")
+            stop(stop-color="#2B266A")
+            stop(offset="0.55318" stop-color="#6055C1")
+            stop(offset="1" stop-color="#4C4B85")
+          clipPath(id="clip0_223_878")
+            rect(width="1920" height="141" fill="white" transform="translate(1920 141) rotate(-180)")
+
     .container.text-center.pt-10.z-index-1.pb-3
       h1.fw-bold.text-white.fs-5 Ready to get started?
-      p.text-white.fw-medium.fs-3
+      p.text-white.fw-medium.fs-2.mb-6
         |Get the entire collection in your inbox
 
-      a.text-white.btn.btn-success.mt-2.mt-lg-5.mb-5
+      a.text-white.btn.btn-success.mb-5
         i.fas.fa-download.me-3
         |Download Free
       p.mb-0.text-white.mt-6.fs--1
