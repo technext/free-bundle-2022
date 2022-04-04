@@ -6,7 +6,7 @@
 
 const isotopeFilter = () => {
 	window.addEventListener('load', event => {
-		let iso = new Isotope('.grid', {
+		const iso = new Isotope('.grid', {
 			itemSelector: '.item',
 			masonry: {
 				// use outer width of grid-sizer for columnWidth
@@ -14,12 +14,12 @@ const isotopeFilter = () => {
 			}
 		});
 
-		let filtersElem = document.querySelectorAll('[data-bs-nav]');
+		const filtersElem = document.querySelectorAll('[data-bs-nav]');
 
 		filtersElem.forEach(() => {
 			document.addEventListener('click', event => {
 				if (event.target.id != 'navbarDropdown') {
-					let filterValue = event.target.getAttribute('data-filter');
+					const filterValue = event.target.getAttribute('data-filter');
 
 					iso.arrange({ filter: filterValue });
 				}
