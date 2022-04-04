@@ -52,7 +52,7 @@ const navbarInit = () => {
 
 	window.addEventListener('load', () => navbar());
 
-	let navbarLink = document.querySelectorAll('.nav-link');
+	const navbarLink = document.querySelectorAll('.nav-link');
 
 	document.addEventListener('click', function (e) {
 		for (let x = 0; x < navbarLink.length; x++) {
