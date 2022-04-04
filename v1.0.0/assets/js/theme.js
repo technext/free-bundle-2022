@@ -332,13 +332,15 @@ var navbarInit = function navbarInit() {
   window.addEventListener('load', function () {
     return navbar();
   });
-  var navbarLink = document.querySelectorAll('.nav-link');
+  var navbarLinks = document.querySelectorAll('.nav-link');
   document.addEventListener('click', function (e) {
-    for (var x = 0; x < navbarLink.length; x++) {
-      navbarLink[x].classList.remove('active');
+    for (var x = 0; x < navbarLinks.length; x++) {
+      navbarLinks[x].classList.remove('active');
     }
 
-    e.target.closest('li').classList.add('active');
+    if (e.target.closest('li')) {
+      e.target.closest('li').classList.add('active');
+    }
   });
 };
 /* -------------------------------------------------------------------------- */
