@@ -19493,9 +19493,8 @@ iframe {
 }
 
 .bg-header-gradient {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(-11.17%, #0d2974), color-stop(110.39%, #3498db));
-  background-image: -o-linear-gradient(left, #0d2974 -11.17%, #3498db 110.39%);
-  background-image: linear-gradient(90deg, #0d2974 -11.17%, #3498db 110.39%);
+  background-image: -o-linear-gradient(359.74deg, #0f0c29 0.23%, #302b63 47.42%, #24243e 99.79%);
+  background-image: linear-gradient(90.26deg, #0f0c29 0.23%, #302b63 47.42%, #24243e 99.79%);
 }
 
 .card {
@@ -19585,7 +19584,7 @@ iframe {
 }
 
 .back-to-top:hover {
-  background-color: #4bdde6 !important;
+  background-color: #52ae3b !important;
   color: white;
 }
 
