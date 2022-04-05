@@ -1,0 +1,45 @@
+.btn {
+  font-size: $btn-font-size;
+  font-family: 'Poppins', sans-serif;
+  padding: $btn-padding-y $btn-padding-x;
+  outline: none;
+  &.btn-rounded {
+    border-radius: 50px;
+  }
+  &.btn-white {
+    background: white;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background: #ff0000;
+      color: white;
+    }
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include btn-variant($value);
+  }
+}
+
+// opacity-buttons
+
+@each $color, $value in $theme-colors {
+  .btn-opacity-#{$color} {
+    @include btn-opacity-variant($value);
+  }
+}
+
+// outline-buttons
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include btn-outline-variant($value);
+  }
+}
+
+
+

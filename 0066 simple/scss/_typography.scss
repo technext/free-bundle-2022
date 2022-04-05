@@ -1,0 +1,34 @@
+h1 {
+  font-size: 40px;
+  @media (max-width: 756px) {
+    font-size: 35px;
+  }
+}
+h2 {
+  font-size: 35px;
+  @media (max-width: 756px) {
+    font-size: 32px;
+  }
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 17px;
+}
+p {
+  font-size: 15px;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-semibold {
+  font-weight: 600;
+}
+

@@ -1,0 +1,18 @@
+.modal-content {
+  width: 500px;
+  @media (max-width: 575px) {
+    width: 300px;
+  }
+  .modal-header {
+    justify-content: center;
+    border: none;
+  }
+  .modal-body {
+    padding: 0px 40px;
+  }
+  .modal-footer {
+    border: none;
+    justify-content: flex-start;
+    padding: 5px 0px 20px 39px;
+  }
+}

@@ -1,0 +1,32 @@
+@mixin btn-opacity-variant($color) {
+  color: $color;
+  background-color: lighten($color, 22%);
+  border: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: $color;
+    background-color: white;
+    border: 2px solid $color;
+  }
+}
+
+@mixin btn-outline-variant($color) {
+  color: $color;
+  background-color: white;
+  border: 2px solid $color;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: white;
+    background-color: $color;
+  }
+}
+
+@mixin btn-variant($color) {
+  transition: all 0.5s ease-in-out;
+  color: white;
+  &:hover {
+    background: transparent;
+    color: $color;
+    border: 1px solid $color;
+  }
+}

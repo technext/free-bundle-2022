@@ -1,0 +1,25 @@
+.grid-margin {
+  margin-bottom: 100px;
+  @media (max-width: 992px) {
+    margin-bottom: 75px;
+  }
+  @media (max-width: 756px) {
+    margin-bottom: 60px;
+  }
+}
+.grid-margin-lg-0 {
+  @media (min-width: 992px) {
+    margin-bottom: 0px;
+  }
+}
+
+.stretch-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  .card{
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
