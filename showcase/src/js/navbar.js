@@ -19,6 +19,7 @@ const navbarInit = () => {
 		navElements.forEach(item => item.removeAttribute('style'));
 		dropElements.forEach(item => (item.innerHTML = ''));
 		navbar();
+		hideDropdown();
 	});
 
 	const navbar = () => {
@@ -50,7 +51,19 @@ const navbarInit = () => {
 		});
 	};
 
-	window.addEventListener('load', () => navbar());
+	window.addEventListener('load', () => {
+		navbar();
+		hideDropdown();
+	});
+
+	const hideDropdown = () => {
+		const dropdownItems = document.querySelectorAll('.dropdown-item');
+		const navbarEle = document.querySelector('.dropdown');
+		if (dropdownItems.length <= 0) {
+			console.log(dropdownItems.length);
+			navbarEle.style.display = 'none';
+		}
+	};
 
 	const navbarLinks = document.querySelectorAll('.nav-link');
 
@@ -58,10 +71,9 @@ const navbarInit = () => {
 		for (let x = 0; x < navbarLinks.length; x++) {
 			navbarLinks[x].classList.remove('active');
 		}
-		if(e.target.closest('li')){
+		if (e.target.closest('li')) {
 			e.target.closest('li').classList.add('active');
 		}
-	
 	});
 };
 export default navbarInit;
