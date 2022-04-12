@@ -303,6 +303,7 @@ var navbarInit = function navbarInit() {
       return item.innerHTML = '';
     });
     navbar();
+    hideDropdown();
   });
 
   var navbar = function navbar() {
@@ -330,8 +331,20 @@ var navbarInit = function navbarInit() {
   };
 
   window.addEventListener('load', function () {
-    return navbar();
+    navbar();
+    hideDropdown();
   });
+
+  var hideDropdown = function hideDropdown() {
+    var dropdownItems = document.querySelectorAll('.dropdown-item');
+    var navbarEle = document.querySelector('.dropdown');
+
+    if (dropdownItems.length <= 0) {
+      console.log(dropdownItems.length);
+      navbarEle.style.display = 'none';
+    }
+  };
+
   var navbarLinks = document.querySelectorAll('.nav-link');
   document.addEventListener('click', function (e) {
     for (var x = 0; x < navbarLinks.length; x++) {
