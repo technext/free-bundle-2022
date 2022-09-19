@@ -1,9 +1,0 @@
-mixin Rating(rating)
-  - for(var i = 0; i < 5; i++){
-    if(i < Math.floor(rating))
-      span.fa.fa-star.text-warning&attributes(attributes)
-    else if( rating > i && rating < i+1 )
-      span.fa.fa-star-half-alt.text-warning.star-icon&attributes(attributes)
-    else
-      span.fa.fa-star.text-300&attributes(attributes)
-  - }

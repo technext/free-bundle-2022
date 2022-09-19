@@ -1,6 +1,0 @@
-mixin Logo(config)
-  - var config = Object.assign({logo:'logo', text: true, width: 32}, config)
-  .d-flex.align-items-center
-    img(src=`${CWD}assets/img/icons/${config.logo}.png` alt='phoenix' width=config.width)
-    if config.text
-      p.logo-text.ms-2(class=config.textClass ? config.textClass : '') phoenix

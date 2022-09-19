@@ -1,8 +1,0 @@
-mixin Popover(val)
-  button.btn.btn-secondary.m-1(type='button' data-bs-container='body' data-bs-toggle='popover' data-bs-placement=val data-bs-content=`${val[0].toUpperCase() + val.substring(1)} Popover`)=`${val[0].toUpperCase() + val.substring(1)} Popover`
-  = '\n'
-
-mixin DismissiblePopover
-  a.btn.btn-lg.btn-danger(tabindex='0', role='button', data-bs-toggle='popover', data-bs-trigger="focus", title='Dismissible popover', data-bs-content="And here's some amazing content. It's very engaging. Right?")
-    | Dismissible popover
-  = '\n'

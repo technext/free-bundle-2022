@@ -1,6 +1,0 @@
-build
-live
-node_modules
-public
-webpack
-/src/scripts/**/*.d.ts
