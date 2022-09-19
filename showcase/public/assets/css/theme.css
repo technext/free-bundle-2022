@@ -113,7 +113,7 @@ h3, .h3 {
 
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.95313rem;
+    font-size: 1.95312rem;
   }
 }
 
@@ -548,7 +548,7 @@ progress {
 
 @media (min-width: 1200px) {
   .display-6 {
-    font-size: 1.95313rem;
+    font-size: 1.95312rem;
   }
 }
 
@@ -4856,7 +4856,7 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .navbar-brand {
-    font-size: 1.95313rem;
+    font-size: 1.95312rem;
   }
 }
 
@@ -7477,7 +7477,6 @@ fieldset:disabled .btn {
 }
 
 .sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -7485,7 +7484,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 576px) {
   .sticky-sm-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7494,7 +7492,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 768px) {
   .sticky-md-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7503,7 +7500,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 992px) {
   .sticky-lg-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7512,7 +7508,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .sticky-xl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7521,7 +7516,6 @@ fieldset:disabled .btn {
 
 @media (min-width: 1400px) {
   .sticky-xxl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7695,7 +7689,6 @@ fieldset:disabled .btn {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -9536,7 +9529,7 @@ fieldset:disabled .btn {
 }
 
 .fs-3 {
-  font-size: 1.95313rem !important;
+  font-size: 1.95312rem !important;
 }
 
 .fs-4 {
@@ -10285,7 +10278,6 @@ fieldset:disabled .btn {
     position: fixed !important;
   }
   .position-sm-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
   }
   .top-sm-unset {
@@ -11678,7 +11670,7 @@ fieldset:disabled .btn {
     font-size: 1.5625rem !important;
   }
   .fs-sm-3 {
-    font-size: 1.95313rem !important;
+    font-size: 1.95312rem !important;
   }
   .fs-sm-4 {
     font-size: 2.44141rem !important;
@@ -11946,7 +11938,6 @@ fieldset:disabled .btn {
     position: fixed !important;
   }
   .position-md-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
   }
   .top-md-unset {
@@ -13339,7 +13330,7 @@ fieldset:disabled .btn {
     font-size: 1.5625rem !important;
   }
   .fs-md-3 {
-    font-size: 1.95313rem !important;
+    font-size: 1.95312rem !important;
   }
   .fs-md-4 {
     font-size: 2.44141rem !important;
@@ -13607,7 +13598,6 @@ fieldset:disabled .btn {
     position: fixed !important;
   }
   .position-lg-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
   }
   .top-lg-unset {
@@ -15000,7 +14990,7 @@ fieldset:disabled .btn {
     font-size: 1.5625rem !important;
   }
   .fs-lg-3 {
-    font-size: 1.95313rem !important;
+    font-size: 1.95312rem !important;
   }
   .fs-lg-4 {
     font-size: 2.44141rem !important;
@@ -15268,7 +15258,6 @@ fieldset:disabled .btn {
     position: fixed !important;
   }
   .position-xl-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
   }
   .top-xl-unset {
@@ -16661,7 +16650,7 @@ fieldset:disabled .btn {
     font-size: 1.5625rem !important;
   }
   .fs-xl-3 {
-    font-size: 1.95313rem !important;
+    font-size: 1.95312rem !important;
   }
   .fs-xl-4 {
     font-size: 2.44141rem !important;
@@ -16929,7 +16918,6 @@ fieldset:disabled .btn {
     position: fixed !important;
   }
   .position-xxl-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
   }
   .top-xxl-unset {
@@ -18322,7 +18310,7 @@ fieldset:disabled .btn {
     font-size: 1.5625rem !important;
   }
   .fs-xxl-3 {
-    font-size: 1.95313rem !important;
+    font-size: 1.95312rem !important;
   }
   .fs-xxl-4 {
     font-size: 2.44141rem !important;
@@ -19129,7 +19117,6 @@ iframe {
 |   Sidebar
 -----------------------------------------------*/
 .sticky-sidebar {
-  position: -webkit-sticky;
   position: sticky;
   z-index: 1020;
   top: 5.3125rem;
